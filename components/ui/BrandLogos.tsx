@@ -19,14 +19,14 @@ export function DualBrandLock({
   variant = "white",
   compact = false,
 }: LogoProps & { variant?: "white" | "color"; compact?: boolean }) {
-  // -v3 = -v2 cropped tight to actual content (1637 × 284, was 2000 × 500).
-  // Source PDF artwork had ~48% vertical whitespace and ~20% horizontal
-  // baked-in safe area, making every display height look ~half the
-  // effective logo size. v3 has 12 px V / 20 px H breathing only —
-  // display heights can be ~1.76x smaller for the same visible mark size.
+  // -mixed-v5 = page 1 (color) re-rendered at 2000×500, then transformed:
+  //   • grayscale dark pixels (Hatcher/SparkLabs/TAIWAN wordmarks) → white
+  //   • colored pixels (Project bubble, Google 4-color, spark icon) → preserved
+  //   • near-white pixels → transparent
+  // Then tight-cropped to 1638 × 284 (same dims as white-v3 for parity).
   const src =
     variant === "white"
-      ? "/hatcher-sparklabs-white-v3.png"
+      ? "/hatcher-sparklabs-mixed-v5.png"
       : "/hatcher-sparklabs-color.png";
 
   // With v3's tight crop, modest display heights yield large visible marks.
