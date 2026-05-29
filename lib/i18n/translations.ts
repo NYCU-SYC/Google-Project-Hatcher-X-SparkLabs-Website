@@ -27,7 +27,7 @@ export const translations = {
         part3: "",
       },
       subtitle:
-        "Google × SparkLabs Taiwan 聯手，為 AI-native 創辦人提供 Google Cloud 技術深度賦能、全球 mentor 網絡，與 11 月國際舞台。",
+        "Google × SparkLabs Taiwan 聯手，為 AI-native 創辦人提供 Google Cloud 技術深度賦能、全球 mentor 網絡，與 11 月國際舞台",
       ctaPrimary: "立即申請",
       ctaSecondary: "了解計劃內容",
       poweredBy: "Powered by Google Cloud · Vertex AI · Gemini",
@@ -66,8 +66,8 @@ export const translations = {
     },
     whyNow: {
       eyebrow: "Why Now / Why Taiwan",
-      title: "AI 正在重新繪製全球競爭版圖。下一代 AI 旗艦，從台灣誕生。",
-      body: "台灣擁有深厚的硬體 DNA、世界級的工程人才、與從 Day One 就具備國際野心的創辦人。當 AI 重塑每一個產業，這座島不只是供應鏈中心——它是世界級 AI 公司的誕生地。",
+      title: "AI 正在重新繪製全球競爭版圖 下一代 AI 旗艦，從台灣誕生",
+      body: "台灣擁有深厚的硬體 DNA、世界級的工程人才、與從 Day One 就具備國際野心的創辦人。 當 AI 重塑每一個產業，這座島不只是供應鏈中心——它是世界級 AI 公司的誕生地。",
       quote:
         "Taiwan's next decade of breakthrough companies will be AI-native, global from day one, and built on a foundation of world-class engineering. We're here to accelerate them.",
       quoteAuthor: "Edgar Chiu",
@@ -80,24 +80,24 @@ export const translations = {
     },
     benefits: {
       eyebrow: "What You Get",
-      title: "五個資源模組，從技術深度到國際舞台一次到位。",
+      title: "五個資源模組，從技術深度到國際舞台一次到位",
       subtitle:
-        "不是 credits 補貼。是 Google 的技術能量加上 SparkLabs 的全球網絡，整套整合給 AI-native founder。",
+        "不只是 credits 補貼。 是 Google 的技術能量加上 SparkLabs 的全球網絡，整套整合給 AI-native founder",
       readyCta: "準備好取得這些資源了嗎？",
       heroCard: {
         tag: "Exclusive · 入選獨家",
         title: "USD 25K Google Cloud Credit",
-        tagline: "直接抵掉你 Seed–Series A 階段最大的固定成本。",
+        tagline: "直接抵掉你 Seed–Series A 階段最大的固定成本",
         description:
-          "模型訓練、推論、資料管線——這些是 AI 公司燒得最快的錢。USD 25K Google Cloud Credit 給你足夠的跑道驗證假設、迭代產品，把資源留在最重要的事情上。",
-        subnote: "已申請過 GFS 25K Credit 者不重複給予。其他所有資源照常提供。",
+          "模型訓練、推論、資料管線——這些是 AI 公司燒得最快的錢。 USD 25K Google Cloud Credit 給你足夠的跑道驗證假設、迭代產品，把資源留在最重要的事情上。",
+        subnote: "已申請過 GFS 25K Credit 者不重複給予。 其他所有資源照常提供。",
       },
       items: [
         {
           title: "Technical Incubation",
           tagline: "Google Cloud AI 技術賦能",
           description:
-            "Google 技術與 Customer Success 團隊直接介入每家入選新創，提供 Gemini 模型最佳化到 production-ready 架構審查的全鏈路支援。",
+            "Google 技術與 Customer Success 團隊直接介入每家入選新創，提供 Gemini 模型最佳化到 production-ready 架構審查的全鏈路支援",
           bullets: [
             "AI Model Optimization — Gemini 模型最佳化",
             "Infrastructure Scalability — 雲端架構擴展設計",
@@ -112,7 +112,7 @@ export const translations = {
           title: "Business Incubation",
           tagline: "SparkLabs 全球 Mentor 網絡",
           description:
-            "每家入選新創 3 場專屬 mentorship + 2 場 office hours，從美國市場進入策略到 Google BU 資源對接，全套到位。",
+            "每家入選新創 3 場專屬 mentorship + 2 場 office hours，從美國市場進入策略到 Google BU 資源對接，全套到位",
           bullets: [
             "Go-to-Market Strategy — 美國市場進入策略",
             "Fundraising Preparation — Pitch deck、估值、投資人對接",
@@ -126,7 +126,7 @@ export const translations = {
           title: "Community Support",
           tagline: "Founder 圈與經驗傳承",
           description:
-            "由已成功國際擴張的 Founder 主講 Entrepreneur Sharing Session，建立 cohort 同儕社群，向走過這條路的人直接學習。",
+            "由已成功國際擴張的 Founder 主講 Entrepreneur Sharing Session，建立 cohort 同儕社群，向走過這條路的人直接學習",
           bullets: [
             "Entrepreneur Sharing Session — 國際擴張前輩主講",
             "Cohort Peer Community — 跨輪次 founder 連結",
@@ -138,7 +138,7 @@ export const translations = {
           title: "Global Showcase Stage",
           tagline: "11 月 20-27 日 · 與 Meet Taipei 同期",
           description:
-            "在 GCP 全球生態系與 Meet Taipei 結合的國際舞台上，向 VC / CVC 與媒體展示成果。200+ 出席者規模。",
+            "在 GCP 全球生態系與 Meet Taipei 結合的國際舞台上，向 VC / CVC 與媒體展示成果。200+ 出席者規模",
           bullets: [
             "Global Sample Showcase — GCP 全球生態系曝光",
             "Global Press Kit — 跨境媒體包與聯合 PR",
@@ -151,7 +151,7 @@ export const translations = {
     criteria: {
       eyebrow: "Who We're Looking For",
       title: "你是我們在找的 founder 嗎？",
-      subtitle: "這個計劃為一群特定的創辦人而設計——AI-native、global-from-day-one、有台灣連結。",
+      subtitle: "這個計劃為一群特定的創辦人而設計——AI-native、global-from-day-one、有台灣連結",
       forYouTitle: "我們在找的你",
       notForYouTitle: "暫時不適合",
       forYou: [
@@ -175,8 +175,8 @@ export const translations = {
     },
     timeline: {
       eyebrow: "Program Timeline",
-      title: "從申請到 Global Showcase，七個月的旅程。",
-      subtitle: "標記這些日期。錯過 7/26 的申請截止，下一屆要等到明年。",
+      title: "從申請到 Global Showcase，七個月的旅程",
+      subtitle: "標記這些日期。 錯過 7/26 的申請截止，下一屆要等到明年。",
       statuses: {
         open: "申請中",
         upcoming: "即將開始",
@@ -187,82 +187,82 @@ export const translations = {
           date: "6 / 19",
           title: "計劃公告 · 申請開放",
           description:
-            "Program Announcement / Application Opens — 線上申請通道正式開放，歡迎 AI-native 團隊提交申請。",
+            "Program Announcement / Application Opens — 線上申請通道正式開放，歡迎 AI-native 團隊提交申請",
         },
         {
           date: "6 / 19 – 7 / 26",
           title: "招募期",
           description:
-            "Recruitment — 6 週招募窗口。我們鼓勵越早申請越好，以便有更多時間準備首輪面談。",
+            "Recruitment — 6 週招募窗口。 我們鼓勵越早申請越好，以便有更多時間準備首輪面談",
         },
         {
           date: "7 / 27 – 8 / 14",
           title: "評選流程",
           description:
-            "Selection Process — 書面審查、首輪面談、與 SparkLabs / GCP Leadership 終審。",
+            "Selection Process — 書面審查、首輪面談、與 SparkLabs / GCP Leadership 終審",
         },
         {
           date: "8 / 17",
           title: "入選名單公告",
           description:
-            "Shortlist Announcement — 入選 10 家團隊正式公布。未錄取者亦會收到個別回覆。",
+            "Shortlist Announcement — 入選 10 家團隊正式公布。 未錄取者亦會收到個別回覆",
         },
         {
           date: "8 / 24 – 11 / 27",
           title: "計劃執行期（12 週密集加速）",
           description:
-            "Program Execution — Technical Incubation、Business Incubation、Community Support 三大模組全面啟動。",
+            "Program Execution — Technical Incubation、Business Incubation、Community Support 三大模組全面啟動",
         },
         {
           date: "11 / 20 – 11 / 27",
           title: "Global Showcase × Meet Taipei",
           description:
-            "Global Sample Showcase + Global Press Kit + International VC / CVC access。200+ 國際觀眾，一次曝光等於做半年 BD。",
+            "Global Sample Showcase + Global Press Kit + International VC / CVC access。 200+ 國際觀眾，一次曝光等於做半年 BD",
         },
       ],
     },
     selection: {
       eyebrow: "Selection Process",
-      title: "評選流程透明公開，讓你知道怎麼被看見。",
-      subtitle: "我們不喜歡黑箱。以下是我們如何評估每一份申請。",
+      title: "評選流程透明公開，讓你知道怎麼被看見",
+      subtitle: "我們不喜歡黑箱。 以下是我們如何評估每一份申請",
       stages: [
         {
           num: "01",
           title: "Application Review",
-          description: "書面審查 — 我們會讀完每一行。",
-          detail: "團隊背景、產品、AI 技術、市場 traction、國際化規劃。",
+          description: "書面審查 — 我們會讀完每一行",
+          detail: "團隊背景、產品、AI 技術、市場 traction、國際化規劃",
         },
         {
           num: "02",
           title: "First Interview",
-          description: "首輪面談 — 與我們團隊 30 分鐘。",
-          detail: "深入了解 founder 動機、市場洞察、技術差異化。",
+          description: "首輪面談 — 與我們團隊 30 分鐘",
+          detail: "深入了解 founder 動機、市場洞察、技術差異化",
         },
         {
           num: "03",
           title: "Final Selection",
-          description: "終審 — 由 SparkLabs 與 GCP Leadership 決定。",
-          detail: "綜合所有資料，選出 10 家最具潛力的團隊。",
+          description: "終審 — 由 SparkLabs 與 GCP Leadership 決定",
+          detail: "綜合所有資料，選出 10 家最具潛力的團隊",
         },
       ],
       criteriaTitle: "4 個評選維度",
-      criteriaSubtitle: "我們會以這四個面向評估每一個團隊。",
+      criteriaSubtitle: "我們會以這四個面向評估每一個團隊",
       criteriaItems: [
         {
           title: "AI Technology Strength",
-          description: "技術差異化、模型品質、產品 readiness。",
+          description: "技術差異化、模型品質、產品 readiness",
         },
         {
           title: "Founder Capability",
-          description: "團隊背景、過往執行紀錄、學習速度。",
+          description: "團隊背景、過往執行紀錄、學習速度",
         },
         {
           title: "Market Traction",
-          description: "PMF 訊號、客戶驗證、收入成長軌跡。",
+          description: "PMF 訊號、客戶驗證、收入成長軌跡",
         },
         {
           title: "Global Expansion Potential",
-          description: "國際市場理解、Day-one Global Mindset、執行可行性。",
+          description: "國際市場理解、Day-one Global Mindset、執行可行性",
         },
       ],
     },
@@ -270,7 +270,7 @@ export const translations = {
       eyebrow: "Mentors & Speakers",
       title: "與最懂你的人並肩作戰",
       subtitle:
-        "從 Google 的 AI 戰略視角、SparkLabs 全球 GP 到 Biotech 與 Frontier AI 領域專家——這些人能直接幫你突破成長瓶頸。",
+        "從 Google 的 AI 戰略視角、SparkLabs 全球 GP 到 Biotech 與 Frontier AI 領域專家 —— 這些人能直接幫你突破成長瓶頸",
       poweredBy: "Connected to SparkLabs Global Mentor Pool",
       mentors: [
         {
@@ -303,23 +303,23 @@ export const translations = {
     faq: {
       eyebrow: "FAQ",
       title: "常見問題",
-      subtitle: "這裡整理了申請者最常問的問題。如果還有疑問，歡迎直接聯絡我們。",
+      subtitle: "這裡整理了申請者最常問的問題。 如果還有疑問，歡迎直接聯絡我們。",
       items: [
         {
           q: "申請需要費用嗎？",
-          a: "完全免費。入選團隊另獨家取得 USD 25K Google Cloud Credit。",
+          a: "完全免費。 入選團隊另獨家取得 USD 25K Google Cloud Credit。",
         },
         {
           q: "這個計劃會收取股權嗎？",
-          a: "不會。本計劃為加速資源型合作，不交換股權。SparkLabs 後續若有興趣進行投資，將會另以獨立的 Term Sheet 進行討論，並非加速計劃的必要條件。",
+          a: "不會。 本計劃為加速資源型合作，不交換股權。 SparkLabs 後續若有興趣進行投資，將會另以獨立的 Term Sheet 進行討論，並非加速計劃的必要條件。",
         },
         {
           q: "一定要在台灣嗎？",
-          a: "Taiwan-based 或 Taiwan-connected 皆可。創辦團隊在台灣有任一連結（registered entity、創辦人、技術團隊或營運）即符合資格。",
+          a: "Taiwan-based 或 Taiwan-connected 皆可。 創辦團隊在台灣有任一連結（registered entity、創辦人、技術團隊或營運）即符合資格。",
         },
         {
           q: "已申請過 GFS 25K Credit 還能參加嗎？",
-          a: "可以申請計劃本身，但 USD 25K Credit 不重複給予。其他所有資源（Technical Deep Dive、Mentor Network、Global Showcase 等）照常提供。",
+          a: "可以申請計劃本身，但 USD 25K Credit 不重複給予。 其他所有資源（Technical Deep Dive、Mentor Network、Global Showcase 等）照常提供。",
         },
         {
           q: "計劃 12 週要實體到場嗎？",
@@ -327,11 +327,11 @@ export const translations = {
         },
         {
           q: "申請結果何時公布？",
-          a: "8/17 公布入選名單。8/24 計劃正式啟動。未錄取者亦會收到個別 email 回覆。",
+          a: "8/17 公布入選名單。8/24 計劃正式啟動。 未錄取者亦會收到個別 email 回覆。",
         },
         {
           q: "國際團隊可以申請嗎？",
-          a: "歡迎。但要求 Day-one Global Mindset，且至少有台灣連結，例如預計 3 個月內在台設立分公司、核心技術團隊在台、或有台灣 founder。",
+          a: "歡迎。 但要求 Day-one Global Mindset，且至少有台灣連結，例如預計 3 個月內在台設立分公司、核心技術團隊在台、或有台灣 founder。",
         },
       ],
     },
@@ -339,10 +339,10 @@ export const translations = {
       deadline: "申請截止：7 月 26 日 · 只精選 10 家團隊",
       title: {
         line1: "把你最大的瓶頸，",
-        line2: "交給我們。",
+        line2: "交給我們",
       },
       subtitle1: "Google Cloud 與全球 mentor 網絡，",
-      subtitle2: "會成為你下一階段成長的加速器。",
+      subtitle2: "會成為你下一階段成長的加速器",
       ctaPrimary: "立即申請",
       ctaSecondary: "聯絡計劃團隊",
       microcopy: "免費申請 · 不交換股權 · 8/17 公布入選名單",
@@ -369,7 +369,7 @@ export const translations = {
       header: {
         eyebrow: "Application",
         title: "申請 Google × SparkLabs Taiwan AI Accelerator",
-        subtitle: "三步驟完成申請。預計 15 - 20 分鐘。",
+        subtitle: "三步驟完成申請。 預計 15 - 20 分鐘。",
         deadline: "申請截止：7 / 26",
         spots: "10 spots only",
       },
