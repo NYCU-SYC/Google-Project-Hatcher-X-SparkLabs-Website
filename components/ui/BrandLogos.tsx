@@ -26,16 +26,17 @@ export function DualBrandLock({
       ? "/hatcher-sparklabs-white-v2.png"
       : "/hatcher-sparklabs-color.png";
 
-  // Combined lockup is 4:1 aspect. Sized 30-40% larger than typical single
-  // wordmarks (YC/Stripe/Vercel = 24-32px) — our lockup carries dual brand
-  // + Project bubble + "Google" subtext, needs more height to keep main
-  // "Hatcher" / "SparkLabs" cap-height comfortably legible.
+  // Combined lockup is 4:1 aspect. Bumped to match the visual weight of
+  // a premium tech nav at the upper end of the benchmark range:
+  // Stripe ~80px, Vercel ~64px, Google Cloud ~72px. Our lockup has more
+  // information density (Project bubble + Google subtext) so we want main
+  // "Hatcher" / "SparkLabs" cap-height pushing ~32-40px for confident reading.
   //
-  // compact (nav):  h-11 (44) → h-12 (48) → h-14 (56)  // Hatcher cap ~26-34px
-  // footer:         h-14 (56) → h-16 (64) → h-20 (80)  // anchor mark
+  // compact (nav):  h-14 (56) → h-16 (64) → h-20 (80)  // Hatcher cap ~36-48px
+  // footer:         h-20 (80) → h-24 (96) → h-28 (112) // anchor mark
   const heightClasses = compact
-    ? "h-11 sm:h-12 md:h-14"
-    : "h-14 sm:h-16 md:h-20";
+    ? "h-14 sm:h-16 md:h-20"
+    : "h-20 sm:h-24 md:h-28";
 
   if (variant === "color") {
     // Wrap with rounded white-bg treatment so the baked-in white background
