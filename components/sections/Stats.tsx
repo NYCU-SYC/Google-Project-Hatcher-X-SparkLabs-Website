@@ -19,11 +19,11 @@ function Counter({ value, prefix, suffix }: RawStat) {
   useEffect(() => {
     if (inView) {
       const controls = animate(motionValue, value, {
-        // Tighter timing: previous 2s with deep ease-out felt sluggish on
-        // small numbers. 1s with a snappier curve keeps the count-up feel
-        // without making the viewer wait.
-        duration: 1,
-        ease: [0.22, 1, 0.36, 1],
+        // The hesitation at the end was from a deep ease-out curve whose
+        // last 20-30% crawled. Use a near-linear deceleration so the
+        // count lands cleanly instead of "settling in".
+        duration: 0.6,
+        ease: [0.22, 1, 0.5, 1],
       });
       return controls.stop;
     }
