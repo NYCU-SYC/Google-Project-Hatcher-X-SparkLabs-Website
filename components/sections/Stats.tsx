@@ -19,8 +19,11 @@ function Counter({ value, prefix, suffix }: RawStat) {
   useEffect(() => {
     if (inView) {
       const controls = animate(motionValue, value, {
-        duration: 2,
-        ease: [0.16, 1, 0.3, 1],
+        // Tighter timing: previous 2s with deep ease-out felt sluggish on
+        // small numbers. 1s with a snappier curve keeps the count-up feel
+        // without making the viewer wait.
+        duration: 1,
+        ease: [0.22, 1, 0.36, 1],
       });
       return controls.stop;
     }
