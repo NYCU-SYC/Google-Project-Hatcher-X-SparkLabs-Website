@@ -24,7 +24,7 @@ export const translations = {
         part1: "從台灣出發，打造",
         part2: "",
         highlight: "世界級 AI 新創",
-        part3: "。",
+        part3: "",
       },
       subtitle:
         "Google × SparkLabs Taiwan 聯手，為 AI-native 創辦人提供 Google Cloud 技術深度賦能、全球 mentor 網絡，與 11 月國際舞台。",
@@ -463,7 +463,7 @@ export const translations = {
         part1: "Build the next",
         part2: "",
         highlight: "world-class AI company",
-        part3: " from Taiwan.",
+        part3: " from Taiwan",
       },
       subtitle:
         "Google and SparkLabs Taiwan unite to give AI-native founders Google Cloud's technical depth, a global mentor network, and a Global Showcase stage in November.",
