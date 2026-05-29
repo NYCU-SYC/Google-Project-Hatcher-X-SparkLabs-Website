@@ -8,25 +8,51 @@ interface LogoProps {
 /**
  * Project Hatcher × SparkLabs Taiwan combined brand lockup.
  * Two colorways per the official brand guideline (page 4 of source .ai):
- * - "white"  → reverse/negative version, designed for dark backgrounds (default)
- * - "color"  → full-color version, designed for white / light backgrounds
+ * - "color"  → full-color version (page 1). Has built-in white background;
+ *             rendered as a white tile with rounded corners + soft shadow
+ *             so it reads as an intentional partner badge on dark surfaces.
+ * - "white"  → reverse/negative version (page 3), transparent white logo
+ *             for direct overlay on dark backgrounds. Kept as an option.
  */
 export function DualBrandLock({
   className,
-  variant = "white",
+  variant = "color",
   compact = false,
 }: LogoProps & { variant?: "white" | "color"; compact?: boolean }) {
   const src =
-    variant === "color"
-      ? "/hatcher-sparklabs-color.png"
-      : "/hatcher-sparklabs-white.png";
+    variant === "white"
+      ? "/hatcher-sparklabs-white.png"
+      : "/hatcher-sparklabs-color.png";
 
-  // Responsive heights — combined lockup has 4:1 aspect ratio.
-  // compact = nav usage (smaller). non-compact = footer/hero usage.
+  // Combined lockup is 4:1 aspect. Heights chosen so the tile reads as a
+  // discrete badge in the nav and a substantial mark in the footer.
   const heightClasses = compact
-    ? "h-7 sm:h-8 md:h-10"
-    : "h-10 sm:h-12 md:h-14";
+    ? "h-9 sm:h-10 md:h-11"
+    : "h-12 sm:h-14 md:h-16";
 
+  if (variant === "color") {
+    // Wrap with rounded white-bg treatment so the baked-in white background
+    // reads as a styled partner badge rather than a stray rectangle.
+    return (
+      <div
+        className={cn(
+          "inline-flex items-center rounded-lg overflow-hidden shadow-[0_2px_12px_rgba(0,0,0,0.25)] ring-1 ring-white/10",
+          className
+        )}
+      >
+        <Image
+          src={src}
+          alt="Project Hatcher × SparkLabs Taiwan"
+          width={2000}
+          height={500}
+          priority
+          className={cn(heightClasses, "w-auto select-none block")}
+        />
+      </div>
+    );
+  }
+
+  // White variant — transparent PNG, no wrapper styling needed.
   return (
     <div className={cn("inline-flex items-center", className)}>
       <Image
@@ -43,14 +69,13 @@ export function DualBrandLock({
 
 /**
  * @deprecated kept for backward-compat in case other code still imports it.
- * Returns the combined lockup at compact size.
  */
 export function GoogleCloudLogo(props: LogoProps) {
   return <DualBrandLock className={props.className} compact />;
 }
 
 /**
- * @deprecated kept for backward-compat. Returns the combined lockup.
+ * @deprecated kept for backward-compat.
  */
 export function SparkLabsLogo(props: LogoProps) {
   return <DualBrandLock className={props.className} compact />;
