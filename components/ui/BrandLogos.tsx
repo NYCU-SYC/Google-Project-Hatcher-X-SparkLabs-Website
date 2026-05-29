@@ -25,15 +25,15 @@ export function DualBrandLock({
       : "/hatcher-sparklabs-color.png";
 
   // Combined lockup is 4:1 aspect. Sizes calibrated against premium tech
-  // nav benchmarks (YC, Stripe, Vercel = 24–32px single wordmarks), bumped
-  // ~25% for our dual-brand lockup with secondary marks (Project bubble
-  // above, "Google" below) that consume vertical headroom.
+  // nav benchmarks (Stripe 56px, Linear 60px, Notion 56px nav height) with
+  // ~25% bump for our dual-brand lockup (Project bubble + Google subtext
+  // consume vertical headroom around the main "Hatcher" cap).
   //
-  // compact (nav):  h-8 (32) → h-9 (36) → h-10 (40)  // Hatcher cap ~18–24px
-  // footer:         h-10 (40) → h-12 (48) → h-14 (56) // anchor mark
+  // compact (nav):  h-10 (40) → h-11 (44) → h-12 (48)  // Hatcher cap ~22–28px
+  // footer:         h-12 (48) → h-14 (56) → h-16 (64)  // anchor mark
   const heightClasses = compact
-    ? "h-8 sm:h-9 md:h-10"
-    : "h-10 sm:h-12 md:h-14";
+    ? "h-10 sm:h-11 md:h-12"
+    : "h-12 sm:h-14 md:h-16";
 
   if (variant === "color") {
     // Wrap with rounded white-bg treatment so the baked-in white background
