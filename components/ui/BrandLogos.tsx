@@ -16,7 +16,7 @@ interface LogoProps {
  */
 export function DualBrandLock({
   className,
-  variant = "color",
+  variant = "white",
   compact = false,
 }: LogoProps & { variant?: "white" | "color"; compact?: boolean }) {
   const src =
@@ -24,11 +24,16 @@ export function DualBrandLock({
       ? "/hatcher-sparklabs-white.png"
       : "/hatcher-sparklabs-color.png";
 
-  // Combined lockup is 4:1 aspect. Heights chosen so the tile reads as a
-  // discrete badge in the nav and a substantial mark in the footer.
+  // Combined lockup is 4:1 aspect. Sizes calibrated against premium tech
+  // nav benchmarks (YC, Stripe, Vercel = 24–32px single wordmarks), bumped
+  // ~25% for our dual-brand lockup with secondary marks (Project bubble
+  // above, "Google" below) that consume vertical headroom.
+  //
+  // compact (nav):  h-8 (32) → h-9 (36) → h-10 (40)  // Hatcher cap ~18–24px
+  // footer:         h-10 (40) → h-12 (48) → h-14 (56) // anchor mark
   const heightClasses = compact
-    ? "h-9 sm:h-10 md:h-11"
-    : "h-12 sm:h-14 md:h-16";
+    ? "h-8 sm:h-9 md:h-10"
+    : "h-10 sm:h-12 md:h-14";
 
   if (variant === "color") {
     // Wrap with rounded white-bg treatment so the baked-in white background
