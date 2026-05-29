@@ -5,51 +5,53 @@ interface LogoProps {
   className?: string;
 }
 
-export function GoogleCloudLogo({ className }: LogoProps) {
+/**
+ * Project Hatcher × SparkLabs Taiwan combined brand lockup.
+ * Two colorways per the official brand guideline (page 4 of source .ai):
+ * - "white"  → reverse/negative version, designed for dark backgrounds (default)
+ * - "color"  → full-color version, designed for white / light backgrounds
+ */
+export function DualBrandLock({
+  className,
+  variant = "white",
+  compact = false,
+}: LogoProps & { variant?: "white" | "color"; compact?: boolean }) {
+  const src =
+    variant === "color"
+      ? "/hatcher-sparklabs-color.png"
+      : "/hatcher-sparklabs-white.png";
+
+  // Responsive heights — combined lockup has 4:1 aspect ratio.
+  // compact = nav usage (smaller). non-compact = footer/hero usage.
+  const heightClasses = compact
+    ? "h-7 sm:h-8 md:h-10"
+    : "h-10 sm:h-12 md:h-14";
+
   return (
     <div className={cn("inline-flex items-center", className)}>
-      {/* Official Google Cloud logo (dark-bg version: 4-color "Google" + white "Cloud") */}
       <Image
-        src="/google-cloud-logo-dark.svg"
-        alt="Google Cloud"
-        width={181}
-        height={28}
+        src={src}
+        alt="Project Hatcher × SparkLabs Taiwan"
+        width={2000}
+        height={500}
         priority
-        className="h-5 sm:h-6 w-auto"
+        className={cn(heightClasses, "w-auto select-none")}
       />
     </div>
   );
 }
 
-export function SparkLabsLogo({ className }: LogoProps) {
-  return (
-    <div className={cn("inline-flex items-center", className)}>
-      {/* White-text + colored sparks SVG — designed for dark backgrounds */}
-      <Image
-        src="/sparklabs-taiwan-logo.svg"
-        alt="SparkLabs Taiwan"
-        width={150}
-        height={40}
-        priority
-        className="h-5 sm:h-7 w-auto"
-      />
-    </div>
-  );
+/**
+ * @deprecated kept for backward-compat in case other code still imports it.
+ * Returns the combined lockup at compact size.
+ */
+export function GoogleCloudLogo(props: LogoProps) {
+  return <DualBrandLock className={props.className} compact />;
 }
 
-export function DualBrandLock({ className, compact = false }: LogoProps & { compact?: boolean }) {
-  return (
-    <div className={cn("inline-flex items-center gap-2 sm:gap-3.5 md:gap-4", className)}>
-      <GoogleCloudLogo />
-      <span
-        className={cn(
-          "text-slate-600 font-light leading-none",
-          compact ? "text-sm sm:text-base" : "text-base sm:text-lg"
-        )}
-      >
-        ×
-      </span>
-      <SparkLabsLogo />
-    </div>
-  );
+/**
+ * @deprecated kept for backward-compat. Returns the combined lockup.
+ */
+export function SparkLabsLogo(props: LogoProps) {
+  return <DualBrandLock className={props.className} compact />;
 }
