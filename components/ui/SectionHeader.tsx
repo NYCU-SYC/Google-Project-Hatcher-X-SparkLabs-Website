@@ -1,5 +1,6 @@
 "use client";
 
+import { Fragment } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
@@ -9,6 +10,22 @@ interface SectionHeaderProps {
   subtitle?: React.ReactNode;
   align?: "left" | "center";
   className?: string;
+}
+
+/**
+ * Convert "\n" inside translation strings into actual line breaks.
+ * Lets translators control wrap points without splitting copy into
+ * line1/line2 props. JSX nodes (already-broken markup) pass through.
+ */
+function renderMultiline(content: React.ReactNode): React.ReactNode {
+  if (typeof content !== "string" || !content.includes("\n")) return content;
+  const lines = content.split("\n");
+  return lines.map((line, i) => (
+    <Fragment key={i}>
+      {i > 0 && <br />}
+      {line}
+    </Fragment>
+  ));
 }
 
 export function SectionHeader({
@@ -49,7 +66,7 @@ export function SectionHeader({
         transition={{ duration: 0.6, delay: 0.05 }}
         className="font-display text-[2.25rem] md:text-[2.75rem] lg:text-[3.25rem] font-bold leading-display tracking-display-tight text-balance text-gradient"
       >
-        {title}
+        {renderMultiline(title)}
       </motion.h2>
 
       {subtitle && (
@@ -60,7 +77,7 @@ export function SectionHeader({
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-base md:text-[17px] leading-relaxed text-slate-400 text-balance max-w-2xl"
         >
-          {subtitle}
+          {renderMultiline(subtitle)}
         </motion.p>
       )}
     </div>
