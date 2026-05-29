@@ -1,0 +1,190 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a1628;
+  --foreground: #f8fafc;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11", "ss01";
+  /* CJK Proportional Alternate — 改善中文字距，特別是標點與英數混排 */
+  font-feature-settings: "palt" 1, "kern" 1;
+}
+
+/* Heading-specific typography for both Latin and CJK */
+h1,
+h2,
+h3,
+h4 {
+  font-feature-settings: "palt" 1, "kern" 1, "ss01" 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a1628;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e3354;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2d4569;
+}
+
+/* Selection */
+::selection {
+  background: rgba(66, 133, 244, 0.35);
+  color: #ffffff;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  /* Display gradient — white to light slate on dark bg */
+  .text-gradient {
+    background: linear-gradient(180deg, #ffffff 0%, #c8d4e8 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  /* Brand gradient — Google four colors on dark bg */
+  .text-gradient-brand {
+    background: linear-gradient(135deg, #6ba1ff 0%, #4285f4 35%, #34a853 70%, #ff7a5c 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .text-gradient-spark {
+    background: linear-gradient(135deg, #ff7a5c 0%, #ff5c35 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  /* Dark glassmorphism cards */
+  .glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .glass-strong {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  /* Subtle grid background */
+  .grid-bg {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  .grid-bg-fade {
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, #000 30%, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, #000 30%, transparent 75%);
+  }
+
+  .container-tight {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .container-tight {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  /* Glow utilities */
+  .glow-blue {
+    box-shadow: 0 0 60px -10px rgba(66, 133, 244, 0.5);
+  }
+
+  .glow-spark {
+    box-shadow: 0 0 60px -10px rgba(255, 92, 53, 0.5);
+  }
+
+  /* Typography helpers — for CJK + Latin mixed content */
+  .leading-cjk {
+    line-height: 1.75;
+  }
+
+  .leading-display {
+    line-height: 1.08;
+  }
+
+  .tracking-display-tight {
+    letter-spacing: -0.025em;
+  }
+
+  .tracking-display-tighter {
+    letter-spacing: -0.035em;
+  }
+
+  /* Body paragraph with breathable line-height for Chinese reading */
+  .prose-body {
+    line-height: 1.75;
+    letter-spacing: 0.005em;
+  }
+
+  /* Subtle drop shadow for headlines (depth on dark bg) */
+  .text-glow {
+    text-shadow: 0 0 40px rgba(130, 177, 255, 0.15);
+  }
+}
+
+/* Lang-specific tuning */
+html[lang^="zh"] body,
+html[lang^="zh"] h1,
+html[lang^="zh"] h2,
+html[lang^="zh"] h3 {
+  letter-spacing: 0;
+}
+
+html[lang="en"] h1,
+html[lang="en"] h2,
+html[lang="en"] h3 {
+  letter-spacing: -0.025em;
+}
