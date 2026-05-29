@@ -19,21 +19,23 @@ export function DualBrandLock({
   variant = "white",
   compact = false,
 }: LogoProps & { variant?: "white" | "color"; compact?: boolean }) {
+  // -v2 = source PDF page 2 (mono black) inverted to white-on-transparent,
+  // with the artwork's safe-area bounding box stripped (4-px edge wipe).
   const src =
     variant === "white"
-      ? "/hatcher-sparklabs-white.png"
+      ? "/hatcher-sparklabs-white-v2.png"
       : "/hatcher-sparklabs-color.png";
 
-  // Combined lockup is 4:1 aspect. Sizes calibrated against premium tech
-  // nav benchmarks (Stripe 56px, Linear 60px, Notion 56px nav height) with
-  // ~25% bump for our dual-brand lockup (Project bubble + Google subtext
-  // consume vertical headroom around the main "Hatcher" cap).
+  // Combined lockup is 4:1 aspect. Sized 30-40% larger than typical single
+  // wordmarks (YC/Stripe/Vercel = 24-32px) — our lockup carries dual brand
+  // + Project bubble + "Google" subtext, needs more height to keep main
+  // "Hatcher" / "SparkLabs" cap-height comfortably legible.
   //
-  // compact (nav):  h-10 (40) → h-11 (44) → h-12 (48)  // Hatcher cap ~22–28px
-  // footer:         h-12 (48) → h-14 (56) → h-16 (64)  // anchor mark
+  // compact (nav):  h-11 (44) → h-12 (48) → h-14 (56)  // Hatcher cap ~26-34px
+  // footer:         h-14 (56) → h-16 (64) → h-20 (80)  // anchor mark
   const heightClasses = compact
-    ? "h-10 sm:h-11 md:h-12"
-    : "h-12 sm:h-14 md:h-16";
+    ? "h-11 sm:h-12 md:h-14"
+    : "h-14 sm:h-16 md:h-20";
 
   if (variant === "color") {
     // Wrap with rounded white-bg treatment so the baked-in white background
