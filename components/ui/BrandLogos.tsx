@@ -19,20 +19,19 @@ export function DualBrandLock({
   variant = "white",
   compact = false,
 }: LogoProps & { variant?: "white" | "color"; compact?: boolean }) {
-  // -mixed-v8 = page 1 (color) re-rendered at 2000×500, then transformed
-  // with edge-seeded flood-fill background detection + connected-component
-  // classification of white islands:
-  //   • background-connected white pixels → transparent
-  //   • white islands bordered by colored pixels (e.g. "Project" text inside
-  //     the purple bubble) → kept opaque white
-  //   • white islands bordered only by grayscale (letter counters inside
-  //     "Hatcher" / "SparkLabs" / "TAIWAN") → transparent
-  //   • grayscale dark pixels → white text, alpha = 255 - luma
-  //   • colored pixels → keep RGB, alpha = 255 - min(R,G,B)
-  // Then tight-cropped to 1638 × 284 (matches white-v3 dims for parity).
+  // -mixed-v9 = refined v8 with hue-aware white-island classification.
+  // v8 kept white islands bordered by ANY colored pixel, which preserved
+  // the white counters inside "Google" colored letters (e.g. inside G/o/g/e).
+  // v9 narrows the keep-white rule: islands are kept only when their
+  // boundary contains the Project bubble's specific purple (low R, low G,
+  // high B). Google counters bordered by blue/red/yellow/green become
+  // transparent like the wordmark counters.
+  //
+  // Final breakdown: 8 islands kept (Project letters in bubble),
+  // 13 transparent (Google counters + Hatcher/SparkLabs/TAIWAN counters).
   const src =
     variant === "white"
-      ? "/hatcher-sparklabs-mixed-v8.png"
+      ? "/hatcher-sparklabs-mixed-v9.png"
       : "/hatcher-sparklabs-color.png";
 
   // With v3's tight crop, modest display heights yield large visible marks.
