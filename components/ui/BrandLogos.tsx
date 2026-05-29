@@ -19,24 +19,27 @@ export function DualBrandLock({
   variant = "white",
   compact = false,
 }: LogoProps & { variant?: "white" | "color"; compact?: boolean }) {
-  // -v2 = source PDF page 2 (mono black) inverted to white-on-transparent,
-  // with the artwork's safe-area bounding box stripped (4-px edge wipe).
+  // -v3 = -v2 cropped tight to actual content (1637 × 284, was 2000 × 500).
+  // Source PDF artwork had ~48% vertical whitespace and ~20% horizontal
+  // baked-in safe area, making every display height look ~half the
+  // effective logo size. v3 has 12 px V / 20 px H breathing only —
+  // display heights can be ~1.76x smaller for the same visible mark size.
   const src =
     variant === "white"
-      ? "/hatcher-sparklabs-white-v2.png"
+      ? "/hatcher-sparklabs-white-v3.png"
       : "/hatcher-sparklabs-color.png";
 
-  // Combined lockup is 4:1 aspect. Bumped to match the visual weight of
-  // a premium tech nav at the upper end of the benchmark range:
-  // Stripe ~80px, Vercel ~64px, Google Cloud ~72px. Our lockup has more
-  // information density (Project bubble + Google subtext) so we want main
-  // "Hatcher" / "SparkLabs" cap-height pushing ~32-40px for confident reading.
+  // With v3's tight crop, modest display heights yield large visible marks.
+  // Sizes chosen so pill height returns to comfortable 52-72 px range
+  // (matches the very original nav feel) while keeping visible content at
+  // ~33-44 px — equivalent to the v2 + h-14/16/20 setting the stakeholder
+  // approved on size, before complaining the bar grew too thick.
   //
-  // compact (nav):  h-14 (56) → h-16 (64) → h-20 (80)  // Hatcher cap ~36-48px
-  // footer:         h-20 (80) → h-24 (96) → h-28 (112) // anchor mark
+  // compact (nav):  h-9 (36) → h-10 (40) → h-12 (48)  // content ~33-44 px
+  // footer:         h-12 (48) → h-14 (56) → h-16 (64) // anchor mark
   const heightClasses = compact
-    ? "h-14 sm:h-16 md:h-20"
-    : "h-20 sm:h-24 md:h-28";
+    ? "h-9 sm:h-10 md:h-12"
+    : "h-12 sm:h-14 md:h-16";
 
   if (variant === "color") {
     // Wrap with rounded white-bg treatment so the baked-in white background
