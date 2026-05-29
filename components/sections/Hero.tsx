@@ -15,7 +15,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[100svh] flex flex-col justify-center overflow-hidden pt-36 pb-24"
+      className="relative min-h-[100svh] flex flex-col justify-center overflow-hidden pt-28 pb-16 sm:pt-36 sm:pb-24"
     >
       <AmbientBackground />
 
@@ -43,7 +43,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="mt-10 font-display text-[2.75rem] md:text-[4rem] lg:text-[5rem] font-bold leading-display tracking-display-tighter text-balance"
+          className="mt-8 sm:mt-10 font-display text-[2.25rem] sm:text-[2.75rem] md:text-[4rem] lg:text-[5rem] font-bold leading-display tracking-display-tighter text-balance"
         >
           <span className="text-gradient">{t.hero.title.part1}</span>
           <br />
@@ -92,7 +92,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.55 }}
-          className="mt-20 md:mt-24 w-full max-w-3xl"
+          className="mt-14 sm:mt-20 md:mt-24 w-full max-w-3xl"
         >
           <p className="text-[11px] font-medium tracking-[0.25em] uppercase text-slate-500 mb-6">
             {t.hero.poweredBy}

@@ -15,7 +15,7 @@ export function GoogleCloudLogo({ className }: LogoProps) {
         width={181}
         height={28}
         priority
-        className="h-6 w-auto"
+        className="h-5 sm:h-6 w-auto"
       />
     </div>
   );
@@ -31,7 +31,7 @@ export function SparkLabsLogo({ className }: LogoProps) {
         width={150}
         height={40}
         priority
-        className="h-7 w-auto"
+        className="h-5 sm:h-7 w-auto"
       />
     </div>
   );
@@ -39,9 +39,14 @@ export function SparkLabsLogo({ className }: LogoProps) {
 
 export function DualBrandLock({ className, compact = false }: LogoProps & { compact?: boolean }) {
   return (
-    <div className={cn("inline-flex items-center gap-3.5 md:gap-4", className)}>
+    <div className={cn("inline-flex items-center gap-2 sm:gap-3.5 md:gap-4", className)}>
       <GoogleCloudLogo />
-      <span className={cn("text-slate-600 font-light leading-none", compact ? "text-base" : "text-lg")}>
+      <span
+        className={cn(
+          "text-slate-600 font-light leading-none",
+          compact ? "text-sm sm:text-base" : "text-base sm:text-lg"
+        )}
+      >
         ×
       </span>
       <SparkLabsLogo />

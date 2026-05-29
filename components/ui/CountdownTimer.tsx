@@ -74,39 +74,39 @@ export function CountdownTimer({
     return (
       <div
         className={cn(
-          "glass-strong rounded-2xl overflow-hidden inline-flex flex-col min-w-[320px] md:min-w-[420px]",
+          "glass-strong rounded-2xl overflow-hidden flex flex-col w-full max-w-[420px] mx-auto sm:min-w-[320px] md:min-w-[420px]",
           className
         )}
       >
         {/* Status strip — top of card */}
         {showStatus && (
-          <div className="flex items-center justify-center gap-3 px-6 py-3 bg-white/[0.025] border-b border-white/[0.06]">
+          <div className="flex items-center justify-center gap-2 sm:gap-3 px-4 py-2.5 sm:px-6 sm:py-3 bg-white/[0.025] border-b border-white/[0.06]">
             <div className="flex items-center gap-2">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-spark opacity-75" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-spark" />
               </span>
-              <span className="text-[11px] font-semibold text-brand-spark-glow uppercase tracking-[0.2em]">
+              <span className="text-[10px] sm:text-[11px] font-semibold text-brand-spark-glow uppercase tracking-[0.18em] sm:tracking-[0.2em]">
                 {t.countdown.statusOpen}
               </span>
             </div>
             <span className="text-white/20">·</span>
-            <span className="text-[11px] font-medium text-slate-300 uppercase tracking-[0.2em]">
+            <span className="text-[10px] sm:text-[11px] font-medium text-slate-300 uppercase tracking-[0.18em] sm:tracking-[0.2em]">
               {t.countdown.statusScarcity}
             </span>
           </div>
         )}
 
         {/* Countdown body */}
-        <div className="flex flex-col items-center gap-4 px-7 py-6 md:px-9 md:py-7">
-          <div className="text-[10px] tracking-[0.25em] uppercase text-slate-400 font-medium">
+        <div className="flex flex-col items-center gap-3 sm:gap-4 px-4 py-5 sm:px-7 sm:py-6 md:px-9 md:py-7">
+          <div className="text-[10px] tracking-[0.25em] uppercase text-slate-400 font-medium text-center">
             {label}
           </div>
-          <div className="flex items-center gap-4 md:gap-6">
+          <div className="flex items-center gap-2 sm:gap-4 md:gap-6">
             {segments.map((seg, i) => (
-              <div key={seg.label} className="flex items-center gap-4 md:gap-6">
-                <div className="flex flex-col items-center min-w-[2.5rem]">
-                  <div className="font-display text-3xl md:text-[2.5rem] font-bold text-gradient-brand leading-none tabular-nums">
+              <div key={seg.label} className="flex items-center gap-2 sm:gap-4 md:gap-6">
+                <div className="flex flex-col items-center min-w-[2rem] sm:min-w-[2.5rem]">
+                  <div className="font-display text-[1.75rem] sm:text-3xl md:text-[2.5rem] font-bold text-gradient-brand leading-none tabular-nums">
                     {String(seg.value).padStart(2, "0")}
                   </div>
                   <div className="mt-2 text-[10px] tracking-[0.15em] uppercase text-slate-500 font-medium">
@@ -114,7 +114,7 @@ export function CountdownTimer({
                   </div>
                 </div>
                 {i < segments.length - 1 && (
-                  <span className="text-slate-700 text-xl font-light -mt-3">:</span>
+                  <span className="text-slate-700 text-lg sm:text-xl font-light -mt-3">:</span>
                 )}
               </div>
             ))}

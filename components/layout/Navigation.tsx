@@ -39,10 +39,10 @@ export function Navigation() {
           scrolled ? "py-3" : "py-5"
         )}
       >
-        <div className="mx-auto w-full max-w-[1480px] px-6 md:px-10 lg:px-14">
+        <div className="mx-auto w-full max-w-[1480px] px-4 sm:px-6 md:px-10 lg:px-14">
           <div
             className={cn(
-              "flex items-center justify-between rounded-full pl-6 pr-4 md:pl-8 md:pr-5 py-3 gap-8 lg:gap-12 transition-all duration-300",
+              "flex items-center justify-between rounded-full pl-4 pr-3 sm:pl-6 sm:pr-4 md:pl-8 md:pr-5 py-2.5 sm:py-3 gap-3 sm:gap-8 lg:gap-12 transition-all duration-300",
               scrolled
                 ? "glass-strong shadow-[0_8px_40px_rgba(0,0,0,0.4)]"
                 : "bg-transparent"
@@ -64,7 +64,7 @@ export function Navigation() {
               ))}
             </nav>
 
-            <div className="flex items-center gap-4 md:gap-5 shrink-0">
+            <div className="flex items-center gap-3 sm:gap-4 md:gap-5 shrink-0">
               <LanguageToggle className="hidden sm:inline-flex" />
 
               <div className="hidden md:block">
@@ -75,7 +75,7 @@ export function Navigation() {
 
               <button
                 onClick={() => setOpen(!open)}
-                className="xl:hidden grid h-10 w-10 place-items-center rounded-full glass-strong text-white"
+                className="xl:hidden grid h-9 w-9 sm:h-10 sm:w-10 place-items-center rounded-full glass-strong text-white"
                 aria-label="Toggle menu"
               >
                 {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
