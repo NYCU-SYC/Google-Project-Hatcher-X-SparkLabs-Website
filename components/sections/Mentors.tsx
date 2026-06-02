@@ -101,15 +101,6 @@ const featuredMentors: MentorEntry[] = [
     photo: null,
     initials: "TO",
   },
-  {
-    name: "Sunny",
-    title: "Google Cloud Mentor",
-    titleZh: "Google Cloud 導師",
-    org: "Google",
-    contribution: "Google Cloud startup support and technical guidance",
-    photo: null,
-    initials: "SU",
-  },
 ];
 
 interface SupportMeta {
