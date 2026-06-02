@@ -48,7 +48,7 @@ export function Navigation() {
             )}
           >
             <a href="/" className="shrink-0">
-              <DualBrandLock compact />
+              <DualBrandLock compact className="translate-y-1" />
             </a>
 
             <nav className="hidden xl:flex items-center gap-2 flex-1 justify-center">
