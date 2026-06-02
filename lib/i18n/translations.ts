@@ -66,8 +66,8 @@ export const translations = {
         { value: 15, label: "入選名額", sublabel: "僅限精選團隊" },
         {
           value: 25,
-          prefix: "",
-          suffix: "K USD",
+          prefix: "USD ",
+          suffix: "K",
           label: "Google Cloud Credit",
           sublabel: "每隊專屬額度",
         },
@@ -595,8 +595,8 @@ export const translations = {
         { value: 15, label: "Selected Teams", sublabel: "Only Spots in Cohort" },
         {
           value: 25,
-          prefix: "",
-          suffix: "K USD",
+          prefix: "USD ",
+          suffix: "K",
           label: "Google Cloud Credit",
           sublabel: "Per Team · Exclusive",
         },

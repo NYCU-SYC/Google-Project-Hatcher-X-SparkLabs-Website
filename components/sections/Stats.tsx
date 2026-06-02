@@ -36,7 +36,7 @@ export function Stats() {
     },
     {
       icon: Cloud,
-      value: `${t.stats.items[1]?.prefix ?? ""}${t.stats.items[1]?.value ?? 25}${t.stats.items[1]?.suffix ?? "K USD"}`,
+      value: `${t.stats.items[1]?.prefix ?? "USD "}${t.stats.items[1]?.value ?? 25}${t.stats.items[1]?.suffix ?? "K"}`,
       label: t.stats.items[1]?.label ?? "Google Cloud Credit",
       context: t.stats.items[1]?.sublabel ?? "Per team, exclusive",
       accent: { text: "text-[#EA4335]", bg: "bg-[#EA4335]/10" },
