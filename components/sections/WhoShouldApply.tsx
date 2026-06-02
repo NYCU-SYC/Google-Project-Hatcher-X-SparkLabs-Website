@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { Rocket, Cpu, Globe2, Users, Sparkles } from "lucide-react";
-import { Button } from "@/components/ui/Button";
 import { useTranslation } from "@/lib/i18n/LanguageProvider";
 
 /**
@@ -98,35 +97,9 @@ export function WhoShouldApply() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
-          {/* Left — CTA + reassurance */}
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.5 }}
-            className="lg:col-span-5 lg:pt-3"
-          >
-            <div className="flex flex-wrap justify-center gap-3 lg:justify-start">
-              <Button href="/apply" variant="primary" size="md" withArrow>
-                {t.criteria.matchCta}
-              </Button>
-              <Button href="#program-at-a-glance" variant="secondary" size="md">
-                {t.criteria.detailsCta}
-              </Button>
-            </div>
-
-            {/* Reassurance — keeps the "not sure?" friction-killer in view */}
-            <div className="mt-6 text-center text-sm text-slate-500 lg:text-left">
-              {t.criteria.uncertainPrompt}{" "}
-              <span className="text-slate-900 font-medium">
-                {t.criteria.uncertainAnswer}
-              </span>
-            </div>
-          </motion.div>
-
-          {/* Right — 2x2 criteria card grid */}
-          <div className="lg:col-span-7">
+        <div className="mx-auto max-w-5xl">
+          {/* 2x2 criteria card grid */}
+          <div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
               {criteriaMeta.map((meta, i) => {
                 const card = t.criteria.cards[i];
