@@ -371,9 +371,9 @@ export const translations = {
           contribution: "AI Startup GTM、美國市場進入策略、美國投資人視角",
         },
         {
-          title: "VP",
-          org: "SparkLabs Taiwan",
-          contribution: "出海與美國市場進入實務建議、Cohort 經營",
+          title: "管理合夥人",
+          org: "Hickory Falls Ventures",
+          contribution: "創投視角、創辦人成長與跨境 GTM",
         },
         {
           title: "Global Mentor",
@@ -900,9 +900,9 @@ export const translations = {
           contribution: "AI Startup GTM, US market entry, US investor perspective",
         },
         {
-          title: "VP",
-          org: "SparkLabs Taiwan",
-          contribution: "Practical guidance on overseas / US market entry, cohort ops",
+          title: "Managing Partner",
+          org: "Hickory Falls Ventures",
+          contribution: "Venture investing, founder scaling, cross-border GTM",
         },
         {
           title: "Global Mentor",
