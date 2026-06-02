@@ -70,35 +70,44 @@ export function WhoShouldApply() {
   return (
     <section
       id="apply-criteria"
-      className="relative py-16 md:py-20 bg-white overflow-hidden"
+      className="relative scroll-mt-28 py-16 md:scroll-mt-32 md:py-20 bg-white overflow-hidden"
     >
       <div className="container-wide relative">
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.5 }}
+          className="mx-auto mb-12 flex max-w-4xl flex-col items-center text-center md:mb-14"
+        >
+          <div className="inline-flex items-center gap-3 rounded-full border border-[#4285F4]/25 bg-[#4285F4]/[0.05] px-5 py-2 text-sm font-bold tracking-normal uppercase text-slate-900 shadow-sm md:text-base">
+            <Sparkles className="h-4.5 w-4.5 text-[#4285F4]" />
+            {t.criteria.eyebrow}
+          </div>
+          <h2 className="mt-5 font-display text-3xl md:text-4xl lg:text-[2.65rem] font-semibold !leading-[1.25] tracking-normal text-slate-900 text-balance">
+            {t.criteria.headline.line1}
+            <br />
+            {t.criteria.headline.line2}
+          </h2>
+          <p className="mt-5 max-w-3xl text-base md:text-lg text-slate-600 leading-relaxed">
+            {t.criteria.cohortIntro}
+            <strong className="text-slate-900">
+              {t.criteria.cohortHighlight}
+            </strong>
+            {t.criteria.cohortRest}
+          </p>
+        </motion.div>
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
-          {/* Left — headline + supporting copy + CTA */}
+          {/* Left — CTA + reassurance */}
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.5 }}
-            className="lg:col-span-5"
+            className="lg:col-span-5 lg:pt-3"
           >
-            <div className="inline-flex items-center gap-3 rounded-full border border-[#4285F4]/25 bg-[#4285F4]/[0.05] px-5 py-2 text-sm font-bold tracking-normal uppercase text-slate-900 shadow-sm md:text-base">
-              <Sparkles className="h-4.5 w-4.5 text-[#4285F4]" />
-              {t.criteria.eyebrow}
-            </div>
-            <h2 className="mt-4 font-display text-3xl md:text-4xl lg:text-[2.65rem] font-semibold !leading-[1.25] tracking-normal text-slate-900 text-balance">
-              {t.criteria.headline.line1}
-              <br />
-              {t.criteria.headline.line2}
-            </h2>
-            <p className="mt-5 text-base md:text-lg text-slate-600 leading-relaxed max-w-xl">
-              {t.criteria.cohortIntro}
-              <strong className="text-slate-900">
-                {t.criteria.cohortHighlight}
-              </strong>
-              {t.criteria.cohortRest}
-            </p>
-            <div className="mt-7 flex flex-wrap gap-3">
+            <div className="flex flex-wrap justify-center gap-3 lg:justify-start">
               <Button href="/apply" variant="primary" size="md" withArrow>
                 {t.criteria.matchCta}
               </Button>
@@ -108,7 +117,7 @@ export function WhoShouldApply() {
             </div>
 
             {/* Reassurance — keeps the "not sure?" friction-killer in view */}
-            <div className="mt-6 text-sm text-slate-500">
+            <div className="mt-6 text-center text-sm text-slate-500 lg:text-left">
               {t.criteria.uncertainPrompt}{" "}
               <span className="text-slate-900 font-medium">
                 {t.criteria.uncertainAnswer}
