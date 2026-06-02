@@ -46,7 +46,7 @@ export function Timeline() {
 
   return (
     <section id="timeline" className="relative py-24 md:py-32 bg-white">
-      <div className="container-tight">
+      <div className="container-wide">
         <SectionHeader
           eyebrow={t.timeline.eyebrow}
           title={t.timeline.title}

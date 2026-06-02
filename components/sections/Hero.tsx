@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Calendar } from "lucide-react";
+import { Calendar } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { useTranslation } from "@/lib/i18n/LanguageProvider";
 
@@ -33,7 +33,7 @@ export function Hero() {
       />
 
       <div className="container-tight">
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="mx-auto max-w-4xl text-center">
           {/* Eyebrow — program name with Google 4-color dots */}
           <motion.div
             initial={{ opacity: 0, y: 8 }}
@@ -67,7 +67,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.16 }}
-            className="mt-6 text-base md:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed"
+            className="mt-6 text-base md:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed"
           >
             {t.hero.subtitle}
           </motion.p>

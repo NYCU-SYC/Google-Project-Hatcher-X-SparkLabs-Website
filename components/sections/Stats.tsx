@@ -29,7 +29,7 @@ export function Stats() {
   const items: Item[] = [
     {
       icon: Users,
-      value: "10",
+      value: "15",
       label: t.stats.items[0]?.label ?? "Selected Teams",
       context: t.stats.items[0]?.sublabel ?? "Only spots in this cohort",
       accent: { text: "text-[#4285F4]", bg: "bg-[#4285F4]/10" },
@@ -59,7 +59,7 @@ export function Stats() {
 
   return (
     <section id="program-at-a-glance" className="relative py-20 md:py-28 bg-white">
-      <div className="container-tight">
+      <div className="container-wide">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-xs font-medium tracking-[0.18em] uppercase text-slate-500">
             {t.stats.title}

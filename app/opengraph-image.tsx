@@ -134,7 +134,7 @@ export default async function Image() {
             </span>
             <span style={{ color: "#DADCE0" }}>·</span>
             <span>
-              Only <strong style={{ color: "#1F1F1F" }}>10 spots</strong>
+              Only <strong style={{ color: "#1F1F1F" }}>15 spots</strong>
             </span>
             <span style={{ color: "#DADCE0" }}>·</span>
             <span>

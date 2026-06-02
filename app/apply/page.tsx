@@ -12,7 +12,7 @@ import { AmbientBackground } from "@/components/ui/AmbientBackground";
 export const metadata: Metadata = {
   title: "Apply | Google × SparkLabs Taiwan AI Accelerator",
   description:
-    "Apply to Google × SparkLabs Taiwan AI Accelerator. Application deadline: July 26. Only 10 spots. Free to apply, no equity taken.",
+    "Apply to Google × SparkLabs Taiwan AI Accelerator. Application deadline: July 26. Only 15 spots. Free to apply, no equity taken.",
 };
 
 export default function ApplyPage() {

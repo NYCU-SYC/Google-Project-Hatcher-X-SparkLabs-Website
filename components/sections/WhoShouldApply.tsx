@@ -1,128 +1,163 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Check, X, Sparkles } from "lucide-react";
-import { SectionHeader } from "@/components/ui/SectionHeader";
+import { Rocket, Cpu, Globe2, Users, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { useTranslation } from "@/lib/i18n/LanguageProvider";
+
+/**
+ * Who Should Apply — conversion-critical "is this me?" section.
+ *
+ * Layout: 5-col headline on the left + 7-col criteria grid on the right
+ * (lg+). On md it splits to single-column headline + 2-col cards; on
+ * mobile everything stacks.
+ *
+ * Replaces the original "for-you vs. not-for-you" twin list with one
+ * confident headline + four criteria cards, each carrying a Google
+ * brand color icon tile and one-sentence body. Adds a domains strip
+ * underneath the cards so founders see which verticals are welcome.
+ */
+
+interface Criterion {
+  icon: typeof Rocket;
+  title: string;
+  body: string;
+  accent: { text: string; bg: string };
+}
+
+const criteria: Criterion[] = [
+  {
+    icon: Rocket,
+    title: "Early-stage teams with traction",
+    body:
+      "Seed to Series A startups with a working prototype, pilot customers, or early market signal.",
+    accent: { text: "text-[#4285F4]", bg: "bg-[#4285F4]/10" },
+  },
+  {
+    icon: Cpu,
+    title: "AI-native, not AI-adjacent",
+    body:
+      "Teams building AI as the product's core — not a side feature bolted onto a traditional stack.",
+    accent: { text: "text-[#EA4335]", bg: "bg-[#EA4335]/10" },
+  },
+  {
+    icon: Globe2,
+    title: "Global from day one",
+    body:
+      "Founders building for international markets from the start, with US or APAC ambition baked in.",
+    accent: { text: "text-[#FBBC04]", bg: "bg-[#FBBC04]/15" },
+  },
+  {
+    icon: Users,
+    title: "Taiwan-connected",
+    body:
+      "Roots, engineering talent, or operations in Taiwan — ready to plug into Google + SparkLabs networks.",
+    accent: { text: "text-[#34A853]", bg: "bg-[#34A853]/10" },
+  },
+];
 
 export function WhoShouldApply() {
   const { t } = useTranslation();
 
   return (
-    <section id="apply-criteria" className="relative py-28 md:py-36">
-      <div className="container-tight">
-        <SectionHeader
-          eyebrow={t.criteria.eyebrow}
-          title={t.criteria.title}
-          subtitle={t.criteria.subtitle}
-        />
+    <section
+      id="apply-criteria"
+      className="relative py-24 md:py-32 bg-white overflow-hidden"
+    >
+      {/* Subtle blue wash — gives the section identity without breaking the
+          white-bg theme. */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -right-40 top-1/4 h-[520px] w-[520px] rounded-full opacity-50 blur-3xl"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(66,133,244,0.08), transparent 70%)",
+        }}
+      />
 
-        <div className="mt-20 grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-7">
-          {/* For You */}
+      <div className="container-wide relative">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+          {/* Left — headline + supporting copy + CTA */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.6 }}
-            className="lg:col-span-3 relative"
+            transition={{ duration: 0.5 }}
+            className="lg:col-span-5"
           >
-            <div
-              className="absolute inset-0 rounded-3xl opacity-40 blur-2xl"
-              style={{
-                background:
-                  "linear-gradient(135deg, rgba(66,133,244,0.25), rgba(52,168,83,0.15))",
-              }}
-            />
-            <div className="relative glass-strong rounded-3xl p-10 md:p-12">
-              <div className="flex items-center gap-3 mb-8">
-                <div className="grid h-10 w-10 place-items-center rounded-full bg-brand-blue/15 border border-brand-blue/30">
-                  <Check className="h-5 w-5 text-brand-blue" strokeWidth={2.5} />
-                </div>
-                <h3 className="font-display text-xl md:text-2xl font-semibold text-slate-900 tracking-tight">
-                  {t.criteria.forYouTitle}
-                </h3>
-              </div>
-              <ul className="space-y-5">
-                {t.criteria.forYou.map((c, i) => (
-                  <motion.li
-                    key={c}
-                    initial={{ opacity: 0, y: 10 }}
+            <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-[11px] font-semibold tracking-[0.16em] uppercase text-slate-600">
+              <Sparkles className="h-3 w-3 text-[#4285F4]" />
+              {t.criteria.eyebrow}
+            </div>
+            <h2 className="mt-4 font-display text-3xl md:text-4xl lg:text-[2.75rem] font-semibold leading-[1.1] tracking-tight text-slate-900 text-balance">
+              Built for ambitious AI founders
+              <br />
+              ready to scale globally.
+            </h2>
+            <p className="mt-5 text-base md:text-lg text-slate-600 leading-relaxed max-w-xl">
+              A focused cohort of{" "}
+              <strong className="text-slate-900">15 selected startups</strong> that
+              combine technical depth, day-one global ambition, and the conviction
+              to build what&apos;s next.
+            </p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <Button href="/apply" variant="primary" size="md" withArrow>
+                {t.criteria.matchCta}
+              </Button>
+              <Button href="#program-at-a-glance" variant="secondary" size="md">
+                See program details
+              </Button>
+            </div>
+
+            {/* Reassurance — keeps the "not sure?" friction-killer in view */}
+            <div className="mt-6 text-sm text-slate-500">
+              {t.criteria.uncertainPrompt}{" "}
+              <span className="text-slate-900 font-medium">
+                {t.criteria.uncertainAnswer}
+              </span>
+            </div>
+          </motion.div>
+
+          {/* Right — 2x2 criteria card grid */}
+          <div className="lg:col-span-7">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
+              {criteria.map((c, i) => {
+                const Icon = c.icon;
+                return (
+                  <motion.div
+                    key={c.title}
+                    initial={{ opacity: 0, y: 12 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: i * 0.05 }}
-                    className="flex items-start gap-3.5 text-slate-700"
+                    viewport={{ once: true, margin: "-60px" }}
+                    transition={{ duration: 0.4, delay: 0.05 + i * 0.06 }}
+                    className="group rounded-2xl border border-slate-200 bg-white p-6 md:p-7 transition-all duration-200 hover:border-slate-300 hover:shadow-sm"
                   >
-                    <div className="mt-1 shrink-0 h-4 w-4 rounded-full bg-brand-blue/20 grid place-items-center">
-                      <Check className="h-2.5 w-2.5 text-brand-blue" strokeWidth={3} />
+                    <div
+                      className={`inline-flex h-10 w-10 items-center justify-center rounded-lg ${c.accent.bg}`}
+                    >
+                      <Icon className={`h-5 w-5 ${c.accent.text}`} strokeWidth={2.2} />
                     </div>
-                    <span className="text-[15px] leading-relaxed">{c}</span>
-                  </motion.li>
-                ))}
-              </ul>
+                    <h3 className="mt-4 font-semibold text-base md:text-[17px] text-slate-900 leading-snug tracking-tight">
+                      {c.title}
+                    </h3>
+                    <p className="mt-1.5 text-sm md:text-[15px] text-slate-600 leading-relaxed">
+                      {c.body}
+                    </p>
+                  </motion.div>
+                );
+              })}
             </div>
-          </motion.div>
 
-          {/* Not For You */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="lg:col-span-2"
-          >
-            <div className="glass rounded-3xl p-10 md:p-12 h-full">
-              <div className="flex items-center gap-3 mb-8">
-                <div className="grid h-10 w-10 place-items-center rounded-full bg-slate-100/60 border border-slate-200">
-                  <X className="h-5 w-5 text-slate-500" strokeWidth={2.5} />
-                </div>
-                <h3 className="font-display text-xl md:text-2xl font-semibold text-slate-700 tracking-tight">
-                  {t.criteria.notForYouTitle}
-                </h3>
-              </div>
-              <ul className="space-y-5">
-                {t.criteria.notForYou.map((c) => (
-                  <li key={c} className="flex items-start gap-3.5 text-slate-500">
-                    <div className="mt-1 shrink-0 h-4 w-4 rounded-full bg-slate-100/60 grid place-items-center">
-                      <X className="h-2.5 w-2.5 text-slate-500" strokeWidth={3} />
-                    </div>
-                    <span className="text-[15px] leading-relaxed">{c}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-10 pt-6 border-t border-slate-100">
-                <p className="text-sm text-slate-600 leading-relaxed">
-                  {t.criteria.uncertainPrompt}
-                  <br />
-                  <span className="text-slate-900 font-medium">{t.criteria.uncertainAnswer}</span>
-                </p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-
-        {/* Domain highlights */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-60px" }}
-          transition={{ duration: 0.5, delay: 0.15 }}
-          className="mt-12"
-        >
-          <div className="relative max-w-3xl mx-auto glass rounded-2xl p-7 md:p-8">
-            <div className="flex flex-col md:flex-row items-start md:items-center gap-5 md:gap-7">
-              <div className="flex items-center gap-2.5 shrink-0">
-                <Sparkles className="h-4 w-4 text-brand-spark" />
-                <span className="text-sm font-medium text-slate-900 tracking-tight">
-                  {t.criteria.domains.title}
+            {/* Welcomed domains — let founders see their vertical is welcome */}
+            <div className="mt-6 rounded-2xl border border-dashed border-slate-200 bg-slate-50/60 px-5 py-4">
+              <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm">
+                <span className="font-semibold text-slate-700">
+                  {t.criteria.domains.title}:
                 </span>
-              </div>
-              <div className="flex flex-wrap gap-2">
                 {t.criteria.domains.items.map((d) => (
                   <span
                     key={d}
-                    className="text-xs md:text-sm px-3.5 py-1.5 rounded-full bg-brand-spark/10 border border-brand-spark/30 text-brand-spark tracking-tight"
+                    className="inline-flex items-center rounded-full bg-white border border-slate-200 px-2.5 py-0.5 text-xs font-medium text-slate-700"
                   >
                     {d}
                   </span>
@@ -130,20 +165,7 @@ export function WhoShouldApply() {
               </div>
             </div>
           </div>
-        </motion.div>
-
-        {/* Section CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-12 flex justify-center"
-        >
-          <Button href="/apply" variant="primary" size="md" withArrow>
-            {t.criteria.matchCta}
-          </Button>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

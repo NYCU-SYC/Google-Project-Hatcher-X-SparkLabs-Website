@@ -40,7 +40,7 @@ export function SectionHeader({
   return (
     <div
       className={cn(
-        "flex flex-col gap-6 max-w-3xl",
+        "flex flex-col gap-6 max-w-4xl",
         align === "center" && "mx-auto",
         alignment,
         className
@@ -75,7 +75,7 @@ export function SectionHeader({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-base md:text-[17px] leading-relaxed text-slate-600 text-balance max-w-2xl"
+          className="text-base md:text-[17px] leading-relaxed text-slate-600 text-balance max-w-3xl"
         >
           {renderMultiline(subtitle)}
         </motion.p>

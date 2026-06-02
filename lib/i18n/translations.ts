@@ -19,7 +19,7 @@ export const translations = {
     },
     hero: {
       badgeCohort: "申請中",
-      badgeStatus: "7 / 26 截止 · 只精選 10 家",
+      badgeStatus: "7 / 26 截止 · 只精選 15 家",
       title: {
         part1: "從台灣出發，打造",
         part2: "",
@@ -42,12 +42,12 @@ export const translations = {
       minutes: "分",
       seconds: "秒",
       statusOpen: "申請中",
-      statusScarcity: "只精選 10 家",
+      statusScarcity: "只精選 15 家",
     },
     stats: {
       title: "Program at a Glance · 計劃規模一覽",
       items: [
-        { value: 10, label: "入選名額", sublabel: "Selected Teams Only" },
+        { value: 15, label: "入選名額", sublabel: "Selected Teams Only" },
         {
           value: 25,
           prefix: "$",
@@ -205,7 +205,7 @@ export const translations = {
           date: "8 / 17",
           title: "入選名單公告",
           description:
-            "Shortlist Announcement — 入選 10 家團隊正式公布。 未錄取者亦會收到個別回覆",
+            "Shortlist Announcement — 入選 15 家團隊正式公布。 未錄取者亦會收到個別回覆",
         },
         {
           date: "8 / 24 – 11 / 27",
@@ -242,7 +242,7 @@ export const translations = {
           num: "03",
           title: "Final Selection",
           description: "終審 — 由 SparkLabs 與 GCP Leadership 決定",
-          detail: "綜合所有資料，選出 10 家最具潛力的團隊",
+          detail: "綜合所有資料，選出 15 家最具潛力的團隊",
         },
       ],
       criteriaTitle: "4 個評選維度",
@@ -336,7 +336,7 @@ export const translations = {
       ],
     },
     finalCta: {
-      deadline: "申請截止：7 月 26 日 · 只精選 10 家團隊",
+      deadline: "申請截止：7 月 26 日 · 只精選 15 家團隊",
       title: {
         line1: "把你最大的瓶頸，",
         line2: "交給我們",
@@ -371,7 +371,7 @@ export const translations = {
         title: "申請 Google × SparkLabs Taiwan AI Accelerator",
         subtitle: "三步驟完成申請。 預計 15 - 20 分鐘。",
         deadline: "申請截止：7 / 26",
-        spots: "10 spots only",
+        spots: "15 spots only",
       },
       eligibility: {
         title: "Step 1 — 確認你符合所有條件",
@@ -458,7 +458,7 @@ export const translations = {
     },
     hero: {
       badgeCohort: "Now Open",
-      badgeStatus: "Apply by July 26 · Only 10 spots",
+      badgeStatus: "Apply by July 26 · Only 15 spots",
       title: {
         part1: "Build the next",
         part2: "",
@@ -481,7 +481,7 @@ export const translations = {
       minutes: "m",
       seconds: "s",
       statusOpen: "Now Open",
-      statusScarcity: "Only 10 spots",
+      statusScarcity: "Only 15 spots",
     },
     stats: {
       title: "Program at a Glance",
@@ -645,7 +645,7 @@ export const translations = {
         {
           date: "8 / 17",
           title: "Shortlist Announcement",
-          description: "The selected 10 teams are publicly announced. Non-selected teams receive individual responses.",
+          description: "The selected 15 teams are publicly announced. Non-selected teams receive individual responses.",
         },
         {
           date: "8 / 24 – 11 / 27",
@@ -682,7 +682,7 @@ export const translations = {
           num: "03",
           title: "Final Selection",
           description: "By SparkLabs & GCP Leadership.",
-          detail: "All signals combined to select the 10 highest-potential teams.",
+          detail: "All signals combined to select the 15 highest-potential teams.",
         },
       ],
       criteriaTitle: "Four evaluation dimensions",
@@ -777,7 +777,7 @@ export const translations = {
       ],
     },
     finalCta: {
-      deadline: "Application Deadline: July 26 · Only 10 spots",
+      deadline: "Application Deadline: July 26 · Only 15 spots",
       title: {
         line1: "Bring us your",
         line2: "biggest bottleneck.",
@@ -812,7 +812,7 @@ export const translations = {
         title: "Apply to Google × SparkLabs Taiwan AI Accelerator",
         subtitle: "Three steps to submit. Estimated 15-20 minutes.",
         deadline: "Deadline: July 26",
-        spots: "10 spots only",
+        spots: "15 spots only",
       },
       eligibility: {
         title: "Step 1 — Confirm you meet all criteria",

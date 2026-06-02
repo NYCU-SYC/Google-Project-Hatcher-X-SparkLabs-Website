@@ -27,7 +27,7 @@ export function Benefits() {
         }}
       />
 
-      <div className="relative container-tight">
+      <div className="relative container-wide">
         <SectionHeader
           eyebrow={t.benefits.eyebrow}
           title={t.benefits.title}

@@ -119,8 +119,22 @@ h4 {
     -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, #000 30%, transparent 75%);
   }
 
+  /*
+   * Container widths
+   * - .container-tight : reading-width container (hero copy, criteria text).
+   * - .container-wide  : default for grid sections (cards, mentors, timeline).
+   * Desktop padding scales up so cards never hug the viewport edges.
+   */
   .container-tight {
-    max-width: 1200px;
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .container-wide {
+    max-width: 1360px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 1.5rem;
@@ -128,9 +142,17 @@ h4 {
   }
 
   @media (min-width: 768px) {
-    .container-tight {
-      padding-left: 2rem;
-      padding-right: 2rem;
+    .container-tight,
+    .container-wide {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .container-wide {
+      padding-left: 3.5rem;
+      padding-right: 3.5rem;
     }
   }
 

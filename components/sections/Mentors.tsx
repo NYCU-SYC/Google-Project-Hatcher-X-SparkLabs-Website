@@ -129,7 +129,7 @@ export function Mentors() {
 
   return (
     <section id="mentors" className="relative py-24 md:py-32 bg-white">
-      <div className="container-tight">
+      <div className="container-wide">
         <SectionHeader
           eyebrow={t.mentors.eyebrow}
           title={t.mentors.title}
