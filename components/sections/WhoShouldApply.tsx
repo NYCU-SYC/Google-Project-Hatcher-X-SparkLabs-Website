@@ -12,48 +12,17 @@ import { useTranslation } from "@/lib/i18n/LanguageProvider";
  * (lg+). On md it splits to single-column headline + 2-col cards; on
  * mobile everything stacks.
  *
- * Replaces the original "for-you vs. not-for-you" twin list with one
- * confident headline + four criteria cards, each carrying a Google
- * brand color icon tile and one-sentence body. Adds a domains strip
- * underneath the cards so founders see which verticals are welcome.
+ * Copy comes from the i18n layer (t.criteria.*). Only visual metadata
+ * (icon + Google brand color tile) lives in the component as a parallel
+ * array zipped with t.criteria.cards by index.
  */
 
-interface Criterion {
-  icon: typeof Rocket;
-  title: string;
-  body: string;
-  accent: { text: string; bg: string };
-}
-
-const criteria: Criterion[] = [
-  {
-    icon: Rocket,
-    title: "Early-stage teams with traction",
-    body:
-      "Seed to Series A startups with a working prototype, pilot customers, or early market signal.",
-    accent: { text: "text-[#4285F4]", bg: "bg-[#4285F4]/10" },
-  },
-  {
-    icon: Cpu,
-    title: "AI-native, not AI-adjacent",
-    body:
-      "Teams building AI as the product's core — not a side feature bolted onto a traditional stack.",
-    accent: { text: "text-[#EA4335]", bg: "bg-[#EA4335]/10" },
-  },
-  {
-    icon: Globe2,
-    title: "Global from day one",
-    body:
-      "Founders building for international markets from the start, with US or APAC ambition baked in.",
-    accent: { text: "text-[#FBBC04]", bg: "bg-[#FBBC04]/15" },
-  },
-  {
-    icon: Users,
-    title: "Taiwan-connected",
-    body:
-      "Roots, engineering talent, or operations in Taiwan — ready to plug into Google + SparkLabs networks.",
-    accent: { text: "text-[#34A853]", bg: "bg-[#34A853]/10" },
-  },
+// Visual metadata only — copy is in translations.ts t.criteria.cards
+const criteriaMeta = [
+  { icon: Rocket, accent: { text: "text-[#4285F4]", bg: "bg-[#4285F4]/10" } },
+  { icon: Cpu, accent: { text: "text-[#EA4335]", bg: "bg-[#EA4335]/10" } },
+  { icon: Globe2, accent: { text: "text-[#FBBC04]", bg: "bg-[#FBBC04]/15" } },
+  { icon: Users, accent: { text: "text-[#34A853]", bg: "bg-[#34A853]/10" } },
 ];
 
 export function WhoShouldApply() {
@@ -90,22 +59,23 @@ export function WhoShouldApply() {
               {t.criteria.eyebrow}
             </div>
             <h2 className="mt-4 font-display text-3xl md:text-4xl lg:text-[2.75rem] font-semibold leading-[1.1] tracking-tight text-slate-900 text-balance">
-              Built for ambitious AI founders
+              {t.criteria.headline.line1}
               <br />
-              ready to scale globally.
+              {t.criteria.headline.line2}
             </h2>
             <p className="mt-5 text-base md:text-lg text-slate-600 leading-relaxed max-w-xl">
-              A focused cohort of{" "}
-              <strong className="text-slate-900">15 selected startups</strong> that
-              combine technical depth, day-one global ambition, and the conviction
-              to build what&apos;s next.
+              {t.criteria.cohortIntro}
+              <strong className="text-slate-900">
+                {t.criteria.cohortHighlight}
+              </strong>
+              {t.criteria.cohortRest}
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Button href="/apply" variant="primary" size="md" withArrow>
                 {t.criteria.matchCta}
               </Button>
               <Button href="#program-at-a-glance" variant="secondary" size="md">
-                See program details
+                {t.criteria.detailsCta}
               </Button>
             </div>
 
@@ -121,11 +91,13 @@ export function WhoShouldApply() {
           {/* Right — 2x2 criteria card grid */}
           <div className="lg:col-span-7">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
-              {criteria.map((c, i) => {
-                const Icon = c.icon;
+              {criteriaMeta.map((meta, i) => {
+                const card = t.criteria.cards[i];
+                if (!card) return null;
+                const Icon = meta.icon;
                 return (
                   <motion.div
-                    key={c.title}
+                    key={card.title}
                     initial={{ opacity: 0, y: 12 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-60px" }}
@@ -133,15 +105,18 @@ export function WhoShouldApply() {
                     className="group rounded-2xl border border-slate-200 bg-white p-6 md:p-7 transition-all duration-200 hover:border-slate-300 hover:shadow-sm"
                   >
                     <div
-                      className={`inline-flex h-10 w-10 items-center justify-center rounded-lg ${c.accent.bg}`}
+                      className={`inline-flex h-10 w-10 items-center justify-center rounded-lg ${meta.accent.bg}`}
                     >
-                      <Icon className={`h-5 w-5 ${c.accent.text}`} strokeWidth={2.2} />
+                      <Icon
+                        className={`h-5 w-5 ${meta.accent.text}`}
+                        strokeWidth={2.2}
+                      />
                     </div>
                     <h3 className="mt-4 font-semibold text-base md:text-[17px] text-slate-900 leading-snug tracking-tight">
-                      {c.title}
+                      {card.title}
                     </h3>
                     <p className="mt-1.5 text-sm md:text-[15px] text-slate-600 leading-relaxed">
-                      {c.body}
+                      {card.body}
                     </p>
                   </motion.div>
                 );

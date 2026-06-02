@@ -149,9 +149,37 @@ export const translations = {
       ],
     },
     criteria: {
-      eyebrow: "Who We're Looking For",
+      eyebrow: "我們在找誰",
       title: "你是我們在找的 founder 嗎？",
       subtitle: "這個計劃為一群特定的創辦人而設計——AI-native、global-from-day-one、有台灣連結",
+      headline: {
+        line1: "為敢於做出世界級 AI 新創的創辦人",
+        line2: "打造的舞台。",
+      },
+      cohortIntro: "我們將精選 ",
+      cohortHighlight: "15 家新創",
+      cohortRest:
+        "，結合技術深度、Day-One 國際視野，以及打造下一波突破的決心。",
+      detailsCta: "了解計劃內容",
+      cards: [
+        {
+          title: "已具初期動能的 Seed–Series A 團隊",
+          body: "已有 prototype、pilot 客戶或早期市場訊號的新創。",
+        },
+        {
+          title: "AI 是產品核心，不是附加功能",
+          body: "AI 不是後接的功能，而是團隊產品最核心的差異。",
+        },
+        {
+          title: "Day-One 國際思維",
+          body: "從第一天就為國際市場而打造，具備美國或亞太擴張企圖。",
+        },
+        {
+          title: "與台灣連結深厚",
+          body:
+            "在台灣有根、工程人才或營運，準備接上 Google + SparkLabs 全球網絡。",
+        },
+      ],
       forYouTitle: "我們在找的你",
       notForYouTitle: "暫時不適合",
       forYou: [
@@ -593,6 +621,33 @@ export const translations = {
       title: "Are you the founder we're looking for?",
       subtitle:
         "This program is designed for a specific kind of founder — AI-native, global from day one, with roots in Taiwan.",
+      headline: {
+        line1: "Built for ambitious AI founders",
+        line2: "ready to scale globally.",
+      },
+      cohortIntro: "A focused cohort of ",
+      cohortHighlight: "15 selected startups",
+      cohortRest:
+        " that combine technical depth, day-one global ambition, and the conviction to build what's next.",
+      detailsCta: "See program details",
+      cards: [
+        {
+          title: "Early-stage teams with traction",
+          body: "Seed to Series A startups with a working prototype, pilot customers, or early market signal.",
+        },
+        {
+          title: "AI-native, not AI-adjacent",
+          body: "Teams building AI as the product's core — not a side feature bolted onto a traditional stack.",
+        },
+        {
+          title: "Global from day one",
+          body: "Founders building for international markets from the start, with US or APAC ambition baked in.",
+        },
+        {
+          title: "Taiwan-connected",
+          body: "Roots, engineering talent, or operations in Taiwan — ready to plug into Google + SparkLabs networks.",
+        },
+      ],
       forYouTitle: "We're looking for you if",
       notForYouTitle: "Not quite ready yet",
       forYou: [
