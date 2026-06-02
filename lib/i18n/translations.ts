@@ -450,7 +450,7 @@ export const translations = {
       backToHome: "← 回到首頁",
       header: {
         eyebrow: "Application",
-        title: "申請 Google × SparkLabs Taiwan AI Accelerator",
+        title: "申請 Google × SparkLabs Taiwan AI加速器",
         subtitle: "三步驟完成申請。 預計 15 - 20 分鐘。",
         deadline: "申請截止：7 / 26",
         spots: "僅 15 個入選名額",
