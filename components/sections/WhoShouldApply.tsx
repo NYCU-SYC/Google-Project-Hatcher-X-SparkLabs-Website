@@ -123,9 +123,6 @@ export function WhoShouldApply() {
                           strokeWidth={2.2}
                         />
                       </div>
-                      <span className="font-mono text-xs font-semibold text-slate-400">
-                        {String(i + 1).padStart(2, "0")}
-                      </span>
                     </div>
                     <h3 className="mt-4 font-semibold text-base md:text-[17px] text-slate-900 leading-snug tracking-normal">
                       {card.title}
