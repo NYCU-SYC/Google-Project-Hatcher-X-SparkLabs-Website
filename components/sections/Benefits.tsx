@@ -69,7 +69,7 @@ export function Benefits() {
                         strokeWidth={1.2}
                       />
                       <div className="font-display text-6xl md:text-7xl font-bold text-gradient-brand leading-none tracking-normal">
-                        $25K
+                        USD 25K
                       </div>
                       <div className="mt-4 text-xs tracking-normal uppercase text-slate-600">
                         Google Cloud Credit
