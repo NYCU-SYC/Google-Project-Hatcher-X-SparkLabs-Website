@@ -18,8 +18,8 @@ export function FinalCTA() {
         }}
       />
 
-      <div className="relative container-tight">
-        <div className="relative max-w-4xl mx-auto">
+      <div className="relative container-wide">
+        <div className="relative max-w-5xl mx-auto">
           <div className="relative glass-strong rounded-lg p-8 md:p-12 lg:p-14 text-center overflow-hidden">
             <div className="absolute inset-0 grid-bg opacity-30 grid-bg-fade pointer-events-none" />
 
