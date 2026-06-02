@@ -16,10 +16,10 @@ export function Navigation() {
 
   const NAV_LINKS = [
     { label: t.nav.glance, href: "/#program-at-a-glance" },
-    { label: t.nav.benefits, href: "/#benefits" },
     { label: t.nav.criteria, href: "/#apply-criteria" },
-    { label: t.nav.timeline, href: "/#timeline" },
+    { label: t.nav.benefits, href: "/#benefits" },
     { label: t.nav.mentors, href: "/#mentors" },
+    { label: t.nav.timeline, href: "/#timeline" },
     { label: t.nav.faq, href: "/#faq" },
   ];
 
