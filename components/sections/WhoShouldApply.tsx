@@ -139,8 +139,8 @@ export function WhoShouldApply() {
             </div>
 
             {/* Welcomed domains — let founders see their vertical is welcome */}
-            <div className="mt-6 rounded-lg border border-dashed border-slate-200 bg-slate-50/60 px-5 py-4">
-              <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm">
+            <div className="mt-6 rounded-lg border border-dashed border-slate-200 bg-slate-50/60 px-5 py-4 text-center">
+              <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-sm">
                 <span className="font-semibold text-slate-700">
                   {t.criteria.domains.title}:
                 </span>
