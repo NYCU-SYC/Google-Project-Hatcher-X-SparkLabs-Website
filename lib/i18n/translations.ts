@@ -66,8 +66,8 @@ export const translations = {
         { value: 15, label: "入選名額", sublabel: "僅限精選團隊" },
         {
           value: 25,
-          prefix: "$",
-          suffix: "K",
+          prefix: "",
+          suffix: "K USD",
           label: "Google Cloud Credit",
           sublabel: "每隊專屬額度",
         },
@@ -170,7 +170,7 @@ export const translations = {
       subtitle: "這個計劃為一群特定的創辦人而設計——AI-native、global-from-day-one、有台灣連結",
       headline: {
         line1: "為敢於做出世界級 AI 新創的創辦人",
-        line2: "打造的舞台。",
+        line2: "打造的舞台",
       },
       cohortIntro: "我們將精選 ",
       cohortHighlight: "15 家新創",
@@ -595,8 +595,8 @@ export const translations = {
         { value: 15, label: "Selected Teams", sublabel: "Only Spots in Cohort" },
         {
           value: 25,
-          prefix: "$",
-          suffix: "K",
+          prefix: "",
+          suffix: "K USD",
           label: "Google Cloud Credit",
           sublabel: "Per Team · Exclusive",
         },
