@@ -53,24 +53,24 @@ export function SelectionProcess() {
                 >
                   <div className="relative mx-auto mb-7 w-fit">
                     <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-brand-blue to-brand-green blur-xl opacity-50" />
-                    <div className="relative grid h-20 w-20 place-items-center rounded-2xl bg-ink-900 border border-white/10">
-                      <Icon className="h-8 w-8 text-white" strokeWidth={1.5} />
+                    <div className="relative grid h-20 w-20 place-items-center rounded-2xl bg-white border border-slate-200">
+                      <Icon className="h-8 w-8 text-slate-900" strokeWidth={1.5} />
                     </div>
-                    <div className="absolute -top-2 -right-2 rounded-full bg-ink-950 border border-white/10 px-2 py-0.5">
-                      <span className="text-[10px] font-mono font-medium text-slate-400">
+                    <div className="absolute -top-2 -right-2 rounded-full bg-white border border-slate-200 px-2 py-0.5">
+                      <span className="text-[10px] font-mono font-medium text-slate-600">
                         {stage.num}
                       </span>
                     </div>
                   </div>
 
                   <div className="text-center">
-                    <h3 className="font-display text-xl md:text-2xl font-bold text-white tracking-tight">
+                    <h3 className="font-display text-xl md:text-2xl font-bold text-slate-900 tracking-tight">
                       {stage.title}
                     </h3>
-                    <p className="mt-2 text-sm text-brand-blue-glow font-medium">
+                    <p className="mt-2 text-sm text-brand-blue font-medium">
                       {stage.description}
                     </p>
-                    <p className="mt-4 text-sm text-slate-400 leading-relaxed">{stage.detail}</p>
+                    <p className="mt-4 text-sm text-slate-600 leading-relaxed">{stage.detail}</p>
                   </div>
                 </motion.div>
               );
@@ -87,10 +87,10 @@ export function SelectionProcess() {
             transition={{ duration: 0.5 }}
             className="text-center mb-12"
           >
-            <h3 className="font-display text-2xl md:text-3xl font-bold text-white tracking-tight">
+            <h3 className="font-display text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">
               {t.selection.criteriaTitle}
             </h3>
-            <p className="mt-3 text-sm md:text-base text-slate-400">
+            <p className="mt-3 text-sm md:text-base text-slate-600">
               {t.selection.criteriaSubtitle}
             </p>
           </motion.div>
@@ -107,21 +107,21 @@ export function SelectionProcess() {
                   transition={{ duration: 0.5, delay: i * 0.06 }}
                   className="group relative"
                 >
-                  <div className="relative glass rounded-2xl p-7 transition-all duration-300 hover:bg-white/5 hover:border-white/15 hover:-translate-y-0.5">
+                  <div className="relative glass rounded-2xl p-7 transition-all duration-300 hover:bg-slate-100/60 hover:border-slate-200 hover:-translate-y-0.5">
                     <div className="flex items-start gap-4">
                       <div className="relative shrink-0">
                         <div
                           className={`absolute inset-0 rounded-xl blur-md opacity-50 bg-gradient-to-br ${criteriaAccents[i]}`}
                         />
-                        <div className="relative grid h-11 w-11 place-items-center rounded-xl bg-ink-900 border border-white/10">
-                          <Icon className="h-5 w-5 text-white" strokeWidth={1.5} />
+                        <div className="relative grid h-11 w-11 place-items-center rounded-xl bg-white border border-slate-200">
+                          <Icon className="h-5 w-5 text-slate-900" strokeWidth={1.5} />
                         </div>
                       </div>
                       <div>
-                        <h4 className="font-display text-base md:text-lg font-semibold text-white tracking-tight">
+                        <h4 className="font-display text-base md:text-lg font-semibold text-slate-900 tracking-tight">
                           {item.title}
                         </h4>
-                        <p className="mt-1.5 text-sm text-slate-400 leading-relaxed">
+                        <p className="mt-1.5 text-sm text-slate-600 leading-relaxed">
                           {item.description}
                         </p>
                       </div>

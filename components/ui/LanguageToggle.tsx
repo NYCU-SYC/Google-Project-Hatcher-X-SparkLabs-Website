@@ -31,7 +31,7 @@ export function LanguageToggle({ className }: LanguageToggleProps) {
             onClick={() => setLocale(opt.value)}
             className={cn(
               "relative z-10 px-3.5 py-1.5 rounded-full transition-colors duration-300",
-              active ? "text-white" : "text-slate-400 hover:text-slate-200"
+              active ? "text-slate-900" : "text-slate-600 hover:text-slate-800"
             )}
             aria-label={`Switch to ${opt.label}`}
           >

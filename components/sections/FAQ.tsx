@@ -36,21 +36,21 @@ export function FAQ() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ duration: 0.4, delay: i * 0.04 }}
-                className="glass rounded-2xl overflow-hidden transition-colors duration-300 hover:border-white/15"
+                className="glass rounded-2xl overflow-hidden transition-colors duration-300 hover:border-slate-200"
               >
                 <button
                   onClick={() => toggle(i)}
                   className="w-full flex items-center justify-between gap-6 px-7 md:px-8 py-6 md:py-7 text-left"
                 >
-                  <span className="font-display text-base md:text-lg font-medium text-white tracking-tight leading-snug">
+                  <span className="font-display text-base md:text-lg font-medium text-slate-900 tracking-tight leading-snug">
                     {faq.q}
                   </span>
                   <span
                     className={`grid h-8 w-8 shrink-0 place-items-center rounded-full transition-all duration-300 ${
-                      isOpen ? "bg-brand-blue rotate-45" : "bg-white/5"
+                      isOpen ? "bg-brand-blue rotate-45" : "bg-slate-100/60"
                     }`}
                   >
-                    <Plus className="h-4 w-4 text-white" strokeWidth={2.5} />
+                    <Plus className="h-4 w-4 text-slate-900" strokeWidth={2.5} />
                   </span>
                 </button>
 
@@ -63,7 +63,7 @@ export function FAQ() {
                       transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                       className="overflow-hidden"
                     >
-                      <div className="px-7 md:px-8 pb-6 text-slate-400 text-[15px] leading-relaxed">
+                      <div className="px-7 md:px-8 pb-6 text-slate-600 text-[15px] leading-relaxed">
                         {faq.a}
                       </div>
                     </motion.div>

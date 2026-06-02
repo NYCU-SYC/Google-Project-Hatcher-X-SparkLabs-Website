@@ -36,12 +36,12 @@ export function Reassurance() {
                   className="glass rounded-2xl p-6 text-center"
                 >
                   <div className="grid h-10 w-10 mx-auto place-items-center rounded-full bg-brand-blue/10 border border-brand-blue/20 mb-4">
-                    <Icon className="h-4 w-4 text-brand-blue-glow" strokeWidth={1.8} />
+                    <Icon className="h-4 w-4 text-brand-blue" strokeWidth={1.8} />
                   </div>
-                  <div className="font-display text-sm font-semibold text-white tracking-tight">
+                  <div className="font-display text-sm font-semibold text-slate-900 tracking-tight">
                     {item.title}
                   </div>
-                  <div className="mt-1.5 text-xs text-slate-400 leading-snug">
+                  <div className="mt-1.5 text-xs text-slate-600 leading-snug">
                     {item.description}
                   </div>
                 </motion.div>

@@ -77,12 +77,12 @@ export function Stats() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.6, delay: i * 0.08 }}
-                className="text-center md:text-left md:border-l md:border-white/10 md:first:border-l-0 md:pl-6 md:first:pl-0"
+                className="text-center md:text-left md:border-l md:border-slate-200 md:first:border-l-0 md:pl-6 md:first:pl-0"
               >
                 <div className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-gradient-brand leading-none tracking-tight">
                   <Counter value={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
                 </div>
-                <div className="mt-4 text-sm md:text-[15px] font-semibold text-white tracking-tight">
+                <div className="mt-4 text-sm md:text-[15px] font-semibold text-slate-900 tracking-tight">
                   {stat.label}
                 </div>
                 {stat.sublabel && (

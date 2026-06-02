@@ -28,13 +28,13 @@ export function PrepareList() {
             transition={{ duration: 0.5 }}
             className="text-center mb-12"
           >
-            <div className="inline-flex items-center gap-2 rounded-full glass px-3.5 py-1 text-[11px] font-mono font-medium text-brand-blue-glow uppercase tracking-[0.2em] mb-5">
+            <div className="inline-flex items-center gap-2 rounded-full glass px-3.5 py-1 text-[11px] font-mono font-medium text-brand-blue uppercase tracking-[0.2em] mb-5">
               Step 2
             </div>
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-white text-balance tracking-tight">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-slate-900 text-balance tracking-tight">
               {t.apply.prepare.title}
             </h2>
-            <p className="mt-4 text-sm md:text-base text-slate-400 leading-relaxed">
+            <p className="mt-4 text-sm md:text-base text-slate-600 leading-relaxed">
               {t.apply.prepare.subtitle}
             </p>
           </motion.div>
@@ -49,17 +49,17 @@ export function PrepareList() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-40px" }}
                   transition={{ duration: 0.4, delay: i * 0.04 }}
-                  className="glass rounded-2xl p-6 transition-all duration-300 hover:bg-white/5 hover:border-white/15"
+                  className="glass rounded-2xl p-6 transition-all duration-300 hover:bg-slate-100/60 hover:border-slate-200"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="shrink-0 grid h-10 w-10 place-items-center rounded-lg bg-white/5 border border-white/10">
-                      <Icon className="h-4 w-4 text-brand-blue-glow" strokeWidth={1.8} />
+                    <div className="shrink-0 grid h-10 w-10 place-items-center rounded-lg bg-slate-100/60 border border-slate-200">
+                      <Icon className="h-4 w-4 text-brand-blue" strokeWidth={1.8} />
                     </div>
                     <div className="flex-1">
-                      <div className="font-display text-sm md:text-base font-semibold text-white tracking-tight">
+                      <div className="font-display text-sm md:text-base font-semibold text-slate-900 tracking-tight">
                         {item.title}
                       </div>
-                      <div className="mt-1.5 text-xs md:text-sm text-slate-400 leading-relaxed">
+                      <div className="mt-1.5 text-xs md:text-sm text-slate-600 leading-relaxed">
                         {item.description}
                       </div>
                     </div>

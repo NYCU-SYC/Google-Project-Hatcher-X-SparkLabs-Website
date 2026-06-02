@@ -80,18 +80,18 @@ export function CountdownTimer({
       >
         {/* Status strip — top of card */}
         {showStatus && (
-          <div className="flex items-center justify-center gap-2 sm:gap-3 px-4 py-2.5 sm:px-6 sm:py-3 bg-white/[0.025] border-b border-white/[0.06]">
+          <div className="flex items-center justify-center gap-2 sm:gap-3 px-4 py-2.5 sm:px-6 sm:py-3 bg-slate-50/60 border-b border-slate-100">
             <div className="flex items-center gap-2">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-spark opacity-75" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-spark" />
               </span>
-              <span className="text-[10px] sm:text-[11px] font-semibold text-brand-spark-glow uppercase tracking-[0.18em] sm:tracking-[0.2em]">
+              <span className="text-[10px] sm:text-[11px] font-semibold text-brand-spark uppercase tracking-[0.18em] sm:tracking-[0.2em]">
                 {t.countdown.statusOpen}
               </span>
             </div>
-            <span className="text-white/20">·</span>
-            <span className="text-[10px] sm:text-[11px] font-medium text-slate-300 uppercase tracking-[0.18em] sm:tracking-[0.2em]">
+            <span className="text-slate-900/20">·</span>
+            <span className="text-[10px] sm:text-[11px] font-medium text-slate-700 uppercase tracking-[0.18em] sm:tracking-[0.2em]">
               {t.countdown.statusScarcity}
             </span>
           </div>
@@ -99,7 +99,7 @@ export function CountdownTimer({
 
         {/* Countdown body */}
         <div className="flex flex-col items-center gap-3 sm:gap-4 px-4 py-5 sm:px-7 sm:py-6 md:px-9 md:py-7">
-          <div className="text-[10px] tracking-[0.25em] uppercase text-slate-400 font-medium text-center">
+          <div className="text-[10px] tracking-[0.25em] uppercase text-slate-600 font-medium text-center">
             {label}
           </div>
           <div className="flex items-center gap-2 sm:gap-4 md:gap-6">
@@ -126,7 +126,7 @@ export function CountdownTimer({
 
   // Inline variant
   return (
-    <div className={cn("inline-flex items-center gap-2 text-xs text-slate-300", className)}>
+    <div className={cn("inline-flex items-center gap-2 text-xs text-slate-700", className)}>
       <span
         className={cn(
           "h-1.5 w-1.5 rounded-full",
@@ -135,8 +135,8 @@ export function CountdownTimer({
             : "bg-brand-spark shadow-[0_0_8px_rgba(255,92,53,0.8)] animate-pulse"
         )}
       />
-      <span className="text-slate-400">{label}</span>
-      <span className="font-mono tabular-nums text-white">
+      <span className="text-slate-600">{label}</span>
+      <span className="font-mono tabular-nums text-slate-900">
         {closed
           ? "—"
           : `${time.days}${t.countdown.days} ${String(time.hours).padStart(2, "0")}:${String(

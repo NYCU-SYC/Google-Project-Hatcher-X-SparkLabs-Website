@@ -68,7 +68,7 @@ export default function RootLayout({
       lang="zh-Hant"
       className={`${inter.variable} ${sora.variable} ${notoTC.variable}`}
     >
-      <body className="min-h-screen bg-ink-900 text-slate-100 font-sans antialiased">
+      <body className="min-h-screen bg-white text-slate-900 font-sans antialiased">
         <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>

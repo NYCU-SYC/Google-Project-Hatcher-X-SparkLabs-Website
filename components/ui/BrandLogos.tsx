@@ -7,68 +7,32 @@ interface LogoProps {
 
 /**
  * Project Hatcher × SparkLabs Taiwan combined brand lockup.
- * Two colorways per the official brand guideline (page 4 of source .ai):
- * - "color"  → full-color version (page 1). Has built-in white background;
- *             rendered as a white tile with rounded corners + soft shadow
- *             so it reads as an intentional partner badge on dark surfaces.
- * - "white"  → reverse/negative version (page 3), transparent white logo
- *             for direct overlay on dark backgrounds. Kept as an option.
+ * Light theme uses the dark-text colorway with colored Project bubble,
+ * Google 4-color subtext, and spark icon — same dimensions as the dark
+ * theme reverse variant so layout sizing stays parallel.
+ *
+ *   "light"  → dark text + colors, transparent bg. Use on white surfaces.
+ *   "white"  → reverse/negative, white-on-transparent. Use on dark surfaces.
+ *   "color"  → original page 1 with baked-in white background (legacy).
  */
 export function DualBrandLock({
   className,
-  variant = "white",
+  variant = "light",
   compact = false,
-}: LogoProps & { variant?: "white" | "color"; compact?: boolean }) {
-  // -mixed-v9 = refined v8 with hue-aware white-island classification.
-  // v8 kept white islands bordered by ANY colored pixel, which preserved
-  // the white counters inside "Google" colored letters (e.g. inside G/o/g/e).
-  // v9 narrows the keep-white rule: islands are kept only when their
-  // boundary contains the Project bubble's specific purple (low R, low G,
-  // high B). Google counters bordered by blue/red/yellow/green become
-  // transparent like the wordmark counters.
-  //
-  // Final breakdown: 8 islands kept (Project letters in bubble),
-  // 13 transparent (Google counters + Hatcher/SparkLabs/TAIWAN counters).
+}: LogoProps & { variant?: "light" | "white" | "color"; compact?: boolean }) {
   const src =
     variant === "white"
       ? "/hatcher-sparklabs-mixed-v9.png"
-      : "/hatcher-sparklabs-color.png";
+      : variant === "color"
+      ? "/hatcher-sparklabs-color.png"
+      : "/hatcher-sparklabs-light.png";
 
-  // With v3's tight crop, modest display heights yield large visible marks.
-  // Sizes chosen so pill height returns to comfortable 52-72 px range
-  // (matches the very original nav feel) while keeping visible content at
-  // ~33-44 px — equivalent to the v2 + h-14/16/20 setting the stakeholder
-  // approved on size, before complaining the bar grew too thick.
-  //
-  // compact (nav):  h-9 (36) → h-10 (40) → h-12 (48)  // content ~33-44 px
-  // footer:         h-12 (48) → h-14 (56) → h-16 (64) // anchor mark
+  // compact (nav):  h-9  (36) → h-10 (40) → h-12 (48)
+  // footer:         h-12 (48) → h-14 (56) → h-16 (64)
   const heightClasses = compact
     ? "h-9 sm:h-10 md:h-12"
     : "h-12 sm:h-14 md:h-16";
 
-  if (variant === "color") {
-    // Wrap with rounded white-bg treatment so the baked-in white background
-    // reads as a styled partner badge rather than a stray rectangle.
-    return (
-      <div
-        className={cn(
-          "inline-flex items-center rounded-lg overflow-hidden shadow-[0_2px_12px_rgba(0,0,0,0.25)] ring-1 ring-white/10",
-          className
-        )}
-      >
-        <Image
-          src={src}
-          alt="Project Hatcher × SparkLabs Taiwan"
-          width={2000}
-          height={500}
-          priority
-          className={cn(heightClasses, "w-auto select-none block")}
-        />
-      </div>
-    );
-  }
-
-  // White variant — transparent PNG, no wrapper styling needed.
   return (
     <div className={cn("inline-flex items-center", className)}>
       <Image
@@ -83,16 +47,12 @@ export function DualBrandLock({
   );
 }
 
-/**
- * @deprecated kept for backward-compat in case other code still imports it.
- */
+/** @deprecated retained for backward-compat with older imports. */
 export function GoogleCloudLogo(props: LogoProps) {
   return <DualBrandLock className={props.className} compact />;
 }
 
-/**
- * @deprecated kept for backward-compat.
- */
+/** @deprecated retained for backward-compat. */
 export function SparkLabsLogo(props: LogoProps) {
   return <DualBrandLock className={props.className} compact />;
 }

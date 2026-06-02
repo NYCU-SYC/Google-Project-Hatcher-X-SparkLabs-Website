@@ -23,7 +23,7 @@ export function ApplyHeader() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs font-medium tracking-[0.2em] uppercase text-brand-blue-glow mb-7"
+          className="inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs font-medium tracking-[0.2em] uppercase text-brand-blue mb-7"
         >
           <span className="h-1.5 w-1.5 rounded-full bg-brand-blue shadow-[0_0_8px_rgba(66,133,244,0.8)]" />
           {t.apply.header.eyebrow}
@@ -42,7 +42,7 @@ export function ApplyHeader() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="mt-6 text-base md:text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed"
+          className="mt-6 text-base md:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed"
         >
           {t.apply.header.subtitle}
         </motion.p>
@@ -53,12 +53,12 @@ export function ApplyHeader() {
           transition={{ duration: 0.6, delay: 0.18 }}
           className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3"
         >
-          <div className="inline-flex items-center gap-2 rounded-full bg-brand-spark/15 border border-brand-spark/30 px-4 py-2 text-sm text-brand-spark-glow font-medium">
+          <div className="inline-flex items-center gap-2 rounded-full bg-brand-spark/15 border border-brand-spark/30 px-4 py-2 text-sm text-brand-spark font-medium">
             <Calendar className="h-4 w-4" />
             {t.apply.header.deadline}
           </div>
-          <div className="inline-flex items-center gap-2 rounded-full glass px-4 py-2 text-sm text-slate-300">
-            <Users className="h-4 w-4 text-brand-blue-glow" />
+          <div className="inline-flex items-center gap-2 rounded-full glass px-4 py-2 text-sm text-slate-700">
+            <Users className="h-4 w-4 text-brand-blue" />
             {t.apply.header.spots}
           </div>
         </motion.div>

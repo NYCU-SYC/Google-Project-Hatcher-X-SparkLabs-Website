@@ -27,7 +27,7 @@ export function StickyMobileCTA() {
         >
           <a
             href="/apply"
-            className="flex items-center justify-center gap-2 w-full rounded-full bg-brand-blue px-6 py-4 text-base font-medium text-white shadow-[0_12px_40px_rgba(66,133,244,0.55)]"
+            className="flex items-center justify-center gap-2 w-full rounded-full bg-brand-blue px-6 py-4 text-base font-medium text-slate-900 shadow-[0_12px_40px_rgba(66,133,244,0.55)]"
           >
             {t.nav.apply}
             <ArrowRight className="h-4 w-4" />

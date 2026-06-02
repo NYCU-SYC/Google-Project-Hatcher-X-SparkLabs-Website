@@ -32,13 +32,13 @@ export function EligibilityChecker() {
             transition={{ duration: 0.5 }}
             className="text-center mb-12"
           >
-            <div className="inline-flex items-center gap-2 rounded-full glass px-3.5 py-1 text-[11px] font-mono font-medium text-brand-blue-glow uppercase tracking-[0.2em] mb-5">
+            <div className="inline-flex items-center gap-2 rounded-full glass px-3.5 py-1 text-[11px] font-mono font-medium text-brand-blue uppercase tracking-[0.2em] mb-5">
               Step 1
             </div>
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-white text-balance tracking-tight">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-slate-900 text-balance tracking-tight">
               {t.apply.eligibility.title}
             </h2>
-            <p className="mt-4 text-sm md:text-base text-slate-400 leading-relaxed">
+            <p className="mt-4 text-sm md:text-base text-slate-600 leading-relaxed">
               {t.apply.eligibility.subtitle}
             </p>
           </motion.div>
@@ -58,7 +58,7 @@ export function EligibilityChecker() {
                     "w-full flex items-start gap-4 p-5 md:p-6 rounded-2xl text-left transition-all duration-300 border",
                     isChecked
                       ? "bg-brand-blue/10 border-brand-blue/30"
-                      : "bg-white/3 border-white/8 hover:bg-white/5 hover:border-white/15"
+                      : "bg-slate-50 border-slate-100 hover:bg-slate-100/60 hover:border-slate-200"
                   )}
                 >
                   <div
@@ -66,15 +66,15 @@ export function EligibilityChecker() {
                       "shrink-0 mt-0.5 h-6 w-6 rounded-lg grid place-items-center transition-all duration-300 border",
                       isChecked
                         ? "bg-brand-blue border-brand-blue"
-                        : "bg-transparent border-white/20"
+                        : "bg-transparent border-slate-300"
                     )}
                   >
-                    {isChecked && <Check className="h-3.5 w-3.5 text-white" strokeWidth={3} />}
+                    {isChecked && <Check className="h-3.5 w-3.5 text-slate-900" strokeWidth={3} />}
                   </div>
                   <span
                     className={cn(
                       "text-[15px] leading-relaxed transition-colors",
-                      isChecked ? "text-white" : "text-slate-300"
+                      isChecked ? "text-slate-900" : "text-slate-700"
                     )}
                   >
                     {item}
@@ -93,7 +93,7 @@ export function EligibilityChecker() {
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.95 }}
-                  className="inline-flex items-center gap-2 rounded-full bg-brand-blue text-white px-8 py-4 text-base font-medium shadow-[0_8px_30px_rgba(66,133,244,0.45)] hover:shadow-[0_12px_40px_rgba(66,133,244,0.6)] hover:-translate-y-0.5 transition-all"
+                  className="inline-flex items-center gap-2 rounded-full bg-brand-blue text-slate-900 px-8 py-4 text-base font-medium shadow-[0_8px_30px_rgba(66,133,244,0.45)] hover:shadow-[0_12px_40px_rgba(66,133,244,0.6)] hover:-translate-y-0.5 transition-all"
                 >
                   {t.apply.eligibility.readyLabel}
                   <ChevronDown className="h-4 w-4" />

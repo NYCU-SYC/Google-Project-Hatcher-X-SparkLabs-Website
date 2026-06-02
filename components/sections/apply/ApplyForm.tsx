@@ -25,10 +25,10 @@ export function ApplyForm() {
             transition={{ duration: 0.5 }}
             className="text-center mb-12"
           >
-            <div className="inline-flex items-center gap-2 rounded-full glass px-3.5 py-1 text-[11px] font-mono font-medium text-brand-blue-glow uppercase tracking-[0.2em] mb-5">
+            <div className="inline-flex items-center gap-2 rounded-full glass px-3.5 py-1 text-[11px] font-mono font-medium text-brand-blue uppercase tracking-[0.2em] mb-5">
               Step 3
             </div>
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-white text-balance tracking-tight">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-slate-900 text-balance tracking-tight">
               {t.apply.form.title}
             </h2>
           </motion.div>
@@ -50,13 +50,13 @@ export function ApplyForm() {
             />
 
             {/* External link header */}
-            <div className="flex items-center justify-between gap-4 px-7 md:px-8 py-5 border-b border-white/8">
+            <div className="flex items-center justify-between gap-4 px-7 md:px-8 py-5 border-b border-slate-100">
               <div className="flex items-center gap-3">
-                <div className="grid h-9 w-9 place-items-center rounded-lg bg-white/5 border border-white/10">
-                  <FileText className="h-4 w-4 text-brand-blue-glow" strokeWidth={1.8} />
+                <div className="grid h-9 w-9 place-items-center rounded-lg bg-slate-100/60 border border-slate-200">
+                  <FileText className="h-4 w-4 text-brand-blue" strokeWidth={1.8} />
                 </div>
                 <div>
-                  <div className="text-sm font-semibold text-white tracking-tight">
+                  <div className="text-sm font-semibold text-slate-900 tracking-tight">
                     {t.apply.form.iframeLabel}
                   </div>
                   <div className="text-xs text-slate-500 mt-0.5">{t.apply.form.iframeMeta}</div>
@@ -66,7 +66,7 @@ export function ApplyForm() {
                 href={FORM_EXTERNAL_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-xs md:text-sm text-brand-blue-glow hover:text-brand-blue-light transition-colors font-medium whitespace-nowrap"
+                className="inline-flex items-center gap-1.5 text-xs md:text-sm text-brand-blue hover:text-brand-blue-light transition-colors font-medium whitespace-nowrap"
               >
                 {t.apply.form.openInNewTab}
                 <ExternalLink className="h-3.5 w-3.5" />
@@ -87,7 +87,7 @@ export function ApplyForm() {
             </div>
 
             {/* Footer reassurance */}
-            <div className="px-7 md:px-8 py-5 border-t border-white/8">
+            <div className="px-7 md:px-8 py-5 border-t border-slate-100">
               <p className="text-xs text-slate-500 text-center leading-relaxed">
                 {t.apply.form.note}
               </p>

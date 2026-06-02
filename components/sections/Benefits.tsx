@@ -50,7 +50,7 @@ export function Benefits() {
             <div className="relative p-10 md:p-14 lg:p-16 grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-14 items-center">
               {/* Left content */}
               <div className="lg:col-span-3">
-                <div className="inline-flex items-center gap-2 rounded-full bg-brand-spark/15 border border-brand-spark/30 px-3.5 py-1 text-[11px] font-medium text-brand-spark-glow uppercase tracking-[0.15em] mb-6">
+                <div className="inline-flex items-center gap-2 rounded-full bg-brand-spark/15 border border-brand-spark/30 px-3.5 py-1 text-[11px] font-medium text-brand-spark uppercase tracking-[0.15em] mb-6">
                   <Sparkles className="h-3 w-3" />
                   {t.benefits.heroCard.tag}
                 </div>
@@ -58,13 +58,13 @@ export function Benefits() {
                 <h3 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-gradient leading-display tracking-display-tight text-balance">
                   {t.benefits.heroCard.title}
                 </h3>
-                <p className="mt-5 text-lg md:text-xl text-brand-blue-glow font-medium tracking-tight">
+                <p className="mt-5 text-lg md:text-xl text-brand-blue font-medium tracking-tight">
                   {t.benefits.heroCard.tagline}
                 </p>
-                <p className="mt-6 text-slate-400 text-[15px] md:text-base leading-relaxed">
+                <p className="mt-6 text-slate-600 text-[15px] md:text-base leading-relaxed">
                   {t.benefits.heroCard.description}
                 </p>
-                <div className="mt-7 inline-flex items-center gap-2 rounded-full bg-white/5 border border-white/10 px-3.5 py-1.5 text-xs text-slate-400">
+                <div className="mt-7 inline-flex items-center gap-2 rounded-full bg-slate-100/60 border border-slate-200 px-3.5 py-1.5 text-xs text-slate-600">
                   <Check className="h-3 w-3 text-brand-green shrink-0" strokeWidth={3} />
                   <span>{t.benefits.heroCard.subnote}</span>
                 </div>
@@ -77,13 +77,13 @@ export function Benefits() {
                   <div className="relative h-full rounded-3xl glass-strong grid place-items-center">
                     <div className="text-center px-6">
                       <Cloud
-                        className="h-12 w-12 text-brand-blue-glow mx-auto mb-4"
+                        className="h-12 w-12 text-brand-blue mx-auto mb-4"
                         strokeWidth={1.2}
                       />
                       <div className="font-display text-6xl md:text-7xl font-bold text-gradient-brand leading-none tracking-tight">
                         $25K
                       </div>
-                      <div className="mt-4 text-xs tracking-[0.25em] uppercase text-slate-400">
+                      <div className="mt-4 text-xs tracking-[0.25em] uppercase text-slate-600">
                         Google Cloud Credit
                       </div>
                     </div>
@@ -116,7 +116,7 @@ export function Benefits() {
                   style={{ filter: "blur(40px)", transform: "scale(0.9)" }}
                 />
 
-                <div className="relative h-full glass-strong rounded-3xl p-8 md:p-9 transition-all duration-500 group-hover:border-white/15 group-hover:-translate-y-1">
+                <div className="relative h-full glass-strong rounded-3xl p-8 md:p-9 transition-all duration-500 group-hover:border-slate-200 group-hover:-translate-y-1">
                   <div className="flex items-start gap-4 mb-6">
                     <div className="relative shrink-0">
                       <div
@@ -125,30 +125,30 @@ export function Benefits() {
                           `bg-gradient-to-br ${meta.accent}`
                         )}
                       />
-                      <div className="relative grid h-12 w-12 place-items-center rounded-xl bg-ink-900 border border-white/10">
-                        <Icon className="h-5 w-5 text-white" strokeWidth={1.5} />
+                      <div className="relative grid h-12 w-12 place-items-center rounded-xl bg-white border border-slate-200">
+                        <Icon className="h-5 w-5 text-slate-900" strokeWidth={1.5} />
                       </div>
                     </div>
                     <div>
-                      <h3 className="font-display text-xl md:text-2xl font-semibold text-white tracking-tight leading-snug">
+                      <h3 className="font-display text-xl md:text-2xl font-semibold text-slate-900 tracking-tight leading-snug">
                         {item.title}
                       </h3>
-                      <p className="mt-1.5 text-sm text-brand-blue-glow tracking-tight">
+                      <p className="mt-1.5 text-sm text-brand-blue tracking-tight">
                         {item.tagline}
                       </p>
                     </div>
                   </div>
 
-                  <p className="text-slate-400 text-sm md:text-[15px] leading-relaxed">
+                  <p className="text-slate-600 text-sm md:text-[15px] leading-relaxed">
                     {item.description}
                   </p>
 
                   {item.bullets.length > 0 && (
                     <ul className="mt-6 space-y-2.5">
                       {item.bullets.map((b) => (
-                        <li key={b} className="flex items-start gap-2.5 text-sm text-slate-300">
+                        <li key={b} className="flex items-start gap-2.5 text-sm text-slate-700">
                           <Check
-                            className="h-4 w-4 mt-0.5 text-brand-blue-glow shrink-0"
+                            className="h-4 w-4 mt-0.5 text-brand-blue shrink-0"
                             strokeWidth={2.5}
                           />
                           <span className="leading-relaxed">{b}</span>
@@ -169,7 +169,7 @@ export function Benefits() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <span className="text-sm text-slate-400">{t.benefits.readyCta}</span>
+          <span className="text-sm text-slate-600">{t.benefits.readyCta}</span>
           <Button href="/apply" variant="primary" size="md" withArrow>
             {t.nav.apply}
           </Button>

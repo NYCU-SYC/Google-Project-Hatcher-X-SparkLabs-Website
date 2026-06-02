@@ -39,16 +39,16 @@ export function WhyNow() {
             />
             <div className="relative glass-strong rounded-3xl p-10 md:p-14 h-full flex flex-col">
               <Quote
-                className="h-10 w-10 text-brand-blue-glow opacity-50 mb-8"
+                className="h-10 w-10 text-brand-blue opacity-50 mb-8"
                 strokeWidth={1.5}
               />
 
-              <blockquote className="font-display text-xl md:text-2xl lg:text-[1.625rem] leading-[1.4] text-white text-balance tracking-tight">
+              <blockquote className="font-display text-xl md:text-2xl lg:text-[1.625rem] leading-[1.4] text-slate-900 text-balance tracking-tight">
                 &ldquo;{t.whyNow.quote}&rdquo;
               </blockquote>
 
-              <div className="mt-10 pt-6 border-t border-white/10 flex items-center gap-4">
-                <div className="relative h-12 w-12 rounded-full overflow-hidden border-2 border-white/15 shrink-0">
+              <div className="mt-10 pt-6 border-t border-slate-200 flex items-center gap-4">
+                <div className="relative h-12 w-12 rounded-full overflow-hidden border-2 border-slate-200 shrink-0">
                   <Image
                     src="/mentors/edgar-chiu.png"
                     alt={t.whyNow.quoteAuthor}
@@ -58,10 +58,10 @@ export function WhyNow() {
                   />
                 </div>
                 <div>
-                  <div className="text-sm font-semibold text-white tracking-tight">
+                  <div className="text-sm font-semibold text-slate-900 tracking-tight">
                     {t.whyNow.quoteAuthor}
                   </div>
-                  <div className="text-xs text-slate-400 mt-1">{t.whyNow.quoteRole}</div>
+                  <div className="text-xs text-slate-600 mt-1">{t.whyNow.quoteRole}</div>
                 </div>
               </div>
             </div>
@@ -80,7 +80,7 @@ export function WhyNow() {
               return (
                 <div
                   key={pillar.label}
-                  className="glass rounded-2xl p-7 transition-all duration-300 hover:bg-white/5 hover:border-white/15 hover:-translate-y-0.5"
+                  className="glass rounded-2xl p-7 transition-all duration-300 hover:bg-slate-100/60 hover:border-slate-200 hover:-translate-y-0.5"
                 >
                   <div className="flex items-start gap-4">
                     <div
@@ -91,10 +91,10 @@ export function WhyNow() {
                       }}
                     />
                     <div>
-                      <div className="font-display text-base md:text-lg font-semibold text-white tracking-tight">
+                      <div className="font-display text-base md:text-lg font-semibold text-slate-900 tracking-tight">
                         {pillar.label}
                       </div>
-                      <div className="mt-2 text-sm text-slate-400 leading-relaxed">
+                      <div className="mt-2 text-sm text-slate-600 leading-relaxed">
                         {pillar.description}
                       </div>
                     </div>

@@ -66,7 +66,7 @@ export const translations = {
     },
     whyNow: {
       eyebrow: "Why Now / Why Taiwan",
-      title: "AI 正在重新繪製全球競爭版圖\n下一代 AI 旗艦，從台灣誕生",
+      title: "AI 正在重新繪製全球競爭版圖下一代 AI 旗艦，從台灣誕生",
       body: "台灣擁有深厚的硬體 DNA、世界級的工程人才、與從 Day One 就具備國際野心的創辦人。 當 AI 重塑每一個產業，這座島不只是供應鏈中心——它是世界級 AI 公司的誕生地。",
       quote:
         "Taiwan's next decade of breakthrough companies will be AI-native, global from day one, and built on a foundation of world-class engineering. We're here to accelerate them.",
@@ -80,7 +80,7 @@ export const translations = {
     },
     benefits: {
       eyebrow: "What You Get",
-      title: "五個資源模組，從技術深度到國際舞台一次到位",
+      title: "五個資源模組，從技術深度 \n 到國際舞台一次到位",
       subtitle:
         "不只是 credits 補貼。 是 Google 的技術能量加上 SparkLabs 的全球網絡，整套整合給 AI-native founder",
       readyCta: "準備好取得這些資源了嗎？",
@@ -505,7 +505,7 @@ export const translations = {
     },
     whyNow: {
       eyebrow: "Why Now / Why Taiwan",
-      title: "AI is redrawing the global map.\nThe next flagships start in Taiwan.",
+      title: "AI is redrawing the global map. The next flagships start in Taiwan.",
       body:
         "Taiwan has deep hardware DNA, world-class engineering talent, and a new generation of founders building global from day one. As AI reshapes every industry, this island isn't just a supply chain hub — it's where world-class AI companies are born.",
       quote:

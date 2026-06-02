@@ -38,7 +38,7 @@ export function FinalCTA() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="relative inline-flex items-center gap-2 rounded-full bg-brand-spark/15 border border-brand-spark/30 px-4 py-1.5 text-sm font-medium text-brand-spark-glow mb-10"
+              className="relative inline-flex items-center gap-2 rounded-full bg-brand-spark/15 border border-brand-spark/30 px-4 py-1.5 text-sm font-medium text-brand-spark mb-10"
             >
               <Calendar className="h-3.5 w-3.5" />
               {t.finalCta.deadline}
@@ -61,7 +61,7 @@ export function FinalCTA() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative mt-8 max-w-2xl mx-auto text-base md:text-lg leading-relaxed text-slate-200"
+              className="relative mt-8 max-w-2xl mx-auto text-base md:text-lg leading-relaxed text-slate-800"
             >
               {t.finalCta.subtitle1}
               <br className="hidden md:inline" />
@@ -88,7 +88,7 @@ export function FinalCTA() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="relative mt-10 text-sm text-slate-300 tracking-wide font-medium"
+              className="relative mt-10 text-sm text-slate-700 tracking-wide font-medium"
             >
               {t.finalCta.microcopy}
             </motion.p>

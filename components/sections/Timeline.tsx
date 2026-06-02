@@ -16,15 +16,15 @@ const itemStatus: ("open" | "upcoming" | "future")[] = [
 const statusStyles = {
   open: {
     dot: "bg-brand-spark shadow-[0_0_20px_rgba(255,92,53,0.8)]",
-    badge: "bg-brand-spark/15 text-brand-spark-glow border-brand-spark/30",
+    badge: "bg-brand-spark/15 text-brand-spark border-brand-spark/30",
   },
   upcoming: {
     dot: "bg-brand-blue shadow-[0_0_16px_rgba(66,133,244,0.6)]",
-    badge: "bg-brand-blue/15 text-brand-blue-glow border-brand-blue/30",
+    badge: "bg-brand-blue/15 text-brand-blue border-brand-blue/30",
   },
   future: {
     dot: "bg-slate-600",
-    badge: "bg-white/5 text-slate-400 border-white/10",
+    badge: "bg-slate-100/60 text-slate-600 border-slate-200",
   },
 };
 
@@ -89,10 +89,10 @@ export function Timeline() {
                         {item.date}
                       </span>
                     </div>
-                    <h3 className="font-display text-xl md:text-2xl font-semibold text-white mb-3 tracking-tight leading-snug">
+                    <h3 className="font-display text-xl md:text-2xl font-semibold text-slate-900 mb-3 tracking-tight leading-snug">
                       {item.title}
                     </h3>
-                    <p className="text-slate-400 text-sm md:text-[15px] leading-relaxed max-w-md md:max-w-none">
+                    <p className="text-slate-600 text-sm md:text-[15px] leading-relaxed max-w-md md:max-w-none">
                       {item.description}
                     </p>
                   </div>

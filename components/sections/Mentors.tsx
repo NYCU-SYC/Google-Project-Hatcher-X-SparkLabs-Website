@@ -91,14 +91,14 @@ export function Mentors() {
                 transition={{ duration: 0.5, delay: i * 0.05 }}
                 className="group relative"
               >
-                <div className="relative glass rounded-2xl p-6 h-full flex flex-col transition-all duration-500 group-hover:bg-white/5 group-hover:border-white/15 group-hover:-translate-y-1">
+                <div className="relative glass rounded-2xl p-6 h-full flex flex-col transition-all duration-500 group-hover:bg-slate-100/60 group-hover:border-slate-200 group-hover:-translate-y-1">
                   {/* Photo */}
                   <div className="relative mx-auto mb-5 w-fit">
                     <div
                       className={`absolute inset-0 rounded-full blur-md opacity-50 bg-gradient-to-br ${mentor.gradient}`}
                     />
                     {mentor.photo ? (
-                      <div className="relative h-20 w-20 rounded-full overflow-hidden border-2 border-white/15">
+                      <div className="relative h-20 w-20 rounded-full overflow-hidden border-2 border-slate-200">
                         <Image
                           src={mentor.photo}
                           alt={mentor.name}
@@ -109,7 +109,7 @@ export function Mentors() {
                       </div>
                     ) : (
                       <div
-                        className={`relative h-20 w-20 rounded-full bg-gradient-to-br ${mentor.gradient} grid place-items-center font-display text-lg font-bold text-white border-2 border-white/15`}
+                        className={`relative h-20 w-20 rounded-full bg-gradient-to-br ${mentor.gradient} grid place-items-center font-display text-lg font-bold text-slate-900 border-2 border-slate-200`}
                       >
                         {mentor.initials}
                       </div>
@@ -118,11 +118,11 @@ export function Mentors() {
 
                   {/* Name + role */}
                   <div className="text-center flex-1 space-y-1.5">
-                    <div className="text-sm md:text-base font-semibold text-white tracking-tight">
+                    <div className="text-sm md:text-base font-semibold text-slate-900 tracking-tight">
                       {mentor.name}
                     </div>
-                    <div className="text-xs text-slate-400 leading-snug">{meta.title}</div>
-                    <div className="text-[11px] text-brand-blue-glow font-medium tracking-wide">
+                    <div className="text-xs text-slate-600 leading-snug">{meta.title}</div>
+                    <div className="text-[11px] text-brand-blue font-medium tracking-wide">
                       {meta.org}
                     </div>
                   </div>
@@ -132,7 +132,7 @@ export function Mentors() {
                     {mentor.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="text-[10px] px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-slate-300 tracking-wide"
+                        className="text-[10px] px-2 py-0.5 rounded-full bg-slate-100/60 border border-slate-200 text-slate-700 tracking-wide"
                       >
                         {tag}
                       </span>
@@ -141,7 +141,7 @@ export function Mentors() {
 
                   {/* Contribution tooltip on hover */}
                   <div className="absolute inset-x-3 -bottom-2 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none">
-                    <div className="text-[11px] leading-snug text-slate-300 bg-ink-950/95 border border-white/10 rounded-lg px-3 py-2 shadow-xl">
+                    <div className="text-[11px] leading-snug text-slate-700 bg-white/95 border border-slate-200 rounded-lg px-3 py-2 shadow-xl">
                       {meta.contribution}
                     </div>
                   </div>
@@ -152,10 +152,10 @@ export function Mentors() {
                     href={mentor.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="absolute top-3 right-3 z-10 grid h-6 w-6 place-items-center rounded-full bg-white/5 hover:bg-white/15 border border-white/10 transition-colors opacity-0 group-hover:opacity-100"
+                    className="absolute top-3 right-3 z-10 grid h-6 w-6 place-items-center rounded-full bg-slate-100/60 hover:bg-slate-100 border border-slate-200 transition-colors opacity-0 group-hover:opacity-100"
                     aria-label={`${mentor.name} LinkedIn`}
                   >
-                    <ExternalLink className="h-3 w-3 text-slate-300" />
+                    <ExternalLink className="h-3 w-3 text-slate-700" />
                   </a>
                 )}
               </motion.div>
@@ -174,7 +174,7 @@ export function Mentors() {
             href="https://www.sparklabstaiwan.com/about/people"
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-2 text-sm text-slate-400 hover:text-brand-blue-glow transition-colors"
+            className="group inline-flex items-center gap-2 text-sm text-slate-600 hover:text-brand-blue transition-colors"
           >
             View full SparkLabs mentor pool
             <ExternalLink className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />

@@ -8,7 +8,7 @@ export function TopAnnouncementBar() {
   const { t } = useTranslation();
 
   return (
-    <div className="fixed inset-x-0 top-0 z-[60] bg-ink-950/95 backdrop-blur-md border-b border-white/[0.06]">
+    <div className="fixed inset-x-0 top-0 z-[60] bg-white/95 backdrop-blur-md border-b border-slate-100">
       {/* Google 4-color top stripe */}
       <div
         className="h-[2px] w-full"
@@ -28,20 +28,20 @@ export function TopAnnouncementBar() {
               <span className="h-1.5 w-1.5 rounded-full bg-[#34A853]" />
               <span className="h-1.5 w-1.5 rounded-full bg-[#4285F4]" />
             </div>
-            <span className="font-display font-semibold text-white truncate tracking-tight">
+            <span className="font-display font-semibold text-slate-900 truncate tracking-tight">
               {t.topBanner.programName}
             </span>
           </div>
 
           {/* Right: deadline + CTA */}
           <div className="flex items-center gap-3 md:gap-4 shrink-0">
-            <span className="hidden sm:inline-flex items-center gap-1.5 text-brand-spark-glow font-medium tracking-tight">
+            <span className="hidden sm:inline-flex items-center gap-1.5 text-brand-spark font-medium tracking-tight">
               <span className="h-1.5 w-1.5 rounded-full bg-brand-spark animate-pulse shadow-[0_0_8px_rgba(255,92,53,0.8)]" />
               {t.topBanner.deadline}
             </span>
             <Link
               href="/apply"
-              className="group inline-flex items-center gap-1 text-white hover:text-brand-blue-glow transition-colors font-medium tracking-tight"
+              className="group inline-flex items-center gap-1 text-slate-900 hover:text-brand-blue transition-colors font-medium tracking-tight"
             >
               <span className="hidden sm:inline">{t.topBanner.ctaShort}</span>
               <span className="sm:hidden">{t.topBanner.ctaShort}</span>

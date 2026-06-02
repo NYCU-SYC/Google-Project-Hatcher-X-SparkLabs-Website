@@ -57,7 +57,7 @@ export function Navigation() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="px-4 py-2 text-sm text-slate-400 hover:text-white transition-colors duration-200 rounded-full hover:bg-white/5 whitespace-nowrap"
+                  className="px-4 py-2 text-sm text-slate-600 hover:text-slate-900 transition-colors duration-200 rounded-full hover:bg-slate-100/60 whitespace-nowrap"
                 >
                   {link.label}
                 </a>
@@ -75,7 +75,7 @@ export function Navigation() {
 
               <button
                 onClick={() => setOpen(!open)}
-                className="xl:hidden grid h-9 w-9 sm:h-10 sm:w-10 place-items-center rounded-full glass-strong text-white"
+                className="xl:hidden grid h-9 w-9 sm:h-10 sm:w-10 place-items-center rounded-full glass-strong text-slate-900"
                 aria-label="Toggle menu"
               >
                 {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
@@ -92,7 +92,7 @@ export function Navigation() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-40 xl:hidden bg-ink-950/85 backdrop-blur-xl pt-24 overflow-y-auto"
+            className="fixed inset-0 z-40 xl:hidden bg-white/95 backdrop-blur-xl pt-24 overflow-y-auto"
             onClick={() => setOpen(false)}
           >
             <motion.nav
@@ -111,7 +111,7 @@ export function Navigation() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.04 }}
-                  className="text-2xl font-display font-medium text-white py-3.5 border-b border-white/5 tracking-tight"
+                  className="text-2xl font-display font-medium text-slate-900 py-3.5 border-b border-slate-100 tracking-tight"
                 >
                   {link.label}
                 </motion.a>
