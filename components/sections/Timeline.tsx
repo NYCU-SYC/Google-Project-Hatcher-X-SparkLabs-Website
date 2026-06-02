@@ -4,6 +4,18 @@ import { motion } from "framer-motion";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { useTranslation } from "@/lib/i18n/LanguageProvider";
 
+/**
+ * Horizontal timeline — visitors can take in the entire program flow
+ * at one glance. Desktop is a single horizontal row with markers on a
+ * gradient rule; mobile becomes a compact stacked list so it never
+ * compresses below readability or causes horizontal overflow.
+ *
+ * Status drives accent color:
+ *   open    → Google Red (#EA4335)   — happening now
+ *   upcoming → Google Blue (#4285F4) — next step
+ *   future   → slate                 — to come
+ */
+
 const itemStatus: ("open" | "upcoming" | "future")[] = [
   "open",
   "open",
@@ -15,91 +27,119 @@ const itemStatus: ("open" | "upcoming" | "future")[] = [
 
 const statusStyles = {
   open: {
-    dot: "bg-brand-spark shadow-[0_0_20px_rgba(255,92,53,0.8)]",
-    badge: "bg-brand-spark/15 text-brand-spark border-brand-spark/30",
+    dot: "bg-[#EA4335] ring-[#EA4335]/20",
+    badge: "bg-[#EA4335]/10 text-[#EA4335]",
   },
   upcoming: {
-    dot: "bg-brand-blue shadow-[0_0_16px_rgba(66,133,244,0.6)]",
-    badge: "bg-brand-blue/15 text-brand-blue border-brand-blue/30",
+    dot: "bg-[#4285F4] ring-[#4285F4]/20",
+    badge: "bg-[#4285F4]/10 text-[#4285F4]",
   },
   future: {
-    dot: "bg-slate-600",
-    badge: "bg-slate-100/60 text-slate-600 border-slate-200",
+    dot: "bg-slate-300 ring-slate-200",
+    badge: "bg-slate-100 text-slate-500",
   },
 };
 
 export function Timeline() {
   const { t } = useTranslation();
+  const items = t.timeline.items;
 
   return (
-    <section id="timeline" className="relative py-28 md:py-36 overflow-hidden">
-      <div
-        className="absolute top-0 right-0 h-[500px] w-[500px] opacity-30 blur-3xl pointer-events-none"
-        style={{
-          background: "radial-gradient(circle, rgba(255,92,53,0.3), transparent 70%)",
-        }}
-      />
-
-      <div className="relative container-tight">
+    <section id="timeline" className="relative py-24 md:py-32 bg-white">
+      <div className="container-tight">
         <SectionHeader
           eyebrow={t.timeline.eyebrow}
           title={t.timeline.title}
           subtitle={t.timeline.subtitle}
         />
 
-        <div className="mt-24 max-w-4xl mx-auto relative">
-          <div className="absolute left-[19px] md:left-1/2 md:-translate-x-px top-2 bottom-2 w-px bg-gradient-to-b from-brand-spark via-brand-blue to-white/5" />
+        {/* DESKTOP — horizontal rail */}
+        <div className="hidden md:block mt-16">
+          <div className="relative">
+            {/* Continuous rule behind the markers */}
+            <div className="absolute left-0 right-0 top-[14px] h-px bg-gradient-to-r from-[#4285F4]/40 via-[#34A853]/40 to-[#EA4335]/40" />
 
-          <div className="space-y-14 md:space-y-20">
-            {t.timeline.items.map((item, i) => {
-              const status = itemStatus[i];
-              const styles = statusStyles[status];
-              const statusLabel = t.timeline.statuses[status];
-              const isLeft = i % 2 === 0;
-
-              return (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-80px" }}
-                  transition={{ duration: 0.6, delay: i * 0.08 }}
-                  className="relative md:grid md:grid-cols-2 md:gap-14 items-center"
-                >
-                  <div className="absolute left-[15px] md:left-1/2 md:-translate-x-1/2 top-2 z-10">
-                    <div className={`h-3 w-3 rounded-full ${styles.dot}`} />
-                  </div>
-
-                  <div
-                    className={`pl-12 md:pl-0 ${
-                      isLeft ? "md:text-right md:pr-12" : "md:col-start-2 md:pl-12"
-                    }`}
+            <div
+              className="relative grid gap-4"
+              style={{ gridTemplateColumns: `repeat(${items.length}, minmax(0,1fr))` }}
+            >
+              {items.map((item, i) => {
+                const status = itemStatus[i] ?? "future";
+                const styles = statusStyles[status];
+                const statusLabel = t.timeline.statuses[status];
+                return (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-80px" }}
+                    transition={{ duration: 0.4, delay: i * 0.06 }}
+                    className="relative pt-10 px-2 text-center"
                   >
-                    <div
-                      className={`inline-flex items-center gap-2.5 mb-3 ${
-                        isLeft ? "md:flex-row-reverse" : ""
-                      }`}
-                    >
-                      <span
-                        className={`text-xs font-medium px-2.5 py-0.5 rounded-full border tracking-wide ${styles.badge}`}
-                      >
-                        {statusLabel}
-                      </span>
-                      <span className="font-mono text-xs text-slate-500 tracking-[0.1em]">
-                        {item.date}
-                      </span>
+                    <div className="absolute left-1/2 top-0 -translate-x-1/2">
+                      <div className={`h-7 w-7 rounded-full ring-4 ${styles.dot}`} />
                     </div>
-                    <h3 className="font-display text-xl md:text-2xl font-semibold text-slate-900 mb-3 tracking-tight leading-snug">
+
+                    <span
+                      className={`inline-block rounded-full px-2 py-0.5 text-[10px] font-semibold tracking-wide uppercase ${styles.badge}`}
+                    >
+                      {statusLabel}
+                    </span>
+                    <div className="mt-2 font-mono text-[11px] text-slate-500 tracking-[0.05em]">
+                      {item.date}
+                    </div>
+                    <h3 className="mt-2 font-semibold text-sm text-slate-900 leading-snug tracking-tight">
                       {item.title}
                     </h3>
-                    <p className="text-slate-600 text-sm md:text-[15px] leading-relaxed max-w-md md:max-w-none">
+                    <p className="mt-1.5 text-xs text-slate-600 leading-relaxed">
                       {item.description}
                     </p>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+
+        {/* MOBILE — compact stacked list */}
+        <div className="md:hidden mt-12">
+          <ol className="relative space-y-6 pl-6 before:absolute before:left-[7px] before:top-1 before:bottom-1 before:w-px before:bg-slate-200">
+            {items.map((item, i) => {
+              const status = itemStatus[i] ?? "future";
+              const styles = statusStyles[status];
+              const statusLabel = t.timeline.statuses[status];
+              return (
+                <motion.li
+                  key={i}
+                  initial={{ opacity: 0, y: 8 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-60px" }}
+                  transition={{ duration: 0.4, delay: i * 0.04 }}
+                  className="relative"
+                >
+                  <div
+                    className={`absolute -left-6 top-1 h-3.5 w-3.5 rounded-full ring-4 ${styles.dot}`}
+                  />
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <span
+                      className={`rounded-full px-2 py-0.5 text-[10px] font-semibold tracking-wide uppercase ${styles.badge}`}
+                    >
+                      {statusLabel}
+                    </span>
+                    <span className="font-mono text-[11px] text-slate-500 tracking-[0.05em]">
+                      {item.date}
+                    </span>
                   </div>
-                </motion.div>
+                  <h3 className="font-semibold text-base text-slate-900 leading-snug tracking-tight">
+                    {item.title}
+                  </h3>
+                  <p className="mt-1 text-sm text-slate-600 leading-relaxed">
+                    {item.description}
+                  </p>
+                </motion.li>
               );
             })}
-          </div>
+          </ol>
         </div>
       </div>
     </section>

@@ -15,7 +15,7 @@ const LanguageContext = createContext<LanguageContextValue | null>(null);
 const STORAGE_KEY = "preferred-locale";
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [locale, setLocaleState] = useState<Locale>("zh");
+  const [locale, setLocaleState] = useState<Locale>("en");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -26,7 +26,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
       setLocaleState(stored);
     } else if (typeof navigator !== "undefined") {
       const lang = navigator.language.toLowerCase();
-      if (!lang.startsWith("zh")) setLocaleState("en");
+      if (lang.startsWith("zh")) setLocaleState("zh");
     }
     setMounted(true);
   }, []);

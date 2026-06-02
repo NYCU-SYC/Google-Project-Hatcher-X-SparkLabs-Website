@@ -2,76 +2,133 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { Cpu, Rocket } from "lucide-react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { useTranslation } from "@/lib/i18n/LanguageProvider";
-import { ExternalLink } from "lucide-react";
 
-interface MentorMeta {
+/**
+ * Mentors & Google Direct Support
+ *
+ * Two stacked subsections so visitors immediately understand WHO
+ * supports them:
+ *
+ *   1. Featured Mentors — individuals with photo / initials avatars.
+ *      Some entries are confirmed (real photo from SparkLabs Taiwan),
+ *      some are placeholders with TODO notes for the program team to
+ *      replace before public launch.
+ *
+ *   2. Google Direct Support — institutional cards for the Google Tech
+ *      Team and Google Go-to-Market Team. These are not individual
+ *      mentors but full Google teams that plug into each selected
+ *      startup.
+ */
+
+interface MentorEntry {
   name: string;
-  initials: string;
+  title: string;
+  org: string;
+  contribution: string;
   photo: string | null;
-  gradient: string;
-  tags: string[];
-  linkedin?: string;
+  initials: string;
+  isPlaceholder?: boolean;
+  todoNote?: string;
 }
 
-const mentorMeta: MentorMeta[] = [
-  {
-    name: "KJ",
-    initials: "KJ",
-    photo: null,
-    gradient: "from-brand-blue to-brand-blue-light",
-    tags: ["Physical AI", "Deep Tech"],
-  },
+const featuredMentors: MentorEntry[] = [
   {
     name: "Edgar Chiu",
-    initials: "EC",
+    title: "Founding Partner",
+    org: "SparkLabs Taiwan",
+    contribution: "Taiwan AI strategy, program vision, founder global expansion",
     photo: "/mentors/edgar-chiu.png",
-    gradient: "from-brand-green to-brand-blue",
-    tags: ["Taiwan AI", "Program Vision"],
-    linkedin: "https://www.linkedin.com/in/edgarchiu",
+    initials: "EC",
   },
   {
     name: "Bernard Moon",
-    initials: "BM",
+    title: "Co-founder & General Partner",
+    org: "SparkLabs Group",
+    contribution: "AI startup GTM, US market entry, US investor perspective",
     photo: "/mentors/bernard-moon.webp",
-    gradient: "from-brand-spark to-brand-spark-glow",
-    tags: ["US GTM", "Fundraising"],
+    initials: "BM",
   },
   {
     name: "Andrew Chen",
-    initials: "AC",
+    title: "VP, SparkLabs Taiwan",
+    org: "SparkLabs Taiwan",
+    contribution: "Practical overseas / US market entry, cohort operations",
     photo: "/mentors/andrew-chen.jpg",
-    gradient: "from-brand-blue-light to-brand-blue",
-    tags: ["Overseas Expansion"],
+    initials: "AC",
   },
   {
     name: "Tony Ling",
-    initials: "TL",
+    title: "Global Mentor",
+    org: "SparkLabs Group",
+    contribution: "Biotech & Healthcare AI fundraising; Silver Lake / Harvard perspective",
     photo: "/mentors/tony-ling.webp",
-    gradient: "from-brand-spark-glow to-yellow-400",
-    tags: ["Biotech AI", "Healthcare"],
+    initials: "TL",
+  },
+  {
+    name: "KJ",
+    title: "Mentor",
+    org: "Google",
+    contribution: "Google's view on Physical AI; Deep Tech AI startup lens",
+    photo: null,
+    initials: "KJ",
+    isPlaceholder: true,
+    todoNote: "TODO: confirm official title and headshot with KJ",
+  },
+  {
+    name: "Voice Chang",
+    title: "Mentor",
+    org: "TBD",
+    contribution: "AI product strategy, founder coaching",
+    photo: null,
+    initials: "VC",
+    isPlaceholder: true,
+    todoNote: "TODO: confirm official title, org, and headshot with Voice Chang",
+  },
+  {
+    name: "Sunny",
+    title: "Mentor",
+    org: "TBD",
+    contribution: "To be confirmed",
+    photo: null,
+    initials: "SU",
+    isPlaceholder: true,
+    todoNote: "TODO: confirm full name, official title, org, and headshot with Sunny",
   },
 ];
 
-const partnerLogos = [
-  "Google",
-  "SparkLabs Taiwan",
-  "Vertex AI",
-  "Gemini",
-  "Cloud Run",
-  "GKE",
-  "Meet Taipei",
-  "SparkLabs Group",
-  "BigQuery",
-  "Firebase",
+interface SupportEntry {
+  icon: typeof Cpu;
+  label: string;
+  title: string;
+  body: string;
+  accent: { text: string; bg: string; ring: string };
+}
+
+const googleDirectSupport: SupportEntry[] = [
+  {
+    icon: Cpu,
+    label: "Google Direct Support",
+    title: "Google Tech Team",
+    body: "Direct technical support from Google engineering and Customer Success. Gemini model optimization, infrastructure scalability, production readiness reviews — implementation-level guidance for each selected startup.",
+    accent: { text: "text-[#4285F4]", bg: "bg-[#4285F4]/10", ring: "ring-[#4285F4]/20" },
+  },
+  {
+    icon: Rocket,
+    label: "Google Direct Support",
+    title: "Google Go-to-Market Team",
+    body: "Direct access to Google's GTM playbook. US market entry strategy, Google BU partnerships, advertising support, and partnership channels — institutional firepower behind every team's growth motion.",
+    accent: { text: "text-[#34A853]", bg: "bg-[#34A853]/10", ring: "ring-[#34A853]/20" },
+  },
 ];
 
 export function Mentors() {
   const { t } = useTranslation();
 
   return (
-    <section id="mentors" className="relative py-28 md:py-36 overflow-hidden">
+    <section id="mentors" className="relative py-24 md:py-32 bg-white">
       <div className="container-tight">
         <SectionHeader
           eyebrow={t.mentors.eyebrow}
@@ -79,140 +136,103 @@ export function Mentors() {
           subtitle={t.mentors.subtitle}
         />
 
-        <div className="mt-20 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 md:gap-6">
-          {mentorMeta.map((mentor, i) => {
-            const meta = t.mentors.mentors[i];
-            return (
+        {/* Featured Mentors */}
+        <div className="mt-16">
+          <h3 className="text-xs font-semibold tracking-[0.16em] uppercase text-slate-500 mb-6 text-center">
+            Featured Mentors
+          </h3>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
+            {featuredMentors.map((m, i) => (
               <motion.div
-                key={mentor.name}
-                initial={{ opacity: 0, y: 20 }}
+                key={m.name}
+                initial={{ opacity: 0, y: 12 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 0.5, delay: i * 0.05 }}
-                className="group relative"
+                transition={{ duration: 0.4, delay: i * 0.04 }}
+                className="group rounded-2xl border border-slate-200 bg-white p-5 md:p-6 text-center transition-all duration-200 hover:border-slate-300 hover:shadow-sm"
               >
-                <div className="relative glass rounded-2xl p-6 h-full flex flex-col transition-all duration-500 group-hover:bg-slate-100/60 group-hover:border-slate-200 group-hover:-translate-y-1">
-                  {/* Photo */}
-                  <div className="relative mx-auto mb-5 w-fit">
-                    <div
-                      className={`absolute inset-0 rounded-full blur-md opacity-50 bg-gradient-to-br ${mentor.gradient}`}
-                    />
-                    {mentor.photo ? (
-                      <div className="relative h-20 w-20 rounded-full overflow-hidden border-2 border-slate-200">
-                        <Image
-                          src={mentor.photo}
-                          alt={mentor.name}
-                          fill
-                          sizes="80px"
-                          className="object-cover"
-                        />
-                      </div>
-                    ) : (
-                      <div
-                        className={`relative h-20 w-20 rounded-full bg-gradient-to-br ${mentor.gradient} grid place-items-center font-display text-lg font-bold text-slate-900 border-2 border-slate-200`}
-                      >
-                        {mentor.initials}
-                      </div>
-                    )}
-                  </div>
-
-                  {/* Name + role */}
-                  <div className="text-center flex-1 space-y-1.5">
-                    <div className="text-sm md:text-base font-semibold text-slate-900 tracking-tight">
-                      {mentor.name}
+                <div className="mx-auto h-16 w-16 md:h-20 md:w-20 mb-4">
+                  {m.photo ? (
+                    <div className="relative h-full w-full rounded-full overflow-hidden ring-1 ring-slate-200">
+                      <Image
+                        src={m.photo}
+                        alt={m.name}
+                        fill
+                        sizes="80px"
+                        className="object-cover"
+                      />
                     </div>
-                    <div className="text-xs text-slate-600 leading-snug">{meta.title}</div>
-                    <div className="text-[11px] text-brand-blue font-medium tracking-wide">
-                      {meta.org}
+                  ) : (
+                    <div className="h-full w-full rounded-full bg-slate-100 ring-1 ring-slate-200 grid place-items-center font-display text-base md:text-lg font-semibold text-slate-600">
+                      {m.initials}
                     </div>
-                  </div>
-
-                  {/* Tags */}
-                  <div className="mt-5 flex flex-wrap gap-1.5 justify-center">
-                    {mentor.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="text-[10px] px-2 py-0.5 rounded-full bg-slate-100/60 border border-slate-200 text-slate-700 tracking-wide"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* Contribution tooltip on hover */}
-                  <div className="absolute inset-x-3 -bottom-2 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none">
-                    <div className="text-[11px] leading-snug text-slate-700 bg-white/95 border border-slate-200 rounded-lg px-3 py-2 shadow-xl">
-                      {meta.contribution}
-                    </div>
-                  </div>
+                  )}
                 </div>
 
-                {mentor.linkedin && (
-                  <a
-                    href={mentor.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="absolute top-3 right-3 z-10 grid h-6 w-6 place-items-center rounded-full bg-slate-100/60 hover:bg-slate-100 border border-slate-200 transition-colors opacity-0 group-hover:opacity-100"
-                    aria-label={`${mentor.name} LinkedIn`}
-                  >
-                    <ExternalLink className="h-3 w-3 text-slate-700" />
-                  </a>
+                <div className="font-semibold text-sm md:text-[15px] text-slate-900 tracking-tight">
+                  {m.name}
+                </div>
+                <div className="mt-1 text-xs text-slate-600 leading-snug">{m.title}</div>
+                <div className="mt-0.5 text-[11px] font-medium text-[#4285F4] tracking-wide">
+                  {m.org}
+                </div>
+
+                {m.isPlaceholder && (
+                  <div className="mt-3 inline-flex items-center gap-1 rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-medium text-slate-500">
+                    To be confirmed
+                  </div>
                 )}
               </motion.div>
-            );
-          })}
+            ))}
+          </div>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-12 flex justify-center"
-        >
-          <a
-            href="https://www.sparklabstaiwan.com/about/people"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group inline-flex items-center gap-2 text-sm text-slate-600 hover:text-brand-blue transition-colors"
-          >
-            View full SparkLabs mentor pool
-            <ExternalLink className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
-          </a>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mt-28"
-        >
-          <p className="text-center text-xs font-medium tracking-[0.25em] uppercase text-slate-500 mb-10">
-            {t.mentors.poweredBy}
-          </p>
-
-          <div className="relative overflow-hidden mask-fade-x py-2">
-            <div className="flex gap-14 md:gap-20 animate-marquee whitespace-nowrap">
-              {[...partnerLogos, ...partnerLogos].map((logo, i) => (
-                <div
-                  key={`${logo}-${i}`}
-                  className="text-base md:text-lg font-medium text-slate-500/70 shrink-0 tracking-tight"
+        {/* Google Direct Support */}
+        <div className="mt-16 md:mt-20">
+          <h3 className="text-xs font-semibold tracking-[0.16em] uppercase text-slate-500 mb-6 text-center">
+            Google Direct Support
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
+            {googleDirectSupport.map((s, i) => {
+              const Icon = s.icon;
+              return (
+                <motion.div
+                  key={s.title}
+                  initial={{ opacity: 0, y: 12 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-60px" }}
+                  transition={{ duration: 0.4, delay: i * 0.08 }}
+                  className={`rounded-2xl border border-slate-200 bg-white p-7 md:p-8 ring-1 ${s.accent.ring}`}
                 >
-                  {logo}
-                </div>
-              ))}
-            </div>
+                  <div className="flex items-start gap-4">
+                    <div
+                      className={`shrink-0 inline-flex h-11 w-11 items-center justify-center rounded-lg ${s.accent.bg}`}
+                    >
+                      <Icon className={`h-5 w-5 ${s.accent.text}`} strokeWidth={2.2} />
+                    </div>
+                    <div className="min-w-0">
+                      <div className="text-[11px] font-semibold tracking-[0.14em] uppercase text-slate-500">
+                        {s.label}
+                      </div>
+                      <div className="mt-1 font-display text-lg md:text-xl font-semibold text-slate-900 tracking-tight">
+                        {s.title}
+                      </div>
+                      <p className="mt-2.5 text-sm md:text-[15px] text-slate-600 leading-relaxed">
+                        {s.body}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
-        </motion.div>
-      </div>
+        </div>
 
-      <style jsx>{`
-        .mask-fade-x {
-          mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
-          -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
-        }
-      `}</style>
+        {/* Pool callout */}
+        <div className="mt-12 text-center">
+          <p className="text-sm text-slate-500">{t.mentors.poweredBy}</p>
+        </div>
+      </div>
     </section>
   );
 }
