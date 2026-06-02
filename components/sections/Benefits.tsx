@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { Cloud, Brain, Users, Sparkles, Globe2, Check } from "lucide-react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { Button } from "@/components/ui/Button";
 import { useTranslation } from "@/lib/i18n/LanguageProvider";
 import { cn } from "@/lib/utils";
 
@@ -151,18 +150,6 @@ export function Benefits() {
           })}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4"
-        >
-          <span className="text-sm text-slate-600">{t.benefits.readyCta}</span>
-          <Button href="/apply" variant="primary" size="md" withArrow>
-            {t.nav.apply}
-          </Button>
-        </motion.div>
       </div>
     </section>
   );
