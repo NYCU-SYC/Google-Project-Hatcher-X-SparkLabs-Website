@@ -22,7 +22,7 @@ export function FAQ() {
   };
 
   return (
-    <section id="faq" className="relative py-28 md:py-36">
+    <section id="faq" className="relative py-20 md:py-24">
       <div className="container-tight">
         <SectionHeader eyebrow={t.faq.eyebrow} title={t.faq.title} subtitle={t.faq.subtitle} />
 

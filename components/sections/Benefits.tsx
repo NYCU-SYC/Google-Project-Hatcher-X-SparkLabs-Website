@@ -18,7 +18,7 @@ export function Benefits() {
   const { t } = useTranslation();
 
   return (
-    <section id="benefits" className="relative py-28 md:py-36 overflow-hidden">
+    <section id="benefits" className="relative py-20 md:py-24 overflow-hidden">
       <div
         className="absolute inset-0 opacity-40 pointer-events-none"
         style={{

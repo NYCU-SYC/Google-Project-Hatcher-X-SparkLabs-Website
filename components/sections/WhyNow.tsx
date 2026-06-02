@@ -11,7 +11,7 @@ export function WhyNow() {
   const { t } = useTranslation();
 
   return (
-    <section id="why-now" className="relative py-28 md:py-36 overflow-hidden">
+    <section id="why-now" className="relative py-20 md:py-24 overflow-hidden">
       <SectionAmbient variant="green" />
 
       <div className="relative container-tight">

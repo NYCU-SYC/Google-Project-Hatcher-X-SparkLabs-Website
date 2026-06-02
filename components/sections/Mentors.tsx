@@ -75,27 +75,37 @@ const featuredMentors: MentorEntry[] = [
     photo: null,
     initials: "KJ",
     isPlaceholder: true,
-    todoNote: "TODO: confirm official title and headshot with KJ",
+    todoNote: "TODO: confirm KJ's official title and headshot before production launch",
   },
   {
     name: "Voice Chang",
-    title: "Mentor",
-    org: "TBD",
-    contribution: "AI product strategy, founder coaching",
+    title: "Head of Taiwan Startups",
+    org: "Google Cloud",
+    contribution: "Taiwan AI startup strategy, Google Cloud partnership lead",
     photo: null,
     initials: "VC",
     isPlaceholder: true,
-    todoNote: "TODO: confirm official title, org, and headshot with Voice Chang",
+    todoNote: "TODO: replace placeholder with Voice Chang's official headshot",
+  },
+  {
+    name: "Tony",
+    title: "Title to be confirmed",
+    org: "Google",
+    contribution: "To be confirmed",
+    photo: null,
+    initials: "TO",
+    isPlaceholder: true,
+    todoNote: "TODO: confirm Tony's official title and headshot before production launch",
   },
   {
     name: "Sunny",
-    title: "Mentor",
-    org: "TBD",
+    title: "Title to be confirmed",
+    org: "Google",
     contribution: "To be confirmed",
     photo: null,
     initials: "SU",
     isPlaceholder: true,
-    todoNote: "TODO: confirm full name, official title, org, and headshot with Sunny",
+    todoNote: "TODO: confirm Sunny's official Google title and headshot before production launch",
   },
 ];
 
@@ -128,7 +138,7 @@ export function Mentors() {
   const { t } = useTranslation();
 
   return (
-    <section id="mentors" className="relative py-24 md:py-32 bg-white">
+    <section id="mentors" className="relative py-20 md:py-24 bg-white">
       <div className="container-wide">
         <SectionHeader
           eyebrow={t.mentors.eyebrow}
@@ -137,9 +147,11 @@ export function Mentors() {
         />
 
         {/* Featured Mentors */}
-        <div className="mt-16">
-          <h3 className="text-xs font-semibold tracking-[0.16em] uppercase text-slate-500 mb-6 text-center">
-            Featured Mentors
+        <div className="mt-14">
+          <h3 className="text-sm font-bold tracking-[0.14em] uppercase text-slate-900 mb-6 text-center">
+            <span className="inline-block border-b-2 border-[#4285F4] pb-1">
+              Featured Mentors &amp; Speakers
+            </span>
           </h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
             {featuredMentors.map((m, i) => (
@@ -188,9 +200,11 @@ export function Mentors() {
         </div>
 
         {/* Google Direct Support */}
-        <div className="mt-16 md:mt-20">
-          <h3 className="text-xs font-semibold tracking-[0.16em] uppercase text-slate-500 mb-6 text-center">
-            Google Direct Support
+        <div className="mt-14 md:mt-16">
+          <h3 className="text-sm font-bold tracking-[0.14em] uppercase text-slate-900 mb-6 text-center">
+            <span className="inline-block border-b-2 border-[#34A853] pb-1">
+              Google Direct Support
+            </span>
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
             {googleDirectSupport.map((s, i) => {

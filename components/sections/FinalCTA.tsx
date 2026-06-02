@@ -9,7 +9,7 @@ export function FinalCTA() {
   const { t } = useTranslation();
 
   return (
-    <section id="apply-cta" className="relative py-28 md:py-40 overflow-hidden">
+    <section id="apply-cta" className="relative py-20 md:py-28 overflow-hidden">
       <div
         className="absolute inset-0 pointer-events-none"
         style={{

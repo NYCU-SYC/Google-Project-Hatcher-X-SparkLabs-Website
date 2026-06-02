@@ -58,7 +58,7 @@ export function Stats() {
   ];
 
   return (
-    <section id="program-at-a-glance" className="relative py-20 md:py-28 bg-white">
+    <section id="program-at-a-glance" className="relative py-16 md:py-20 bg-white">
       <div className="container-wide">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-xs font-medium tracking-[0.18em] uppercase text-slate-500">

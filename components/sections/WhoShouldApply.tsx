@@ -31,7 +31,7 @@ export function WhoShouldApply() {
   return (
     <section
       id="apply-criteria"
-      className="relative py-24 md:py-32 bg-white overflow-hidden"
+      className="relative py-20 md:py-24 bg-white overflow-hidden"
     >
       {/* Subtle blue wash — gives the section identity without breaking the
           white-bg theme. */}

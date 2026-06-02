@@ -18,7 +18,7 @@ export function SelectionProcess() {
   const { t } = useTranslation();
 
   return (
-    <section id="selection" className="relative py-28 md:py-36 overflow-hidden">
+    <section id="selection" className="relative py-20 md:py-24 overflow-hidden">
       <div
         className="absolute inset-0 pointer-events-none opacity-50"
         style={{

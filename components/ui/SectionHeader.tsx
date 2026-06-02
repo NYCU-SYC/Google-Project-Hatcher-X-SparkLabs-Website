@@ -52,9 +52,9 @@ export function SectionHeader({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs font-medium tracking-[0.15em] uppercase text-brand-blue"
+          className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3.5 py-1 text-[11px] font-semibold tracking-[0.18em] uppercase text-slate-700 shadow-sm"
         >
-          <span className="h-1.5 w-1.5 rounded-full bg-brand-blue shadow-[0_0_8px_rgba(66,133,244,0.8)]" />
+          <span className="h-1.5 w-1.5 rounded-full bg-[#4285F4]" />
           {eyebrow}
         </motion.div>
       )}
@@ -64,7 +64,7 @@ export function SectionHeader({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.6, delay: 0.05 }}
-        className="font-display text-[2.25rem] md:text-[2.75rem] lg:text-[3.25rem] font-bold leading-display tracking-display-tight text-balance text-gradient"
+        className="font-display text-[2.5rem] md:text-[3.25rem] lg:text-[3.75rem] font-semibold leading-[1.05] tracking-tight text-slate-900 text-balance"
       >
         {renderMultiline(title)}
       </motion.h2>
