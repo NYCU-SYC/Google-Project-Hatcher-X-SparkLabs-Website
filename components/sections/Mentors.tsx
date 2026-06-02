@@ -50,7 +50,7 @@ const featuredMentors: MentorEntry[] = [
   {
     name: "Bernard Moon",
     title: "Co-founder & General Partner",
-    titleZh: "共同創辦人暨 General Partner",
+    titleZh: "共同創辦人兼合夥人",
     org: "SparkLabs Group",
     contribution: "AI startup GTM, US market entry, US investor perspective",
     photo: "/mentors/bernard-moon.webp",

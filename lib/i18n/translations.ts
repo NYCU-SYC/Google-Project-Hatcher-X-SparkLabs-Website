@@ -366,7 +366,7 @@ export const translations = {
           contribution: "台灣 AI 戰略視角、program 願景、創業者出海",
         },
         {
-          title: "Co-founder & General Partner",
+          title: "共同創辦人兼合夥人",
           org: "SparkLabs Group",
           contribution: "AI Startup GTM、美國市場進入策略、美國投資人視角",
         },
