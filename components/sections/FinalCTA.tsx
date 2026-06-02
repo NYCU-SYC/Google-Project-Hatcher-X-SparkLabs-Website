@@ -9,28 +9,18 @@ export function FinalCTA() {
   const { t } = useTranslation();
 
   return (
-    <section id="apply-cta" className="relative py-20 md:py-28 overflow-hidden">
+    <section id="apply-cta" className="relative py-16 md:py-20 overflow-hidden bg-slate-50/60">
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 80% 60% at 50% 50%, rgba(66,133,244,0.25), transparent 65%)",
-        }}
-      />
-
-      <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[600px] w-[600px] rounded-full opacity-30 blur-3xl animate-pulse-glow"
-        style={{
-          background:
-            "conic-gradient(from 90deg, #4285F4, #34A853, #FF5C35, #4285F4)",
+            "linear-gradient(180deg, rgba(66,133,244,0.07), rgba(255,255,255,0) 65%)",
         }}
       />
 
       <div className="relative container-tight">
         <div className="relative max-w-4xl mx-auto">
-          <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-brand-blue/20 via-transparent to-brand-spark/15 blur-2xl" />
-
-          <div className="relative glass-strong rounded-[2rem] p-12 md:p-16 lg:p-20 text-center overflow-hidden">
+          <div className="relative glass-strong rounded-lg p-8 md:p-12 lg:p-14 text-center overflow-hidden">
             <div className="absolute inset-0 grid-bg opacity-30 grid-bg-fade pointer-events-none" />
 
             <motion.div
@@ -49,11 +39,10 @@ export function FinalCTA() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="relative font-display text-3xl md:text-5xl lg:text-6xl font-bold leading-display tracking-display-tighter text-balance"
+              className="relative font-display text-3xl md:text-5xl lg:text-[3.25rem] font-bold !leading-[1.32] tracking-normal text-balance"
             >
-              <span className="text-gradient">{t.finalCta.title.line1}</span>
-              <br />
-              <span className="text-gradient-brand">{t.finalCta.title.line2}</span>
+              <span className="block text-gradient">{t.finalCta.title.line1}</span>
+              <span className="block text-gradient-brand">{t.finalCta.title.line2}</span>
             </motion.h2>
 
             <motion.p
@@ -61,7 +50,7 @@ export function FinalCTA() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative mt-8 max-w-2xl mx-auto text-base md:text-lg leading-relaxed text-slate-800"
+              className="relative mt-6 max-w-2xl mx-auto text-base md:text-lg leading-relaxed text-slate-800"
             >
               {t.finalCta.subtitle1}
               <br className="hidden md:inline" />
@@ -73,7 +62,7 @@ export function FinalCTA() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="relative mt-12 flex flex-col sm:flex-row items-center justify-center gap-4"
+              className="relative mt-10 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4"
             >
               <Button href="/apply" variant="primary" size="lg" withArrow>
                 {t.finalCta.ctaPrimary}
@@ -88,7 +77,7 @@ export function FinalCTA() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="relative mt-10 text-sm text-slate-700 tracking-wide font-medium"
+              className="relative mt-8 text-sm text-slate-700 tracking-normal font-medium"
             >
               {t.finalCta.microcopy}
             </motion.p>

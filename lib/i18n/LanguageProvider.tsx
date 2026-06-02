@@ -13,6 +13,7 @@ interface LanguageContextValue {
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
 const STORAGE_KEY = "preferred-locale";
+const COOKIE_MAX_AGE = 60 * 60 * 24 * 365;
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [locale, setLocaleState] = useState<Locale>("en");
@@ -35,6 +36,16 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     if (!mounted) return;
     document.documentElement.lang = locale === "zh" ? "zh-Hant" : "en";
     window.localStorage.setItem(STORAGE_KEY, locale);
+    document.cookie = `${STORAGE_KEY}=${locale}; path=/; max-age=${COOKIE_MAX_AGE}; SameSite=Lax`;
+
+    const seo = translations[locale].seo;
+    const isApplyPage = window.location.pathname.startsWith("/apply");
+    document.title = isApplyPage ? seo.applyTitle : seo.homeTitle;
+
+    const description = document.querySelector<HTMLMetaElement>('meta[name="description"]');
+    if (description) {
+      description.content = isApplyPage ? seo.applyDescription : seo.homeDescription;
+    }
   }, [locale, mounted]);
 
   const setLocale = useCallback((next: Locale) => setLocaleState(next), []);

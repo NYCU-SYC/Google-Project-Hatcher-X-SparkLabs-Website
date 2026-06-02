@@ -48,7 +48,7 @@ export function Footer() {
           </div>
 
           <div className="lg:col-span-3">
-            <h4 className="text-xs font-medium tracking-[0.15em] uppercase text-slate-500 mb-5">
+            <h4 className="text-xs font-medium tracking-normal uppercase text-slate-500 mb-5">
               {t.footer.programTitle}
             </h4>
             <ul className="space-y-3 text-sm">
@@ -63,7 +63,7 @@ export function Footer() {
           </div>
 
           <div className="lg:col-span-4">
-            <h4 className="text-xs font-medium tracking-[0.15em] uppercase text-slate-500 mb-5">
+            <h4 className="text-xs font-medium tracking-normal uppercase text-slate-500 mb-5">
               {t.footer.contactTitle}
             </h4>
             <ul className="space-y-3 text-sm">

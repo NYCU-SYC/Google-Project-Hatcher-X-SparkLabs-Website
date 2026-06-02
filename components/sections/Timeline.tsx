@@ -55,7 +55,7 @@ export function Timeline() {
   const items = t.timeline.items;
 
   return (
-    <section id="timeline" className="relative py-20 md:py-24 bg-white">
+    <section id="timeline" className="relative py-16 md:py-20 bg-white">
       <div className="container-wide">
         <SectionHeader
           eyebrow={t.timeline.eyebrow}
@@ -63,64 +63,64 @@ export function Timeline() {
           subtitle={t.timeline.subtitle}
         />
 
-        {/* DESKTOP — horizontal rail */}
-        <div className="hidden md:block mt-14">
-          <div className="relative">
-            {/* Continuous gradient rule behind the markers */}
-            <div className="absolute left-0 right-0 top-[18px] h-px bg-gradient-to-r from-[#4285F4]/30 via-[#34A853]/30 to-[#EA4335]/30" />
-
+        {/* Desktop / tablet: true horizontal timeline */}
+        <div className="hidden md:block mt-12 overflow-x-auto pb-4">
+          <div className="relative min-w-[1220px] pt-12">
             <div
-              className="relative grid gap-3"
-              style={{ gridTemplateColumns: `repeat(${items.length}, minmax(0,1fr))` }}
-            >
+              aria-hidden
+              className="absolute left-[7%] right-[7%] top-[1.375rem] h-px bg-gradient-to-r from-[#EA4335]/45 via-[#4285F4]/40 to-slate-300"
+            />
+            <ol className="grid grid-cols-6 gap-4">
               {items.map((item, i) => {
                 const status = itemStatus[i] ?? "future";
                 const styles = statusStyles[status];
                 const statusLabel = t.timeline.statuses[status];
                 return (
-                  <motion.div
+                  <motion.li
                     key={i}
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-80px" }}
-                    transition={{ duration: 0.4, delay: i * 0.06 }}
-                    className="relative pt-12 px-2 text-center"
+                    viewport={{ once: true, margin: "-60px" }}
+                    transition={{ duration: 0.4, delay: i * 0.05 }}
+                    className="relative"
                   >
-                    {/* Marker on the rule */}
-                    <div className="absolute left-1/2 top-0 -translate-x-1/2 h-9 w-9 rounded-full bg-white ring-4 ring-white flex items-center justify-center">
-                      <div className={`h-3.5 w-3.5 rounded-full ${styles.dot}`} />
-                    </div>
-
-                    {/* Status badge */}
-                    <span
-                      className={`inline-block rounded-full border px-2 py-0.5 text-[10px] font-semibold tracking-wide uppercase ${styles.badge}`}
-                    >
-                      {statusLabel}
-                    </span>
-
-                    {/* BIG date pill */}
                     <div
-                      className={`mx-auto mt-3 inline-flex items-center rounded-lg px-3 py-1.5 font-mono text-sm font-bold tabular-nums tracking-tight ${styles.dateBg} ${styles.dateText}`}
-                    >
-                      {item.date}
+                      className={`absolute left-1/2 top-[-2.375rem] z-10 h-5 w-5 -translate-x-1/2 rounded-full border-4 border-white shadow-sm ${styles.dot}`}
+                    />
+                    <div className="h-full rounded-lg border border-slate-200 bg-white p-4 text-center shadow-[0_8px_24px_rgba(15,23,42,0.06)]">
+                      <div className="grid w-full justify-items-center gap-2">
+                        <div
+                          style={{ whiteSpace: "nowrap" }}
+                          className={`inline-flex w-fit whitespace-nowrap items-center rounded-lg px-3 py-1.5 font-mono text-sm font-bold tabular-nums tracking-normal ${styles.dateBg} ${styles.dateText}`}
+                        >
+                          {item.date}
+                        </div>
+                        <span
+                          className={`inline-flex w-fit rounded-full border px-2.5 py-1 text-[10px] font-semibold tracking-normal uppercase ${styles.badge}`}
+                        >
+                          {statusLabel}
+                        </span>
+                      </div>
+                      <h3 className="mt-4 font-semibold text-[15px] text-slate-900 leading-snug tracking-normal">
+                        {item.title}
+                      </h3>
+                      <p className="mt-2 text-xs text-slate-600 leading-relaxed">
+                        {item.description}
+                      </p>
                     </div>
-
-                    {/* Title + description */}
-                    <h3 className="mt-3 font-semibold text-sm text-slate-900 leading-snug tracking-tight">
-                      {item.title}
-                    </h3>
-                    <p className="mt-1.5 text-xs text-slate-600 leading-relaxed">
-                      {item.description}
-                    </p>
-                  </motion.div>
+                  </motion.li>
                 );
               })}
-            </div>
+            </ol>
           </div>
         </div>
 
-        {/* MOBILE — compact stacked list */}
-        <div className="md:hidden mt-10">
+        {/* Mobile: vertical timeline for readability */}
+        <div className="md:hidden relative mt-10">
+          <div
+            aria-hidden
+            className="absolute bottom-0 left-4 top-0 w-px bg-gradient-to-b from-[#EA4335]/40 via-[#4285F4]/35 to-slate-300"
+          />
           <ol className="space-y-4">
             {items.map((item, i) => {
               const status = itemStatus[i] ?? "future";
@@ -129,32 +129,33 @@ export function Timeline() {
               return (
                 <motion.li
                   key={i}
-                  initial={{ opacity: 0, y: 8 }}
+                  initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-60px" }}
-                  transition={{ duration: 0.4, delay: i * 0.04 }}
-                  className="flex items-start gap-4 rounded-2xl border border-slate-200 bg-white p-4"
+                  transition={{ duration: 0.4, delay: i * 0.05 }}
+                  className="relative pl-11"
                 >
-                  {/* Left — prominent date block */}
-                  <div className="shrink-0">
-                    <div
-                      className={`inline-flex items-center rounded-lg px-2.5 py-1.5 font-mono text-xs font-bold tabular-nums tracking-tight ${styles.dateBg} ${styles.dateText}`}
-                    >
-                      {item.date}
+                  <div
+                    className={`absolute left-[0.375rem] top-6 z-10 h-5 w-5 rounded-full border-4 border-white shadow-sm ${styles.dot}`}
+                  />
+                  <div className="rounded-lg border border-slate-200 bg-white p-5 shadow-[0_8px_24px_rgba(15,23,42,0.06)]">
+                    <div className="flex flex-wrap items-start justify-between gap-3">
+                      <div
+                        style={{ whiteSpace: "nowrap" }}
+                        className={`inline-flex whitespace-nowrap items-center rounded-lg px-3 py-1.5 font-mono text-sm font-bold tabular-nums tracking-normal ${styles.dateBg} ${styles.dateText}`}
+                      >
+                        {item.date}
+                      </div>
+                      <span
+                        className={`inline-block rounded-full border px-2.5 py-1 text-[10px] font-semibold tracking-normal uppercase ${styles.badge}`}
+                      >
+                        {statusLabel}
+                      </span>
                     </div>
-                  </div>
-
-                  {/* Right — content */}
-                  <div className="min-w-0">
-                    <span
-                      className={`inline-block rounded-full border px-2 py-0.5 text-[10px] font-semibold tracking-wide uppercase ${styles.badge}`}
-                    >
-                      {statusLabel}
-                    </span>
-                    <h3 className="mt-1.5 font-semibold text-[15px] text-slate-900 leading-snug tracking-tight">
+                    <h3 className="mt-4 font-semibold text-base text-slate-900 leading-snug tracking-normal">
                       {item.title}
                     </h3>
-                    <p className="mt-1 text-sm text-slate-600 leading-relaxed">
+                    <p className="mt-2 text-sm text-slate-600 leading-relaxed">
                       {item.description}
                     </p>
                   </div>

@@ -74,7 +74,7 @@ export function CountdownTimer({
     return (
       <div
         className={cn(
-          "glass-strong rounded-2xl overflow-hidden flex flex-col w-full max-w-[420px] mx-auto sm:min-w-[320px] md:min-w-[420px]",
+          "glass-strong rounded-lg overflow-hidden flex flex-col w-full max-w-[420px] mx-auto sm:min-w-[320px] md:min-w-[420px]",
           className
         )}
       >
@@ -86,12 +86,12 @@ export function CountdownTimer({
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-spark opacity-75" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-spark" />
               </span>
-              <span className="text-[10px] sm:text-[11px] font-semibold text-brand-spark uppercase tracking-[0.18em] sm:tracking-[0.2em]">
+              <span className="text-[10px] sm:text-[11px] font-semibold text-brand-spark uppercase tracking-normal">
                 {t.countdown.statusOpen}
               </span>
             </div>
             <span className="text-slate-900/20">·</span>
-            <span className="text-[10px] sm:text-[11px] font-medium text-slate-700 uppercase tracking-[0.18em] sm:tracking-[0.2em]">
+            <span className="text-[10px] sm:text-[11px] font-medium text-slate-700 uppercase tracking-normal">
               {t.countdown.statusScarcity}
             </span>
           </div>
@@ -99,7 +99,7 @@ export function CountdownTimer({
 
         {/* Countdown body */}
         <div className="flex flex-col items-center gap-3 sm:gap-4 px-4 py-5 sm:px-7 sm:py-6 md:px-9 md:py-7">
-          <div className="text-[10px] tracking-[0.25em] uppercase text-slate-600 font-medium text-center">
+          <div className="text-[10px] tracking-normal uppercase text-slate-600 font-medium text-center">
             {label}
           </div>
           <div className="flex items-center gap-2 sm:gap-4 md:gap-6">
@@ -109,7 +109,7 @@ export function CountdownTimer({
                   <div className="font-display text-[1.75rem] sm:text-3xl md:text-[2.5rem] font-bold text-gradient-brand leading-none tabular-nums">
                     {String(seg.value).padStart(2, "0")}
                   </div>
-                  <div className="mt-2 text-[10px] tracking-[0.15em] uppercase text-slate-500 font-medium">
+                  <div className="mt-2 text-[10px] tracking-normal uppercase text-slate-500 font-medium">
                     {seg.label}
                   </div>
                 </div>

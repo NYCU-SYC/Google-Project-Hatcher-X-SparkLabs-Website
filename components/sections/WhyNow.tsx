@@ -43,7 +43,7 @@ export function WhyNow() {
                 strokeWidth={1.5}
               />
 
-              <blockquote className="font-display text-xl md:text-2xl lg:text-[1.625rem] leading-[1.4] text-slate-900 text-balance tracking-tight">
+              <blockquote className="font-display text-xl md:text-2xl lg:text-[1.625rem] leading-[1.4] text-slate-900 text-balance tracking-normal">
                 &ldquo;{t.whyNow.quote}&rdquo;
               </blockquote>
 
@@ -58,7 +58,7 @@ export function WhyNow() {
                   />
                 </div>
                 <div>
-                  <div className="text-sm font-semibold text-slate-900 tracking-tight">
+                  <div className="text-sm font-semibold text-slate-900 tracking-normal">
                     {t.whyNow.quoteAuthor}
                   </div>
                   <div className="text-xs text-slate-600 mt-1">{t.whyNow.quoteRole}</div>
@@ -91,7 +91,7 @@ export function WhyNow() {
                       }}
                     />
                     <div>
-                      <div className="font-display text-base md:text-lg font-semibold text-slate-900 tracking-tight">
+                      <div className="font-display text-base md:text-lg font-semibold text-slate-900 tracking-normal">
                         {pillar.label}
                       </div>
                       <div className="mt-2 text-sm text-slate-600 leading-relaxed">

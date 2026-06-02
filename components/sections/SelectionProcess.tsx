@@ -64,7 +64,7 @@ export function SelectionProcess() {
                   </div>
 
                   <div className="text-center">
-                    <h3 className="font-display text-xl md:text-2xl font-bold text-slate-900 tracking-tight">
+                    <h3 className="font-display text-xl md:text-2xl font-bold text-slate-900 tracking-normal">
                       {stage.title}
                     </h3>
                     <p className="mt-2 text-sm text-brand-blue font-medium">
@@ -87,7 +87,7 @@ export function SelectionProcess() {
             transition={{ duration: 0.5 }}
             className="text-center mb-12"
           >
-            <h3 className="font-display text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">
+            <h3 className="font-display text-2xl md:text-3xl font-bold text-slate-900 tracking-normal">
               {t.selection.criteriaTitle}
             </h3>
             <p className="mt-3 text-sm md:text-base text-slate-600">
@@ -118,7 +118,7 @@ export function SelectionProcess() {
                         </div>
                       </div>
                       <div>
-                        <h4 className="font-display text-base md:text-lg font-semibold text-slate-900 tracking-tight">
+                        <h4 className="font-display text-base md:text-lg font-semibold text-slate-900 tracking-normal">
                           {item.title}
                         </h4>
                         <p className="mt-1.5 text-sm text-slate-600 leading-relaxed">

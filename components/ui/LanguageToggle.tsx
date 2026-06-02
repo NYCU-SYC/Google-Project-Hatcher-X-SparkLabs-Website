@@ -9,7 +9,7 @@ interface LanguageToggleProps {
 }
 
 export function LanguageToggle({ className }: LanguageToggleProps) {
-  const { locale, setLocale } = useTranslation();
+  const { locale, setLocale, t } = useTranslation();
 
   const options: { value: "zh" | "en"; label: string }[] = [
     { value: "zh", label: "中" },
@@ -31,9 +31,9 @@ export function LanguageToggle({ className }: LanguageToggleProps) {
             onClick={() => setLocale(opt.value)}
             className={cn(
               "relative z-10 px-3.5 py-1.5 rounded-full transition-colors duration-300",
-              active ? "text-slate-900" : "text-slate-600 hover:text-slate-800"
+              active ? "text-white" : "text-slate-600 hover:text-slate-800"
             )}
-            aria-label={`Switch to ${opt.label}`}
+            aria-label={t.languageToggle[opt.value]}
           >
             {active && (
               <motion.span

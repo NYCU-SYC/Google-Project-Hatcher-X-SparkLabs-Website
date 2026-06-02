@@ -16,6 +16,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -23,6 +24,8 @@ body {
   color: var(--foreground);
   font-feature-settings: "cv02", "cv03", "cv04", "cv11", "ss01";
   font-feature-settings: "palt" 1, "kern" 1;
+  line-height: 1.65;
+  overflow-x: hidden;
 }
 
 h1,
@@ -175,11 +178,11 @@ h4 {
   }
 
   .tracking-display-tight {
-    letter-spacing: -0.025em;
+    letter-spacing: 0;
   }
 
   .tracking-display-tighter {
-    letter-spacing: -0.035em;
+    letter-spacing: 0;
   }
 
   .prose-body {
@@ -204,5 +207,5 @@ html[lang^="zh"] h3 {
 html[lang="en"] h1,
 html[lang="en"] h2,
 html[lang="en"] h3 {
-  letter-spacing: -0.025em;
+  letter-spacing: 0;
 }

@@ -19,11 +19,11 @@ interface ButtonProps {
 }
 
 const base =
-  "group relative inline-flex items-center justify-center gap-2 font-medium tracking-tight rounded-full transition-all duration-300 ease-out will-change-transform whitespace-nowrap";
+  "group relative inline-flex items-center justify-center gap-2 font-medium tracking-normal rounded-full transition-all duration-300 ease-out will-change-transform whitespace-nowrap";
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-brand-blue text-slate-900 shadow-[0_8px_30px_rgba(66,133,244,0.35)] hover:bg-brand-blue-light hover:shadow-[0_12px_40px_rgba(66,133,244,0.55)] hover:-translate-y-0.5",
+    "bg-brand-blue text-white shadow-[0_8px_24px_rgba(66,133,244,0.28)] hover:bg-brand-blue-light hover:shadow-[0_12px_32px_rgba(66,133,244,0.38)] hover:-translate-y-0.5",
   secondary:
     "glass-strong text-slate-900 hover:bg-slate-100 hover:border-slate-300 hover:-translate-y-0.5",
   ghost: "text-slate-700 hover:text-slate-900",

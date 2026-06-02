@@ -18,7 +18,7 @@ export function PrepareList() {
   const { t } = useTranslation();
 
   return (
-    <section id="prepare" className="relative py-20 md:py-24 scroll-mt-24">
+    <section id="prepare" className="relative py-14 md:py-16 scroll-mt-24">
       <div className="container-tight">
         <div className="max-w-4xl mx-auto">
           <motion.div
@@ -26,12 +26,12 @@ export function PrepareList() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.5 }}
-            className="text-center mb-12"
+            className="text-center mb-10"
           >
-            <div className="inline-flex items-center gap-2 rounded-full glass px-3.5 py-1 text-[11px] font-mono font-medium text-brand-blue uppercase tracking-[0.2em] mb-5">
-              Step 2
+            <div className="inline-flex items-center gap-2 rounded-full glass px-3.5 py-1 text-[11px] font-mono font-medium text-brand-blue uppercase tracking-normal mb-5">
+              {t.apply.steps.prepare}
             </div>
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-slate-900 text-balance tracking-tight">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-slate-900 text-balance tracking-normal">
               {t.apply.prepare.title}
             </h2>
             <p className="mt-4 text-sm md:text-base text-slate-600 leading-relaxed">
@@ -49,14 +49,14 @@ export function PrepareList() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-40px" }}
                   transition={{ duration: 0.4, delay: i * 0.04 }}
-                  className="glass rounded-2xl p-6 transition-all duration-300 hover:bg-slate-100/60 hover:border-slate-200"
+                  className="glass rounded-lg p-5 md:p-6 transition-all duration-300 hover:bg-slate-100/60 hover:border-slate-200"
                 >
                   <div className="flex items-start gap-4">
                     <div className="shrink-0 grid h-10 w-10 place-items-center rounded-lg bg-slate-100/60 border border-slate-200">
                       <Icon className="h-4 w-4 text-brand-blue" strokeWidth={1.8} />
                     </div>
                     <div className="flex-1">
-                      <div className="font-display text-sm md:text-base font-semibold text-slate-900 tracking-tight">
+                      <div className="font-display text-sm md:text-base font-semibold text-slate-900 tracking-normal">
                         {item.title}
                       </div>
                       <div className="mt-1.5 text-xs md:text-sm text-slate-600 leading-relaxed">

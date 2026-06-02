@@ -15,7 +15,7 @@ export function ApplyForm() {
   const { t } = useTranslation();
 
   return (
-    <section id="form" className="relative py-20 md:py-24 scroll-mt-24">
+    <section id="form" className="relative py-14 md:py-16 scroll-mt-24">
       <div className="container-tight">
         <div className="max-w-3xl mx-auto">
           <motion.div
@@ -23,12 +23,12 @@ export function ApplyForm() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.5 }}
-            className="text-center mb-12"
+            className="text-center mb-10"
           >
-            <div className="inline-flex items-center gap-2 rounded-full glass px-3.5 py-1 text-[11px] font-mono font-medium text-brand-blue uppercase tracking-[0.2em] mb-5">
-              Step 3
+            <div className="inline-flex items-center gap-2 rounded-full glass px-3.5 py-1 text-[11px] font-mono font-medium text-brand-blue uppercase tracking-normal mb-5">
+              {t.apply.steps.form}
             </div>
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-slate-900 text-balance tracking-tight">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-slate-900 text-balance tracking-normal">
               {t.apply.form.title}
             </h2>
           </motion.div>
@@ -38,7 +38,7 @@ export function ApplyForm() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.6 }}
-            className="relative glass-strong rounded-3xl overflow-hidden"
+            className="relative glass-strong rounded-lg overflow-hidden"
           >
             {/* Top accent line */}
             <div
@@ -56,7 +56,7 @@ export function ApplyForm() {
                   <FileText className="h-4 w-4 text-brand-blue" strokeWidth={1.8} />
                 </div>
                 <div>
-                  <div className="text-sm font-semibold text-slate-900 tracking-tight">
+                  <div className="text-sm font-semibold text-slate-900 tracking-normal">
                     {t.apply.form.iframeLabel}
                   </div>
                   <div className="text-xs text-slate-500 mt-0.5">{t.apply.form.iframeMeta}</div>
@@ -77,12 +77,12 @@ export function ApplyForm() {
             <div className="relative bg-white">
               <iframe
                 src={FORM_EMBED_URL}
-                title="Google × SparkLabs Taiwan AI Accelerator Application"
+                title={t.apply.form.iframeTitle}
                 className="w-full border-0"
                 style={{ minHeight: "1200px" }}
                 loading="lazy"
               >
-                Loading…
+                {t.apply.form.loading}
               </iframe>
             </div>
 
