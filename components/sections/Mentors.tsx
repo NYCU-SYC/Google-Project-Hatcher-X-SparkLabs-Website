@@ -67,8 +67,8 @@ const featuredMentors: MentorEntry[] = [
   },
   {
     name: "Tony Ling",
-    title: "Global Mentor",
-    titleZh: "全球導師",
+    title: "Venture Partner",
+    titleZh: "創投合夥人",
     org: "SparkLabs Group",
     contribution: "Biotech & Healthcare AI fundraising; Silver Lake / Harvard perspective",
     photo: "/mentors/tony-ling.webp",

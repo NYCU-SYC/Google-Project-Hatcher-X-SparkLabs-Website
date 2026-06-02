@@ -376,7 +376,7 @@ export const translations = {
           contribution: "創投視角、創辦人成長與跨境 GTM",
         },
         {
-          title: "Global Mentor",
+          title: "創投合夥人",
           org: "SparkLabs Group",
           contribution: "Biotech & Healthcare AI 募資、Silver Lake / Harvard 視角",
         },
@@ -905,7 +905,7 @@ export const translations = {
           contribution: "Venture investing, founder scaling, cross-border GTM",
         },
         {
-          title: "Global Mentor",
+          title: "Venture Partner",
           org: "SparkLabs Group",
           contribution: "Biotech & Healthcare AI fundraising; Silver Lake / Harvard perspective",
         },
