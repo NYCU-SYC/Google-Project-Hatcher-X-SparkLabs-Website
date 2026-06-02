@@ -3,15 +3,15 @@
 import { motion } from "framer-motion";
 import { Calendar } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { CountdownTimer } from "@/components/ui/CountdownTimer";
 import { useTranslation } from "@/lib/i18n/LanguageProvider";
 
 /**
  * Hero — light, official, founder-friendly.
  * Modeled on Google for Startups program landing pages: an eyebrow
  * pill announcing the program, a clean two-line headline, one short
- * supporting paragraph, primary + secondary CTAs, and a deadline
- * meta-strip. No animated countdown, no partner logo wall, no scroll
- * indicator — these create visual noise that fights the message.
+ * supporting paragraph, deadline countdown, primary + secondary CTAs,
+ * and a deadline meta-strip.
  */
 export function Hero() {
   const { t } = useTranslation();
@@ -72,11 +72,21 @@ export function Hero() {
             {t.hero.subtitle}
           </motion.p>
 
-          {/* CTAs */}
+          {/* Countdown — mirrors the apply page deadline timer */}
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.24 }}
+            className="mt-8 flex justify-center"
+          >
+            <CountdownTimer variant="card" showStatus={false} />
+          </motion.div>
+
+          {/* CTAs */}
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.32 }}
             className="mt-9 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3"
           >
             <Button href="/apply" variant="primary" size="lg" withArrow>
@@ -91,7 +101,7 @@ export function Hero() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.32 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-7 inline-flex items-center gap-2 text-sm text-slate-500"
           >
             <Calendar className="h-4 w-4 text-slate-400" />
