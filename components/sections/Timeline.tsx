@@ -30,6 +30,8 @@ const stepMeta = [
   {
     dot: "bg-[#4285F4]",
     text: "text-[#4285F4]",
+    dateBg: "bg-[#4285F4]",
+    dateText: "text-white",
     border: "border-[#4285F4]/25",
     ring: "ring-[#4285F4]/15",
     wash: "from-[#4285F4]/10",
@@ -37,6 +39,8 @@ const stepMeta = [
   {
     dot: "bg-[#FBBC04]",
     text: "text-[#B77900]",
+    dateBg: "bg-[#FBBC04]",
+    dateText: "text-slate-900",
     border: "border-[#FBBC04]/35",
     ring: "ring-[#FBBC04]/20",
     wash: "from-[#FBBC04]/12",
@@ -44,6 +48,8 @@ const stepMeta = [
   {
     dot: "bg-[#34A853]",
     text: "text-[#16833A]",
+    dateBg: "bg-[#34A853]",
+    dateText: "text-white",
     border: "border-[#34A853]/30",
     ring: "ring-[#34A853]/20",
     wash: "from-[#34A853]/10",
@@ -154,13 +160,14 @@ export function Timeline() {
         <div className="md:hidden relative mt-10">
           <div
             aria-hidden
-            className="absolute bottom-0 left-4 top-0 w-px bg-gradient-to-b from-[#EA4335]/40 via-[#4285F4]/35 to-slate-300"
+            className="absolute bottom-0 left-4 top-0 w-px bg-gradient-to-b from-[#4285F4]/45 via-[#FBBC04]/45 to-[#34A853]/45"
           />
           <ol className="space-y-4">
             {items.map((item, i) => {
               const status = itemStatus[i] ?? "future";
               const styles = statusStyles[status];
               const statusLabel = t.timeline.statuses[status];
+              const meta = stepMeta[i] ?? stepMeta[0];
               return (
                 <motion.li
                   key={i}
@@ -171,14 +178,16 @@ export function Timeline() {
                   className="relative pl-11"
                 >
                   <div
-                    className={`absolute left-[0.375rem] top-6 z-10 h-5 w-5 rounded-full border-4 border-white shadow-sm ${styles.dot}`}
+                    className={`absolute left-[0.375rem] top-6 z-10 h-5 w-5 rounded-full border-4 border-white shadow-sm ${meta.dot}`}
                   />
-                  <div className="rounded-lg border border-slate-200 bg-white p-5 shadow-[0_10px_28px_rgba(15,23,42,0.07)]">
-                    <div className="flex flex-wrap items-start justify-between gap-3">
+                  <div className={`relative overflow-hidden rounded-lg border bg-white p-5 shadow-[0_10px_28px_rgba(15,23,42,0.07)] ring-1 ${meta.border} ${meta.ring}`}>
+                    <div className={`absolute inset-x-0 top-0 h-1 ${meta.dot}`} />
+                    <div className={`pointer-events-none absolute inset-0 bg-gradient-to-b ${meta.wash} to-white`} />
+                    <div className="relative flex flex-wrap items-start justify-between gap-3">
                       <div>
                         <div
                           style={{ whiteSpace: "nowrap" }}
-                          className={`inline-flex whitespace-nowrap items-center rounded-lg px-3 py-1.5 font-mono text-sm font-bold tabular-nums tracking-normal ${styles.dateBg} ${styles.dateText}`}
+                          className={`inline-flex whitespace-nowrap items-center rounded-lg px-3 py-1.5 font-mono text-sm font-bold tabular-nums tracking-normal ${meta.dateBg} ${meta.dateText}`}
                         >
                           {item.date}
                         </div>
@@ -189,10 +198,10 @@ export function Timeline() {
                         {statusLabel}
                       </span>
                     </div>
-                    <h3 className="mt-4 font-semibold text-base text-slate-900 leading-snug tracking-normal">
+                    <h3 className="relative mt-4 font-semibold text-base text-slate-900 leading-snug tracking-normal">
                       {item.title}
                     </h3>
-                    <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+                    <p className="relative mt-2 text-sm text-slate-600 leading-relaxed">
                       {item.description}
                     </p>
                   </div>
