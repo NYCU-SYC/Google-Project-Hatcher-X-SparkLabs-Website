@@ -52,9 +52,7 @@ export function FinalCTA() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="relative mt-6 max-w-2xl mx-auto text-base md:text-lg leading-relaxed text-slate-800"
             >
-              {t.finalCta.subtitle1}
-              <br className="hidden md:inline" />
-              {t.finalCta.subtitle2}
+              {t.finalCta.microcopy}
             </motion.p>
 
             <motion.div
@@ -72,15 +70,6 @@ export function FinalCTA() {
               </Button>
             </motion.div>
 
-            <motion.p
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="relative mt-8 text-sm text-slate-700 tracking-normal font-medium"
-            >
-              {t.finalCta.microcopy}
-            </motion.p>
           </div>
         </div>
       </div>

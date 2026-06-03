@@ -15,11 +15,11 @@ const applyMetadataByLocale: Record<Locale, Metadata> = {
   zh: {
     title: "立即申請｜Google × SparkLabs Taiwan AI 加速器",
     description:
-      "申請 Google × SparkLabs Taiwan AI 加速器。7 月 26 日截止，僅精選 15 家團隊。免費申請，不交換股權。",
+      "申請 Google × SparkLabs Taiwan AI 加速器。7 月 26 日截止，精選 15 家團隊。免費申請，不交換股權。",
     openGraph: {
       title: "立即申請｜Google × SparkLabs Taiwan AI 加速器",
       description:
-        "申請 Google × SparkLabs Taiwan AI 加速器。7 月 26 日截止，僅精選 15 家團隊。",
+        "申請 Google × SparkLabs Taiwan AI 加速器。7 月 26 日截止，精選 15 家團隊。",
       locale: "zh_TW",
     },
     twitter: {

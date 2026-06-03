@@ -15,8 +15,14 @@ const LanguageContext = createContext<LanguageContextValue | null>(null);
 const STORAGE_KEY = "preferred-locale";
 const COOKIE_MAX_AGE = 60 * 60 * 24 * 365;
 
-export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [locale, setLocaleState] = useState<Locale>("en");
+export function LanguageProvider({
+  children,
+  initialLocale = "en",
+}: {
+  children: React.ReactNode;
+  initialLocale?: Locale;
+}) {
+  const [locale, setLocaleState] = useState<Locale>(initialLocale);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {

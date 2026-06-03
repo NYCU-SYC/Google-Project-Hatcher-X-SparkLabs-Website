@@ -3,13 +3,13 @@ export type Locale = "zh" | "en";
 export const translations = {
   zh: {
     nav: {
-      glance: "計劃一覽",
+      glance: "計畫總覽",
       whyNow: "為何現在",
       benefits: "資源支援",
-      criteria: "申請對象",
+      criteria: "適合團隊",
       timeline: "時程",
-      selection: "評選方式",
-      mentors: "導師",
+      selection: "評選流程",
+      mentors: "導師與講者",
       faq: "FAQ",
       apply: "立即申請",
       toggleMenu: "開啟選單",
@@ -25,16 +25,16 @@ export const translations = {
       en: "切換至英文",
     },
     seo: {
-      homeTitle: "Google × SparkLabs Taiwan AI 加速器｜從台灣打造世界級 AI 新創",
+      homeTitle: "Google × SparkLabs Taiwan AI 加速器｜從台灣走向全球的 AI 新創計畫",
       homeDescription:
-        "Google 與 SparkLabs Taiwan 攜手，為 AI-native 創辦人提供 USD 25K Google Cloud Credit、全球導師網絡與 11 月 Global Showcase 舞台。7 月 26 日截止申請。",
+        "Google 與 SparkLabs Taiwan 攜手，為 AI-native 創辦團隊提供 USD 25K Google Cloud Credit、Google 技術支援、全球導師網絡與 11 月 Global Showcase。7 月 26 日截止申請。",
       applyTitle: "立即申請｜Google × SparkLabs Taiwan AI 加速器",
       applyDescription:
-        "申請 Google × SparkLabs Taiwan AI 加速器。7 月 26 日截止，僅精選 15 家團隊。免費申請，不交換股權。",
+        "申請 Google × SparkLabs Taiwan AI 加速器。7 月 26 日截止，精選 15 家團隊。免費申請，不交換股權。",
     },
     hero: {
       badgeCohort: "申請中",
-      badgeStatus: "7 / 26 截止 · 只精選 15 家",
+      badgeStatus: "7 / 26 截止 · 精選 15 家團隊",
       title: {
         part1: "Google Project Hatcher × SparkLabs",
         part2: "",
@@ -42,11 +42,11 @@ export const translations = {
         part3: "",
       },
       subtitle:
-        "15 個名額、USD $25K Google Cloud Credit、11 月國際舞台。為準備走向全球的 AI 創辦人打造。",
+        "15 個名額、USD 25K Google Cloud Credit、11 月國際舞台。為準備走向全球的 AI 創辦團隊而設。",
       ctaPrimary: "立即申請",
-      ctaSecondary: "了解計劃內容",
+      ctaSecondary: "了解計畫內容",
       applicationOpen: "6 月 5 日開放申請",
-      poweredBy: "技術支持：Google Cloud · Vertex AI · Gemini",
+      poweredBy: "技術支援：Google Cloud · Vertex AI · Gemini",
       scroll: "scroll",
     },
     countdown: {
@@ -58,13 +58,13 @@ export const translations = {
       minutes: "分",
       seconds: "秒",
       statusOpen: "申請中",
-      statusScarcity: "只精選 15 家",
+      statusScarcity: "精選 15 家團隊",
     },
     stats: {
-      title: "計劃規模一覽",
-      headline: "一眼掌握申請、資源與時程重點",
+      title: "計畫總覽",
+      headline: "申請時程、資源與入選名額一次看清",
       items: [
-        { value: 15, label: "入選名額", sublabel: "僅限精選團隊" },
+        { value: 15, label: "入選名額", sublabel: "精選 15 家團隊" },
         {
           value: 25,
           prefix: "USD ",
@@ -76,148 +76,148 @@ export const translations = {
         {
           value: 200,
           suffix: "+",
-          label: "Global Showcase 觀眾",
-          sublabel: "11 月 Meet Taipei 同期",
+          label: "Global Showcase 出席者",
+          sublabel: "11 月 Meet Taipei 同期登場",
         },
       ],
     },
     whyNow: {
       eyebrow: "為何現在 / 為何台灣",
-      title: "AI 正在重新繪製全球競爭版圖下一代 AI 旗艦，從台灣誕生",
-      body: "台灣擁有深厚的硬體 DNA、世界級的工程人才、與從 Day One 就具備國際野心的創辦人。 當 AI 重塑每一個產業，這座島不只是供應鏈中心——它是世界級 AI 公司的誕生地。",
+      title: "下一代世界級 AI 公司，可以從台灣出發",
+      body: "台灣有深厚的硬體與供應鏈基礎，也有世界級工程人才。當 AI 重塑每個產業，台灣不只負責製造，更有機會孕育面向全球的新創公司。",
       quote:
-        "台灣下一個十年的突破型公司，將會是 AI-native、從第一天就面向全球，並建立在世界級工程能力之上。我們在這裡協助它們加速。",
+        "未來十年，台灣最有機會成長為全球公司的團隊，會是 AI-native、從第一天就看向國際，並建立在扎實工程能力之上。這個計畫要協助它們更快跨出去。",
       quoteAuthor: "Edgar Chiu",
       quoteRole: "SparkLabs Taiwan 創始合夥人",
       pillars: [
-        { label: "硬體 DNA", description: "從台積電到 NVIDIA 生態的核心位置" },
-        { label: "工程人才", description: "世界級的 AI、軟體與系統人才" },
-        { label: "國際企圖", description: "從 Day One 就面向全球的創辦人越來越多" },
+        { label: "硬體與供應鏈", description: "位在台積電到 NVIDIA 生態的關鍵位置" },
+        { label: "工程人才", description: "具備世界級 AI、軟體與系統能力的人才密度" },
+        { label: "國際企圖", description: "越來越多創辦人從第一天就看向全球市場" },
       ],
     },
     benefits: {
       eyebrow: "你將獲得什麼",
-      title: "精準提供你需要的支持，去除不必要的複雜",
+      title: "聚焦真正重要的支援，省去不必要的複雜",
       subtitle:
-        "這不只是計劃，而是 Google 的技術能量結合 SparkLabs 的全球網絡，幫你更快接近第一個國際客戶。",
+        "這不只是課程或補助，而是把 Google 的技術能量與 SparkLabs 的全球網絡整合成可直接使用的加速資源，幫團隊更快靠近第一個國際客戶。",
       readyCta: "準備好取得這些資源了嗎？",
       heroCard: {
         tag: "USD 25K Credit",
-        title: "USD $25K Google Cloud Credit",
+        title: "USD 25K Google Cloud Credit",
         tagline: "入選團隊專屬",
         description:
-          "入選後即可使用 USD $25K 額度，投入 Gemini、Vertex AI 與產品上線所需的雲端資源，讓團隊更快驗證、迭代與交付。",
-        subnote: "已申請過 GFS 25K Credit 者不重複給予。 其他所有資源照常提供。",
+          "入選即取得 USD 25K 額度，可投入 Gemini、Vertex AI 與產品上線所需的雲端資源，讓團隊更快驗證、迭代與交付。",
+        subnote: "已申請過 GFS 25K Credit 者不重複給予，其他所有資源照常提供。",
       },
       showcaseCard: {
         tag: "Global Showcase",
         title: "國際展示舞台",
         description:
-          "一個晚上，面向 200+ 位 VC、CVC 與媒體，把原本可能需要半年 BD 的曝光與連結集中完成。",
+          "一個舞台，200+ 位 VC、CVC 與媒體。把原本需要半年累積的曝光、引薦與商務開發，集中在一晚完成。",
       },
       items: [
         {
-          title: "技術孵化",
-          tagline: "Google Cloud AI 技術賦能",
+          title: "技術加速",
+          tagline: "Google Cloud AI 技術支援",
           description:
-            "Google Cloud AI 團隊提供直接技術支持，從架構檢視到上線準備，協助入選團隊更穩定地把 AI 產品推向市場。",
+            "Google Cloud AI 團隊提供直接技術支援，從架構檢視、模型優化到上線準備，協助團隊更穩定地把 AI 產品推向市場。",
           bullets: [
             "架構檢視：與 Google 工程師一對一討論",
-            "AI 模型優化：Gemini 微調與應用建議",
-            "領域專家：Medical AI 與 Deep Tech 專家支持",
+            "AI 模型優化：Gemini 調校與應用建議",
+            "領域專家：Medical AI、Deep Tech 等專家支援",
           ],
         },
         {
-          title: "商務孵化",
-          tagline: "SparkLabs 全球 Mentor 網絡",
+          title: "商務加速",
+          tagline: "Google GTM 與 SparkLabs Mentor 網絡",
           description:
-            "Google Go-to-Market 團隊協助你釐清客戶、通路與營收成長路徑，並接上可落地的全球市場資源。",
+            "協助團隊釐清客戶、通路與營收成長路徑，並接上美國市場、Google BU 與全球夥伴資源。",
           bullets: [
             "Go-to-Market 策略：美國市場進入",
-            "募資準備：pitch deck、估值與投資人介紹",
+            "募資準備：募資簡報、估值與投資人介紹",
             "Google BU 合作：直接接觸 Google 業務單位",
           ],
         },
         {
           title: "創辦人社群",
-          tagline: "創辦人圈與經驗傳承",
+          tagline: "走過全球化的創辦人經驗",
           description:
-            "由已成功國際擴張的創辦人分享實戰經驗，建立同屆團隊社群，讓你直接向走過這條路的人學習。",
+            "由已成功拓展國際市場的創辦人分享實戰經驗，讓同屆團隊在真實案例中交換做法、少走彎路。",
           bullets: [
-            "創辦人分享：由已成功全球化的 founder 主講",
-            "實戰 playbook：不藏私的 war-room 經驗",
+            "創辦人分享：由具全球化經驗的創辦人主講",
+            "實戰經驗：不藏私的戰情室方法",
           ],
         },
         {
           title: "國際展示舞台",
           tagline: "11 月 20-27 日 · 與 Meet Taipei 同期",
           description:
-            "一個晚上，面向 200+ 位 VC、CVC 與媒體，把原本可能需要半年 BD 的曝光與連結集中完成。",
+            "一個舞台，200+ 位 VC、CVC 與媒體。把原本需要半年累積的曝光、引薦與商務開發，集中在一晚完成。",
           bullets: [
-            "200+ 出席者：一個舞台集中半年 BD 能量",
+            "200+ 出席者：一晚集中半年商務開發能量",
             "資本市場連結：國際 VC / CVC 媒合",
-            "Global Press Kit：跨境媒體素材與聯合 PR",
+            "全球媒體素材包：跨境媒體素材與聯合 PR",
           ],
         },
       ],
     },
     criteria: {
-      eyebrow: "我們在找誰",
-      title: "你是我們在找的創辦人嗎？",
-      subtitle: "這個計劃為 AI-native、從第一天就面向全球，並與台灣有連結的創辦人而設計。",
+      eyebrow: "適合參與的團隊",
+      title: "這個計畫適合你嗎？",
+      subtitle: "我們尋找 AI-native、具備初期市場動能，並準備從台灣走向全球的創辦團隊。",
       headline: {
-        line1: "為敢於做出世界級 AI 新創的創辦人",
-        line2: "打造的舞台",
+        line1: "為準備打造世界級 AI 公司的創辦人",
+        line2: "搭起通往全球的舞台",
       },
       cohortIntro: "我們將精選 ",
       cohortHighlight: "15 家新創",
       cohortRest:
-        "，結合技術深度、從第一天就面向國際的視野，以及打造下一波突破的決心。",
-      detailsCta: "了解計劃內容",
+        "，看重技術深度、國際視野，以及把產品推向下一個市場的決心。",
+      detailsCta: "了解計畫內容",
       cards: [
         {
-          title: "已具初期動能的 Seed–Series A 團隊",
-          body: "已有 prototype、pilot 客戶或早期市場訊號的新創。",
+          title: "已有初期動能的 Seed 至 Series A 團隊",
+          body: "已有 prototype、pilot 客戶，或能看見早期市場訊號。",
         },
         {
           title: "AI 是產品核心，不是附加功能",
-          body: "AI 不是後接的功能，而是團隊產品最核心的差異。",
+          body: "AI 不是附加功能，而是產品差異化與使用價值的核心。",
         },
         {
-          title: "Day-One 國際思維",
-          body: "從第一天就為國際市場而打造，具備美國或亞太擴張企圖。",
+          title: "從第一天就看向國際市場",
+          body: "產品與商業模式從一開始就為美國、亞太或其他海外市場設計。",
         },
         {
-          title: "與台灣連結深厚",
+          title: "與台灣有明確連結",
           body:
-            "在台灣有根、工程人才或營運，準備接上 Google + SparkLabs 全球網絡。",
+            "團隊在台灣有技術、人才、營運或創辦人連結，準備接上 Google 與 SparkLabs 全球網絡。",
         },
       ],
-      forYouTitle: "我們在找的你",
+      forYouTitle: "適合申請",
       notForYouTitle: "暫時不適合",
       forYou: [
-        "Seed–Series A：雲端與基礎架構選擇尚未鎖定",
-        "AI-Native：AI 是產品核心，不是附加功能",
-        "Global Mindset：從 Day One 就為國際市場打造",
-        "Taiwan-Connected：團隊在台灣有根、有人才或有營運",
+        "Seed 至 Series A：雲端與基礎架構仍有調整空間",
+        "AI-native：AI 是產品核心，而非附加功能",
+        "全球市場思維：從第一天就為海外市場設計",
+        "台灣連結：團隊在台灣有技術、人才或營運基礎",
       ],
       notForYou: [
         "尚在純概念階段、無任何產品雛形",
         "AI 僅為附加功能、非核心差異化",
         "已完成 Series B 以上輪次",
       ],
-      uncertainPrompt: "不確定自己是否符合？",
-      uncertainAnswer: "先申請，讓我們一起判斷。",
+      uncertainPrompt: "不確定是否符合？",
+      uncertainAnswer: "先申請，我們會一起判斷。",
       domains: {
-        title: "我們特別歡迎這些領域",
+        title: "我們特別歡迎的領域",
         items: ["Biotech / Healthcare AI", "Frontier AI", "Deep Tech AI", "Physical AI"],
       },
       matchCta: "符合條件 — 立即申請",
     },
     timeline: {
-      eyebrow: "計劃時程",
-      title: "三個關鍵日期，走向國際舞台",
-      subtitle: "6 月 5 日開放申請，8 月 17 日公布入選名單，11 月 20 日登上 Global Showcase。",
+      eyebrow: "計畫時程",
+      title: "三個關鍵日期，從申請走向國際舞台",
+      subtitle: "6 月 5 日開放申請；8 月 17 日公布入選名單；11 月 20 日登上 Global Showcase。",
       statuses: {
         open: "申請中",
         upcoming: "即將開始",
@@ -227,7 +227,7 @@ export const translations = {
         {
           date: "6/5",
           title: "開放申請",
-          description: "AI-native 團隊可開始提交申請。",
+          description: "AI-native 團隊可提交申請資料。",
         },
         {
           date: "8/17",
@@ -237,36 +237,36 @@ export const translations = {
         {
           date: "11/20",
           title: "Global Showcase",
-          description: "入選團隊登上國際舞台，面向投資人、企業與媒體展示成果。",
+          description: "入選團隊登上國際舞台，向投資人、企業與媒體展示成果。",
         },
       ],
     },
     selection: {
       eyebrow: "評選流程",
-      title: "評選流程透明公開，讓你知道怎麼被看見",
-      subtitle: "我們不喜歡黑箱。 以下是我們如何評估每一份申請",
+      title: "評選標準透明，讓你知道我們怎麼看團隊",
+      subtitle: "我們會從技術、市場、團隊與國際化潛力，完整評估每份申請。",
       stages: [
         {
           num: "01",
           title: "書面審查",
-          description: "書面審查 — 我們會讀完每一行",
-          detail: "團隊背景、產品、AI 技術、市場 traction、國際化規劃",
+          description: "我們會完整閱讀申請資料",
+          detail: "團隊背景、產品進度、AI 技術、市場動能與國際化規劃",
         },
         {
           num: "02",
           title: "首輪面談",
-          description: "首輪面談 — 與我們團隊 30 分鐘",
-          detail: "深入了解 founder 動機、市場洞察、技術差異化",
+          description: "與計畫團隊 30 分鐘深入交流",
+          detail: "了解創辦人動機、市場洞察與技術差異化",
         },
         {
           num: "03",
           title: "終審評選",
-          description: "終審 — 由 SparkLabs 與 GCP Leadership 決定",
-          detail: "綜合所有資料，選出 15 家最具潛力的團隊",
+          description: "由 SparkLabs 與 GCP Leadership 共同決定",
+          detail: "綜合所有資料，選出最具潛力的 15 家團隊",
         },
       ],
-      criteriaTitle: "4 個評選維度",
-      criteriaSubtitle: "我們會以這四個面向評估每一個團隊",
+      criteriaTitle: "四個評選維度",
+      criteriaSubtitle: "每個團隊都會從這四個面向被評估",
       criteriaItems: [
         {
           title: "AI 技術強度",
@@ -282,34 +282,34 @@ export const translations = {
         },
         {
           title: "國際擴張潛力",
-          description: "國際市場理解、Day-one 全球思維、執行可行性",
+          description: "國際市場理解、從第一天就看向全球、執行可行性",
         },
       ],
     },
     mentors: {
       eyebrow: "導師與講者",
-      title: "與最懂你的人並肩作戰",
+      title: "和懂技術、懂市場的人並肩作戰",
       subtitle:
-        "從 Google 的 AI 戰略視角、SparkLabs 全球 GP 到 Biotech 與 Frontier AI 領域專家 —— 這些人能直接幫你突破成長瓶頸",
+        "從 Google 的 AI 戰略視角、SparkLabs 全球 GP，到 Biotech 與 Frontier AI 領域專家，協助你釐清成長瓶頸並找到下一步。",
       poweredBy: "串接 SparkLabs 全球導師網絡",
       sparkLabsNetwork: {
-        label: "SparkLabs 全球網路",
+        label: "SparkLabs 全球網絡",
         title: "把台灣 AI 團隊接上跨國創業網絡",
         points: [
           {
             title: "全球導師與 GP",
             body:
-              "接觸 SparkLabs Group / Global Ventures 的創辦人、投資人與企業導師，補上募資、GTM 與跨境經營視角。",
+              "已經走過你正在挑戰的路的人，為你打開關鍵引薦。",
           },
           {
             title: "市場與資本連結",
             body:
-              "透過 SparkLabs accelerator 與 VC network，對接美國、亞洲與其他海外市場的投資人、企業與合作夥伴。",
+              "美國、亞洲與更多海外市場：那些通常需要多年累積的門，為你提前打開。",
           },
           {
             title: "出海陪跑",
             body:
-              "從台灣起步，聚焦海外市場進入、pitch 調整、客戶 / 合作機會與 Global Showcase 前的敘事打磨。",
+              "台灣的市場動能只是起點。我們協助你把這些證明轉化為全球市場能理解的故事與策略。",
           },
         ],
       },
@@ -321,13 +321,13 @@ export const translations = {
           label: "Google 直接支援",
           title: "Google 技術團隊",
           body:
-            "Google 工程與 Customer Success 團隊提供直接技術支援，涵蓋 Gemini 模型最佳化、雲端架構擴展、上線前架構審查，以及每家入選團隊的實作層級陪跑。",
+            "Google 工程與 Customer Success 團隊提供直接技術支援，涵蓋 Gemini 模型最佳化、雲端架構擴展、上線前架構審查，以及入選團隊的實作陪跑。",
         },
         {
           label: "Google 直接支援",
           title: "Google Go-to-Market 團隊",
           body:
-            "協助團隊接上 Google GTM playbook，包含美國市場進入策略、Google BU 合作機會、廣告資源與合作夥伴通路，讓每家團隊都有可落地的成長路徑。",
+            "協助團隊接上 Google GTM 方法與資源，包含美國市場進入策略、Google BU 合作機會、廣告資源與合作夥伴通路，讓成長路徑更可落地。",
         },
       ],
       mentors: [
@@ -339,12 +339,12 @@ export const translations = {
         {
           title: "共同創辦人兼管理合夥人",
           org: "SparkLabs Taiwan",
-          contribution: "台灣 AI 戰略視角、計劃願景、創業者出海",
+          contribution: "台灣 AI 戰略視角、計畫願景、創辦人出海策略",
         },
         {
           title: "共同創辦人兼合夥人",
           org: "SparkLabs Group",
-          contribution: "AI Startup GTM、美國市場進入策略、美國投資人視角",
+          contribution: "AI 新創 GTM、美國市場進入策略、美國投資人視角",
         },
         {
           title: "管理合夥人",
@@ -361,59 +361,57 @@ export const translations = {
     faq: {
       eyebrow: "FAQ",
       title: "常見問題",
-      subtitle: "這裡整理了申請者最常問的問題。 如果還有疑問，歡迎直接聯絡我們。",
+      subtitle: "這裡整理了申請者最常問的問題。如果還有疑問，歡迎直接聯絡我們。",
       items: [
         {
           q: "申請需要費用嗎？",
-          a: "完全免費。 入選團隊另獨家取得 USD 25K Google Cloud Credit。",
+          a: "完全免費。入選團隊可額外取得 USD 25K Google Cloud Credit。",
         },
         {
-          q: "這個計劃會收取股權嗎？",
-          a: "不會。 本計劃為加速資源型合作，不交換股權。 SparkLabs 後續若有興趣進行投資，將會另以獨立的 Term Sheet 進行討論，並非加速計劃的必要條件。",
+          q: "這個計畫會收取股權嗎？",
+          a: "不會。本計畫提供加速資源，不以交換股權為條件。若 SparkLabs 後續有投資意願，會以獨立 Term Sheet 另行討論，並非參與計畫的必要條件。",
         },
         {
           q: "一定要在台灣嗎？",
-          a: "設籍台灣或與台灣有明確連結都可以。創辦團隊只要在台灣具備任一實質連結，例如公司登記、創辦人、技術團隊或營運，即符合資格。",
+          a: "不一定。設籍台灣或與台灣有明確連結皆可，例如公司登記、創辦人、技術團隊或營運在台灣。",
         },
         {
           q: "已申請過 GFS 25K Credit 還能參加嗎？",
-          a: "可以申請計劃本身，但 USD 25K Credit 不重複給予。其他所有資源，例如技術深度診斷、Mentor Network、Global Showcase 等，照常提供。",
+          a: "可以申請計畫本身，但 USD 25K Credit 不重複提供。其他資源包含技術診斷、導師網絡、Global Showcase 等，仍可照常參與。",
         },
         {
-          q: "計劃 12 週要實體到場嗎？",
-          a: "採 Hybrid 模式：部分 mentorship 與 Global Showcase（11/20-27）為實體於台北舉行；其餘以線上 / 混合進行。",
+          q: "計畫 12 週要實體到場嗎？",
+          a: "採 Hybrid 模式：部分導師交流與 Global Showcase（11/20–11/27）會在台北實體進行；其餘以線上或混合形式安排。",
         },
         {
           q: "申請結果何時公布？",
-          a: "8/17 公布入選名單。8/24 計劃正式啟動。未錄取者也會收到個別 email 回覆。",
+          a: "8 月 17 日公布入選名單，8 月 24 日計畫啟動。未入選團隊也會收到個別電子郵件回覆。",
         },
         {
           q: "國際團隊可以申請嗎？",
-          a: "歡迎。但團隊需要具備 Day-one Global Mindset，且至少有台灣連結，例如預計 3 個月內在台設立分公司、核心技術團隊在台，或有台灣創辦人。",
+          a: "歡迎申請，但團隊需具備從第一天就面向全球的思維，且至少有一項台灣連結，例如三個月內設立台灣公司、核心技術團隊在台灣，或有台灣創辦人。",
         },
       ],
     },
     finalCta: {
-      deadline: "申請截止：7 月 26 日 · 只精選 15 家團隊",
+      deadline: "申請截止：7 月 26 日 · 精選 15 家團隊",
       title: {
-        line1: "把你最大的瓶頸，",
+        line1: "把最大的成長瓶頸，",
         line2: "交給我們",
       },
-      subtitle1: "Google Cloud 與全球導師網絡，",
-      subtitle2: "會成為你下一階段成長的加速器",
       ctaPrimary: "立即申請",
-      ctaSecondary: "聯絡計劃團隊",
-      microcopy: "15 家團隊，一次機會。名額額滿即截止。",
+      ctaSecondary: "聯絡計畫團隊",
+      microcopy: "15 家團隊，一次機會。額滿即截止。",
     },
     footer: {
       tagline:
-        "Google 與 SparkLabs Taiwan 攜手，為下一代 AI-native 創辦人提供技術資源、導師網絡與國際舞台。",
-      programTitle: "計劃",
+        "Google 與 SparkLabs Taiwan 攜手，為下一代 AI-native 創辦團隊提供技術資源、導師網絡與國際舞台。",
+      programTitle: "計畫",
       programLinks: [
-        { label: "計劃一覽", href: "/#program-at-a-glance" },
+        { label: "計畫總覽", href: "/#program-at-a-glance" },
         { label: "資源支援", href: "/#benefits" },
         { label: "申請時程", href: "/#timeline" },
-        { label: "導師團", href: "/#mentors" },
+        { label: "導師與講者", href: "/#mentors" },
         { label: "立即申請", href: "/apply" },
       ],
       contactTitle: "聯絡我們",
@@ -431,61 +429,61 @@ export const translations = {
       backToHome: "← 回到首頁",
       header: {
         eyebrow: "申請表",
-        title: "申請 Google × SparkLabs Taiwan AI加速器",
-        subtitle: "三步驟完成申請。 預計 15 - 20 分鐘。",
+        title: "申請 Google × SparkLabs Taiwan AI 加速器",
+        subtitle: "三步驟完成申請，預計 15 至 20 分鐘。",
         deadline: "申請截止：7 / 26",
-        spots: "僅 15 個入選名額",
+        spots: "精選 15 個入選名額",
       },
       eligibility: {
-        title: "步驟 1 — 確認你符合所有條件",
-        subtitle: "勾選所有條件後，下方會解鎖「我準備好了」按鈕。",
+        title: "步驟 1：確認參與條件",
+        subtitle: "勾選所有條件後，即可進入下一步。",
         items: [
-          "我們團隊正處於 Seed 至 Series A 階段",
-          "AI 是我們產品的核心，不是附加功能",
-          "我們從 Day One 就為國際市場打造",
-          "我們的團隊在台灣有根、有人才或有營運",
+          "團隊目前處於 Seed 至 Series A 階段",
+          "AI 是產品核心，而非附加功能",
+          "產品從第一天就為國際市場設計",
+          "團隊在台灣有技術、人才或營運連結",
         ],
-        readyLabel: "全部符合 — 進入下一步",
-        notReadyLabel: "尚未全部符合？歡迎還是申請，我們會逐案判斷。",
+        readyLabel: "符合條件，進入下一步",
+        notReadyLabel: "尚未完全符合？仍歡迎申請，我們會逐案判斷。",
       },
       prepare: {
-        title: "步驟 2 — 申請前請準備好以下資料",
-        subtitle: "建議先準備齊全再開始填表，避免中途中斷。",
+        title: "步驟 2：準備申請資料",
+        subtitle: "建議先整理好以下內容，填寫時會更順暢。",
         items: [
-          { title: "公司基本資訊", description: "公司名稱、註冊地、成立日期、員工人數" },
-          { title: "創辦團隊", description: "創辦人姓名、職稱、LinkedIn、簡短背景" },
-          { title: "產品與 AI 技術描述", description: "在解決什麼問題？AI 技術差異化在哪？" },
-          { title: "市場 Traction", description: "現有用戶、收入、合作夥伴等可量化指標" },
-          { title: "國際擴張規劃", description: "未來 18 個月的市場拓展計劃" },
-          { title: "Cloud / Infra 需求", description: "目前使用的雲端、預期算力、模型規模" },
-          { title: "Pitch Deck", description: "PDF 上傳（建議 12-20 頁，小於 10MB）" },
+          { title: "公司基本資訊", description: "公司名稱、註冊地、成立時間、團隊規模" },
+          { title: "創辦團隊", description: "創辦人姓名、職稱、LinkedIn 與簡短背景" },
+          { title: "產品與 AI 技術", description: "解決的問題、AI 的角色與技術差異化" },
+          { title: "市場動能", description: "現有用戶、營收、合作夥伴或其他可量化指標" },
+          { title: "國際擴張規劃", description: "未來 18 個月的目標市場與拓展計畫" },
+          { title: "雲端與基礎架構需求", description: "目前雲端使用情況、預期算力與模型規模" },
+          { title: "Pitch Deck", description: "PDF 上傳（建議 12 至 20 頁，小於 10MB）" },
         ],
       },
       criteria: {
-        title: "我們會這樣評選",
-        subtitle: "確保你知道我們在看什麼。",
+        title: "評選重點",
+        subtitle: "我們會從以下面向理解團隊的潛力。",
         items: [
           { title: "AI 技術強度", description: "技術差異化、模型品質、產品成熟度" },
           { title: "創辦團隊能力", description: "團隊背景、過往執行紀錄、學習速度" },
           { title: "市場動能", description: "PMF 訊號、客戶驗證、收入成長" },
           {
             title: "國際擴張潛力",
-            description: "國際市場理解、Day-one 全球思維",
+            description: "國際市場理解、從第一天就看向全球",
           },
         ],
       },
       form: {
-        title: "步驟 3 — 提交申請",
+        title: "步驟 3：提交申請",
         placeholder:
-          "申請表單將於此嵌入（Typeform / Tally / 自建表單）。\n\n若表單尚未載入，請聯絡 program@sparklabstaiwan.com 取得申請連結，或稍後重新造訪此頁。",
-        note: "資料會直接送到 SparkLabs Taiwan 與 Google Cloud 評審團隊。建議使用桌機填寫以獲得最佳體驗。",
+          "申請表單將嵌入於此（Google Forms / Typeform / Tally）。\n\n若表單尚未載入，請聯絡 program@sparklabstaiwan.com 取得申請連結，或稍後重新整理頁面。",
+        note: "資料會直接送交 SparkLabs Taiwan 與 Google Cloud 評審團隊。建議使用桌機填寫，體驗會更完整。",
         externalCta: "前往申請表單",
         iframeLabel: "申請表單",
         iframeTitle: "Google × SparkLabs Taiwan AI 加速器申請表",
         iframeMeta: "Google Forms · 約 15 分鐘",
         openInNewTab: "在新分頁開啟",
-        loading: "載入中...",
-        fallbackPrompt: "無法看到上方表單？",
+        loading: "載入中…",
+        fallbackPrompt: "看不到上方表單？",
         fallbackCta: "在新視窗開啟申請表單",
       },
       steps: {
@@ -494,17 +492,17 @@ export const translations = {
         form: "步驟 3",
       },
       reassurance: {
-        title: "你即將申請的計劃",
+        title: "你即將申請的是",
         items: [
-          { title: "免費申請", description: "完全免費 · 不收任何費用" },
-          { title: "不交換股權", description: "計劃本身不收取股權" },
-          { title: "8 / 17 公布入選", description: "結果於 8 月 17 日公告" },
-          { title: "8 / 24 啟動", description: "計劃於 8 月 24 日啟動" },
+          { title: "免費申請", description: "完全免費，不收取申請費" },
+          { title: "不交換股權", description: "參與計畫不以股權交換為條件" },
+          { title: "8 / 17 公布入選", description: "8 月 17 日公布結果" },
+          { title: "8 / 24 啟動", description: "8 月 24 日正式啟動" },
         ],
       },
       faqReminder: {
         title: "還有疑問？",
-        subtitle: "完整 FAQ 整理在主頁。",
+        subtitle: "首頁整理了完整 FAQ。",
         cta: "查看 FAQ →",
       },
     },
@@ -810,17 +808,17 @@ export const translations = {
           {
             title: "Global mentors & GPs",
             body:
-              "Access SparkLabs Group / Global Ventures founders, investors, and corporate mentors for fundraising, GTM, and cross-border operating perspective.",
+              "The people who've already done what you're trying to do — open for intros.",
           },
           {
             title: "Market & capital access",
             body:
-              "Connect through SparkLabs' accelerator and VC network across the U.S., Asia, and other overseas markets.",
+              "U.S., Asia, and beyond — doors that take years to open, opened for you.",
           },
           {
             title: "Global expansion support",
             body:
-              "Translate Taiwan traction into overseas entry strategy, pitch refinement, customer / partner pathways, and Global Showcase readiness.",
+              "Taiwan traction is just the start. We help you make it land globally.",
           },
         ],
       },
@@ -911,8 +909,6 @@ export const translations = {
         line1: "Bring us your",
         line2: "biggest bottleneck.",
       },
-      subtitle1: "We'll bring Google",
-      subtitle2: "and our global mentors.",
       ctaPrimary: "Apply Now",
       ctaSecondary: "Contact the Team",
       microcopy: "15 teams. One shot. Applications close when spots are gone.",

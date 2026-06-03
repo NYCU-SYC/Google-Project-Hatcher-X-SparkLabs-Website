@@ -28,17 +28,17 @@ const notoTC = Noto_Sans_TC({
 
 const metadataByLocale: Record<Locale, Metadata> = {
   zh: {
-    title: "Google × SparkLabs Taiwan AI 加速器｜從台灣打造世界級 AI 新創",
+    title: "Google × SparkLabs Taiwan AI 加速器｜從台灣走向全球的 AI 新創計畫",
     description:
-      "Google 與 SparkLabs Taiwan 攜手，為 AI-native 創辦人提供 USD 25K Google Cloud Credit、全球導師網絡與 11 月 Global Showcase 舞台。7 月 26 日截止申請。",
+      "Google 與 SparkLabs Taiwan 攜手，為 AI-native 創辦團隊提供 USD 25K Google Cloud Credit、Google 技術支援、全球導師網絡與 11 月 Global Showcase。7 月 26 日截止申請。",
     openGraph: {
       title: "Google × SparkLabs Taiwan AI 加速器",
-      description: "從台灣打造世界級 AI 新創。7 月 26 日截止申請。",
+      description: "從台灣走向全球的 AI 新創計畫。7 月 26 日截止申請。",
       locale: "zh_TW",
     },
     twitter: {
       title: "Google × SparkLabs Taiwan AI 加速器",
-      description: "從台灣打造世界級 AI 新創。",
+      description: "從台灣走向全球的 AI 新創計畫。",
     },
   },
   en: {
@@ -125,7 +125,7 @@ export default function RootLayout({
       className={`${inter.variable} ${sora.variable} ${notoTC.variable}`}
     >
       <body className="min-h-screen bg-white text-slate-900 font-sans antialiased">
-        <LanguageProvider>{children}</LanguageProvider>
+        <LanguageProvider initialLocale={locale}>{children}</LanguageProvider>
       </body>
     </html>
   );
