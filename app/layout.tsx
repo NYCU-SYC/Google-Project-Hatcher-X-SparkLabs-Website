@@ -58,6 +58,34 @@ const metadataByLocale: Record<Locale, Metadata> = {
   },
 };
 
+const keywordsByLocale: Record<Locale, string[]> = {
+  zh: [
+    "台灣 AI 加速器",
+    "AI 新創",
+    "Google Cloud Startup",
+    "SparkLabs Taiwan",
+    "Google Project Hatcher",
+    "Vertex AI",
+    "Gemini",
+    "Frontier AI",
+    "Biotech AI",
+    "Deep Tech AI",
+    "Seed Series A AI",
+  ],
+  en: [
+    "AI Accelerator Taiwan",
+    "Google Cloud Startup",
+    "SparkLabs Taiwan",
+    "Google Project Hatcher",
+    "Vertex AI",
+    "Gemini",
+    "Frontier AI",
+    "Biotech AI",
+    "Deep Tech AI",
+    "Seed Series A AI",
+  ],
+};
+
 function getRequestLocale(): Locale {
   const locale = cookies().get("preferred-locale")?.value;
   return locale === "zh" || locale === "en" ? locale : "en";
@@ -72,19 +100,7 @@ export function generateMetadata(): Metadata {
       process.env.NEXT_PUBLIC_SITE_URL || "https://sparklabs-google-ai.tw"
     ),
     ...metadata,
-    keywords: [
-      "AI Accelerator Taiwan",
-      "Google Cloud Startup",
-      "SparkLabs Taiwan",
-      "Vertex AI",
-      "Gemini",
-      "Frontier AI",
-      "Biotech AI",
-      "Deep Tech AI",
-      "Seed Series A AI",
-      "台灣 AI 加速器",
-      "AI 新創",
-    ],
+    keywords: keywordsByLocale[locale],
     openGraph: {
       ...metadata.openGraph,
       type: "website",

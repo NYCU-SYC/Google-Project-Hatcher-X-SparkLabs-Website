@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Globe2, Network, Users } from "lucide-react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
@@ -150,10 +151,12 @@ export function Mentors() {
                 <div className="mx-auto h-16 w-16 md:h-20 md:w-20 mb-4">
                   {m.photo ? (
                     <div className="relative h-full w-full rounded-full overflow-hidden ring-1 ring-slate-200">
-                      <img
+                      <Image
                         src={m.photo}
                         alt={m.name}
-                        className="h-full w-full object-cover"
+                        fill
+                        sizes="(min-width: 768px) 80px, 64px"
+                        className="object-cover"
                         loading="lazy"
                       />
                     </div>

@@ -16,11 +16,31 @@ const applyMetadataByLocale: Record<Locale, Metadata> = {
     title: "立即申請｜Google × SparkLabs Taiwan AI 加速器",
     description:
       "申請 Google × SparkLabs Taiwan AI 加速器。7 月 26 日截止，僅精選 15 家團隊。免費申請，不交換股權。",
+    openGraph: {
+      title: "立即申請｜Google × SparkLabs Taiwan AI 加速器",
+      description:
+        "申請 Google × SparkLabs Taiwan AI 加速器。7 月 26 日截止，僅精選 15 家團隊。",
+      locale: "zh_TW",
+    },
+    twitter: {
+      title: "立即申請｜Google × SparkLabs Taiwan AI 加速器",
+      description: "免費申請，不交換股權。7 月 26 日截止。",
+    },
   },
   en: {
     title: "Apply | Google × SparkLabs Taiwan AI Accelerator",
     description:
       "Apply to Google × SparkLabs Taiwan AI Accelerator. Application deadline: July 26. Only 15 spots. Free to apply, no equity taken.",
+    openGraph: {
+      title: "Apply | Google × SparkLabs Taiwan AI Accelerator",
+      description:
+        "Application deadline: July 26. Only 15 spots. Free to apply, no equity taken.",
+      locale: "en_US",
+    },
+    twitter: {
+      title: "Apply | Google × SparkLabs Taiwan AI Accelerator",
+      description: "Only 15 spots. Free to apply, no equity taken.",
+    },
   },
 };
 

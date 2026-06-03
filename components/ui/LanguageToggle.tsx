@@ -12,7 +12,7 @@ export function LanguageToggle({ className }: LanguageToggleProps) {
   const { locale, setLocale, t } = useTranslation();
 
   const options: { value: "zh" | "en"; label: string }[] = [
-    { value: "zh", label: "中" },
+    { value: "zh", label: locale === "en" ? "ZH" : "中" },
     { value: "en", label: "EN" },
   ];
 

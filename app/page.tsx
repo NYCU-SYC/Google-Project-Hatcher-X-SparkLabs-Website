@@ -14,7 +14,7 @@ import { FinalCTA } from "@/components/sections/FinalCTA";
 /**
  * Information architecture per Google for Startups program-page convention:
  *   Hero → Credit / Showcase Highlights → Program at a Glance →
- *   Who Should Apply → Benefits → CTA → Mentors → Timeline → FAQ
+ *   Who Should Apply → Benefits → Mentors → Timeline → FAQ → CTA
  *
  * WhyNow and SelectionProcess were dropped from the landing page in favor
  * of a tighter, scan-able flow — selection criteria live on the /apply
@@ -29,10 +29,10 @@ export default function HomePage() {
       <Stats />
       <WhoShouldApply />
       <Benefits />
-      <FinalCTA />
       <Mentors />
       <Timeline />
       <FAQ />
+      <FinalCTA />
       <Footer />
       <StickyMobileCTA />
     </main>

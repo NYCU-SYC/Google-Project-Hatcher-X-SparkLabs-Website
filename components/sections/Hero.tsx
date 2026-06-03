@@ -30,7 +30,7 @@ export function Hero() {
       />
 
       <div className="container-tight">
-        <div className="mx-auto max-w-4xl text-center">
+        <div className="mx-auto max-w-5xl text-center">
           {/* Eyebrow — program name with Google 4-color dots */}
           <motion.div
             initial={{ opacity: 0, y: 8 }}
@@ -52,11 +52,13 @@ export function Hero() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.08 }}
-            className="mt-8 font-display text-[2.25rem] sm:text-[2.75rem] md:text-[3.35rem] lg:text-[3.75rem] font-semibold leading-[1.12] tracking-normal text-slate-900 text-balance"
+            className="mx-auto mt-8 max-w-5xl font-display text-[2.15rem] sm:text-[2.65rem] md:text-[2.75rem] lg:text-[2.85rem] xl:text-[3.25rem] font-semibold leading-[1.12] tracking-normal text-slate-900 text-balance"
           >
-            {t.hero.title.part1}{" "}
-            <span className="text-gradient-brand">{t.hero.title.highlight}</span>
-            {t.hero.title.part3 || ""}
+            <span className="block md:whitespace-nowrap">{t.hero.title.part1}</span>
+            <span className="block text-gradient-brand md:whitespace-nowrap">
+              {t.hero.title.highlight.trim()}
+              {t.hero.title.part3 || ""}
+            </span>
           </motion.h1>
 
           {/* Subheadline — one sentence */}

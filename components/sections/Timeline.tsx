@@ -26,6 +26,30 @@ const itemStatus: ("open" | "upcoming" | "future")[] = [
   "future",
 ];
 
+const stepMeta = [
+  {
+    dot: "bg-[#4285F4]",
+    text: "text-[#4285F4]",
+    border: "border-[#4285F4]/25",
+    ring: "ring-[#4285F4]/15",
+    wash: "from-[#4285F4]/10",
+  },
+  {
+    dot: "bg-[#FBBC04]",
+    text: "text-[#B77900]",
+    border: "border-[#FBBC04]/35",
+    ring: "ring-[#FBBC04]/20",
+    wash: "from-[#FBBC04]/12",
+  },
+  {
+    dot: "bg-[#34A853]",
+    text: "text-[#16833A]",
+    border: "border-[#34A853]/30",
+    ring: "ring-[#34A853]/20",
+    wash: "from-[#34A853]/10",
+  },
+];
+
 const statusStyles = {
   open: {
     dateBg: "bg-[#EA4335]",
@@ -60,21 +84,26 @@ export function Timeline() {
           subtitle={t.timeline.subtitle}
         />
 
-        {/* Desktop / tablet: true horizontal timeline */}
-        <div className="hidden md:block mt-12 overflow-x-auto pb-4">
-          <div className="relative min-w-[720px] pt-12">
+        {/* Desktop / tablet: true horizontal milestone timeline */}
+        <div className="hidden md:block mt-14 pb-4">
+          <div className="relative mx-auto w-full max-w-6xl pt-2">
             <div
               aria-hidden
-              className="absolute left-[7%] right-[7%] top-[1.375rem] h-px bg-gradient-to-r from-[#EA4335]/45 via-[#4285F4]/40 to-slate-300"
+              className="absolute left-[16%] right-[16%] top-8 h-1 rounded-full bg-slate-100"
+            />
+            <div
+              aria-hidden
+              className="absolute left-[16%] right-[16%] top-8 h-1 rounded-full bg-gradient-to-r from-[#4285F4] via-[#FBBC04] to-[#34A853]"
             />
             <ol
-              className="grid gap-4"
+              className="relative grid auto-rows-fr items-stretch gap-4 lg:gap-6"
               style={{ gridTemplateColumns: `repeat(${items.length}, minmax(0, 1fr))` }}
             >
               {items.map((item, i) => {
                 const status = itemStatus[i] ?? "future";
                 const styles = statusStyles[status];
                 const statusLabel = t.timeline.statuses[status];
+                const meta = stepMeta[i] ?? stepMeta[0];
                 return (
                   <motion.li
                     key={i}
@@ -82,29 +111,35 @@ export function Timeline() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-60px" }}
                     transition={{ duration: 0.4, delay: i * 0.05 }}
-                    className="relative"
+                    className="relative flex h-full min-h-full flex-col"
                   >
-                    <div
-                      className={`absolute left-1/2 top-[-2.375rem] z-10 h-5 w-5 -translate-x-1/2 rounded-full border-4 border-white shadow-sm ${styles.dot}`}
-                    />
-                    <div className="h-full rounded-lg border border-slate-200 bg-white p-4 text-center shadow-[0_8px_24px_rgba(15,23,42,0.06)]">
-                      <div className="grid w-full justify-items-center gap-2">
-                        <div
-                          style={{ whiteSpace: "nowrap" }}
-                          className={`inline-flex w-fit whitespace-nowrap items-center rounded-lg px-3 py-1.5 font-mono text-sm font-bold tabular-nums tracking-normal ${styles.dateBg} ${styles.dateText}`}
-                        >
-                          {item.date}
+                    <div className="relative z-10 mb-6 flex justify-center">
+                      <div className={`grid h-14 w-14 place-items-center rounded-full border-4 border-white text-sm font-bold text-white shadow-[0_10px_28px_rgba(15,23,42,0.16)] ${meta.dot}`}>
+                        {String(i + 1).padStart(2, "0")}
+                      </div>
+                    </div>
+
+                    <div className={`relative flex h-full min-h-[180px] flex-1 flex-col overflow-hidden rounded-lg border bg-white p-5 text-left shadow-[0_14px_34px_rgba(15,23,42,0.08)] ring-1 ${meta.border} ${meta.ring}`}>
+                      <div className={`absolute inset-x-0 top-0 h-1.5 ${meta.dot}`} />
+                      <div className={`pointer-events-none absolute inset-0 bg-gradient-to-b ${meta.wash} to-white`} />
+
+                      <div className="relative flex items-start justify-between gap-4">
+                        <div>
+                          <div className={`font-mono text-2xl font-bold leading-none tracking-normal tabular-nums ${meta.text}`}>
+                            {item.date}
+                          </div>
                         </div>
                         <span
-                          className={`inline-flex w-fit rounded-full border px-2.5 py-1 text-[10px] font-semibold tracking-normal uppercase ${styles.badge}`}
+                          className={`inline-flex w-fit rounded-full border px-3 py-1.5 text-[11px] font-semibold tracking-normal uppercase ${styles.badge}`}
                         >
                           {statusLabel}
                         </span>
                       </div>
-                      <h3 className="mt-4 font-semibold text-[15px] text-slate-900 leading-snug tracking-normal">
+
+                      <h3 className="relative mt-6 font-display text-lg font-semibold leading-snug tracking-normal text-slate-900">
                         {item.title}
                       </h3>
-                      <p className="mt-2 text-xs text-slate-600 leading-relaxed">
+                      <p className="relative mt-3 text-sm leading-relaxed text-slate-600">
                         {item.description}
                       </p>
                     </div>
@@ -138,13 +173,15 @@ export function Timeline() {
                   <div
                     className={`absolute left-[0.375rem] top-6 z-10 h-5 w-5 rounded-full border-4 border-white shadow-sm ${styles.dot}`}
                   />
-                  <div className="rounded-lg border border-slate-200 bg-white p-5 shadow-[0_8px_24px_rgba(15,23,42,0.06)]">
+                  <div className="rounded-lg border border-slate-200 bg-white p-5 shadow-[0_10px_28px_rgba(15,23,42,0.07)]">
                     <div className="flex flex-wrap items-start justify-between gap-3">
-                      <div
-                        style={{ whiteSpace: "nowrap" }}
-                        className={`inline-flex whitespace-nowrap items-center rounded-lg px-3 py-1.5 font-mono text-sm font-bold tabular-nums tracking-normal ${styles.dateBg} ${styles.dateText}`}
-                      >
-                        {item.date}
+                      <div>
+                        <div
+                          style={{ whiteSpace: "nowrap" }}
+                          className={`inline-flex whitespace-nowrap items-center rounded-lg px-3 py-1.5 font-mono text-sm font-bold tabular-nums tracking-normal ${styles.dateBg} ${styles.dateText}`}
+                        >
+                          {item.date}
+                        </div>
                       </div>
                       <span
                         className={`inline-block rounded-full border px-2.5 py-1 text-[10px] font-semibold tracking-normal uppercase ${styles.badge}`}

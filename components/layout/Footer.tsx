@@ -26,21 +26,21 @@ export function Footer() {
               <a
                 href="#"
                 className="grid h-10 w-10 place-items-center rounded-full glass hover:bg-slate-100 transition-colors"
-                aria-label="LinkedIn"
+                aria-label={t.footer.socialAria.linkedin}
               >
                 <Linkedin className="h-4 w-4 text-slate-700" />
               </a>
               <a
                 href="#"
                 className="grid h-10 w-10 place-items-center rounded-full glass hover:bg-slate-100 transition-colors"
-                aria-label="Twitter"
+                aria-label={t.footer.socialAria.twitter}
               >
                 <Twitter className="h-4 w-4 text-slate-700" />
               </a>
               <a
                 href="mailto:program@sparklabstaiwan.com"
                 className="grid h-10 w-10 place-items-center rounded-full glass hover:bg-slate-100 transition-colors"
-                aria-label="Email"
+                aria-label={t.footer.socialAria.email}
               >
                 <Mail className="h-4 w-4 text-slate-700" />
               </a>

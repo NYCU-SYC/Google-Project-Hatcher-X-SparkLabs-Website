@@ -40,12 +40,25 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
     const seo = translations[locale].seo;
     const isApplyPage = window.location.pathname.startsWith("/apply");
-    document.title = isApplyPage ? seo.applyTitle : seo.homeTitle;
+    const pageTitle = isApplyPage ? seo.applyTitle : seo.homeTitle;
+    const pageDescription = isApplyPage ? seo.applyDescription : seo.homeDescription;
+
+    document.title = pageTitle;
 
     const description = document.querySelector<HTMLMetaElement>('meta[name="description"]');
     if (description) {
-      description.content = isApplyPage ? seo.applyDescription : seo.homeDescription;
+      description.content = pageDescription;
     }
+
+    const updateMeta = (selector: string, content: string) => {
+      const meta = document.querySelector<HTMLMetaElement>(selector);
+      if (meta) meta.content = content;
+    };
+
+    updateMeta('meta[property="og:title"]', pageTitle);
+    updateMeta('meta[property="og:description"]', pageDescription);
+    updateMeta('meta[name="twitter:title"]', pageTitle);
+    updateMeta('meta[name="twitter:description"]', pageDescription);
   }, [locale, mounted]);
 
   const setLocale = useCallback((next: Locale) => setLocaleState(next), []);
