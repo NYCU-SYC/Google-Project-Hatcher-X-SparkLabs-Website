@@ -24,7 +24,7 @@ interface Item {
 }
 
 export function Stats() {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
 
   const items: Item[] = [
     {
@@ -75,7 +75,7 @@ export function Stats() {
             const Icon = item.icon;
             return (
               <motion.div
-                key={item.label}
+                key={`${locale}-${i}-${item.label}`}
                 initial={{ opacity: 0, y: 12 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
