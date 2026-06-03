@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Cloud, Brain, Users, Sparkles, Globe2, Check } from "lucide-react";
+import { Brain, Users, Sparkles, Globe2, Check } from "lucide-react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { useTranslation } from "@/lib/i18n/LanguageProvider";
 import { cn } from "@/lib/utils";
@@ -25,65 +25,7 @@ export function Benefits() {
           subtitle={t.benefits.subtitle}
         />
 
-        {/* Hero Card — USD 25K Credit */}
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.6 }}
-          className="mt-12 relative"
-        >
-          <div className="relative glass-strong rounded-lg overflow-hidden">
-            <div className="absolute inset-0 grid-bg opacity-30 grid-bg-fade pointer-events-none" />
-
-            <div className="relative p-7 md:p-10 lg:p-12 grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-center">
-              {/* Left content */}
-              <div className="lg:col-span-3">
-                <div className="mb-5 inline-flex items-center gap-2.5 rounded-full border border-brand-spark/30 bg-brand-spark/15 px-4 py-1.5 text-xs font-bold uppercase tracking-normal text-brand-spark shadow-sm md:text-sm">
-                  <Sparkles className="h-4 w-4" />
-                  {t.benefits.heroCard.tag}
-                </div>
-
-                <h3 className="font-display text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-gradient leading-tight tracking-normal text-balance">
-                  {t.benefits.heroCard.title}
-                </h3>
-                <p className="mt-4 text-lg md:text-xl text-brand-blue font-medium tracking-normal">
-                  {t.benefits.heroCard.tagline}
-                </p>
-                <p className="mt-6 text-slate-600 text-[15px] md:text-base leading-relaxed">
-                  {t.benefits.heroCard.description}
-                </p>
-                <div className="mt-6 inline-flex items-center gap-2 rounded-full bg-white border border-slate-200 px-3.5 py-1.5 text-xs text-slate-600">
-                  <Check className="h-3 w-3 text-brand-green shrink-0" strokeWidth={3} />
-                  <span>{t.benefits.heroCard.subnote}</span>
-                </div>
-              </div>
-
-              {/* Right visual */}
-              <div className="lg:col-span-2 relative">
-                <div className="relative aspect-square max-w-[280px] mx-auto">
-                  <div className="relative h-full rounded-lg border border-slate-200 bg-white grid place-items-center">
-                    <div className="text-center px-6">
-                      <Cloud
-                        className="h-12 w-12 text-brand-blue mx-auto mb-4"
-                        strokeWidth={1.2}
-                      />
-                      <div className="font-display text-6xl md:text-7xl font-bold text-gradient-brand leading-none tracking-normal">
-                        USD 25K
-                      </div>
-                      <div className="mt-4 text-xs tracking-normal uppercase text-slate-600">
-                        Google Cloud Credit
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Other 4 cards in 2x2 grid */}
-        <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-5">
           {itemMeta.map((meta, i) => {
             const item = t.benefits.items[i];
             const Icon = meta.icon;

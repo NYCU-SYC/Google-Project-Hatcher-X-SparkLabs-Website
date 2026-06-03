@@ -2,6 +2,7 @@ import { Navigation } from "@/components/layout/Navigation";
 import { Footer } from "@/components/layout/Footer";
 import { StickyMobileCTA } from "@/components/layout/StickyMobileCTA";
 import { Hero } from "@/components/sections/Hero";
+import { HeroHighlights } from "@/components/sections/HeroHighlights";
 import { Stats } from "@/components/sections/Stats";
 import { WhoShouldApply } from "@/components/sections/WhoShouldApply";
 import { Benefits } from "@/components/sections/Benefits";
@@ -12,8 +13,8 @@ import { FinalCTA } from "@/components/sections/FinalCTA";
 
 /**
  * Information architecture per Google for Startups program-page convention:
- *   Hero → Program at a Glance → Who Should Apply → Benefits →
- *   Mentors & Google Direct Support → Timeline → FAQ → CTA
+ *   Hero → Credit / Showcase Highlights → Program at a Glance →
+ *   Who Should Apply → Benefits → CTA → Mentors → Timeline → FAQ
  *
  * WhyNow and SelectionProcess were dropped from the landing page in favor
  * of a tighter, scan-able flow — selection criteria live on the /apply
@@ -24,13 +25,14 @@ export default function HomePage() {
     <main className="relative bg-white">
       <Navigation />
       <Hero />
+      <HeroHighlights />
       <Stats />
       <WhoShouldApply />
       <Benefits />
+      <FinalCTA />
       <Mentors />
       <Timeline />
       <FAQ />
-      <FinalCTA />
       <Footer />
       <StickyMobileCTA />
     </main>

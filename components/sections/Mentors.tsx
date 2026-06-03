@@ -1,12 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Cpu, Globe2, Network, Rocket, Users } from "lucide-react";
+import { Globe2, Network, Users } from "lucide-react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { useTranslation } from "@/lib/i18n/LanguageProvider";
 
 /**
- * Mentors & Google Direct Support
+ * Mentors & SparkLabs Global Network
  *
  * Two stacked subsections so visitors immediately understand WHO
  * supports them:
@@ -16,12 +16,7 @@ import { useTranslation } from "@/lib/i18n/LanguageProvider";
  *      some are placeholders with TODO notes for the program team to
  *      replace before public launch.
  *
- *   2. Google Direct Support — institutional cards for the Google Tech
- *      Team and Google Go-to-Market Team. These are not individual
- *      mentors but full Google teams that plug into each selected
- *      startup.
- *
- *   3. SparkLabs Global Network — three institutional cards that show
+ *   2. SparkLabs Global Network — three institutional cards that show
  *      the cross-border mentor, market, and expansion support.
  */
 
@@ -104,20 +99,9 @@ const featuredMentors: MentorEntry[] = [
 ];
 
 interface SupportMeta {
-  icon: typeof Cpu;
+  icon: typeof Globe2;
   accent: { text: string; bg: string; ring: string };
 }
-
-const googleDirectSupportMeta: SupportMeta[] = [
-  {
-    icon: Cpu,
-    accent: { text: "text-[#4285F4]", bg: "bg-[#4285F4]/10", ring: "ring-[#4285F4]/20" },
-  },
-  {
-    icon: Rocket,
-    accent: { text: "text-[#34A853]", bg: "bg-[#34A853]/10", ring: "ring-[#34A853]/20" },
-  },
-];
 
 const sparkLabsNetworkMeta: SupportMeta[] = [
   {
@@ -191,50 +175,6 @@ export function Mentors() {
                 </div>
               </motion.div>
             ))}
-          </div>
-        </div>
-
-        {/* Google Direct Support */}
-        <div className="mt-14 md:mt-16">
-          <h3 className="mb-6 text-center text-sm font-bold tracking-normal uppercase text-slate-900 md:text-base">
-            <span className="inline-block border-b-2 border-[#34A853] pb-1">
-              {t.mentors.googleSupportTitle}
-            </span>
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
-            {t.mentors.directSupport.map((s, i) => {
-              const meta = googleDirectSupportMeta[i];
-              const Icon = meta.icon;
-              return (
-                <motion.div
-                  key={s.title}
-                  initial={{ opacity: 0, y: 12 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-60px" }}
-                  transition={{ duration: 0.4, delay: i * 0.08 }}
-                  className={`rounded-lg border border-slate-200 bg-white p-6 md:p-7 ring-1 ${meta.accent.ring}`}
-                >
-                  <div className="flex items-start gap-4">
-                    <div
-                      className={`shrink-0 inline-flex h-11 w-11 items-center justify-center rounded-lg ${meta.accent.bg}`}
-                    >
-                      <Icon className={`h-5 w-5 ${meta.accent.text}`} strokeWidth={2.2} />
-                    </div>
-                    <div className="min-w-0">
-                      <div className="text-[11px] font-semibold tracking-normal uppercase text-slate-500">
-                        {s.label}
-                      </div>
-                      <div className="mt-1 font-display text-lg md:text-xl font-semibold text-slate-900 tracking-normal">
-                        {s.title}
-                      </div>
-                      <p className="mt-2.5 text-sm md:text-[15px] text-slate-600 leading-relaxed">
-                        {s.body}
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
-              );
-            })}
           </div>
         </div>
 

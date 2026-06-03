@@ -7,7 +7,7 @@ import { useTranslation } from "@/lib/i18n/LanguageProvider";
 /**
  * Horizontal program timeline.
  *
- * Desktop (≥ md): grid rail with numbered date badges sitting on a
+ * Desktop (≥ md): grid rail with date badges sitting on a
  * brand-colored gradient rule. Each step shows phase label, BIG date
  * badge, title, one-line description.
  *
@@ -17,13 +17,10 @@ import { useTranslation } from "@/lib/i18n/LanguageProvider";
  * Date prominence is the primary visual: the date is the largest
  * tabular-numeric element in each step, sitting in a brand-colored
  * pill so visitors instantly see "when". Status color comes from the
- * status array per index (open / upcoming / future).
+ * status array per index (upcoming / future).
  */
 
 const itemStatus: ("open" | "upcoming" | "future")[] = [
-  "open",
-  "open",
-  "upcoming",
   "upcoming",
   "future",
   "future",
@@ -65,12 +62,15 @@ export function Timeline() {
 
         {/* Desktop / tablet: true horizontal timeline */}
         <div className="hidden md:block mt-12 overflow-x-auto pb-4">
-          <div className="relative min-w-[1220px] pt-12">
+          <div className="relative min-w-[720px] pt-12">
             <div
               aria-hidden
               className="absolute left-[7%] right-[7%] top-[1.375rem] h-px bg-gradient-to-r from-[#EA4335]/45 via-[#4285F4]/40 to-slate-300"
             />
-            <ol className="grid grid-cols-6 gap-4">
+            <ol
+              className="grid gap-4"
+              style={{ gridTemplateColumns: `repeat(${items.length}, minmax(0, 1fr))` }}
+            >
               {items.map((item, i) => {
                 const status = itemStatus[i] ?? "future";
                 const styles = statusStyles[status];

@@ -16,7 +16,7 @@ export const translations = {
       closeMenu: "關閉選單",
     },
     topBanner: {
-      programName: "Google × SparkLabs Taiwan AI 加速器",
+      programName: "Google Project Hatcher × SparkLabs",
       deadline: "7 / 26 申請截止",
       ctaShort: "立即申請",
     },
@@ -36,15 +36,16 @@ export const translations = {
       badgeCohort: "申請中",
       badgeStatus: "7 / 26 截止 · 只精選 15 家",
       title: {
-        part1: "從台灣出發，打造",
+        part1: "Google Project Hatcher × SparkLabs",
         part2: "",
-        highlight: "世界級 AI 新創",
+        highlight: " AI 新創全球化加速計畫",
         part3: "",
       },
       subtitle:
-        "Google × SparkLabs Taiwan 聯手，為 AI-native 創辦人提供 Google Cloud 技術深度賦能、全球導師網絡，與 11 月國際舞台",
-      ctaPrimary: "立即申請",
+        "15 spots. USD $25K Google Cloud Credit. A global stage in November. Built for ambitious AI founders ready to scale globally.",
+      ctaPrimary: "Apply Now",
       ctaSecondary: "了解計劃內容",
+      applicationOpen: "Applications open June 5",
       poweredBy: "Powered by Google Cloud · Vertex AI · Gemini",
       scroll: "scroll",
     },
@@ -96,46 +97,45 @@ export const translations = {
     },
     benefits: {
       eyebrow: "你將獲得什麼",
-      title: "五個資源模組，從技術深度到國際舞台一次到位",
+      title: "Everything you need. Nothing you don't.",
       subtitle:
-        "不只是 credits 補貼，而是 Google 的技術能量加上 SparkLabs 的全球網絡，為 AI-native founder 整合成一套可直接使用的加速資源。",
+        "Not just a program. Google's technical horsepower combined with SparkLabs' global network — A shortcut to your first global customer.",
       readyCta: "準備好取得這些資源了嗎？",
       heroCard: {
-        tag: "入選團隊專屬",
-        title: "USD 25K Google Cloud Credit",
-        tagline: "直接抵掉你 Seed–Series A 階段最大的固定成本",
+        tag: "USD 25K Credit",
+        title: "USD $25K Google Cloud Credit",
+        tagline: "Selected teams only",
         description:
-          "模型訓練、推論、資料管線——這些是 AI 公司燒得最快的錢。 USD 25K Google Cloud Credit 給你足夠的跑道驗證假設、迭代產品，把資源留在最重要的事情上。",
+          "$25K to burn on Gemini, Vertex AI, and whatever it takes to ship faster. Yours the moment you're selected.",
         subnote: "已申請過 GFS 25K Credit 者不重複給予。 其他所有資源照常提供。",
+      },
+      showcaseCard: {
+        tag: "Global Showcase",
+        title: "Global Showcase Stage",
+        description:
+          "One stage. 200+ VCs, CVCs, and press. The BD that would've taken you six months — in one night.",
       },
       items: [
         {
           title: "技術孵化",
           tagline: "Google Cloud AI 技術賦能",
           description:
-            "Google 技術與 Customer Success 團隊直接支援每家入選新創，從 Gemini 模型最佳化到 production-ready 架構審查，提供完整技術陪跑。",
+            "Google Cloud AI Team — Direct technical support from Google engineers, from architecture reviews to production readiness.",
           bullets: [
-            "Gemini 模型最佳化",
-            "雲端架構擴展設計",
-            "上線前壓力測試",
-            "Google 工程師一對一架構檢視",
-            "實作層級技術陪跑",
-            "進階 AI 服務隨需支援",
-            "Medical AI 與 Deep Tech AI 專職技術導師",
+            "Architecture Reviews — 1-on-1 with Google engineers",
+            "AI Model Optimization — Gemini fine-tuning",
+            "Domain Experts — Medical AI & Deep Tech specialists",
           ],
         },
         {
           title: "商務孵化",
           tagline: "SparkLabs 全球 Mentor 網絡",
           description:
-            "每家入選新創可取得 3 場專屬 mentorship 與 2 場 office hours，從美國市場進入策略到 Google BU 資源對接，協助團隊更快走向國際。",
+            "Google GTM Team — Google's go-to-market experts helping you find customers, build distribution, and grow revenue across global markets.",
           bullets: [
-            "美國市場進入策略",
-            "Pitch deck、估值與投資人對接",
-            "跨垂直領域產業連結",
-            "Google 服務與 BU 資源串接",
-            "Google Ads 資源協助",
-            "與 Google 各事業部建立合作機會",
+            "Go-to-Market Strategy — US market entry",
+            "Fundraising Preparation — pitch deck, valuation, investor intros",
+            "Google BU Partnership — direct access to Google business units",
           ],
         },
         {
@@ -144,22 +144,19 @@ export const translations = {
           description:
             "由已成功國際擴張的 Founder 分享實戰經驗，建立 cohort 同儕社群，讓你直接向走過這條路的人學習。",
           bullets: [
-            "國際擴張前輩分享",
-            "跨輪次 founder 連結",
-            "跨垂直領域創辦人網絡",
-            "不藏私的實戰 playbook 交換",
+            "Entrepreneur Sharing Sessions — led by globally-scaled founders",
+            "Real-world Playbooks — unfiltered war-room learnings",
           ],
         },
         {
           title: "國際展示舞台",
           tagline: "11 月 20-27 日 · 與 Meet Taipei 同期",
           description:
-            "在 GCP 全球生態系與 Meet Taipei 結合的國際舞台上，向 VC / CVC 與媒體展示成果。200+ 出席者規模",
+            "One stage. 200+ VCs, CVCs, and press. The BD that would've taken you six months — in one night.",
           bullets: [
-            "GCP 全球生態系曝光",
-            "跨境媒體包與聯合 PR",
-            "國際 VC / CVC 媒合活動",
-            "200+ 出席者，一次曝光等於做半年 BD",
+            "200+ attendees — one stage equals six months of BD",
+            "Capital Market Access — international VC / CVC matchmaking",
+            "Global Press Kit — cross-border media & joint PR",
           ],
         },
       ],
@@ -219,8 +216,8 @@ export const translations = {
     },
     timeline: {
       eyebrow: "計劃時程",
-      title: "從申請到 Global Showcase，七個月的旅程",
-      subtitle: "標記這些日期。 錯過 7/26 的申請截止，下一屆要等到明年。",
+      title: "Three dates. One global stage.",
+      subtitle: "Applications open June 5. Shortlist lands August 17. Showcase starts November 20.",
       statuses: {
         open: "申請中",
         upcoming: "即將開始",
@@ -228,40 +225,19 @@ export const translations = {
       },
       items: [
         {
-          date: "6/19",
-          title: "計劃公告 · 申請開放",
-          description:
-            "線上申請通道正式開放，歡迎 AI-native 團隊提交申請。",
-        },
-        {
-          date: "6/19–7/26",
-          title: "招募期",
-          description:
-            "6 週招募窗口。我們鼓勵越早申請越好，以便有更多時間準備首輪面談。",
-        },
-        {
-          date: "7/27–8/14",
-          title: "評選流程",
-          description:
-            "書面審查、首輪面談，以及 SparkLabs / GCP Leadership 終審。",
+          date: "6/5",
+          title: "Applications Open",
+          description: "AI-native teams can begin submitting applications.",
         },
         {
           date: "8/17",
-          title: "入選名單公告",
-          description:
-            "正式公布 15 家入選團隊，未錄取者也會收到個別回覆。",
+          title: "Shortlist Announced",
+          description: "The selected 15 teams are announced.",
         },
         {
-          date: "8/24–11/27",
-          title: "計劃執行期（12 週密集加速）",
-          description:
-            "技術孵化、商務孵化與創辦人社群三大模組全面啟動。",
-        },
-        {
-          date: "11/20–11/27",
-          title: "Global Showcase × Meet Taipei",
-          description:
-            "Global Showcase、跨境媒體曝光與國際 VC / CVC 連結同步展開，預計 200+ 國際觀眾參與。",
+          date: "11/20",
+          title: "Global Showcase",
+          description: "Selected teams step onto the global stage.",
         },
       ],
     },
@@ -427,7 +403,7 @@ export const translations = {
       subtitle2: "會成為你下一階段成長的加速器",
       ctaPrimary: "立即申請",
       ctaSecondary: "聯絡計劃團隊",
-      microcopy: "免費申請 · 不交換股權 · 8/17 公布入選名單",
+      microcopy: "15 teams. One shot. Applications close when spots are gone.",
     },
     footer: {
       tagline:
@@ -544,7 +520,7 @@ export const translations = {
       closeMenu: "Close menu",
     },
     topBanner: {
-      programName: "Google × SparkLabs Taiwan AI Accelerator",
+      programName: "Google Project Hatcher × SparkLabs",
       deadline: "Apply by July 26",
       ctaShort: "Apply Now",
     },
@@ -565,15 +541,16 @@ export const translations = {
       badgeCohort: "Now Open",
       badgeStatus: "Apply by July 26 · Only 15 spots",
       title: {
-        part1: "Build the next",
+        part1: "Google Project Hatcher × SparkLabs",
         part2: "",
-        highlight: "world-class AI company",
-        part3: " from Taiwan",
+        highlight: " AI Startup Globalization Accelerator",
+        part3: "",
       },
       subtitle:
-        "Google and SparkLabs Taiwan unite to give AI-native founders Google Cloud's technical depth, a global mentor network, and a Global Showcase stage in November.",
+        "15 spots. USD $25K Google Cloud Credit. A global stage in November. Built for ambitious AI founders ready to scale globally.",
       ctaPrimary: "Apply Now",
       ctaSecondary: "See Program Details",
+      applicationOpen: "Applications open June 5",
       poweredBy: "Powered by Google Cloud · Vertex AI · Gemini",
       scroll: "scroll",
     },
@@ -626,31 +603,33 @@ export const translations = {
     },
     benefits: {
       eyebrow: "What You Get",
-      title: "Five modules. From technical depth to a global stage.",
+      title: "Everything you need. Nothing you don't.",
       subtitle:
-        "Not a credit subsidy. Google's technical horsepower combined with SparkLabs' global network — integrated for AI-native founders.",
+        "Not just a program. Google's technical horsepower combined with SparkLabs' global network — A shortcut to your first global customer.",
       readyCta: "Ready to access these resources?",
       heroCard: {
-        tag: "Exclusive · Selected Teams",
-        title: "USD 25K Google Cloud Credit",
-        tagline: "Cover the largest fixed cost of your Seed–Series A stage.",
+        tag: "USD 25K Credit",
+        title: "USD $25K Google Cloud Credit",
+        tagline: "Selected teams only",
         description:
-          "Training, inference, data pipelines — the fastest-burning costs for AI companies. USD 25K Google Cloud Credit gives you runway to validate hypotheses, iterate, and keep capital where it matters most.",
+          "$25K to burn on Gemini, Vertex AI, and whatever it takes to ship faster. Yours the moment you're selected.",
         subnote: "Not granted again if you've already received GFS 25K Credit. All other resources apply.",
+      },
+      showcaseCard: {
+        tag: "Global Showcase",
+        title: "Global Showcase Stage",
+        description:
+          "One stage. 200+ VCs, CVCs, and press. The BD that would've taken you six months — in one night.",
       },
       items: [
         {
           title: "Technical Incubation",
           tagline: "Google Cloud AI Enablement",
           description:
-            "Google's technical and Customer Success teams plug directly into each selected startup — from Gemini model optimization to production-ready architecture reviews.",
+            "Google Cloud AI Team — Direct technical support from Google engineers, from architecture reviews to production readiness.",
           bullets: [
-            "AI Model Optimization — Gemini fine-tuning",
-            "Infrastructure Scalability — cloud architecture design",
-            "Production Readiness — pre-launch stress testing",
             "Architecture Reviews — 1-on-1 with Google engineers",
-            "Hands-on Support — implementation-level guidance",
-            "On-Demand AI Service Support — advanced services as needed",
+            "AI Model Optimization — Gemini fine-tuning",
             "Domain Experts — Medical AI & Deep Tech AI specialists",
           ],
         },
@@ -658,14 +637,11 @@ export const translations = {
           title: "Business Incubation",
           tagline: "SparkLabs Global Mentor Network",
           description:
-            "3 dedicated mentorship sessions + 2 office hours per selected startup. From US market entry to direct access to Google BU partnerships.",
+            "Google GTM Team — Google's go-to-market experts helping you find customers, build distribution, and grow revenue across global markets.",
           bullets: [
             "Go-to-Market Strategy — US market entry",
             "Fundraising Preparation — pitch deck, valuation, investor intros",
-            "Industry Connection — cross-vertical industry access",
-            "Google GTM Support — Google services & BU resources",
-            "Google Ads — advertising support",
-            "Google BU Partnership — partnerships with Google business units",
+            "Google BU Partnership — direct access to Google business units",
           ],
         },
         {
@@ -674,9 +650,7 @@ export const translations = {
           description:
             "Entrepreneur Sharing Sessions led by founders who've already scaled globally. Build a cohort peer community and learn directly from those who've walked the path.",
           bullets: [
-            "Entrepreneur Sharing Session — led by globally-scaled founders",
-            "Cohort Peer Community — cross-batch founder connections",
-            "Cross-Industry Founder Network — multi-vertical exchange",
+            "Entrepreneur Sharing Sessions — led by globally-scaled founders",
             "Real-world Playbooks — unfiltered war-room learnings",
           ],
         },
@@ -684,12 +658,11 @@ export const translations = {
           title: "Global Showcase Stage",
           tagline: "Nov 20–27 · Co-located with Meet Taipei",
           description:
-            "Showcase your progress to VCs, CVCs, and media on the GCP global ecosystem stage co-located with Meet Taipei. 200+ attendees expected.",
+            "One stage. 200+ VCs, CVCs, and press. The BD that would've taken you six months — in one night.",
           bullets: [
-            "Global Sample Showcase — GCP global ecosystem exposure",
-            "Global Press Kit — cross-border media & joint PR",
-            "Capital Market Access — international VC / CVC matchmaking",
             "200+ attendees — one stage equals six months of BD",
+            "Capital Market Access — international VC / CVC matchmaking",
+            "Global Press Kit — cross-border media & joint PR",
           ],
         },
       ],
@@ -749,9 +722,8 @@ export const translations = {
     },
     timeline: {
       eyebrow: "Program Timeline",
-      title: "From application to Global Showcase, a seven-month journey.",
-      subtitle:
-        "Mark these dates. Miss the July 26 deadline and the next cohort won't open until next year.",
+      title: "Three dates. One global stage.",
+      subtitle: "Applications open June 5. Shortlist lands August 17. Showcase starts November 20.",
       statuses: {
         open: "Open",
         upcoming: "Upcoming",
@@ -759,38 +731,19 @@ export const translations = {
       },
       items: [
         {
-          date: "6/19",
-          title: "Program Announcement · Applications Open",
-          description: "The online portal goes live for AI-native teams.",
-        },
-        {
-          date: "6/19–7/26",
-          title: "Recruitment",
-          description:
-            "A 6-week window. We encourage early applications so you have more time to prepare for the first interview.",
-        },
-        {
-          date: "7/27–8/14",
-          title: "Selection Process",
-          description:
-            "Application review, first interview, and final selection by SparkLabs / GCP Leadership.",
+          date: "6/5",
+          title: "Applications Open",
+          description: "AI-native teams can begin submitting applications.",
         },
         {
           date: "8/17",
-          title: "Shortlist Announcement",
-          description: "The selected 15 teams are publicly announced. Non-selected teams receive individual responses.",
+          title: "Shortlist Announced",
+          description: "The selected 15 teams are announced.",
         },
         {
-          date: "8/24–11/27",
-          title: "Program Execution (12-week intensive)",
-          description:
-            "All three modules in full swing: Technical Incubation, Business Incubation, and Community Support.",
-        },
-        {
-          date: "11/20–11/27",
-          title: "Global Showcase × Meet Taipei",
-          description:
-            "Global Sample Showcase + Global Press Kit + International VC / CVC access. 200+ international attendees — one stage equals six months of BD.",
+          date: "11/20",
+          title: "Global Showcase",
+          description: "Selected teams step onto the global stage.",
         },
       ],
     },
@@ -957,7 +910,7 @@ export const translations = {
       subtitle2: "and our global mentors.",
       ctaPrimary: "Apply Now",
       ctaSecondary: "Contact the Team",
-      microcopy: "Free to apply · No equity taken · Shortlist announced August 17",
+      microcopy: "15 teams. One shot. Applications close when spots are gone.",
     },
     footer: {
       tagline:
