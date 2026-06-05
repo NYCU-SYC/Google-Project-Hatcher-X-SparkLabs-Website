@@ -47,7 +47,7 @@ export function Navigation() {
                 : "shadow-[0_6px_20px_rgba(15,23,42,0.055)]"
             )}
           >
-            <a href="/" className="shrink-0">
+            <a href="/" className="flex shrink-0 items-center leading-none">
               <DualBrandLock compact />
             </a>
 
