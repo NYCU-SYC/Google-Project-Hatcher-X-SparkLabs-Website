@@ -45,7 +45,7 @@ export function ApplyForm() {
               className="absolute top-0 left-0 right-0 h-1 z-10"
               style={{
                 background:
-                  "linear-gradient(90deg, #4285F4 0%, #34A853 50%, #FF5C35 100%)",
+                  "linear-gradient(90deg, #1A73E8 0%, #4285F4 70%, #34A853 100%)",
               }}
             />
 

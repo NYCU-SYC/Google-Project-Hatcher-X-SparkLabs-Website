@@ -28,32 +28,32 @@ const notoTC = Noto_Sans_TC({
 
 const metadataByLocale: Record<Locale, Metadata> = {
   zh: {
-    title: "Google × SparkLabs Taiwan AI 加速器｜從台灣走向全球的 AI 新創計畫",
+    title: "Google Cloud × SparkLabs Taiwan AI Accelerator｜為有全球企圖的 AI 創辦人而設",
     description:
-      "Google 與 SparkLabs Taiwan 攜手，為 AI-native 創辦團隊提供 USD 25K Google Cloud Credit、Google 技術支援、全球導師網絡與 11 月 Global Showcase。7 月 26 日截止申請。",
+      "由 Google Cloud 與 SparkLabs Taiwan 共同推動的 12 週、不交換股權 AI 加速器計畫，協助 AI 新創強化技術、加快成長並拓展國際市場。",
     openGraph: {
-      title: "Google × SparkLabs Taiwan AI 加速器",
-      description: "從台灣走向全球的 AI 新創計畫。7 月 26 日截止申請。",
+      title: "Google Cloud × SparkLabs Taiwan AI Accelerator",
+      description: "為有全球企圖的 AI 創辦人而設。7 月 26 日截止申請。",
       locale: "zh_TW",
     },
     twitter: {
-      title: "Google × SparkLabs Taiwan AI 加速器",
-      description: "從台灣走向全球的 AI 新創計畫。",
+      title: "Google Cloud × SparkLabs Taiwan AI Accelerator",
+      description: "為有全球企圖的 AI 創辦人而設。",
     },
   },
   en: {
     title:
-      "Google × SparkLabs Taiwan AI Accelerator | Build the next world-class AI company from Taiwan",
+      "Google Cloud × SparkLabs Taiwan AI Accelerator | Built for AI founders with global ambition",
     description:
-      "Google and SparkLabs Taiwan unite to accelerate AI-native founders with USD 25K Google Cloud Credit, a global mentor network, and a Global Showcase stage in November 2026. Apply by July 26.",
+      "A 12-week equity-free accelerator powered by Google Cloud and SparkLabs Taiwan, helping AI startups strengthen technology, accelerate growth, and scale globally.",
     openGraph: {
-      title: "Google × SparkLabs Taiwan AI Accelerator",
-      description: "Build the next world-class AI company from Taiwan. Apply by July 26.",
+      title: "Google Cloud × SparkLabs Taiwan AI Accelerator",
+      description: "Built for AI founders with global ambition. Apply by July 26.",
       locale: "en_US",
     },
     twitter: {
-      title: "Google × SparkLabs Taiwan AI Accelerator",
-      description: "Build the next world-class AI company from Taiwan.",
+      title: "Google Cloud × SparkLabs Taiwan AI Accelerator",
+      description: "Built for AI founders with global ambition.",
     },
   },
 };
@@ -64,7 +64,6 @@ const keywordsByLocale: Record<Locale, string[]> = {
     "AI 新創",
     "Google Cloud Startup",
     "SparkLabs Taiwan",
-    "Google Project Hatcher",
     "Vertex AI",
     "Gemini",
     "Frontier AI",
@@ -76,7 +75,6 @@ const keywordsByLocale: Record<Locale, string[]> = {
     "AI Accelerator Taiwan",
     "Google Cloud Startup",
     "SparkLabs Taiwan",
-    "Google Project Hatcher",
     "Vertex AI",
     "Gemini",
     "Frontier AI",

@@ -1,66 +1,20 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Rocket, Cpu, Globe2, Users, Sparkles } from "lucide-react";
+import { Code2, Globe2, HeartPulse, Layers3, Rocket, Sparkles } from "lucide-react";
 import { useTranslation } from "@/lib/i18n/LanguageProvider";
 
 /**
  * Who Should Apply — conversion-critical "is this me?" section.
- *
- * Layout: 5-col headline on the left + 7-col criteria grid on the right
- * (lg+). On md it splits to single-column headline + 2-col cards; on
- * mobile everything stacks.
- *
- * Copy comes from the i18n layer (t.criteria.*). Only visual metadata
- * (icon + Google brand color tile) lives in the component as a parallel
- * array zipped with t.criteria.cards by index.
  */
 
-// Visual metadata only — copy is in translations.ts t.criteria.cards
-const criteriaMeta = [
-  {
-    icon: Rocket,
-    accent: {
-      text: "text-[#4285F4]",
-      bg: "bg-[#4285F4]/10",
-      border: "border-[#4285F4]/35",
-      surface: "bg-[#4285F4]/[0.04]",
-    },
-  },
-  {
-    icon: Cpu,
-    accent: {
-      text: "text-[#EA4335]",
-      bg: "bg-[#EA4335]/10",
-      border: "border-[#EA4335]/35",
-      surface: "bg-[#EA4335]/[0.04]",
-    },
-  },
-  {
-    icon: Globe2,
-    accent: {
-      text: "text-[#FBBC04]",
-      bg: "bg-[#FBBC04]/15",
-      border: "border-[#FBBC04]/50",
-      surface: "bg-[#FBBC04]/[0.06]",
-    },
-  },
-  {
-    icon: Users,
-    accent: {
-      text: "text-[#34A853]",
-      bg: "bg-[#34A853]/10",
-      border: "border-[#34A853]/35",
-      surface: "bg-[#34A853]/[0.04]",
-    },
-  },
-];
-
-const domainStyles = [
-  "bg-[#4285F4]/10 border-[#4285F4]/30 text-[#174EA6]",
-  "bg-[#34A853]/10 border-[#34A853]/30 text-[#137333]",
-  "bg-[#EA4335]/10 border-[#EA4335]/30 text-[#A50E0E]",
-  "bg-[#FBBC04]/20 border-[#FBBC04]/45 text-[#8A5A00]",
+const checklistMeta = [
+  { icon: Sparkles, color: "text-[#1A73E8]", bg: "bg-[#E8F0FE]", accent: "bg-[#4285F4]" },
+  { icon: Rocket, color: "text-[#B06000]", bg: "bg-[#FEF7E0]", accent: "bg-[#FBBC04]" },
+  { icon: Code2, color: "text-[#188038]", bg: "bg-[#E6F4EA]", accent: "bg-[#34A853]" },
+  { icon: Layers3, color: "text-[#007B83]", bg: "bg-[#E4F7F8]", accent: "bg-[#00ACC1]" },
+  { icon: Globe2, color: "text-[#6A1B9A]", bg: "bg-[#F3E8FD]", accent: "bg-[#8E24AA]" },
+  { icon: HeartPulse, color: "text-[#C5221F]", bg: "bg-[#FCE8E6]", accent: "bg-[#EA4335]" },
 ];
 
 export function WhoShouldApply() {
@@ -69,7 +23,7 @@ export function WhoShouldApply() {
   return (
     <section
       id="apply-criteria"
-      className="relative scroll-mt-28 py-16 md:scroll-mt-32 md:py-20 bg-white overflow-hidden"
+      className="relative scroll-mt-28 overflow-hidden bg-white py-16 md:scroll-mt-32 md:py-24"
     >
       <div className="container-wide relative">
         <motion.div
@@ -77,78 +31,96 @@ export function WhoShouldApply() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.5 }}
-          className="mx-auto mb-12 flex max-w-4xl flex-col items-center text-center md:mb-14"
+          className="mx-auto mb-10 flex max-w-3xl flex-col items-center text-center md:mb-12"
         >
-          <div className="inline-flex items-center gap-3 rounded-full border border-[#4285F4]/25 bg-[#4285F4]/[0.05] px-5 py-2 text-sm font-bold tracking-normal uppercase text-slate-900 shadow-sm md:text-base">
-            <Sparkles className="h-4.5 w-4.5 text-[#4285F4]" />
+          <div className="inline-flex items-center gap-2.5 rounded-full border border-[#1A73E8]/20 bg-[#1A73E8]/[0.045] px-4 py-1.5 text-xs font-bold uppercase tracking-normal text-[#174EA6]">
+            <Sparkles className="h-4 w-4 text-[#1A73E8]" />
             {t.criteria.eyebrow}
           </div>
-          <h2 className="mt-5 font-display text-3xl md:text-4xl lg:text-[2.65rem] font-semibold !leading-[1.25] tracking-normal text-slate-900 text-balance">
-            {t.criteria.headline.line1}
-            <br />
-            {t.criteria.headline.line2}
+          <h2 className="mt-5 font-display text-[2rem] font-semibold !leading-[1.18] tracking-normal text-slate-950 text-balance md:text-[2.45rem] lg:text-[2.75rem]">
+            {t.criteria.title}
           </h2>
-          <p className="mt-5 max-w-3xl text-base md:text-lg text-slate-600 leading-relaxed">
-            {t.criteria.cohortIntro}
-            <strong className="text-slate-900">
-              {t.criteria.cohortHighlight}
-            </strong>
-            {t.criteria.cohortRest}
+          <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-slate-600 md:text-base">
+            {t.criteria.subtitle}
           </p>
         </motion.div>
 
-        <div className="mx-auto max-w-5xl">
-          {/* 2x2 criteria card grid */}
-          <div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
-              {criteriaMeta.map((meta, i) => {
-                const card = t.criteria.cards[i];
-                if (!card) return null;
-                const Icon = meta.icon;
-                return (
-                  <motion.div
-                    key={card.title}
-                    initial={{ opacity: 0, y: 12 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-60px" }}
-                    transition={{ duration: 0.4, delay: 0.05 + i * 0.06 }}
-                    className={`group relative rounded-lg border p-6 md:p-7 shadow-[0_6px_20px_rgba(15,23,42,0.05)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(15,23,42,0.08)] ${meta.accent.border} ${meta.accent.surface}`}
-                  >
-                    <div className="flex items-start justify-between gap-4">
-                      <div
-                        className={`inline-flex h-12 w-12 items-center justify-center rounded-lg ${meta.accent.bg}`}
-                      >
-                        <Icon
-                          className={`h-5 w-5 ${meta.accent.text}`}
-                          strokeWidth={2.2}
-                        />
-                      </div>
-                    </div>
-                    <h3 className="mt-4 font-semibold text-base md:text-[17px] text-slate-900 leading-snug tracking-normal">
-                      {card.title}
-                    </h3>
-                    <p className="mt-1.5 text-sm md:text-[15px] text-slate-600 leading-relaxed">
-                      {card.body}
-                    </p>
-                  </motion.div>
-                );
-              })}
+        <div className="mx-auto max-w-6xl">
+          <div className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-[0_18px_50px_rgba(15,23,42,0.07)] ring-1 ring-[#1A73E8]/10">
+            <div className="grid h-1 grid-cols-4">
+              <div className="bg-[#4285F4]" />
+              <div className="bg-[#EA4335]" />
+              <div className="bg-[#FBBC04]" />
+              <div className="bg-[#34A853]" />
             </div>
 
-            {/* Welcomed domains — let founders see their vertical is welcome */}
-            <div className="mt-6 rounded-lg border border-dashed border-slate-200 bg-slate-50/60 px-5 py-4 text-center">
-              <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-sm">
-                <span className="font-semibold text-slate-700">
-                  {t.criteria.domains.title}:
-                </span>
-                {t.criteria.domains.items.map((d, i) => (
-                  <span
-                    key={d}
-                    className={`inline-flex items-center rounded-full border px-3 py-1 text-xs font-semibold ${domainStyles[i % domainStyles.length]}`}
-                  >
-                    {d}
-                  </span>
-                ))}
+            <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
+              <div className="border-b border-slate-200 bg-[#F8FAFF] p-6 sm:p-8 lg:border-b-0 lg:border-r lg:p-9">
+                <div className="text-xs font-bold uppercase tracking-normal text-[#174EA6]">
+                  {t.criteria.leadIn}
+                </div>
+                <div className="mt-5 font-display text-3xl font-semibold leading-tight tracking-normal text-slate-950 sm:text-[2.35rem]">
+                  {t.criteria.cohortHighlight}
+                </div>
+                <p className="mt-4 text-[15px] leading-relaxed text-slate-600">
+                  {t.criteria.cohortIntro}
+                  <strong className="font-semibold text-slate-900">
+                    {" "}
+                    {t.criteria.cohortHighlight}
+                  </strong>
+                  {t.criteria.cohortRest}
+                </p>
+
+                <div className="mt-6">
+                  <div className="text-[11px] font-bold uppercase tracking-normal text-slate-400">
+                    {t.criteria.domains.title}
+                  </div>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {t.criteria.domains.items.map((domain) => (
+                      <span
+                        key={domain}
+                        className="rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-semibold text-slate-700 shadow-sm"
+                      >
+                        {domain}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+              </div>
+
+              <div className="p-6 sm:p-8 lg:p-9">
+                <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+                  {t.criteria.checklist.map((item, i) => {
+                    const meta = checklistMeta[i] ?? checklistMeta[0];
+                    const Icon = meta.icon;
+
+                    return (
+                      <motion.div
+                        key={item}
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-60px" }}
+                        transition={{ duration: 0.35, delay: i * 0.04 }}
+                        className="group relative min-h-[92px] overflow-hidden rounded-lg border border-slate-200 bg-white p-4 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-[0_10px_24px_rgba(15,23,42,0.06)]"
+                      >
+                        <div className={`absolute inset-y-0 left-0 w-1 ${meta.accent}`} />
+                        <div className="flex items-start gap-3">
+                          <div
+                            className={`grid h-10 w-10 shrink-0 place-items-center rounded-lg ${meta.bg}`}
+                          >
+                            <Icon className={`h-5 w-5 ${meta.color}`} strokeWidth={2.1} />
+                          </div>
+                          <div className="min-w-0">
+                            <div className="text-sm font-semibold leading-relaxed text-slate-900 md:text-[15px]">
+                              {item}
+                            </div>
+                          </div>
+                        </div>
+                      </motion.div>
+                    );
+                  })}
+                </div>
               </div>
             </div>
           </div>

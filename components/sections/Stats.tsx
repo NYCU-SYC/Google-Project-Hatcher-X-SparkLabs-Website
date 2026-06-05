@@ -58,19 +58,19 @@ export function Stats() {
   ];
 
   return (
-    <section id="program-at-a-glance" className="relative py-14 md:py-16 bg-white">
+    <section id="program-at-a-glance" className="relative bg-slate-50/70 py-14 md:py-20">
       <div className="container-wide">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="inline-flex items-center gap-3 rounded-full border border-[#4285F4]/25 bg-[#4285F4]/[0.05] px-5 py-2 text-sm font-bold tracking-normal uppercase text-slate-900 shadow-sm md:text-base">
-            <span className="h-2.5 w-2.5 rounded-full bg-[#4285F4]" />
+          <p className="inline-flex items-center gap-2.5 rounded-full border border-[#1A73E8]/20 bg-white px-4 py-1.5 text-xs font-bold uppercase tracking-normal text-[#174EA6] shadow-sm">
+            <span className="h-2 w-2 rounded-full bg-[#1A73E8]" />
             {t.stats.title}
           </p>
-          <h2 className="mt-3 font-display text-2xl md:text-3xl font-semibold text-slate-900 tracking-normal leading-tight">
+          <h2 className="mt-4 font-display text-2xl font-semibold tracking-normal text-slate-950 md:text-3xl">
             {t.stats.headline}
           </h2>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
+        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {items.map((item, i) => {
             const Icon = item.icon;
             return (
@@ -80,14 +80,14 @@ export function Stats() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.4, delay: i * 0.06 }}
-                className="group rounded-lg border border-slate-200 bg-white p-6 md:p-7 transition-all duration-200 hover:border-slate-300 hover:shadow-sm"
+                className="group rounded-lg border border-slate-200 bg-white p-5 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-[0_10px_24px_rgba(15,23,42,0.055)] md:p-6"
               >
                 <div
                   className={`inline-flex h-10 w-10 items-center justify-center rounded-lg ${item.accent.bg}`}
                 >
                   <Icon className={`h-5 w-5 ${item.accent.text}`} strokeWidth={2.2} />
                 </div>
-                <div className="mt-5 font-display text-3xl md:text-4xl font-semibold text-slate-900 tabular-nums tracking-normal">
+                <div className="mt-5 font-display text-3xl font-semibold tracking-normal text-slate-950 tabular-nums md:text-[2.35rem]">
                   {item.value}
                 </div>
                 <div className="mt-2 text-sm font-medium text-slate-900">

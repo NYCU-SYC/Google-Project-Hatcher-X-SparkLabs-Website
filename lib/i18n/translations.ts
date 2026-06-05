@@ -3,9 +3,9 @@ export type Locale = "zh" | "en";
 export const translations = {
   zh: {
     nav: {
-      glance: "計畫總覽",
-      whyNow: "為何現在",
-      benefits: "資源支援",
+      glance: "關於計畫",
+      whyNow: "差異亮點",
+      benefits: "你將獲得",
       criteria: "適合團隊",
       timeline: "時程",
       selection: "評選流程",
@@ -16,7 +16,7 @@ export const translations = {
       closeMenu: "關閉選單",
     },
     topBanner: {
-      programName: "Google Project Hatcher × SparkLabs",
+      programName: "Google Cloud × SparkLabs Taiwan AI Accelerator",
       deadline: "7 / 26 申請截止",
       ctaShort: "立即申請",
     },
@@ -25,24 +25,24 @@ export const translations = {
       en: "切換至英文",
     },
     seo: {
-      homeTitle: "Google × SparkLabs Taiwan AI 加速器｜從台灣走向全球的 AI 新創計畫",
+      homeTitle: "Google Cloud × SparkLabs Taiwan AI Accelerator｜為有全球企圖的 AI 創辦人而設",
       homeDescription:
-        "Google 與 SparkLabs Taiwan 攜手，為 AI-native 創辦團隊提供 USD 25K Google Cloud Credit、Google 技術支援、全球導師網絡與 11 月 Global Showcase。7 月 26 日截止申請。",
-      applyTitle: "立即申請｜Google × SparkLabs Taiwan AI 加速器",
+        "由 Google Cloud 與 SparkLabs Taiwan 共同推動的 12 週、不交換股權 AI 加速器計畫，協助 AI 新創強化技術、加快成長並拓展國際市場。",
+      applyTitle: "立即申請｜Google Cloud × SparkLabs Taiwan AI Accelerator",
       applyDescription:
-        "申請 Google × SparkLabs Taiwan AI 加速器。7 月 26 日截止，精選 15 家團隊。免費申請，不交換股權。",
+        "申請 Google Cloud × SparkLabs Taiwan AI Accelerator。7 月 26 日截止，精選 15 家 AI 新創。免費申請，不交換股權。",
     },
     hero: {
       badgeCohort: "申請中",
       badgeStatus: "7 / 26 截止 · 精選 15 家團隊",
       title: {
-        part1: "Google Project Hatcher × SparkLabs",
+        part1: "為有全球企圖的",
         part2: "",
-        highlight: " AI 新創全球化加速計畫",
+        highlight: " AI 創辦人而設計",
         part3: "",
       },
       subtitle:
-        "15 個名額、USD 25K Google Cloud Credit、11 月國際舞台。為準備走向全球的 AI 創辦團隊而設。",
+        "這是一個由 Google Cloud 與 SparkLabs Taiwan 共同推動、為期 12 週且不交換股權的加速器計畫，協助 AI 新創強化技術、加快成長，並走向國際市場。",
       ctaPrimary: "立即申請",
       ctaSecondary: "了解計畫內容",
       applicationOpen: "6 月 5 日開放申請",
@@ -62,7 +62,7 @@ export const translations = {
     },
     stats: {
       title: "計畫總覽",
-      headline: "申請時程、資源與入選名額一次看清",
+      headline: "重要時程、資源與入選名額一次看清",
       items: [
         { value: 15, label: "入選名額", sublabel: "精選 15 家團隊" },
         {
@@ -70,7 +70,7 @@ export const translations = {
           prefix: "USD ",
           suffix: "K",
           label: "Google Cloud Credit",
-          sublabel: "每隊專屬額度",
+          sublabel: "每隊最高 USD 25K 額度",
         },
         { value: 12, suffix: " 週", label: "密集加速", sublabel: "8 / 24 - 11 / 27" },
         {
@@ -78,6 +78,43 @@ export const translations = {
           suffix: "+",
           label: "Global Showcase 出席者",
           sublabel: "11 月 Meet Taipei 同期登場",
+        },
+      ],
+    },
+    aboutProgram: {
+      eyebrow: "關於計畫",
+      title: "關於計畫",
+      paragraphs: [
+        "台灣不缺世界級 AI 人才；下一步，是讓更多 AI 新創長成世界級公司。",
+        "Google AI Accelerator 結合 Google Cloud 的 AI 專業與 SparkLabs 的全球創辦人網絡，協助高潛力團隊加快腳步：從 AI 技術建構、產品化，到跨市場成長。",
+        "入選創辦人將直接連結技術專家、商業導師、國際投資人與國際展示機會，讓產品、團隊與市場策略同步升級。",
+      ],
+    },
+    programDifference: {
+      eyebrow: "核心差異",
+      title: "技術與國際成長，放在同一個加速器裡",
+      subtitle:
+        "Google Cloud 帶來 AI 技術深度，SparkLabs Taiwan 帶來創辦人網絡、GTM 經驗與國際連結。兩者結合，讓團隊不只做出更好的 AI 產品，也更快走向下一個市場。",
+      cards: [
+        {
+          title: "打造更成熟的 AI 產品",
+          lead: "與 Google 專家直接合作，協助你：",
+          bullets: [
+            "優化 AI 架構",
+            "善用 Vertex AI 與 Gemini",
+            "提升系統擴充性",
+            "準備產品化部署",
+          ],
+        },
+        {
+          title: "從台灣走向全球市場",
+          lead: "與 SparkLabs 及全球導師合作，協助你：",
+          bullets: [
+            "釐清 Go-to-market 策略",
+            "接觸投資人",
+            "拓展國際市場",
+            "建立策略合作夥伴關係",
+          ],
         },
       ],
     },
@@ -97,9 +134,9 @@ export const translations = {
     },
     benefits: {
       eyebrow: "你將獲得什麼",
-      title: "聚焦真正重要的支援，省去不必要的複雜",
+      title: "具體、可使用、能推動成長的加速資源",
       subtitle:
-        "這不只是課程或補助，而是把 Google 的技術能量與 SparkLabs 的全球網絡整合成可直接使用的加速資源，幫團隊更快靠近第一個國際客戶。",
+        "從雲端額度、AI 技術指導，到商業導師、募資準備與國際曝光，協助團隊把技術、產品與市場推進到下一階段。",
       readyCta: "準備好取得這些資源了嗎？",
       heroCard: {
         tag: "USD 25K Credit",
@@ -117,80 +154,81 @@ export const translations = {
       },
       items: [
         {
-          title: "技術加速",
-          tagline: "Google Cloud AI 技術支援",
-          description:
-            "Google Cloud AI 團隊提供直接技術支援，從架構檢視、模型優化到上線準備，協助團隊更穩定地把 AI 產品推向市場。",
-          bullets: [
-            "架構檢視：與 Google 工程師一對一討論",
-            "AI 模型優化：Gemini 調校與應用建議",
-            "領域專家：Medical AI、Deep Tech 等專家支援",
-          ],
+          title: "Google Cloud 額度",
+          tagline: "USD 25K Google Cloud 額度",
+          description: "可投入 Google Cloud、Vertex AI、Gemini 的建置、測試與擴充。",
+          bullets: [],
         },
         {
-          title: "商務加速",
-          tagline: "Google GTM 與 SparkLabs Mentor 網絡",
-          description:
-            "協助團隊釐清客戶、通路與營收成長路徑，並接上美國市場、Google BU 與全球夥伴資源。",
-          bullets: [
-            "Go-to-Market 策略：美國市場進入",
-            "募資準備：募資簡報、估值與投資人介紹",
-            "Google BU 合作：直接接觸 Google 業務單位",
-          ],
+          title: "Google AI 專家",
+          tagline: "來自 Google 團隊的技術指導",
+          description: "協助檢視 AI 架構、模型應用、擴充性與產品化部署準備。",
+          bullets: [],
         },
         {
-          title: "創辦人社群",
-          tagline: "走過全球化的創辦人經驗",
-          description:
-            "由已成功拓展國際市場的創辦人分享實戰經驗，讓同屆團隊在真實案例中交換做法、少走彎路。",
-          bullets: [
-            "創辦人分享：由具全球化經驗的創辦人主講",
-            "實戰經驗：不藏私的戰情室方法",
-          ],
+          title: "商業導師輔導",
+          tagline: "創辦人與營運實戰者的一對一建議",
+          description: "協助釐清成長策略、客戶開發與商業化路徑。",
+          bullets: [],
         },
         {
-          title: "國際展示舞台",
-          tagline: "11 月 20-27 日 · 與 Meet Taipei 同期",
-          description:
-            "一個舞台，200+ 位 VC、CVC 與媒體。把原本需要半年累積的曝光、引薦與商務開發，集中在一晚完成。",
-          bullets: [
-            "200+ 出席者：一晚集中半年商務開發能量",
-            "資本市場連結：國際 VC / CVC 媒合",
-            "全球媒體素材包：跨境媒體素材與聯合 PR",
-          ],
+          title: "全球網絡",
+          tagline: "串接 SparkLabs 國際新創生態系",
+          description: "連結跨區域導師、創辦人、投資人與市場資源。",
+          bullets: [],
+        },
+        {
+          title: "募資支援",
+          tagline: "投資人準備與引薦",
+          description: "優化募資敘事、Pitch Deck 與投資人溝通策略。",
+          bullets: [],
+        },
+        {
+          title: "國際展示機會",
+          tagline: "面向投資人、夥伴與客戶發表",
+          description: "在國際舞台展示產品成果、市場潛力與合作機會。",
+          bullets: [],
         },
       ],
     },
     criteria: {
-      eyebrow: "適合參與的團隊",
-      title: "這個計畫適合你嗎？",
-      subtitle: "我們尋找 AI-native、具備初期市場動能，並準備從台灣走向全球的創辦團隊。",
+      eyebrow: "適合申請",
+      title: "適合申請的團隊",
+      subtitle: "我們正在尋找技術扎實、產品可規模化，並具備全球企圖的 AI 新創團隊。",
       headline: {
-        line1: "為準備打造世界級 AI 公司的創辦人",
-        line2: "搭起通往全球的舞台",
+        line1: "適合準備走向全球的 AI 新創",
+        line2: "",
       },
-      cohortIntro: "我們將精選 ",
+      cohortIntro: "我們將精選",
       cohortHighlight: "15 家新創",
       cohortRest:
-        "，看重技術深度、國際視野，以及把產品推向下一個市場的決心。",
+        "，看重技術深度、可規模化產品與國際市場企圖。",
+      leadIn: "我們正在尋找：",
+      checklist: [
+        "AI-native 新創團隊",
+        "Seed 至 Series A 階段",
+        "具備扎實技術能力的創辦團隊",
+        "正在打造可規模化的產品",
+        "不只看台灣市場，具備明確全球企圖",
+        "歡迎 B2B AI、DeepTech、Physical AI、Healthcare AI 團隊",
+      ],
       detailsCta: "了解計畫內容",
       cards: [
         {
-          title: "已有初期動能的 Seed 至 Series A 團隊",
-          body: "已有 prototype、pilot 客戶，或能看見早期市場訊號。",
+          title: "AI-native 新創團隊",
+          body: "AI 是產品核心，而不是附加功能。",
         },
         {
-          title: "AI 是產品核心，不是附加功能",
-          body: "AI 不是附加功能，而是產品差異化與使用價值的核心。",
+          title: "Seed 至 Series A 階段",
+          body: "已有產品雛形、pilot 客戶或早期市場訊號。",
         },
         {
-          title: "從第一天就看向國際市場",
-          body: "產品與商業模式從一開始就為美國、亞太或其他海外市場設計。",
+          title: "強技術創辦團隊",
+          body: "具備把 AI 技術轉化為可規模化產品的能力。",
         },
         {
-          title: "與台灣有明確連結",
-          body:
-            "團隊在台灣有技術、人才、營運或創辦人連結，準備接上 Google 與 SparkLabs 全球網絡。",
+          title: "具備全球企圖",
+          body: "不只看台灣市場，已開始思考國際客戶、通路與合作夥伴。",
         },
       ],
       forYouTitle: "適合申請",
@@ -209,8 +247,8 @@ export const translations = {
       uncertainPrompt: "不確定是否符合？",
       uncertainAnswer: "先申請，我們會一起判斷。",
       domains: {
-        title: "我們特別歡迎的領域",
-        items: ["Biotech / Healthcare AI", "Frontier AI", "Deep Tech AI", "Physical AI"],
+        title: "歡迎領域",
+        items: ["B2B AI", "DeepTech", "Physical AI", "Healthcare AI"],
       },
       matchCta: "符合條件 — 立即申請",
     },
@@ -288,9 +326,9 @@ export const translations = {
     },
     mentors: {
       eyebrow: "導師與講者",
-      title: "和懂技術、懂市場的人並肩作戰",
+      title: "與懂 AI、懂市場、懂國際成長的人並肩前進",
       subtitle:
-        "從 Google 的 AI 戰略視角、SparkLabs 全球 GP，到 Biotech 與 Frontier AI 領域專家，協助你釐清成長瓶頸並找到下一步。",
+        "從 Google Cloud 的 AI 技術視角、SparkLabs 全球 GP，到 DeepTech 與 Healthcare AI 領域專家，協助你釐清瓶頸、找到下一步。",
       poweredBy: "串接 SparkLabs 全球導師網絡",
       sparkLabsNetwork: {
         label: "SparkLabs 全球網絡",
@@ -365,11 +403,11 @@ export const translations = {
       items: [
         {
           q: "申請需要費用嗎？",
-          a: "完全免費。入選團隊可額外取得 USD 25K Google Cloud Credit。",
+          a: "完全免費。入選團隊可取得最高 USD 25K Google Cloud 額度，用於雲端與 AI 產品建置。",
         },
         {
           q: "這個計畫會收取股權嗎？",
-          a: "不會。本計畫提供加速資源，不以交換股權為條件。若 SparkLabs 後續有投資意願，會以獨立 Term Sheet 另行討論，並非參與計畫的必要條件。",
+          a: "不會。這是 equity-free 的加速器計畫，參與不以交換股權為條件。若未來有投資討論，會另行以獨立條件進行。",
         },
         {
           q: "一定要在台灣嗎？",
@@ -377,7 +415,7 @@ export const translations = {
         },
         {
           q: "已申請過 GFS 25K Credit 還能參加嗎？",
-          a: "可以申請計畫本身，但 USD 25K Credit 不重複提供。其他資源包含技術診斷、導師網絡、Global Showcase 等，仍可照常參與。",
+          a: "可以申請計畫本身，但 USD 25K Google Cloud 額度不重複提供。技術指導、商業導師、SparkLabs 全球網絡與 Global Showcase 等資源仍可照常參與。",
         },
         {
           q: "計畫 12 週要實體到場嗎？",
@@ -396,27 +434,28 @@ export const translations = {
     finalCta: {
       deadline: "申請截止：7 月 26 日 · 精選 15 家團隊",
       title: {
-        line1: "把最大的成長瓶頸，",
-        line2: "交給我們",
+        line1: "準備把 AI 產品",
+        line2: "推向國際市場了嗎？",
       },
       ctaPrimary: "立即申請",
       ctaSecondary: "聯絡計畫團隊",
-      microcopy: "15 家團隊，一次機會。額滿即截止。",
+      microcopy: "12 週、不交換股權，協助你的技術、商業與國際拓展同步升級。",
     },
     footer: {
       tagline:
-        "Google 與 SparkLabs Taiwan 攜手，為下一代 AI-native 創辦團隊提供技術資源、導師網絡與國際舞台。",
+        "Google Cloud 與 SparkLabs Taiwan 攜手，協助有全球企圖的 AI 創辦人強化技術、加速成長並走向國際市場。",
       programTitle: "計畫",
       programLinks: [
-        { label: "計畫總覽", href: "/#program-at-a-glance" },
-        { label: "資源支援", href: "/#benefits" },
+        { label: "關於計畫", href: "/#about-program" },
+        { label: "差異亮點", href: "/#program-difference" },
+        { label: "你將獲得", href: "/#benefits" },
+        { label: "適合團隊", href: "/#apply-criteria" },
         { label: "申請時程", href: "/#timeline" },
-        { label: "導師與講者", href: "/#mentors" },
         { label: "立即申請", href: "/apply" },
       ],
       contactTitle: "聯絡我們",
       address: "台北市信義區松仁路 100 號",
-      copyright: "© 2026 Google × SparkLabs Taiwan AI 加速器。保留所有權利。",
+      copyright: "© 2026 Google Cloud × SparkLabs Taiwan AI Accelerator。保留所有權利。",
       privacy: "隱私權政策",
       terms: "使用條款",
       socialAria: {
@@ -429,22 +468,24 @@ export const translations = {
       backToHome: "← 回到首頁",
       header: {
         eyebrow: "申請表",
-        title: "申請 Google × SparkLabs Taiwan AI 加速器",
-        subtitle: "三步驟完成申請，預計 15 至 20 分鐘。",
+        title: "申請 Google Cloud × SparkLabs Taiwan AI Accelerator",
+        subtitle: "確認資格、準備資料並提交表單，約 15 至 20 分鐘即可完成。",
         deadline: "申請截止：7 / 26",
-        spots: "精選 15 個入選名額",
+        spots: "精選 15 家 AI 新創",
       },
       eligibility: {
-        title: "步驟 1：確認參與條件",
-        subtitle: "勾選所有條件後，即可進入下一步。",
+        title: "步驟 1：確認是否適合申請",
+        subtitle: "若大多數條件符合，就可以開始準備申請資料。",
         items: [
-          "團隊目前處於 Seed 至 Series A 階段",
-          "AI 是產品核心，而非附加功能",
-          "產品從第一天就為國際市場設計",
-          "團隊在台灣有技術、人才或營運連結",
+          "我們是 AI-native 新創團隊",
+          "目前處於 Seed 至 Series A 階段",
+          "創辦團隊具備扎實技術能力",
+          "正在打造可規模化的 AI 產品",
+          "具備不只台灣市場的全球企圖",
+          "我們的方向屬於 B2B AI、DeepTech、Physical AI、Healthcare AI 或相關 AI 應用",
         ],
         readyLabel: "符合條件，進入下一步",
-        notReadyLabel: "尚未完全符合？仍歡迎申請，我們會逐案判斷。",
+        notReadyLabel: "尚未全部符合？仍可申請，我們會依團隊狀況逐案評估。",
       },
       prepare: {
         title: "步驟 2：準備申請資料",
@@ -452,10 +493,10 @@ export const translations = {
         items: [
           { title: "公司基本資訊", description: "公司名稱、註冊地、成立時間、團隊規模" },
           { title: "創辦團隊", description: "創辦人姓名、職稱、LinkedIn 與簡短背景" },
-          { title: "產品與 AI 技術", description: "解決的問題、AI 的角色與技術差異化" },
+          { title: "產品與 AI 技術", description: "解決的問題、AI 的角色、架構與技術差異化" },
           { title: "市場動能", description: "現有用戶、營收、合作夥伴或其他可量化指標" },
           { title: "國際擴張規劃", description: "未來 18 個月的目標市場與拓展計畫" },
-          { title: "雲端與基礎架構需求", description: "目前雲端使用情況、預期算力與模型規模" },
+          { title: "雲端與基礎架構需求", description: "目前雲端使用情況、預期算力、模型規模與部署需求" },
           { title: "Pitch Deck", description: "PDF 上傳（建議 12 至 20 頁，小於 10MB）" },
         ],
       },
@@ -476,10 +517,10 @@ export const translations = {
         title: "步驟 3：提交申請",
         placeholder:
           "申請表單將嵌入於此（Google Forms / Typeform / Tally）。\n\n若表單尚未載入，請聯絡 program@sparklabstaiwan.com 取得申請連結，或稍後重新整理頁面。",
-        note: "資料會直接送交 SparkLabs Taiwan 與 Google Cloud 評審團隊。建議使用桌機填寫，體驗會更完整。",
+        note: "資料會直接送交 SparkLabs Taiwan 與 Google Cloud 評審團隊。建議使用桌機填寫，內容會更好整理。",
         externalCta: "前往申請表單",
         iframeLabel: "申請表單",
-        iframeTitle: "Google × SparkLabs Taiwan AI 加速器申請表",
+        iframeTitle: "Google Cloud × SparkLabs Taiwan AI Accelerator 申請表",
         iframeMeta: "Google Forms · 約 15 分鐘",
         openInNewTab: "在新分頁開啟",
         loading: "載入中…",
@@ -496,8 +537,8 @@ export const translations = {
         items: [
           { title: "免費申請", description: "完全免費，不收取申請費" },
           { title: "不交換股權", description: "參與計畫不以股權交換為條件" },
+          { title: "12 週加速", description: "技術、商業與國際拓展同步推進" },
           { title: "8 / 17 公布入選", description: "8 月 17 日公布結果" },
-          { title: "8 / 24 啟動", description: "8 月 24 日正式啟動" },
         ],
       },
       faqReminder: {
@@ -510,9 +551,9 @@ export const translations = {
 
   en: {
     nav: {
-      glance: "Overview",
-      whyNow: "Why Now",
-      benefits: "Benefits",
+      glance: "About",
+      whyNow: "Why Different",
+      benefits: "What You Get",
       criteria: "Who",
       timeline: "Timeline",
       selection: "Selection",
@@ -523,7 +564,7 @@ export const translations = {
       closeMenu: "Close menu",
     },
     topBanner: {
-      programName: "Google Project Hatcher × SparkLabs",
+      programName: "Google Cloud × SparkLabs Taiwan AI Accelerator",
       deadline: "Apply by July 26",
       ctaShort: "Apply Now",
     },
@@ -533,24 +574,24 @@ export const translations = {
     },
     seo: {
       homeTitle:
-        "Google × SparkLabs Taiwan AI Accelerator | Build the next world-class AI company from Taiwan",
+        "Google Cloud × SparkLabs Taiwan AI Accelerator | Built for AI founders with global ambition",
       homeDescription:
-        "Google and SparkLabs Taiwan unite to accelerate AI-native founders with USD 25K Google Cloud Credit, a global mentor network, and a Global Showcase stage in November 2026. Apply by July 26.",
-      applyTitle: "Apply | Google × SparkLabs Taiwan AI Accelerator",
+        "A 12-week equity-free accelerator powered by Google Cloud and SparkLabs Taiwan, helping AI startups strengthen technology, accelerate growth, and scale globally.",
+      applyTitle: "Apply | Google Cloud × SparkLabs Taiwan AI Accelerator",
       applyDescription:
-        "Apply to Google × SparkLabs Taiwan AI Accelerator. Application deadline: July 26. Only 15 spots. Free to apply, no equity taken.",
+        "Apply to the Google Cloud × SparkLabs Taiwan AI Accelerator. Application deadline: July 26. 15 selected AI startups. Free to apply, equity-free.",
     },
     hero: {
       badgeCohort: "Now Open",
       badgeStatus: "Apply by July 26 · Only 15 spots",
       title: {
-        part1: "Google Project Hatcher × SparkLabs",
+        part1: "Built for AI founders",
         part2: "",
-        highlight: " AI Startup Globalization Accelerator",
+        highlight: " with global ambition.",
         part3: "",
       },
       subtitle:
-        "15 spots. USD $25K Google Cloud Credit. A global stage in November. Built for ambitious AI founders ready to scale globally.",
+        "A 12-week equity-free accelerator powered by Google Cloud and SparkLabs Taiwan, helping AI startups strengthen their technology, accelerate growth, and scale globally.",
       ctaPrimary: "Apply Now",
       ctaSecondary: "See Program Details",
       applicationOpen: "Applications open June 5",
@@ -570,7 +611,7 @@ export const translations = {
     },
     stats: {
       title: "Program at a Glance",
-      headline: "The essentials, built for quick scanning.",
+      headline: "Key dates, resources, and cohort size at a glance.",
       items: [
         { value: 15, label: "Selected Teams", sublabel: "Only Spots in Cohort" },
         {
@@ -578,7 +619,7 @@ export const translations = {
           prefix: "USD ",
           suffix: "K",
           label: "Google Cloud Credit",
-          sublabel: "Per Team · Exclusive",
+          sublabel: "Up to USD 25K per team",
         },
         { value: 12, suffix: " wk", label: "Weeks of Acceleration", sublabel: "Aug 24 – Nov 27" },
         {
@@ -586,6 +627,43 @@ export const translations = {
           suffix: "+",
           label: "Global Showcase Audience",
           sublabel: "Nov × Meet Taipei",
+        },
+      ],
+    },
+    aboutProgram: {
+      eyebrow: "About the Program",
+      title: "About the Program",
+      paragraphs: [
+        "Taiwan has world-class AI talent. What it needs are more world-class AI companies.",
+        "The Google AI Accelerator brings together Google Cloud's AI expertise and SparkLabs' global founder network to help high-potential startups move faster—from building with AI to scaling globally.",
+        "Selected founders receive direct access to technical experts, business mentors, global investors, and opportunities to showcase their innovations on an international stage.",
+      ],
+    },
+    programDifference: {
+      eyebrow: "Why This Program Is Different",
+      title: "Why This Program Is Different",
+      subtitle:
+        "Google Cloud brings deep AI and infrastructure expertise. SparkLabs Taiwan brings global founder networks, GTM experience, and cross-border startup support.",
+      cards: [
+        {
+          title: "Build Better AI",
+          lead: "Work directly with Google experts to:",
+          bullets: [
+            "Optimize AI architecture",
+            "Leverage Vertex AI & Gemini",
+            "Improve scalability",
+            "Prepare for production deployment",
+          ],
+        },
+        {
+          title: "Scale Beyond Taiwan",
+          lead: "Work with SparkLabs and global mentors to:",
+          bullets: [
+            "Refine GTM strategy",
+            "Access investors",
+            "Expand internationally",
+            "Build strategic partnerships",
+          ],
         },
       ],
     },
@@ -606,9 +684,9 @@ export const translations = {
     },
     benefits: {
       eyebrow: "What You Get",
-      title: "Everything you need. Nothing you don't.",
+      title: "What You'll Get",
       subtitle:
-        "Not just a program. Google's technical horsepower combined with SparkLabs' global network — A shortcut to your first global customer.",
+        "A focused set of technical, business, fundraising, and global expansion resources designed for AI founders who need to move faster.",
       readyCta: "Ready to access these resources?",
       heroCard: {
         tag: "USD 25K Credit",
@@ -626,80 +704,82 @@ export const translations = {
       },
       items: [
         {
-          title: "Technical Incubation",
-          tagline: "Google Cloud AI Enablement",
-          description:
-            "Google Cloud AI Team — Direct technical support from Google engineers, from architecture reviews to production readiness.",
-          bullets: [
-            "Architecture Reviews — 1-on-1 with Google engineers",
-            "AI Model Optimization — Gemini fine-tuning",
-            "Domain Experts — Medical AI & Deep Tech specialists",
-          ],
+          title: "Google Cloud Credits",
+          tagline: "USD 25K Cloud Credits",
+          description: "Build, test, and scale with Google Cloud, Vertex AI, and Gemini.",
+          bullets: [],
         },
         {
-          title: "Business Incubation",
-          tagline: "SparkLabs Global Mentor Network",
-          description:
-            "Google GTM Team — Google's go-to-market experts helping you find customers, build distribution, and grow revenue across global markets.",
-          bullets: [
-            "Go-to-Market Strategy — US market entry",
-            "Fundraising Preparation — pitch deck, valuation, investor intros",
-            "Google BU Partnership — direct access to Google business units",
-          ],
+          title: "Google AI Experts",
+          tagline: "Technical guidance from Google teams",
+          description: "Get support on AI architecture, model usage, scalability, and production readiness.",
+          bullets: [],
         },
         {
-          title: "Community Support",
-          tagline: "Founder Circle & Knowledge Transfer",
-          description:
-            "Entrepreneur Sharing Sessions led by founders who've already scaled globally. Build a cohort peer community and learn directly from those who've walked the path.",
-          bullets: [
-            "Entrepreneur Sharing Sessions — led by globally-scaled founders",
-            "Real-world Playbooks — unfiltered war-room learnings",
-          ],
+          title: "Business Mentorship",
+          tagline: "1-on-1 support from operators and founders",
+          description: "Sharpen growth strategy, customer development, and commercialization plans.",
+          bullets: [],
         },
         {
-          title: "Global Showcase Stage",
-          tagline: "Nov 20–27 · Co-located with Meet Taipei",
-          description:
-            "One stage. 200+ VCs, CVCs, and press. The BD that would've taken you six months — in one night.",
-          bullets: [
-            "200+ attendees — one stage equals six months of BD",
-            "Capital Market Access — international VC / CVC matchmaking",
-            "Global Press Kit — cross-border media & joint PR",
-          ],
+          title: "Global Network",
+          tagline: "Access to SparkLabs' international ecosystem",
+          description: "Connect with mentors, operators, investors, and market builders across regions.",
+          bullets: [],
+        },
+        {
+          title: "Fundraising Support",
+          tagline: "Investor readiness and introductions",
+          description: "Refine your narrative, pitch deck, investor approach, and fundraising readiness.",
+          bullets: [],
+        },
+        {
+          title: "Global Showcase",
+          tagline: "Present to investors, partners, and customers",
+          description: "Showcase your product and market potential to an international audience.",
+          bullets: [],
         },
       ],
     },
     criteria: {
-      eyebrow: "Who We're Looking For",
-      title: "Are you the founder we're looking for?",
+      eyebrow: "Who Should Apply",
+      title: "Who Should Apply",
       subtitle:
-        "This program is designed for a specific kind of founder — AI-native, global from day one, with roots in Taiwan.",
+        "This program is designed for AI startups with technical depth, scalable products, and global ambition beyond Taiwan.",
       headline: {
-        line1: "Built for ambitious AI founders",
-        line2: "ready to scale globally.",
+        line1: "Built for AI startups ready to scale",
+        line2: "",
       },
-      cohortIntro: "A focused cohort of ",
+      cohortIntro: "A focused cohort of",
       cohortHighlight: "15 selected startups",
       cohortRest:
-        " that combine technical depth, day-one global ambition, and the conviction to build what's next.",
+        " with technical depth, scalable products, and global ambition.",
+      leadIn: "We are looking for:",
+      checklist: [
+        "AI-native startups",
+        "Seed to Series A",
+        "Strong technical founders",
+        "Building scalable products",
+        "Global ambition beyond Taiwan",
+        "B2B AI, DeepTech, Physical AI, Healthcare AI welcome",
+      ],
       detailsCta: "See program details",
       cards: [
         {
-          title: "Early-stage teams with traction",
-          body: "Seed to Series A startups with a working prototype, pilot customers, or early market signal.",
+          title: "AI-native startups",
+          body: "AI is core to the product, not a feature added later.",
         },
         {
-          title: "AI-native, not AI-adjacent",
-          body: "Teams building AI as the product's core — not a side feature bolted onto a traditional stack.",
+          title: "Seed to Series A",
+          body: "Teams with a working product, pilots, or early market signal.",
         },
         {
-          title: "Global from day one",
-          body: "Founders building for international markets from the start, with US or APAC ambition baked in.",
+          title: "Strong technical founders",
+          body: "Founders who can turn AI capability into scalable products.",
         },
         {
-          title: "Taiwan-connected",
-          body: "Roots, engineering talent, or operations in Taiwan — ready to plug into Google + SparkLabs networks.",
+          title: "Global ambition beyond Taiwan",
+          body: "Teams thinking beyond local markets, with customers, partners, or GTM plans abroad.",
         },
       ],
       forYouTitle: "We're looking for you if",
@@ -718,8 +798,8 @@ export const translations = {
       uncertainPrompt: "Not sure if you qualify?",
       uncertainAnswer: "Apply anyway — let's figure it out together.",
       domains: {
-        title: "We especially welcome these domains",
-        items: ["Biotech / Healthcare AI", "Frontier AI", "Deep Tech AI", "Physical AI"],
+        title: "Welcome domains",
+        items: ["B2B AI", "DeepTech", "Physical AI", "Healthcare AI"],
       },
       matchCta: "I Match. Apply Now",
     },
@@ -797,9 +877,9 @@ export const translations = {
     },
     mentors: {
       eyebrow: "Mentors & Speakers",
-      title: "Build alongside those who get it",
+      title: "Work with people who understand AI, GTM, and global growth",
       subtitle:
-        "From Google's AI strategy lens, SparkLabs' global GPs, to Biotech and Frontier AI domain experts — these people can directly help you break through growth bottlenecks.",
+        "From Google Cloud's AI expertise to SparkLabs' global partners and domain specialists, founders get practical guidance on technology, market entry, and scaling beyond Taiwan.",
       poweredBy: "Connected to SparkLabs Global Mentor Pool",
       sparkLabsNetwork: {
         label: "SparkLabs Global Network",
@@ -875,11 +955,11 @@ export const translations = {
       items: [
         {
           q: "Are there application fees?",
-          a: "Applications are completely free. Selected teams exclusively receive USD 25K Google Cloud Credit.",
+          a: "No. Applications are free. Selected teams may receive up to USD 25K in Google Cloud credits for cloud and AI product development.",
         },
         {
           q: "Does the program take equity?",
-          a: "No. The program does not take equity. If SparkLabs is later interested in investing, that's discussed under a separate term sheet — it's not a precondition of joining the program.",
+          a: "No. This is an equity-free accelerator. Participation does not require an equity exchange. Any future investment discussion would be handled separately.",
         },
         {
           q: "Do we have to be based in Taiwan?",
@@ -887,7 +967,7 @@ export const translations = {
         },
         {
           q: "I've already received GFS 25K Credit. Can I still apply?",
-          a: "Yes, you can still apply to the program. The USD 25K Credit will not be granted again, but all other resources (Technical Deep Dive, Mentor Network, Global Showcase) apply as usual.",
+          a: "Yes. You can still apply to the program. The USD 25K Google Cloud credits will not be granted again, but technical guidance, mentorship, SparkLabs network access, and Global Showcase opportunities still apply.",
         },
         {
           q: "Do we have to attend the 12 weeks in person?",
@@ -906,27 +986,28 @@ export const translations = {
     finalCta: {
       deadline: "Application Deadline: July 26 · Only 15 spots",
       title: {
-        line1: "Bring us your",
-        line2: "biggest bottleneck.",
+        line1: "Ready to take your AI product",
+        line2: "to global markets?",
       },
       ctaPrimary: "Apply Now",
       ctaSecondary: "Contact the Team",
-      microcopy: "15 teams. One shot. Applications close when spots are gone.",
+      microcopy: "A 12-week, equity-free accelerator for AI founders ready to strengthen technology, accelerate growth, and scale globally.",
     },
     footer: {
       tagline:
-        "Google and SparkLabs Taiwan unite to deliver technical resources, mentor networks, and a global stage to the next generation of AI-native founders.",
+        "Google Cloud and SparkLabs Taiwan help AI founders strengthen technology, accelerate growth, and scale beyond Taiwan.",
       programTitle: "Program",
       programLinks: [
-        { label: "Overview", href: "/#program-at-a-glance" },
-        { label: "Benefits", href: "/#benefits" },
+        { label: "About", href: "/#about-program" },
+        { label: "Why Different", href: "/#program-difference" },
+        { label: "What You Get", href: "/#benefits" },
+        { label: "Who Should Apply", href: "/#apply-criteria" },
         { label: "Timeline", href: "/#timeline" },
-        { label: "Mentors", href: "/#mentors" },
         { label: "Apply Now", href: "/apply" },
       ],
       contactTitle: "Contact",
       address: "100 Songren Rd, Xinyi District, Taipei",
-      copyright: "© 2026 Google × SparkLabs Taiwan AI Accelerator. All rights reserved.",
+      copyright: "© 2026 Google Cloud × SparkLabs Taiwan AI Accelerator. All rights reserved.",
       privacy: "Privacy Policy",
       terms: "Terms of Use",
       socialAria: {
@@ -939,33 +1020,35 @@ export const translations = {
       backToHome: "← Back to Home",
       header: {
         eyebrow: "Application",
-        title: "Apply to Google × SparkLabs Taiwan AI Accelerator",
-        subtitle: "Three steps to submit. Estimated 15-20 minutes.",
+        title: "Apply to the Google Cloud × SparkLabs Taiwan AI Accelerator",
+        subtitle: "Confirm fit, prepare your materials, and submit in about 15-20 minutes.",
         deadline: "Deadline: July 26",
-        spots: "15 spots only",
+        spots: "15 selected AI startups",
       },
       eligibility: {
-        title: "Step 1 — Confirm you meet all criteria",
-        subtitle: "Tick every box to unlock the next step.",
+        title: "Step 1 — Confirm fit",
+        subtitle: "If most of these apply, you should prepare your application.",
         items: [
-          "Our team is between Seed and Series A",
-          "AI is the core of our product, not a feature",
-          "We've built for global markets from day one",
-          "Our team has roots, talent, or operations in Taiwan",
+          "We are an AI-native startup",
+          "We are Seed to Series A",
+          "We have strong technical founders",
+          "We are building a scalable AI product",
+          "We have global ambition beyond Taiwan",
+          "We work in B2B AI, DeepTech, Physical AI, Healthcare AI, or a related AI domain",
         ],
-        readyLabel: "All checks pass — continue to next step",
-        notReadyLabel: "Not all checked? Apply anyway — we evaluate case by case.",
+        readyLabel: "Looks like a fit — continue to next step",
+        notReadyLabel: "Not every box applies? You can still apply. We review teams case by case.",
       },
       prepare: {
         title: "Step 2 — Prepare the following before you apply",
-        subtitle: "We recommend gathering everything first to avoid mid-form interruptions.",
+        subtitle: "Gather these materials first so the form is easier to complete.",
         items: [
           { title: "Company Basics", description: "Name, registration, founding date, headcount" },
           { title: "Founding Team", description: "Names, titles, LinkedIn, short backgrounds" },
-          { title: "Product & AI Tech", description: "What problem? What's your AI differentiation?" },
+          { title: "Product & AI Technology", description: "Problem, AI role, architecture, and technical differentiation" },
           { title: "Market Traction", description: "Users, revenue, partnerships — quantifiable signals" },
-          { title: "Global Expansion Plan", description: "Your market expansion plan for the next 18 months" },
-          { title: "Cloud / Infra Needs", description: "Current cloud, expected compute, model scale" },
+          { title: "Global Expansion Plan", description: "Target markets and expansion priorities for the next 18 months" },
+          { title: "Cloud / Infrastructure Needs", description: "Current cloud setup, expected compute, model scale, and deployment needs" },
           { title: "Pitch Deck", description: "PDF upload (12-20 pages recommended, under 10MB)" },
         ],
       },
@@ -992,10 +1075,10 @@ export const translations = {
         title: "Step 3 — Submit your application",
         placeholder:
           "Application form will be embedded here (Typeform / Tally / custom form).\n\nThis is a placeholder. Email program@sparklabstaiwan.com to request the application link, or come back once the form is live.",
-        note: "Submissions go directly to the SparkLabs Taiwan and Google Cloud review team. Desktop is recommended for the best experience.",
+        note: "Submissions go directly to the SparkLabs Taiwan and Google Cloud review team. Desktop is recommended for easier completion.",
         externalCta: "Go to Application Form",
         iframeLabel: "Application Form",
-        iframeTitle: "Google × SparkLabs Taiwan AI Accelerator Application",
+        iframeTitle: "Google Cloud × SparkLabs Taiwan AI Accelerator Application",
         iframeMeta: "Powered by Google Forms · ~15 min",
         openInNewTab: "Open in new tab",
         loading: "Loading...",
@@ -1011,9 +1094,9 @@ export const translations = {
         title: "What you're applying to",
         items: [
           { title: "Free to Apply", description: "Completely free · No fees" },
-          { title: "No Equity Taken", description: "Zero equity exchange" },
-          { title: "Shortlist 8 / 17", description: "Results on August 17" },
-          { title: "Kickoff 8 / 24", description: "Program starts August 24" },
+          { title: "Equity-Free", description: "No equity exchange required" },
+          { title: "12-Week Accelerator", description: "Technology, growth, and global expansion support" },
+          { title: "Shortlist 8 / 17", description: "Results announced on August 17" },
         ],
       },
       faqReminder: {

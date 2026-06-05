@@ -1,23 +1,24 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Brain, Users, Sparkles, Globe2, Check } from "lucide-react";
+import { Brain, Check, Cloud, Globe2, Sparkles, Users } from "lucide-react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { useTranslation } from "@/lib/i18n/LanguageProvider";
-import { cn } from "@/lib/utils";
 
 const itemMeta = [
-  { icon: Brain, accent: "from-brand-blue to-brand-blue-light" },
-  { icon: Users, accent: "from-brand-green to-brand-blue" },
-  { icon: Sparkles, accent: "from-brand-spark to-brand-spark-glow" },
-  { icon: Globe2, accent: "from-brand-blue to-brand-green" },
+  { icon: Cloud, color: "text-[#1A73E8]", bg: "bg-[#E8F0FE]", accent: "bg-[#4285F4]" },
+  { icon: Brain, color: "text-[#188038]", bg: "bg-[#E6F4EA]", accent: "bg-[#34A853]" },
+  { icon: Users, color: "text-[#B06000]", bg: "bg-[#FEF7E0]", accent: "bg-[#FBBC04]" },
+  { icon: Globe2, color: "text-[#007B83]", bg: "bg-[#E4F7F8]", accent: "bg-[#00ACC1]" },
+  { icon: Sparkles, color: "text-[#C5221F]", bg: "bg-[#FCE8E6]", accent: "bg-[#EA4335]" },
+  { icon: Check, color: "text-[#6A1B9A]", bg: "bg-[#F3E8FD]", accent: "bg-[#8E24AA]" },
 ];
 
 export function Benefits() {
   const { t } = useTranslation();
 
   return (
-    <section id="benefits" className="relative py-16 md:py-20 overflow-hidden bg-slate-50/50">
+    <section id="benefits" className="relative scroll-mt-28 overflow-hidden bg-slate-50/70 py-16 md:py-24">
       <div className="relative container-wide">
         <SectionHeader
           eyebrow={t.benefits.eyebrow}
@@ -25,9 +26,10 @@ export function Benefits() {
           subtitle={t.benefits.subtitle}
         />
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div className="mt-12 grid auto-rows-fr grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
           {itemMeta.map((meta, i) => {
             const item = t.benefits.items[i];
+            if (!item) return null;
             const Icon = meta.icon;
             return (
               <motion.div
@@ -36,40 +38,25 @@ export function Benefits() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.5, delay: i * 0.07 }}
-                className="group relative rounded-lg overflow-hidden"
+                className="group h-full rounded-lg"
               >
-                <div
-                  className={cn(
-                    "absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl",
-                    `bg-gradient-to-br ${meta.accent}`
-                  )}
-                  style={{ filter: "blur(40px)", transform: "scale(0.9)" }}
-                />
-
-                <div className="relative h-full glass-strong rounded-lg p-6 md:p-7 transition-all duration-300 group-hover:border-slate-200 group-hover:-translate-y-0.5">
-                  <div className="flex items-start gap-4 mb-6">
-                    <div className="relative shrink-0">
-                      <div
-                        className={cn(
-                          "absolute inset-0 rounded-xl blur-md opacity-60",
-                          `bg-gradient-to-br ${meta.accent}`
-                        )}
-                      />
-                      <div className="relative grid h-12 w-12 place-items-center rounded-xl bg-white border border-slate-200">
-                        <Icon className="h-5 w-5 text-slate-900" strokeWidth={1.5} />
-                      </div>
+                <div className="relative flex h-full min-h-[220px] flex-col overflow-hidden rounded-lg border border-slate-200 bg-white p-6 shadow-sm transition-all duration-200 group-hover:-translate-y-0.5 group-hover:border-slate-300 group-hover:shadow-[0_10px_26px_rgba(15,23,42,0.06)] md:p-7">
+                  <div className={`absolute inset-x-0 top-0 h-1 ${meta.accent}`} />
+                  <div className="flex items-start gap-4">
+                    <div className={`grid h-11 w-11 shrink-0 place-items-center rounded-lg ${meta.bg}`}>
+                      <Icon className={`h-5 w-5 ${meta.color}`} strokeWidth={2} />
                     </div>
                     <div>
-                      <h3 className="font-display text-xl md:text-2xl font-semibold text-slate-900 tracking-normal leading-snug">
+                      <h3 className="font-display text-xl font-semibold leading-snug tracking-normal text-slate-900">
                         {item.title}
                       </h3>
-                      <p className="mt-1.5 text-sm text-brand-blue tracking-normal">
+                      <p className="mt-1.5 text-sm font-semibold leading-snug text-[#1A73E8] tracking-normal">
                         {item.tagline}
                       </p>
                     </div>
                   </div>
 
-                  <p className="text-slate-600 text-sm md:text-[15px] leading-relaxed">
+                  <p className="mt-5 text-sm leading-relaxed text-slate-600 md:text-[15px]">
                     {item.description}
                   </p>
 

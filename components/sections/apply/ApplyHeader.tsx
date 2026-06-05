@@ -9,12 +9,12 @@ export function ApplyHeader() {
   const { t } = useTranslation();
 
   return (
-    <header className="relative pt-32 pb-12 md:pt-40 md:pb-14 overflow-hidden">
+    <header className="relative overflow-hidden pt-32 pb-12 md:pt-40 md:pb-14">
       <div
-        className="absolute inset-0 opacity-50 pointer-events-none"
+        className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 60% 50% at 50% 30%, rgba(66,133,244,0.18), transparent 70%)",
+            "linear-gradient(180deg, rgba(66,133,244,0.07) 0%, rgba(255,255,255,0) 60%)",
         }}
       />
 
@@ -23,9 +23,9 @@ export function ApplyHeader() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs font-medium tracking-normal uppercase text-brand-blue mb-7"
+          className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#1A73E8]/20 bg-white px-4 py-1.5 text-xs font-bold uppercase tracking-normal text-[#174EA6] shadow-sm"
         >
-          <span className="h-1.5 w-1.5 rounded-full bg-brand-blue shadow-[0_0_8px_rgba(66,133,244,0.8)]" />
+          <span className="h-1.5 w-1.5 rounded-full bg-[#1A73E8]" />
           {t.apply.header.eyebrow}
         </motion.div>
 
@@ -33,7 +33,7 @@ export function ApplyHeader() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.05 }}
-          className="font-display text-3xl md:text-5xl lg:text-[3.1rem] font-bold leading-tight tracking-normal text-balance text-gradient max-w-3xl mx-auto"
+          className="mx-auto max-w-3xl font-display text-3xl font-semibold leading-tight tracking-normal text-slate-950 text-balance md:text-5xl lg:text-[3.1rem]"
         >
           {t.apply.header.title}
         </motion.h1>
@@ -42,7 +42,7 @@ export function ApplyHeader() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="mt-6 text-base md:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed"
+          className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-slate-600 md:text-lg"
         >
           {t.apply.header.subtitle}
         </motion.p>
@@ -51,14 +51,14 @@ export function ApplyHeader() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.18 }}
-          className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-3"
+          className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row"
         >
-          <div className="inline-flex items-center gap-2 rounded-full bg-brand-spark/15 border border-brand-spark/30 px-4 py-2 text-sm text-brand-spark font-medium">
+          <div className="inline-flex items-center gap-2 rounded-full border border-[#F9AB00]/25 bg-[#FEF7E0] px-4 py-2 text-sm font-semibold text-[#B06000]">
             <Calendar className="h-4 w-4" />
             {t.apply.header.deadline}
           </div>
-          <div className="inline-flex items-center gap-2 rounded-full glass px-4 py-2 text-sm text-slate-700">
-            <Users className="h-4 w-4 text-brand-blue" />
+          <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 shadow-sm">
+            <Users className="h-4 w-4 text-[#1A73E8]" />
             {t.apply.header.spots}
           </div>
         </motion.div>

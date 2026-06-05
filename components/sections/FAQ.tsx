@@ -22,11 +22,11 @@ export function FAQ() {
   };
 
   return (
-    <section id="faq" className="relative py-16 md:py-20">
+    <section id="faq" className="relative bg-slate-50/70 py-16 md:py-24">
       <div className="container-wide">
         <SectionHeader eyebrow={t.faq.eyebrow} title={t.faq.title} subtitle={t.faq.subtitle} />
 
-        <div className="mt-10 md:mt-12 max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-3">
+        <div className="mx-auto mt-10 grid max-w-5xl grid-cols-1 gap-3 md:mt-12 lg:grid-cols-2">
           {t.faq.items.map((faq, i) => {
             const isOpen = open.has(i);
             return (
@@ -36,18 +36,18 @@ export function FAQ() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ duration: 0.4, delay: i * 0.04 }}
-                className="glass rounded-lg overflow-hidden transition-colors duration-300 hover:border-slate-200"
+                className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm transition-all duration-200 hover:border-slate-300"
               >
                 <button
                   onClick={() => toggle(i)}
-                  className="w-full flex items-center justify-between gap-6 px-5 md:px-7 py-5 md:py-6 text-left"
+                  className="flex w-full items-center justify-between gap-6 px-5 py-5 text-left md:px-6"
                 >
                   <span className="font-display text-base md:text-lg font-medium text-slate-900 tracking-normal leading-snug">
                     {faq.q}
                   </span>
                   <span
                     className={`grid h-8 w-8 shrink-0 place-items-center rounded-full transition-all duration-300 ${
-                      isOpen ? "bg-brand-blue rotate-45" : "bg-slate-100/60"
+                      isOpen ? "rotate-45 bg-[#1A73E8]" : "bg-slate-100"
                     }`}
                   >
                     <Plus

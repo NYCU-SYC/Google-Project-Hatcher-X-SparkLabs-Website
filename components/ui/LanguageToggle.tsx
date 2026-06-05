@@ -38,7 +38,7 @@ export function LanguageToggle({ className }: LanguageToggleProps) {
             {active && (
               <motion.span
                 layoutId="lang-toggle-pill"
-                className="absolute inset-0 rounded-full bg-brand-blue shadow-[0_4px_20px_rgba(66,133,244,0.45)]"
+                className="absolute inset-0 rounded-full bg-[#1A73E8] shadow-sm"
                 transition={{ type: "spring", stiffness: 500, damping: 35 }}
               />
             )}

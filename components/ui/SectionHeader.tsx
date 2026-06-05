@@ -40,7 +40,7 @@ export function SectionHeader({
   return (
     <div
       className={cn(
-        "flex flex-col gap-6 max-w-4xl",
+        "flex flex-col gap-4 max-w-3xl",
         align === "center" && "mx-auto",
         alignment,
         className
@@ -52,9 +52,9 @@ export function SectionHeader({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-3 rounded-full border border-[#4285F4]/25 bg-[#4285F4]/[0.05] px-5 py-2 text-sm font-bold tracking-normal uppercase text-slate-900 shadow-sm md:text-base"
+          className="inline-flex items-center gap-2.5 rounded-full border border-[#1A73E8]/20 bg-[#1A73E8]/[0.045] px-4 py-1.5 text-xs font-bold tracking-normal uppercase text-[#174EA6]"
         >
-          <span className="h-2.5 w-2.5 rounded-full bg-[#4285F4]" />
+          <span className="h-2 w-2 rounded-full bg-[#1A73E8]" />
           {eyebrow}
         </motion.div>
       )}
@@ -64,7 +64,7 @@ export function SectionHeader({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.6, delay: 0.05 }}
-        className="font-display text-3xl md:text-4xl lg:text-[2.875rem] font-semibold !leading-[1.24] tracking-normal text-slate-900 text-balance"
+        className="font-display text-[2rem] md:text-[2.45rem] lg:text-[2.75rem] font-semibold !leading-[1.18] tracking-normal text-slate-950 text-balance"
       >
         {renderMultiline(title)}
       </motion.h2>
@@ -75,7 +75,7 @@ export function SectionHeader({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-base md:text-[17px] leading-relaxed text-slate-600 text-balance max-w-3xl"
+          className="max-w-2xl text-[15px] leading-relaxed text-slate-600 text-balance md:text-base"
         >
           {renderMultiline(subtitle)}
         </motion.p>

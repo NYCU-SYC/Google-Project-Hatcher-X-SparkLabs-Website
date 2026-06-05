@@ -15,10 +15,10 @@ export function Navigation() {
   const [open, setOpen] = useState(false);
 
   const NAV_LINKS = [
-    { label: t.nav.glance, href: "/#program-at-a-glance" },
-    { label: t.nav.criteria, href: "/#apply-criteria" },
+    { label: t.nav.glance, href: "/#about-program" },
+    { label: t.nav.whyNow, href: "/#program-difference" },
     { label: t.nav.benefits, href: "/#benefits" },
-    { label: t.nav.mentors, href: "/#mentors" },
+    { label: t.nav.criteria, href: "/#apply-criteria" },
     { label: t.nav.timeline, href: "/#timeline" },
     { label: t.nav.faq, href: "/#faq" },
   ];
@@ -35,20 +35,20 @@ export function Navigation() {
       <header
         className={cn(
           "fixed inset-x-0 top-0 z-50 transition-all duration-300",
-          scrolled ? "py-3" : "py-5"
+          scrolled ? "py-3" : "py-4"
         )}
       >
-        <div className="mx-auto w-full max-w-[1480px] px-4 sm:px-6 md:px-10 lg:px-14">
+        <div className="mx-auto w-full max-w-[1220px] px-4 sm:px-6 lg:px-8">
           <div
             className={cn(
-              "flex items-center justify-between rounded-full pl-5 pr-3 sm:pl-8 sm:pr-4 md:pl-12 md:pr-5 lg:pl-14 py-2 sm:py-2.5 md:py-3 gap-3 sm:gap-8 lg:gap-12 transition-all duration-300",
+              "flex items-center justify-between gap-3 rounded-full border border-slate-200/80 bg-white/95 py-2 pl-4 pr-2.5 shadow-[0_8px_24px_rgba(15,23,42,0.06)] backdrop-blur-xl transition-all duration-300 sm:gap-6 sm:pl-6 sm:pr-3 lg:gap-8",
               scrolled
-                ? "glass-strong shadow-[0_8px_28px_rgba(15,23,42,0.08)]"
-                : "bg-transparent"
+                ? "shadow-[0_10px_26px_rgba(15,23,42,0.08)]"
+                : "shadow-[0_6px_20px_rgba(15,23,42,0.055)]"
             )}
           >
             <a href="/" className="shrink-0">
-              <DualBrandLock compact className="translate-y-1" />
+              <DualBrandLock compact />
             </a>
 
             <nav className="hidden xl:flex items-center gap-2 flex-1 justify-center">
@@ -56,14 +56,14 @@ export function Navigation() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="px-4 py-2 text-sm text-slate-600 hover:text-slate-900 transition-colors duration-200 rounded-full hover:bg-slate-100/60 whitespace-nowrap"
+                  className="whitespace-nowrap rounded-full px-3.5 py-2 text-sm font-medium text-slate-600 transition-colors duration-200 hover:bg-slate-100 hover:text-slate-950"
                 >
                   {link.label}
                 </a>
               ))}
             </nav>
 
-            <div className="flex items-center gap-3 sm:gap-4 md:gap-5 shrink-0">
+            <div className="flex shrink-0 items-center gap-2.5 sm:gap-3">
               <LanguageToggle className="hidden sm:inline-flex" />
 
               <div className="hidden md:block">
@@ -74,7 +74,7 @@ export function Navigation() {
 
               <button
                 onClick={() => setOpen(!open)}
-                className="xl:hidden grid h-9 w-9 sm:h-10 sm:w-10 place-items-center rounded-full glass-strong text-slate-900"
+                className="grid h-9 w-9 place-items-center rounded-full border border-slate-200 bg-white text-slate-900 shadow-sm xl:hidden"
                 aria-label={open ? t.nav.closeMenu : t.nav.toggleMenu}
               >
                 {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}

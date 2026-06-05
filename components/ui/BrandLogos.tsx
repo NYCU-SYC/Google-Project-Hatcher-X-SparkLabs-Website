@@ -6,7 +6,7 @@ interface LogoProps {
 }
 
 /**
- * Project Hatcher × SparkLabs Taiwan combined brand lockup.
+ * Google Cloud × SparkLabs Taiwan AI Accelerator combined brand lockup.
  * Light theme uses the dark-text colorway with colored Project bubble,
  * Google 4-color subtext, and spark icon — same dimensions as the dark
  * theme reverse variant so layout sizing stays parallel.
@@ -27,17 +27,15 @@ export function DualBrandLock({
       ? "/hatcher-sparklabs-color.png"
       : "/hatcher-sparklabs-light.png";
 
-  // compact (nav):  h-9  (36) → h-10 (40) → h-12 (48)
-  // footer:         h-12 (48) → h-14 (56) → h-16 (64)
   const heightClasses = compact
-    ? "h-9 sm:h-10 md:h-12"
-    : "h-12 sm:h-14 md:h-16";
+    ? "h-8 sm:h-9 md:h-10"
+    : "h-11 sm:h-12 md:h-14";
 
   return (
     <div className={cn("inline-flex items-center", className)}>
       <Image
         src={src}
-        alt="Project Hatcher × SparkLabs Taiwan"
+        alt="Google Cloud × SparkLabs Taiwan AI Accelerator"
         width={2000}
         height={500}
         priority

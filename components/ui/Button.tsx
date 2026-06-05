@@ -19,19 +19,19 @@ interface ButtonProps {
 }
 
 const base =
-  "group relative inline-flex items-center justify-center gap-2 font-medium tracking-normal rounded-full transition-all duration-300 ease-out will-change-transform whitespace-nowrap";
+  "group relative inline-flex items-center justify-center gap-2 font-semibold tracking-normal rounded-full transition-all duration-200 ease-out whitespace-nowrap";
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-brand-blue text-white shadow-[0_8px_24px_rgba(66,133,244,0.28)] hover:bg-brand-blue-light hover:shadow-[0_12px_32px_rgba(66,133,244,0.38)] hover:-translate-y-0.5",
+    "bg-[#1A73E8] text-white shadow-[0_8px_18px_rgba(26,115,232,0.22)] hover:bg-[#185ABC] hover:shadow-[0_10px_24px_rgba(26,115,232,0.26)] hover:-translate-y-0.5",
   secondary:
-    "glass-strong text-slate-900 hover:bg-slate-100 hover:border-slate-300 hover:-translate-y-0.5",
+    "border border-slate-200 bg-white text-slate-800 shadow-sm hover:border-slate-300 hover:bg-slate-50 hover:text-slate-950 hover:-translate-y-0.5",
   ghost: "text-slate-700 hover:text-slate-900",
 };
 
 const sizes: Record<Size, string> = {
   md: "px-6 py-2.5 text-sm",
-  lg: "px-8 py-4 text-base",
+  lg: "px-7 py-3.5 text-base",
 };
 
 export function Button({

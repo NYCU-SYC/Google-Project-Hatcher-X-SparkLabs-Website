@@ -16,27 +16,25 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative pt-28 pb-14 sm:pt-32 sm:pb-16 md:pt-36 md:pb-16 overflow-hidden"
+      className="relative overflow-hidden bg-white pt-28 pb-14 sm:pt-32 sm:pb-16 md:pt-36 md:pb-20 lg:pt-40"
     >
-      {/* Subtle warm wash behind the headline. Keeps the section feeling
-          "lit" without resorting to glow orbs. */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 h-[640px] -z-10"
+        className="pointer-events-none absolute inset-0 -z-10"
         style={{
           background:
-            "radial-gradient(ellipse 800px 400px at 50% 0%, rgba(66,133,244,0.06), transparent 70%)",
+            "linear-gradient(180deg, rgba(66,133,244,0.055) 0%, rgba(255,255,255,0) 48%)",
         }}
       />
+      <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[520px] grid-bg grid-bg-fade opacity-45" />
 
       <div className="container-tight">
         <div className="mx-auto max-w-5xl text-center">
-          {/* Eyebrow — program name with Google 4-color dots */}
           <motion.div
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-3 rounded-full border border-[#4285F4]/20 bg-white px-4 py-2 text-sm font-semibold text-slate-800 shadow-sm"
+            className="inline-flex max-w-full items-center gap-3 rounded-full border border-slate-200 bg-white/90 px-4 py-2 text-xs font-semibold text-slate-700 shadow-sm backdrop-blur sm:text-sm"
           >
             <span className="flex items-center gap-1">
               <span className="h-2 w-2 rounded-full bg-[#4285F4]" />
@@ -47,39 +45,39 @@ export function Hero() {
             <span>{t.topBanner.programName}</span>
           </motion.div>
 
-          {/* Headline */}
           <motion.h1
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.08 }}
-            className="mx-auto mt-8 max-w-5xl font-display text-[2.15rem] sm:text-[2.65rem] md:text-[2.75rem] lg:text-[2.85rem] xl:text-[3.25rem] font-semibold leading-[1.12] tracking-normal text-slate-900 text-balance"
+            className="mx-auto mt-7 max-w-5xl font-display text-[2.45rem] font-semibold leading-[1.08] tracking-normal text-slate-950 text-balance sm:text-[3.25rem] md:text-[4rem] lg:text-[4.55rem]"
           >
-            <span className="block md:whitespace-nowrap">{t.hero.title.part1}</span>
-            <span className="block text-gradient-brand md:whitespace-nowrap">
+            <span className="block">{t.hero.title.part1}</span>
+            <span className="block text-[#1A73E8]">
               {t.hero.title.highlight.trim()}
               {t.hero.title.part3 || ""}
             </span>
           </motion.h1>
 
-          {/* Subheadline — one sentence */}
           <motion.p
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.16 }}
-            className="mt-6 text-base md:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed"
+            className="mx-auto mt-6 max-w-[760px] text-base leading-relaxed text-slate-600 md:text-lg"
           >
             {t.hero.subtitle}
           </motion.p>
 
-          {/* CTAs */}
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.24 }}
-            className="mt-9 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3"
+            className="mt-9 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center"
           >
             <Button href="/apply" variant="primary" size="lg" withArrow>
               {t.hero.ctaPrimary}
+            </Button>
+            <Button href="/#program-difference" variant="secondary" size="lg">
+              {t.hero.ctaSecondary}
             </Button>
           </motion.div>
 
@@ -87,7 +85,7 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.32 }}
-            className="mt-5 text-sm font-semibold text-slate-600"
+            className="mt-5 text-sm font-semibold text-slate-500"
           >
             {t.hero.applicationOpen}
           </motion.div>

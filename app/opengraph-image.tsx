@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 
-export const alt = "Google × SparkLabs Taiwan AI Accelerator";
+export const alt = "Google Cloud × SparkLabs Taiwan AI Accelerator";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -99,7 +99,7 @@ export default async function Image() {
               maxWidth: 900,
             }}
           >
-            Build the next world-class
+            Built for AI founders
             <br />
             <span
               style={{
@@ -109,9 +109,8 @@ export default async function Image() {
                 color: "transparent",
               }}
             >
-              AI company
+              with global ambition
             </span>{" "}
-            from Taiwan.
           </div>
         </div>
 
@@ -130,11 +129,15 @@ export default async function Image() {
         >
           <div style={{ display: "flex", gap: 24 }}>
             <span>
-              <strong style={{ color: "#1F1F1F" }}>USD $25K</strong> Cloud Credit
+              <strong style={{ color: "#1F1F1F" }}>12-week</strong> accelerator
             </span>
             <span style={{ color: "#DADCE0" }}>·</span>
             <span>
-              Only <strong style={{ color: "#1F1F1F" }}>15 spots</strong>
+              <strong style={{ color: "#1F1F1F" }}>Equity-free</strong>
+            </span>
+            <span style={{ color: "#DADCE0" }}>·</span>
+            <span>
+              <strong style={{ color: "#1F1F1F" }}>USD 25K</strong> Cloud Credits
             </span>
             <span style={{ color: "#DADCE0" }}>·</span>
             <span>
