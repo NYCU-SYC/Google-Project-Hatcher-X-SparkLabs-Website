@@ -27,7 +27,7 @@ export function WhoShouldApply() {
     >
       <div className="container-wide relative">
         <motion.div
-          initial={{ opacity: 0, y: 12 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.5 }}
@@ -98,7 +98,7 @@ export function WhoShouldApply() {
                     return (
                       <motion.div
                         key={item}
-                        initial={{ opacity: 0, y: 10 }}
+                        initial={false}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, margin: "-60px" }}
                         transition={{ duration: 0.35, delay: i * 0.04 }}

@@ -11,7 +11,7 @@ export function FAQReminderLink() {
     <section className="relative py-14 md:py-16">
       <div className="container-tight">
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.5 }}

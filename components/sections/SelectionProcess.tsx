@@ -45,7 +45,7 @@ export function SelectionProcess() {
               return (
                 <motion.div
                   key={stage.num}
-                  initial={{ opacity: 0, y: 24 }}
+                  initial={false}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-80px" }}
                   transition={{ duration: 0.6, delay: i * 0.12 }}
@@ -81,7 +81,7 @@ export function SelectionProcess() {
         {/* 4 evaluation criteria */}
         <div className="mt-28">
           <motion.div
-            initial={{ opacity: 0, y: 16 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
@@ -101,7 +101,7 @@ export function SelectionProcess() {
               return (
                 <motion.div
                   key={item.title}
-                  initial={{ opacity: 0, y: 16 }}
+                  initial={false}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-60px" }}
                   transition={{ duration: 0.5, delay: i * 0.06 }}

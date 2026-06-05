@@ -48,7 +48,7 @@ export function ProgramDifference() {
             return (
               <motion.div
                 key={card.title}
-                initial={{ opacity: 0, y: 24 }}
+                initial={false}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}

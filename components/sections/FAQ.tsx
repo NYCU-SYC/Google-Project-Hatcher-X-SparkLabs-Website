@@ -32,7 +32,7 @@ export function FAQ() {
             return (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 12 }}
+                initial={false}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ duration: 0.4, delay: i * 0.04 }}

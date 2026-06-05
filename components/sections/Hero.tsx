@@ -31,7 +31,7 @@ export function Hero() {
       <div className="container-tight">
         <div className="mx-auto max-w-5xl text-center">
           <motion.div
-            initial={{ opacity: 0, y: 8 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="inline-flex max-w-full items-center gap-3 rounded-full border border-slate-200 bg-white/90 px-4 py-2 text-xs font-semibold text-slate-700 shadow-sm backdrop-blur sm:text-sm"
@@ -46,20 +46,20 @@ export function Hero() {
           </motion.div>
 
           <motion.h1
-            initial={{ opacity: 0, y: 12 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.08 }}
             className="mx-auto mt-7 max-w-5xl font-display text-[2.45rem] font-semibold leading-[1.08] tracking-normal text-slate-950 text-balance sm:text-[3.25rem] md:text-[4rem] lg:text-[4.55rem]"
           >
             <span className="block">{t.hero.title.part1}</span>
-            <span className="block text-[#1A73E8]">
+            <span className="block">
               {t.hero.title.highlight.trim()}
               {t.hero.title.part3 || ""}
             </span>
           </motion.h1>
 
           <motion.p
-            initial={{ opacity: 0, y: 12 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.16 }}
             className="mx-auto mt-6 max-w-[760px] text-base leading-relaxed text-slate-600 md:text-lg"
@@ -68,7 +68,7 @@ export function Hero() {
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, y: 12 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.24 }}
             className="mt-9 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center"
@@ -82,7 +82,7 @@ export function Hero() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0 }}
+            initial={false}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.32 }}
             className="mt-5 text-sm font-semibold text-slate-500"

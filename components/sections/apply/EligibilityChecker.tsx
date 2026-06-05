@@ -26,7 +26,7 @@ export function EligibilityChecker() {
       <div className="container-tight">
         <div className="max-w-3xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 16 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.5 }}
@@ -49,7 +49,7 @@ export function EligibilityChecker() {
               return (
                 <motion.button
                   key={i}
-                  initial={{ opacity: 0, x: -10 }}
+                  initial={false}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.05 }}
@@ -90,7 +90,7 @@ export function EligibilityChecker() {
                 <motion.a
                   key="ready"
                   href="#prepare"
-                  initial={{ opacity: 0, scale: 0.95 }}
+                  initial={false}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.95 }}
                   className="inline-flex items-center gap-2 rounded-full bg-brand-blue text-white px-8 py-4 text-base font-medium shadow-[0_8px_24px_rgba(66,133,244,0.32)] hover:shadow-[0_12px_32px_rgba(66,133,244,0.42)] hover:-translate-y-0.5 transition-all"
@@ -101,7 +101,7 @@ export function EligibilityChecker() {
               ) : (
                 <motion.div
                   key="not-ready"
-                  initial={{ opacity: 0 }}
+                  initial={false}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   className="inline-flex items-center gap-2 text-sm text-slate-500"

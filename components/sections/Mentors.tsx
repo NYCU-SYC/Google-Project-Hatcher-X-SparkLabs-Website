@@ -142,7 +142,7 @@ export function Mentors() {
             {featuredMentors.map((m, i) => (
               <motion.div
                 key={m.name}
-                initial={{ opacity: 0, y: 12 }}
+                initial={false}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.4, delay: i * 0.04 }}
@@ -195,7 +195,7 @@ export function Mentors() {
               return (
                 <motion.div
                   key={point.title}
-                  initial={{ opacity: 0, y: 12 }}
+                  initial={false}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-60px" }}
                   transition={{ duration: 0.4, delay: i * 0.08 }}

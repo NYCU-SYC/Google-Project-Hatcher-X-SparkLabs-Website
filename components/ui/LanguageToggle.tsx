@@ -27,10 +27,12 @@ export function LanguageToggle({ className }: LanguageToggleProps) {
         const active = locale === opt.value;
         return (
           <button
+            type="button"
             key={opt.value}
             onClick={() => setLocale(opt.value)}
+            aria-pressed={active}
             className={cn(
-              "relative z-10 px-3.5 py-1.5 rounded-full transition-colors duration-300",
+              "relative z-10 min-w-11 cursor-pointer select-none rounded-full px-3.5 py-1.5 transition-colors duration-300",
               active ? "text-white" : "text-slate-600 hover:text-slate-800"
             )}
             aria-label={t.languageToggle[opt.value]}
@@ -38,11 +40,11 @@ export function LanguageToggle({ className }: LanguageToggleProps) {
             {active && (
               <motion.span
                 layoutId="lang-toggle-pill"
-                className="absolute inset-0 rounded-full bg-[#1A73E8] shadow-sm"
+                className="pointer-events-none absolute inset-0 rounded-full bg-[#1A73E8] shadow-sm"
                 transition={{ type: "spring", stiffness: 500, damping: 35 }}
               />
             )}
-            <span className="relative z-10">{opt.label}</span>
+            <span className="pointer-events-none relative z-10">{opt.label}</span>
           </button>
         );
       })}

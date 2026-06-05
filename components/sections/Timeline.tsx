@@ -113,7 +113,7 @@ export function Timeline() {
                 return (
                   <motion.li
                     key={i}
-                    initial={{ opacity: 0, y: 10 }}
+                    initial={false}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-60px" }}
                     transition={{ duration: 0.4, delay: i * 0.05 }}
@@ -171,7 +171,7 @@ export function Timeline() {
               return (
                 <motion.li
                   key={i}
-                  initial={{ opacity: 0, y: 10 }}
+                  initial={false}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-60px" }}
                   transition={{ duration: 0.4, delay: i * 0.05 }}

@@ -39,7 +39,7 @@ export function HeroHighlights() {
             return (
               <motion.div
                 key={card.key}
-                initial={{ opacity: 0, y: 18 }}
+                initial={false}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
@@ -78,7 +78,7 @@ export function HeroHighlights() {
 
       <div className="container-tight">
         <motion.div
-          initial={{ opacity: 0, y: 18 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.5 }}

@@ -14,7 +14,7 @@ export function FinalCTA() {
         <div className="relative mx-auto max-w-5xl">
           <div className="relative overflow-hidden rounded-lg border border-slate-200 bg-[#F8FAFF] p-7 text-center shadow-sm ring-1 ring-[#1A73E8]/10 sm:p-8 md:p-12 lg:p-14">
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
+              initial={false}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
@@ -25,7 +25,7 @@ export function FinalCTA() {
             </motion.div>
 
             <motion.h2
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
@@ -36,7 +36,7 @@ export function FinalCTA() {
             </motion.h2>
 
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -46,7 +46,7 @@ export function FinalCTA() {
             </motion.p>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}

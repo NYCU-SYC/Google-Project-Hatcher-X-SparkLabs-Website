@@ -22,7 +22,7 @@ export function PrepareList() {
       <div className="container-tight">
         <div className="max-w-4xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 16 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.5 }}
@@ -45,7 +45,7 @@ export function PrepareList() {
               return (
                 <motion.div
                   key={item.title}
-                  initial={{ opacity: 0, y: 12 }}
+                  initial={false}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-40px" }}
                   transition={{ duration: 0.4, delay: i * 0.04 }}

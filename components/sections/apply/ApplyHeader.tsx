@@ -20,7 +20,7 @@ export function ApplyHeader() {
 
       <div className="relative container-tight text-center">
         <motion.div
-          initial={{ opacity: 0, y: 12 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#1A73E8]/20 bg-white px-4 py-1.5 text-xs font-bold uppercase tracking-normal text-[#174EA6] shadow-sm"
@@ -30,16 +30,23 @@ export function ApplyHeader() {
         </motion.div>
 
         <motion.h1
-          initial={{ opacity: 0, y: 16 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.05 }}
-          className="mx-auto max-w-3xl font-display text-3xl font-semibold leading-tight tracking-normal text-slate-950 text-balance md:text-5xl lg:text-[3.1rem]"
+          className="mx-auto flex max-w-5xl flex-col items-center gap-1.5 font-display text-3xl font-semibold leading-none tracking-normal text-slate-950 text-balance md:gap-2.5 md:text-5xl lg:gap-3 lg:text-[3.1rem]"
         >
-          {t.apply.header.title}
+          {t.apply.header.title.split("\n").map((line, index) => (
+            <span
+              key={line}
+              className={index === 1 ? "block md:whitespace-nowrap" : "block"}
+            >
+              {line}
+            </span>
+          ))}
         </motion.h1>
 
         <motion.p
-          initial={{ opacity: 0, y: 16 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-slate-600 md:text-lg"
@@ -48,7 +55,7 @@ export function ApplyHeader() {
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.18 }}
           className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row"
@@ -64,7 +71,7 @@ export function ApplyHeader() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.25 }}
           className="mt-10 flex justify-center"

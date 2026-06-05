@@ -76,7 +76,7 @@ export function Stats() {
             return (
               <motion.div
                 key={`${locale}-${i}-${item.label}`}
-                initial={{ opacity: 0, y: 12 }}
+                initial={false}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.4, delay: i * 0.06 }}
