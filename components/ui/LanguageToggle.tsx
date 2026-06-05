@@ -26,13 +26,17 @@ export function LanguageToggle({ className }: LanguageToggleProps) {
       {options.map((opt) => {
         const active = locale === opt.value;
         return (
-          <button
-            type="button"
+          <a
+            href={`/api/locale?locale=${opt.value}`}
             key={opt.value}
-            onClick={() => setLocale(opt.value)}
-            aria-pressed={active}
+            onClick={(event) => {
+              event.preventDefault();
+              setLocale(opt.value);
+              document.cookie = `preferred-locale=${opt.value}; path=/; max-age=31536000; SameSite=Lax`;
+            }}
+            aria-current={active ? "true" : undefined}
             className={cn(
-              "relative z-10 min-w-11 cursor-pointer select-none rounded-full px-3.5 py-1.5 transition-colors duration-300",
+              "relative z-10 min-w-11 cursor-pointer select-none rounded-full px-3.5 py-1.5 text-center transition-colors duration-300",
               active ? "text-white" : "text-slate-600 hover:text-slate-800"
             )}
             aria-label={t.languageToggle[opt.value]}
@@ -45,7 +49,7 @@ export function LanguageToggle({ className }: LanguageToggleProps) {
               />
             )}
             <span className="pointer-events-none relative z-10">{opt.label}</span>
-          </button>
+          </a>
         );
       })}
     </div>

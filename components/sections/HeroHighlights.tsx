@@ -76,13 +76,13 @@ export function HeroHighlights() {
         </div>
       </div>
 
-      <div className="container-tight">
+      <div className="container-wide">
         <motion.div
           initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.5 }}
-          className="relative mx-auto max-w-[980px] overflow-hidden rounded-lg border border-slate-200 bg-white shadow-[0_18px_50px_rgba(15,23,42,0.07)] ring-1 ring-[#1A73E8]/10"
+          className="relative mx-auto w-full overflow-hidden rounded-lg border border-slate-200 bg-white shadow-[0_18px_50px_rgba(15,23,42,0.07)] ring-1 ring-[#1A73E8]/10"
         >
           <div className="grid h-1 grid-cols-4">
             <div className="bg-[#4285F4]" />
