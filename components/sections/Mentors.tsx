@@ -88,15 +88,6 @@ const featuredMentors: MentorEntry[] = [
     photo: "/mentors/voice-chang.jpg",
     initials: "VC",
   },
-  {
-    name: "Tony",
-    title: "Google Cloud Mentor",
-    titleZh: "Google Cloud 導師",
-    org: "Google Cloud",
-    contribution: "Google Cloud startup support and GTM guidance",
-    photo: null,
-    initials: "TO",
-  },
 ];
 
 interface SupportMeta {
