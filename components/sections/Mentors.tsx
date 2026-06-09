@@ -71,13 +71,13 @@ const featuredMentors: MentorEntry[] = [
     initials: "TL",
   },
   {
-    name: "KJ",
-    title: "Google Cloud Mentor",
-    titleZh: "Google Cloud 導師",
+    name: "KJ Wu",
+    title: "Head of Startup Customer Engineering, Greater China",
+    titleZh: "大中華區新創客戶工程負責人",
     org: "Google Cloud",
     contribution: "Google's view on Physical AI; Deep Tech AI startup lens",
-    photo: null,
-    initials: "KJ",
+    photo: "/mentors/kj-wu.png",
+    initials: "KW",
   },
   {
     name: "Voice Chang",
@@ -85,7 +85,7 @@ const featuredMentors: MentorEntry[] = [
     titleZh: "台灣新創業務負責人",
     org: "Google Cloud",
     contribution: "Taiwan AI startup strategy, Google Cloud partnership lead",
-    photo: null,
+    photo: "/mentors/voice-chang.jpg",
     initials: "VC",
   },
   {
