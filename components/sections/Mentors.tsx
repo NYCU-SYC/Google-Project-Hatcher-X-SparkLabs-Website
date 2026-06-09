@@ -29,6 +29,9 @@ interface MentorEntry {
   contribution: string;
   photo: string | null;
   initials: string;
+  /** object-position for the avatar crop (default: center). Use "top" when
+   * a portrait's subject sits high in the frame and center-crop clips the head. */
+  objectPosition?: string;
   isPlaceholder?: boolean;
   todoNote?: string;
 }
@@ -87,6 +90,7 @@ const featuredMentors: MentorEntry[] = [
     contribution: "Taiwan AI startup strategy, Google Cloud partnership lead",
     photo: "/mentors/voice-chang.jpg",
     initials: "VC",
+    objectPosition: "top",
   },
 ];
 
@@ -148,6 +152,7 @@ export function Mentors() {
                         fill
                         sizes="(min-width: 768px) 80px, 64px"
                         className="object-cover"
+                        style={{ objectPosition: m.objectPosition ?? "center" }}
                         loading="lazy"
                       />
                     </div>
