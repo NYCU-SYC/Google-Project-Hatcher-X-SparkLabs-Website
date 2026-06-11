@@ -4,12 +4,7 @@ import { motion } from "framer-motion";
 import { ExternalLink, FileText } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { useTranslation } from "@/lib/i18n/LanguageProvider";
-
-// Google Forms embed URL — strip user-specific `/u/0` and edit_requested params,
-// add `?embedded=true` for iframe-friendly rendering.
-const FORM_ID = "119x6W7T_Ec6fZ6dWStT-54zey0BE-n7lvFp4fLEZ8yw";
-const FORM_EMBED_URL = `https://docs.google.com/forms/d/${FORM_ID}/viewform?embedded=true`;
-const FORM_EXTERNAL_URL = `https://docs.google.com/forms/d/${FORM_ID}/viewform`;
+import { GOOGLE_FORM_EMBED_URL, GOOGLE_FORM_EXTERNAL_URL } from "@/lib/applyForm";
 
 export function ApplyForm() {
   const { t } = useTranslation();
@@ -63,7 +58,7 @@ export function ApplyForm() {
                 </div>
               </div>
               <a
-                href={FORM_EXTERNAL_URL}
+                href={GOOGLE_FORM_EXTERNAL_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 text-xs md:text-sm text-brand-blue hover:text-brand-blue-light transition-colors font-medium whitespace-nowrap"
@@ -76,7 +71,7 @@ export function ApplyForm() {
             {/* Embedded iframe — white background since Google Forms is light */}
             <div className="relative bg-white">
               <iframe
-                src={FORM_EMBED_URL}
+                src={GOOGLE_FORM_EMBED_URL}
                 title={t.apply.form.iframeTitle}
                 className="w-full border-0"
                 style={{ minHeight: "1200px" }}
@@ -104,7 +99,7 @@ export function ApplyForm() {
           >
             <p className="text-sm text-slate-500 mb-4">{t.apply.form.fallbackPrompt}</p>
             <Button
-              href={FORM_EXTERNAL_URL}
+              href={GOOGLE_FORM_EXTERNAL_URL}
               variant="secondary"
               size="md"
               withArrow

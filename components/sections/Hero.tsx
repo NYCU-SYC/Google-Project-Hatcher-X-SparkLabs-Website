@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
+import { GOOGLE_FORM_EXTERNAL_URL } from "@/lib/applyForm";
 import { useTranslation } from "@/lib/i18n/LanguageProvider";
 
 /**
@@ -73,7 +74,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.24 }}
             className="mt-9 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center"
           >
-            <Button href="/apply" variant="primary" size="lg" withArrow>
+            <Button href={GOOGLE_FORM_EXTERNAL_URL} variant="primary" size="lg" withArrow external>
               {t.hero.ctaPrimary}
             </Button>
             <Button href="/#program-difference" variant="secondary" size="lg">

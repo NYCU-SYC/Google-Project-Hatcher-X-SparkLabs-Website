@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { GOOGLE_FORM_EXTERNAL_URL } from "@/lib/applyForm";
 import { useTranslation } from "@/lib/i18n/LanguageProvider";
 
 export function TopAnnouncementBar() {
@@ -39,14 +39,16 @@ export function TopAnnouncementBar() {
               <span className="h-1.5 w-1.5 rounded-full bg-brand-spark animate-pulse shadow-[0_0_8px_rgba(255,92,53,0.8)]" />
               {t.topBanner.deadline}
             </span>
-            <Link
-              href="/apply"
+            <a
+              href={GOOGLE_FORM_EXTERNAL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center gap-1 text-slate-900 hover:text-brand-blue transition-colors font-medium tracking-normal"
             >
               <span className="hidden sm:inline">{t.topBanner.ctaShort}</span>
               <span className="sm:hidden">{t.topBanner.ctaShort}</span>
               <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
-            </Link>
+            </a>
           </div>
         </div>
       </div>

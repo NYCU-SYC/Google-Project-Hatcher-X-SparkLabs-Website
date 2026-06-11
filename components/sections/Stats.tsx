@@ -45,7 +45,7 @@ export function Stats() {
       icon: Calendar,
       value: `${t.stats.items[2]?.value ?? 12}${t.stats.items[2]?.suffix ?? " wk"}`,
       label: t.stats.items[2]?.label ?? "Weeks of Acceleration",
-      context: t.stats.items[2]?.sublabel ?? "Aug 24 – Nov 27",
+      context: t.stats.items[2]?.sublabel ?? "Mid August – Late November",
       accent: { text: "text-[#FBBC04]", bg: "bg-[#FBBC04]/15" },
     },
     {

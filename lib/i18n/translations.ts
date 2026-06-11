@@ -45,7 +45,7 @@ export const translations = {
         "這是一個由 Google Cloud 與 SparkLabs Taiwan 共同推動、為期 12 週且不交換股權的加速器計畫，協助 AI 新創強化技術、加快成長，並走向國際市場。",
       ctaPrimary: "立即申請",
       ctaSecondary: "了解計畫內容",
-      applicationOpen: "6 月 5 日開放申請",
+      applicationOpen: "6 / 15 開放申請",
       poweredBy: "技術支援：Google Cloud · Vertex AI · Gemini",
       scroll: "scroll",
     },
@@ -72,12 +72,12 @@ export const translations = {
           label: "Google Cloud Credit",
           sublabel: "每隊最高 USD 25K 額度",
         },
-        { value: 12, suffix: " 週", label: "密集加速", sublabel: "8 / 24 - 11 / 27" },
+        { value: 12, suffix: " 週", label: "密集加速", sublabel: "8 月中旬 - 11 月下旬" },
         {
           value: 200,
           suffix: "+",
           label: "Global Showcase 出席者",
-          sublabel: "11 月 Meet Taipei 同期登場",
+          sublabel: "11 月下旬 Meet Taipei 同期登場",
         },
       ],
     },
@@ -257,7 +257,7 @@ export const translations = {
     timeline: {
       eyebrow: "計畫時程",
       title: "三個關鍵日期，從申請走向國際舞台",
-      subtitle: "6 月 5 日開放申請；8 月 17 日公布入選名單；11 月 20 日登上 Global Showcase。",
+      subtitle: "6 / 15 開放申請；8 月中旬公布入選名單；11 月下旬登上 Global Showcase。",
       statuses: {
         open: "申請中",
         upcoming: "即將開始",
@@ -265,17 +265,17 @@ export const translations = {
       },
       items: [
         {
-          date: "6/5",
+          date: "6/15",
           title: "開放申請",
           description: "AI-native 團隊可提交申請資料。",
         },
         {
-          date: "8/17",
+          date: "8 月中旬",
           title: "入選名單公布",
           description: "正式公布 15 家入選團隊。",
         },
         {
-          date: "11/20",
+          date: "11 月下旬",
           title: "Global Showcase",
           description: "入選團隊登上國際舞台，向投資人、企業與媒體展示成果。",
         },
@@ -421,11 +421,11 @@ export const translations = {
         },
         {
           q: "計畫 12 週要實體到場嗎？",
-          a: "採 Hybrid 模式：部分導師交流與 Global Showcase（11/20–11/27）會在台北實體進行；其餘以線上或混合形式安排。",
+          a: "採 Hybrid 模式：部分導師交流與 Global Showcase 預計於 11 月下旬在台北實體進行；其餘以線上或混合形式安排。",
         },
         {
           q: "申請結果何時公布？",
-          a: "8 月 17 日公布入選名單，8 月 24 日計畫啟動。未入選團隊也會收到個別電子郵件回覆。",
+          a: "預計 8 月中旬公布入選名單，並於 8 月中旬後啟動計畫。未入選團隊也會收到個別電子郵件回覆。",
         },
         {
           q: "國際團隊可以申請嗎？",
@@ -540,7 +540,7 @@ export const translations = {
           { title: "免費申請", description: "完全免費，不收取申請費" },
           { title: "不交換股權", description: "參與計畫不以股權交換為條件" },
           { title: "12 週加速", description: "技術、商業與國際拓展同步推進" },
-          { title: "8 / 17 公布入選", description: "8 月 17 日公布結果" },
+          { title: "8 月中旬公布入選", description: "預計 8 月中旬公布結果" },
         ],
       },
       faqReminder: {
@@ -596,7 +596,7 @@ export const translations = {
         "A 12-week equity-free accelerator powered by Google Cloud and SparkLabs Taiwan, helping AI startups strengthen their technology, accelerate growth, and scale globally.",
       ctaPrimary: "Apply Now",
       ctaSecondary: "See Program Details",
-      applicationOpen: "Applications open June 5",
+      applicationOpen: "Application Open 6/15",
       poweredBy: "Powered by Google Cloud · Vertex AI · Gemini",
       scroll: "scroll",
     },
@@ -623,12 +623,12 @@ export const translations = {
           label: "Google Cloud Credit",
           sublabel: "Up to USD 25K per team",
         },
-        { value: 12, suffix: " wk", label: "Weeks of Acceleration", sublabel: "Aug 24 – Nov 27" },
+        { value: 12, suffix: " wk", label: "Weeks of Acceleration", sublabel: "Mid August – Late November" },
         {
           value: 200,
           suffix: "+",
           label: "Global Showcase Audience",
-          sublabel: "Nov × Meet Taipei",
+          sublabel: "Late November × Meet Taipei",
         },
       ],
     },
@@ -810,7 +810,7 @@ export const translations = {
     timeline: {
       eyebrow: "Program Timeline",
       title: "Three dates. One global stage.",
-      subtitle: "Applications open June 5. Shortlist lands August 17. Showcase starts November 20.",
+      subtitle: "Application Open 6/15. Shortlist lands in mid August. Showcase starts in late November.",
       statuses: {
         open: "Open",
         upcoming: "Upcoming",
@@ -818,17 +818,17 @@ export const translations = {
       },
       items: [
         {
-          date: "6/5",
-          title: "Applications Open",
+          date: "6/15",
+          title: "Application Open",
           description: "AI-native teams can begin submitting applications.",
         },
         {
-          date: "8/17",
+          date: "Mid August",
           title: "Shortlist Announced",
           description: "The selected 15 teams are announced.",
         },
         {
-          date: "11/20",
+          date: "Late November",
           title: "Global Showcase",
           description: "Selected teams step onto the global stage.",
         },
@@ -975,11 +975,11 @@ export const translations = {
         },
         {
           q: "Do we have to attend the 12 weeks in person?",
-          a: "Hybrid model: some mentorship and Global Showcase (11/20-27) are in person in Taipei; the rest is online / hybrid.",
+          a: "Hybrid model: some mentorship and the Global Showcase are expected to take place in Taipei in late November; the rest is online / hybrid.",
         },
         {
           q: "When will we hear back?",
-          a: "Shortlist announced on August 17. Program kicks off on August 24. Non-selected teams will also receive individual email responses.",
+          a: "Shortlist announcements are expected in mid August, with the program starting shortly after. Non-selected teams will also receive individual email responses.",
         },
         {
           q: "Can international teams apply?",
@@ -1100,7 +1100,7 @@ export const translations = {
           { title: "Free to Apply", description: "Completely free · No fees" },
           { title: "Equity-Free", description: "No equity exchange required" },
           { title: "12-Week Accelerator", description: "Technology, growth, and global expansion support" },
-          { title: "Shortlist 8 / 17", description: "Results announced on August 17" },
+          { title: "Shortlist in Mid August", description: "Results expected in mid August" },
         ],
       },
       faqReminder: {

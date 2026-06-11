@@ -6,6 +6,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { DualBrandLock } from "@/components/ui/BrandLogos";
 import { LanguageToggle } from "@/components/ui/LanguageToggle";
+import { GOOGLE_FORM_EXTERNAL_URL } from "@/lib/applyForm";
 import { useTranslation } from "@/lib/i18n/LanguageProvider";
 import { cn } from "@/lib/utils";
 
@@ -67,7 +68,7 @@ export function Navigation() {
               <LanguageToggle className="hidden sm:inline-flex" />
 
               <div className="hidden md:block">
-                <Button href="/apply" variant="primary" size="md" withArrow>
+                <Button href={GOOGLE_FORM_EXTERNAL_URL} variant="primary" size="md" withArrow external>
                   {t.nav.apply}
                 </Button>
               </div>
@@ -117,7 +118,14 @@ export function Navigation() {
               ))}
               <div className="pt-6 flex items-center justify-between gap-4">
                 <LanguageToggle />
-                <Button href="/apply" variant="primary" size="lg" withArrow className="flex-1">
+                <Button
+                  href={GOOGLE_FORM_EXTERNAL_URL}
+                  variant="primary"
+                  size="lg"
+                  withArrow
+                  external
+                  className="flex-1"
+                >
                   {t.nav.apply}
                 </Button>
               </div>

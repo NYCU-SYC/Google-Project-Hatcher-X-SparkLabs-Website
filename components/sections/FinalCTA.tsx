@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
 import { Calendar } from "lucide-react";
+import { GOOGLE_FORM_EXTERNAL_URL } from "@/lib/applyForm";
 import { useTranslation } from "@/lib/i18n/LanguageProvider";
 
 export function FinalCTA() {
@@ -52,7 +53,7 @@ export function FinalCTA() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="relative mt-9 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center"
             >
-              <Button href="/apply" variant="primary" size="lg" withArrow>
+              <Button href={GOOGLE_FORM_EXTERNAL_URL} variant="primary" size="lg" withArrow external>
                 {t.finalCta.ctaPrimary}
               </Button>
               <Button href="mailto:program@sparklabstaiwan.com" variant="secondary" size="lg">

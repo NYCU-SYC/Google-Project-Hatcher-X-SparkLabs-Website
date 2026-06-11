@@ -2,6 +2,7 @@
 
 import { DualBrandLock } from "@/components/ui/BrandLogos";
 import { Mail, MapPin, Linkedin, Twitter } from "lucide-react";
+import { GOOGLE_FORM_EXTERNAL_URL } from "@/lib/applyForm";
 import { useTranslation } from "@/lib/i18n/LanguageProvider";
 
 export function Footer() {
@@ -52,13 +53,21 @@ export function Footer() {
               {t.footer.programTitle}
             </h4>
             <ul className="space-y-3 text-sm">
-              {t.footer.programLinks.map((link) => (
-                <li key={link.href}>
-                  <a href={link.href} className="text-slate-700 hover:text-slate-900 transition-colors">
-                    {link.label}
-                  </a>
-                </li>
-              ))}
+              {t.footer.programLinks.map((link) => {
+                const isApplyLink = link.href === "/apply";
+                return (
+                  <li key={link.href}>
+                    <a
+                      href={isApplyLink ? GOOGLE_FORM_EXTERNAL_URL : link.href}
+                      target={isApplyLink ? "_blank" : undefined}
+                      rel={isApplyLink ? "noopener noreferrer" : undefined}
+                      className="text-slate-700 hover:text-slate-900 transition-colors"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 

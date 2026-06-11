@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { GOOGLE_FORM_EXTERNAL_URL } from "@/lib/applyForm";
 import { useTranslation } from "@/lib/i18n/LanguageProvider";
 
 export function StickyMobileCTA() {
@@ -46,7 +47,9 @@ export function StickyMobileCTA() {
           className="fixed bottom-4 inset-x-4 z-40 md:hidden"
         >
           <a
-            href="/apply"
+            href={GOOGLE_FORM_EXTERNAL_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex w-full items-center justify-center gap-2 rounded-full bg-[#1A73E8] px-6 py-4 text-base font-semibold text-white shadow-[0_12px_28px_rgba(26,115,232,0.28)]"
           >
             {t.nav.apply}
