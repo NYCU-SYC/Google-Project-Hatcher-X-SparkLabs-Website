@@ -92,6 +92,16 @@ const featuredMentors: MentorEntry[] = [
     initials: "VC",
     objectPosition: "top",
   },
+  {
+    name: "Tony Lee",
+    title: "Healthcare Industry Lead",
+    titleZh: "醫療產業負責人",
+    org: "Google APAC Top Partner Team",
+    contribution: "Healthcare AI industry guidance, Google APAC partner ecosystem",
+    photo: "/mentors/tony-lee.jpg",
+    initials: "TL",
+    objectPosition: "top",
+  },
 ];
 
 interface SupportMeta {

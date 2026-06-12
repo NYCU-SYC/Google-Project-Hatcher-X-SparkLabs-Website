@@ -46,7 +46,7 @@ export const translations = {
       ctaPrimary: "立即申請",
       ctaSecondary: "了解計畫內容",
       applicationOpen: "6 / 15 開放申請",
-      poweredBy: "技術支援：Google Cloud · Vertex AI · Gemini",
+      poweredBy: "技術支援：Google Cloud · Gemini Enterprise Agent Platform · Gemini models API",
       scroll: "scroll",
     },
     countdown: {
@@ -101,7 +101,7 @@ export const translations = {
           poweredBy: "由 Google 支持",
           lead: "",
           bullets: [
-            "Google AI 團隊直接支援，協助實作 Vertex AI、Gemini 與完整 Google Cloud 技術資源",
+            "Google AI 團隊直接支援，協助實作 Gemini Enterprise Agent Platform、Gemini models API 與完整 Google Cloud 技術資源",
             "Google Health 與其他 Google 團隊的產業專家，協助針對垂直領域打磨產品",
             "Google 產品化工程師協助進行架構檢視",
             "USD 25K Google Cloud 額度，支持團隊快速測試與上線",
@@ -145,8 +145,8 @@ export const translations = {
         title: "USD 25K Google Cloud Credit",
         tagline: "入選團隊專屬",
         description:
-          "入選即取得 USD 25K 額度，可投入 Gemini、Vertex AI 與產品上線所需的雲端資源，讓團隊更快驗證、迭代與交付。",
-        subnote: "已申請過 GFS 25K Credit 者不重複給予，其他所有資源照常提供。",
+          "入選即取得 USD 25K 額度，可投入 Gemini models API、Gemini Enterprise Agent Platform 與產品上線所需的雲端資源，讓團隊更快驗證、迭代與交付。",
+        subnote: "已申請過 Google Cloud for Startup Program 25K Credit 者不重複給予，其他所有資源照常提供。",
       },
       showcaseCard: {
         tag: "Global Showcase",
@@ -158,7 +158,7 @@ export const translations = {
         {
           title: "Google Cloud 額度",
           tagline: "USD 25K Google Cloud 額度",
-          description: "可投入 Google Cloud、Vertex AI、Gemini 的建置、測試與擴充。",
+          description: "可投入 Google Cloud、Gemini Enterprise Agent Platform、Gemini models API 的建置、測試與擴充。",
           bullets: [],
         },
         {
@@ -361,7 +361,7 @@ export const translations = {
           label: "Google 直接支援",
           title: "Google 技術團隊",
           body:
-            "Google 工程與 Customer Success 團隊提供直接技術支援，涵蓋 Gemini 模型最佳化、雲端架構擴展、上線前架構審查，以及入選團隊的實作陪跑。",
+            "Google 工程與 Customer Success 團隊提供直接技術支援，涵蓋 Gemini models API 最佳化、雲端架構擴展、上線前架構審查，以及入選團隊的實作陪跑。",
         },
         {
           label: "Google 直接支援",
@@ -416,7 +416,7 @@ export const translations = {
           a: "不一定。設籍台灣或與台灣有明確連結皆可，例如公司登記、創辦人、技術團隊或營運在台灣。",
         },
         {
-          q: "已申請過 GFS 25K Credit 還能參加嗎？",
+          q: "已申請過 Google Cloud for Startup Program 25K Credit 還能參加嗎？",
           a: "可以申請計畫本身，但 USD 25K Google Cloud 額度不重複提供。技術指導、商業導師、SparkLabs 全球網絡與 Global Showcase 等資源仍可照常參與。",
         },
         {
@@ -597,7 +597,7 @@ export const translations = {
       ctaPrimary: "Apply Now",
       ctaSecondary: "See Program Details",
       applicationOpen: "Application Open 6/15",
-      poweredBy: "Powered by Google Cloud · Vertex AI · Gemini",
+      poweredBy: "Powered by Google Cloud · Gemini Enterprise Agent Platform · Gemini models API",
       scroll: "scroll",
     },
     countdown: {
@@ -652,7 +652,7 @@ export const translations = {
           poweredBy: "Powered by Google",
           lead: "",
           bullets: [
-            "Direct support from Google AI team, with hands-on access to Vertex AI, Gemini, and the full Google Cloud stack",
+            "Direct support from Google AI team, with hands-on access to Gemini Enterprise Agent Platform, Gemini models API, and the full Google Cloud stack",
             "Industry experts from Google Health and other Google teams to sharpen your product for your vertical",
             "Architecture reviews from Google production engineers",
             "$25K in Google Cloud credits to test and ship fast",
@@ -697,8 +697,8 @@ export const translations = {
         title: "USD $25K Google Cloud Credit",
         tagline: "Selected teams only",
         description:
-          "$25K to burn on Gemini, Vertex AI, and whatever it takes to ship faster. Yours the moment you're selected.",
-        subnote: "Not granted again if you've already received GFS 25K Credit. All other resources apply.",
+          "$25K to burn on Gemini models API, Gemini Enterprise Agent Platform, and whatever it takes to ship faster. Yours the moment you're selected.",
+        subnote: "Not granted again if you've already received the Google Cloud for Startup Program 25K Credit. All other resources apply.",
       },
       showcaseCard: {
         tag: "Global Showcase",
@@ -710,7 +710,7 @@ export const translations = {
         {
           title: "Google Cloud Credits",
           tagline: "USD 25K Cloud Credits",
-          description: "Build, test, and scale with Google Cloud, Vertex AI, and Gemini.",
+          description: "Build, test, and scale with Google Cloud, Gemini Enterprise Agent Platform, and Gemini models API.",
           bullets: [],
         },
         {
@@ -914,7 +914,7 @@ export const translations = {
           label: "Google Direct Support",
           title: "Google Tech Team",
           body:
-            "Direct technical support from Google engineering and Customer Success. Gemini model optimization, infrastructure scalability, production readiness reviews, and implementation-level guidance for each selected startup.",
+            "Direct technical support from Google engineering and Customer Success. Gemini models API optimization, infrastructure scalability, production readiness reviews, and implementation-level guidance for each selected startup.",
         },
         {
           label: "Google Direct Support",
@@ -970,7 +970,7 @@ export const translations = {
           a: "Taiwan-based or Taiwan-connected both qualify. Any meaningful Taiwan connection — registered entity, founder, technical team, or operations — counts.",
         },
         {
-          q: "I've already received GFS 25K Credit. Can I still apply?",
+          q: "I've already received the Google Cloud for Startup Program 25K Credit. Can I still apply?",
           a: "Yes. You can still apply to the program. The USD 25K Google Cloud credits will not be granted again, but technical guidance, mentorship, SparkLabs network access, and Global Showcase opportunities still apply.",
         },
         {
