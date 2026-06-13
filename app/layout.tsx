@@ -95,7 +95,8 @@ export function generateMetadata(): Metadata {
 
   return {
     metadataBase: new URL(
-      process.env.NEXT_PUBLIC_SITE_URL || "https://sparklabs-google-ai.tw"
+      process.env.NEXT_PUBLIC_SITE_URL ||
+        "https://project-hatcher.sparklabstaiwan.com"
     ),
     ...metadata,
     keywords: keywordsByLocale[locale],
