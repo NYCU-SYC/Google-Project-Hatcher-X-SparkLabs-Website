@@ -16,7 +16,7 @@ export const translations = {
       closeMenu: "關閉選單",
     },
     topBanner: {
-      programName: "Google Cloud × SparkLabs Taiwan AI Accelerator",
+      programName: "Google Cloud Taiwan",
       deadline: "7 / 26 申請截止",
       ctaShort: "立即申請",
     },
@@ -42,7 +42,7 @@ export const translations = {
         part3: "",
       },
       subtitle:
-        "這是一個由 Google Cloud 與 SparkLabs Taiwan 共同推動、為期 12 週且不交換股權的加速器計畫，協助 AI 新創強化技術、加快成長，並走向國際市場。",
+        "這是一個由 Google Cloud Taiwan 推動、為期 12 週且不交換股權的加速器計畫，協助 AI 新創強化技術、加快成長，並走向國際市場。",
       ctaPrimary: "立即申請",
       ctaSecondary: "了解計畫內容",
       applicationOpen: "6 / 15 開放申請",
@@ -69,8 +69,8 @@ export const translations = {
           value: 25,
           prefix: "USD ",
           suffix: "K",
-          label: "Google Cloud Credit",
-          sublabel: "每隊最高 USD 25K 額度",
+          label: "Google Cloud Platform 抵免額度",
+          sublabel: "每隊最高 USD 25K 抵免額度",
         },
         { value: 12, suffix: " 週", label: "密集加速", sublabel: "8 月中旬 - 11 月下旬" },
         {
@@ -86,7 +86,7 @@ export const translations = {
       title: "關於計畫",
       paragraphs: [
         "台灣不缺世界級 AI 人才；下一步，是讓更多 AI 新創長成世界級公司。",
-        "Google AI Accelerator 結合 Google Cloud 的 AI 專業與 SparkLabs 的全球創辦人網絡，協助高潛力團隊加快腳步：從 AI 技術建構、產品化，到跨市場成長。",
+        "Google Cloud × SparkLabs Taiwan AI Accelerator，協助高潛力團隊加快腳步：從 AI 技術建構、產品化，到跨市場成長。",
         "入選創辦人將直接連結技術專家、商業導師、國際投資人與國際展示機會，讓產品、團隊與市場策略同步升級。",
       ],
     },
@@ -101,10 +101,10 @@ export const translations = {
           poweredBy: "由 Google 支持",
           lead: "",
           bullets: [
-            "Google AI 團隊直接支援，協助實作 Gemini Enterprise Agent Platform、Gemini models API 與完整 Google Cloud 技術資源",
-            "Google Health 與其他 Google 團隊的產業專家，協助針對垂直領域打磨產品",
-            "Google 產品化工程師協助進行架構檢視",
-            "USD 25K Google Cloud 額度，支持團隊快速測試與上線",
+            "Google Cloud AI 直接支援，協助實作 Gemini Enterprise Agent Platform、Gemini models API 與完整 Google Cloud 技術資源",
+            "Google Healthcare 產業專家，協助針對垂直領域打磨產品",
+            "Google Cloud 工程師協助進行產品架構檢視",
+            "Google Cloud Platform 抵免額度，支持團隊快速測試與上線",
           ],
         },
         {
@@ -113,7 +113,7 @@ export const translations = {
           lead: "",
           bullets: [
             "Google Ads 與 Google GTM 團隊提供市場進入策略支援",
-            "Google Cloud 專家與 SparkLabs Taiwan 導師提供一對一輔導",
+            "Google 專家與 SparkLabs Taiwan 導師提供一對一輔導",
             "透過 SparkLabs 全球網絡，連結國際 VC 與 CVC",
             "Global Showcase Day 結合區域科技媒體跨境 PR 曝光",
           ],
@@ -141,11 +141,11 @@ export const translations = {
         "從雲端額度、AI 技術指導，到商業導師、募資準備與國際曝光，協助團隊把技術、產品與市場推進到下一階段。",
       readyCta: "準備好取得這些資源了嗎？",
       heroCard: {
-        tag: "USD 25K Credit",
-        title: "USD 25K Google Cloud Credit",
+        tag: "USD 25K 抵免額度",
+        title: "Google Cloud Platform 抵免額度",
         tagline: "入選團隊專屬",
         description:
-          "入選即取得 USD 25K 額度，可投入 Gemini models API、Gemini Enterprise Agent Platform 與產品上線所需的雲端資源，讓團隊更快驗證、迭代與交付。",
+          "入選即取得 USD 25K 抵免額度，可投入 Gemini models API、Gemini Enterprise Agent Platform 與產品上線所需的雲端資源，讓團隊更快驗證、迭代與交付。",
         subnote: "已申請過 Google Cloud for Startup Program 25K Credit 者不重複給予，其他所有資源照常提供。",
       },
       showcaseCard: {
@@ -156,14 +156,14 @@ export const translations = {
       },
       items: [
         {
-          title: "Google Cloud 額度",
-          tagline: "USD 25K Google Cloud 額度",
+          title: "Google Cloud Platform 抵免額度",
+          tagline: "USD 25K 抵免額度",
           description: "可投入 Google Cloud、Gemini Enterprise Agent Platform、Gemini models API 的建置、測試與擴充。",
           bullets: [],
         },
         {
-          title: "Google AI 專家",
-          tagline: "來自 Google 團隊的技術指導",
+          title: "Google Cloud AI 專家",
+          tagline: "來自 Google Cloud 團隊的技術指導",
           description: "協助檢視 AI 架構、模型應用、擴充性與產品化部署準備。",
           bullets: [],
         },
@@ -566,7 +566,7 @@ export const translations = {
       closeMenu: "Close menu",
     },
     topBanner: {
-      programName: "Google Cloud × SparkLabs Taiwan AI Accelerator",
+      programName: "Google Cloud Taiwan",
       deadline: "Apply by July 26",
       ctaShort: "Apply Now",
     },
@@ -593,7 +593,7 @@ export const translations = {
         part3: "",
       },
       subtitle:
-        "A 12-week equity-free accelerator powered by Google Cloud and SparkLabs Taiwan, helping AI startups strengthen their technology, accelerate growth, and scale globally.",
+        "A 12-week equity-free accelerator powered by Google Cloud Taiwan, helping AI startups strengthen their technology, accelerate growth, and scale globally.",
       ctaPrimary: "Apply Now",
       ctaSecondary: "See Program Details",
       applicationOpen: "Application Open 6/15",
@@ -620,7 +620,7 @@ export const translations = {
           value: 25,
           prefix: "USD ",
           suffix: "K",
-          label: "Google Cloud Credit",
+          label: "Google Cloud Platform credit",
           sublabel: "Up to USD 25K per team",
         },
         { value: 12, suffix: " wk", label: "Weeks of Acceleration", sublabel: "Mid August – Late November" },
@@ -637,7 +637,7 @@ export const translations = {
       title: "About the Program",
       paragraphs: [
         "Taiwan has world-class AI talent. What it needs are more world-class AI companies.",
-        "The Google AI Accelerator brings together Google Cloud's AI expertise and SparkLabs' global founder network to help high-potential startups move faster—from building with AI to scaling globally.",
+        "The Google Cloud × SparkLabs Taiwan AI Accelerator helps high-potential startups move faster—from building with AI to scaling globally.",
         "Selected founders receive direct access to technical experts, business mentors, global investors, and opportunities to showcase their innovations on an international stage.",
       ],
     },
@@ -652,10 +652,10 @@ export const translations = {
           poweredBy: "Powered by Google",
           lead: "",
           bullets: [
-            "Direct support from Google AI team, with hands-on access to Gemini Enterprise Agent Platform, Gemini models API, and the full Google Cloud stack",
-            "Industry experts from Google Health and other Google teams to sharpen your product for your vertical",
-            "Architecture reviews from Google production engineers",
-            "$25K in Google Cloud credits to test and ship fast",
+            "Direct support from Google Cloud AI, with hands-on access to Gemini Enterprise Agent Platform, Gemini models API, and the full Google Cloud stack",
+            "Google Healthcare industry experts to sharpen your product for your vertical",
+            "Product architecture reviews from Google Cloud engineers",
+            "Google Cloud Platform credit to test and ship fast",
           ],
         },
         {
@@ -664,7 +664,7 @@ export const translations = {
           lead: "",
           bullets: [
             "Go-to-market support from Google Ads and Google's GTM team",
-            "1:1 mentorship from Google Cloud experts and SparkLabs Taiwan mentors",
+            "1:1 mentorship from Google experts and SparkLabs Taiwan mentors",
             "Access to international VCs and CVCs through SparkLabs' global network",
             "Global Showcase Day with cross-border PR across regional tech media",
           ],
@@ -693,8 +693,8 @@ export const translations = {
         "A focused set of technical, business, fundraising, and global expansion resources designed for AI founders who need to move faster.",
       readyCta: "Ready to access these resources?",
       heroCard: {
-        tag: "USD 25K Credit",
-        title: "USD $25K Google Cloud Credit",
+        tag: "USD 25K credit",
+        title: "Google Cloud Platform Credit",
         tagline: "Selected teams only",
         description:
           "$25K to burn on Gemini models API, Gemini Enterprise Agent Platform, and whatever it takes to ship faster. Yours the moment you're selected.",
@@ -708,14 +708,14 @@ export const translations = {
       },
       items: [
         {
-          title: "Google Cloud Credits",
-          tagline: "USD 25K Cloud Credits",
+          title: "Google Cloud Platform Credit",
+          tagline: "USD 25K credit",
           description: "Build, test, and scale with Google Cloud, Gemini Enterprise Agent Platform, and Gemini models API.",
           bullets: [],
         },
         {
-          title: "Google AI Experts",
-          tagline: "Technical guidance from Google teams",
+          title: "Google Cloud AI Experts",
+          tagline: "Technical guidance from the Google Cloud team",
           description: "Get support on AI architecture, model usage, scalability, and production readiness.",
           bullets: [],
         },
@@ -959,7 +959,7 @@ export const translations = {
       items: [
         {
           q: "Are there application fees?",
-          a: "No. Applications are free. Selected teams may receive up to USD 25K in Google Cloud credits for cloud and AI product development.",
+          a: "No. Applications are free. Selected teams may receive Google Cloud Platform credit for cloud and AI product development.",
         },
         {
           q: "Does the program take equity?",
@@ -971,7 +971,7 @@ export const translations = {
         },
         {
           q: "I've already received the Google Cloud for Startup Program 25K Credit. Can I still apply?",
-          a: "Yes. You can still apply to the program. The USD 25K Google Cloud credits will not be granted again, but technical guidance, mentorship, SparkLabs network access, and Global Showcase opportunities still apply.",
+          a: "Yes. You can still apply to the program. The USD 25K Google Cloud Platform credit will not be granted again; subject to future fundraising criteria, eligible teams may upgrade to the AI Tier and receive USD 350K in Google Cloud Platform credit. Technical guidance, mentorship, SparkLabs network access, and Global Showcase opportunities still apply.",
         },
         {
           q: "Do we have to attend the 12 weeks in person?",
