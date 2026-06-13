@@ -16,7 +16,7 @@ export const translations = {
       closeMenu: "關閉選單",
     },
     topBanner: {
-      programName: "Google Cloud Taiwan",
+      programName: "Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator",
       deadline: "7 / 26 申請截止",
       ctaShort: "立即申請",
     },
@@ -25,12 +25,12 @@ export const translations = {
       en: "切換至英文",
     },
     seo: {
-      homeTitle: "Google Cloud × SparkLabs Taiwan AI Accelerator｜為有全球企圖的 AI 創辦人而設",
+      homeTitle: "Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator｜為有全球企圖的 AI 創辦人而設",
       homeDescription:
         "由 Google Cloud 與 SparkLabs Taiwan 共同推動的 12 週、不交換股權 AI 加速器計畫，協助 AI 新創強化技術、加快成長並拓展國際市場。",
-      applyTitle: "立即申請｜Google Cloud × SparkLabs Taiwan AI Accelerator",
+      applyTitle: "立即申請｜Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator",
       applyDescription:
-        "申請 Google Cloud × SparkLabs Taiwan AI Accelerator。7 月 26 日截止，精選 15 家 AI 新創。免費申請，不交換股權。",
+        "申請 Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator。7 月 26 日截止，精選 15 家 AI 新創。免費申請，不交換股權。",
     },
     hero: {
       badgeCohort: "申請中",
@@ -86,7 +86,7 @@ export const translations = {
       title: "關於計畫",
       paragraphs: [
         "台灣不缺世界級 AI 人才；下一步，是讓更多 AI 新創長成世界級公司。",
-        "Google Cloud × SparkLabs Taiwan AI Accelerator，協助高潛力團隊加快腳步：從 AI 技術建構、產品化，到跨市場成長。",
+        "Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator，協助高潛力團隊加快腳步：從 AI 技術建構、產品化，到跨市場成長。",
         "入選創辦人將直接連結技術專家、商業導師、國際投資人與國際展示機會，讓產品、團隊與市場策略同步升級。",
       ],
     },
@@ -457,7 +457,7 @@ export const translations = {
       ],
       contactTitle: "聯絡我們",
       address: "台北市信義區松仁路 100 號",
-      copyright: "© 2026 Google Cloud × SparkLabs Taiwan AI Accelerator。保留所有權利。",
+      copyright: "© 2026 Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator。保留所有權利。",
       privacy: "隱私權政策",
       terms: "使用條款",
       socialAria: {
@@ -522,7 +522,7 @@ export const translations = {
         note: "資料會直接送交 SparkLabs Taiwan 與 Google Cloud 評審團隊。建議使用桌機填寫，內容會更好整理。",
         externalCta: "前往申請表單",
         iframeLabel: "申請表單",
-        iframeTitle: "Google Cloud × SparkLabs Taiwan AI Accelerator 申請表",
+        iframeTitle: "Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator 申請表",
         iframeMeta: "Google Forms · 約 15 分鐘",
         openInNewTab: "在新分頁開啟",
         loading: "載入中…",
@@ -566,7 +566,7 @@ export const translations = {
       closeMenu: "Close menu",
     },
     topBanner: {
-      programName: "Google Cloud Taiwan",
+      programName: "Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator",
       deadline: "Apply by July 26",
       ctaShort: "Apply Now",
     },
@@ -576,12 +576,12 @@ export const translations = {
     },
     seo: {
       homeTitle:
-        "Google Cloud × SparkLabs Taiwan AI Accelerator | Built for AI founders with global ambition",
+        "Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator | Built for AI founders with global ambition",
       homeDescription:
         "A 12-week equity-free accelerator powered by Google Cloud and SparkLabs Taiwan, helping AI startups strengthen technology, accelerate growth, and scale globally.",
-      applyTitle: "Apply | Google Cloud × SparkLabs Taiwan AI Accelerator",
+      applyTitle: "Apply | Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator",
       applyDescription:
-        "Apply to the Google Cloud × SparkLabs Taiwan AI Accelerator. Application deadline: July 26. 15 selected AI startups. Free to apply, equity-free.",
+        "Apply to the Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator. Application deadline: July 26. 15 selected AI startups. Free to apply, equity-free.",
     },
     hero: {
       badgeCohort: "Now Open",
@@ -637,7 +637,7 @@ export const translations = {
       title: "About the Program",
       paragraphs: [
         "Taiwan has world-class AI talent. What it needs are more world-class AI companies.",
-        "The Google Cloud × SparkLabs Taiwan AI Accelerator helps high-potential startups move faster—from building with AI to scaling globally.",
+        "The Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator helps high-potential startups move faster—from building with AI to scaling globally.",
         "Selected founders receive direct access to technical experts, business mentors, global investors, and opportunities to showcase their innovations on an international stage.",
       ],
     },
@@ -1011,7 +1011,7 @@ export const translations = {
       ],
       contactTitle: "Contact",
       address: "100 Songren Rd, Xinyi District, Taipei",
-      copyright: "© 2026 Google Cloud × SparkLabs Taiwan AI Accelerator. All rights reserved.",
+      copyright: "© 2026 Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator. All rights reserved.",
       privacy: "Privacy Policy",
       terms: "Terms of Use",
       socialAria: {
@@ -1082,7 +1082,7 @@ export const translations = {
         note: "Submissions go directly to the SparkLabs Taiwan and Google Cloud review team. Desktop is recommended for easier completion.",
         externalCta: "Go to Application Form",
         iframeLabel: "Application Form",
-        iframeTitle: "Google Cloud × SparkLabs Taiwan AI Accelerator Application",
+        iframeTitle: "Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator Application",
         iframeMeta: "Powered by Google Forms · ~15 min",
         openInNewTab: "Open in new tab",
         loading: "Loading...",

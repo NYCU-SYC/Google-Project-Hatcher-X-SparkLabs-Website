@@ -28,31 +28,31 @@ const notoTC = Noto_Sans_TC({
 
 const metadataByLocale: Record<Locale, Metadata> = {
   zh: {
-    title: "Google Cloud × SparkLabs Taiwan AI Accelerator｜為有全球企圖的 AI 創辦人而設",
+    title: "Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator｜為有全球企圖的 AI 創辦人而設",
     description:
       "由 Google Cloud 與 SparkLabs Taiwan 共同推動的 12 週、不交換股權 AI 加速器計畫，協助 AI 新創強化技術、加快成長並拓展國際市場。",
     openGraph: {
-      title: "Google Cloud × SparkLabs Taiwan AI Accelerator",
+      title: "Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator",
       description: "為有全球企圖的 AI 創辦人而設。7 月 26 日截止申請。",
       locale: "zh_TW",
     },
     twitter: {
-      title: "Google Cloud × SparkLabs Taiwan AI Accelerator",
+      title: "Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator",
       description: "為有全球企圖的 AI 創辦人而設。",
     },
   },
   en: {
     title:
-      "Google Cloud × SparkLabs Taiwan AI Accelerator | Built for AI founders with global ambition",
+      "Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator | Built for AI founders with global ambition",
     description:
       "A 12-week equity-free accelerator powered by Google Cloud and SparkLabs Taiwan, helping AI startups strengthen technology, accelerate growth, and scale globally.",
     openGraph: {
-      title: "Google Cloud × SparkLabs Taiwan AI Accelerator",
+      title: "Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator",
       description: "Built for AI founders with global ambition. Apply by July 26.",
       locale: "en_US",
     },
     twitter: {
-      title: "Google Cloud × SparkLabs Taiwan AI Accelerator",
+      title: "Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator",
       description: "Built for AI founders with global ambition.",
     },
   },

@@ -6,7 +6,7 @@ interface LogoProps {
 }
 
 /**
- * Google Cloud × SparkLabs Taiwan AI Accelerator combined brand lockup.
+ * Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator combined brand lockup.
  * Light theme uses the dark-text colorway with colored Project bubble,
  * Google 4-color subtext, and spark icon — same dimensions as the dark
  * theme reverse variant so layout sizing stays parallel.
@@ -35,7 +35,7 @@ export function DualBrandLock({
     <div className={cn("inline-flex items-center", className)}>
       <Image
         src={src}
-        alt="Google Cloud × SparkLabs Taiwan AI Accelerator"
+        alt="Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator"
         width={2000}
         height={500}
         priority

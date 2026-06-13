@@ -13,32 +13,32 @@ import type { Locale } from "@/lib/i18n/translations";
 
 const applyMetadataByLocale: Record<Locale, Metadata> = {
   zh: {
-    title: "立即申請｜Google Cloud × SparkLabs Taiwan AI Accelerator",
+    title: "立即申請｜Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator",
     description:
-      "申請 Google Cloud × SparkLabs Taiwan AI Accelerator。7 月 26 日截止，精選 15 家 AI 新創。免費申請，不交換股權。",
+      "申請 Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator。7 月 26 日截止，精選 15 家 AI 新創。免費申請，不交換股權。",
     openGraph: {
-      title: "立即申請｜Google Cloud × SparkLabs Taiwan AI Accelerator",
+      title: "立即申請｜Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator",
       description:
         "申請 12 週、不交換股權的 AI 新創加速器計畫。7 月 26 日截止。",
       locale: "zh_TW",
     },
     twitter: {
-      title: "立即申請｜Google Cloud × SparkLabs Taiwan AI Accelerator",
+      title: "立即申請｜Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator",
       description: "免費申請，不交換股權。7 月 26 日截止。",
     },
   },
   en: {
-    title: "Apply | Google Cloud × SparkLabs Taiwan AI Accelerator",
+    title: "Apply | Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator",
     description:
-      "Apply to the Google Cloud × SparkLabs Taiwan AI Accelerator. Application deadline: July 26. 15 selected AI startups. Free to apply, equity-free.",
+      "Apply to the Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator. Application deadline: July 26. 15 selected AI startups. Free to apply, equity-free.",
     openGraph: {
-      title: "Apply | Google Cloud × SparkLabs Taiwan AI Accelerator",
+      title: "Apply | Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator",
       description:
         "A 12-week, equity-free accelerator for AI founders with global ambition. Apply by July 26.",
       locale: "en_US",
     },
     twitter: {
-      title: "Apply | Google Cloud × SparkLabs Taiwan AI Accelerator",
+      title: "Apply | Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator",
       description: "15 selected AI startups. Free to apply, equity-free.",
     },
   },

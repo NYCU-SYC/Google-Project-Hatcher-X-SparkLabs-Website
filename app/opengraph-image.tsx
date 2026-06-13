@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 
-export const alt = "Google Cloud × SparkLabs Taiwan AI Accelerator";
+export const alt = "Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
