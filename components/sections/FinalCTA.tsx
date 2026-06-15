@@ -56,7 +56,7 @@ export function FinalCTA() {
               <Button href={GOOGLE_FORM_EXTERNAL_URL} variant="primary" size="lg" withArrow external>
                 {t.finalCta.ctaPrimary}
               </Button>
-              <Button href="mailto:program@sparklabstaiwan.com" variant="secondary" size="lg">
+              <Button href="mailto:p.hatcher@sparklabstaiwan.com" variant="secondary" size="lg">
                 {t.finalCta.ctaSecondary}
               </Button>
             </motion.div>

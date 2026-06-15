@@ -39,7 +39,7 @@ export function Footer() {
                 <Twitter className="h-4 w-4 text-slate-700" />
               </a>
               <a
-                href="mailto:program@sparklabstaiwan.com"
+                href="mailto:p.hatcher@sparklabstaiwan.com"
                 className="grid h-10 w-10 place-items-center rounded-full glass hover:bg-slate-100 transition-colors"
                 aria-label={t.footer.socialAria.email}
               >
@@ -79,10 +79,10 @@ export function Footer() {
               <li className="flex items-start gap-2.5 text-slate-700">
                 <Mail className="h-4 w-4 mt-0.5 text-brand-blue shrink-0" />
                 <a
-                  href="mailto:program@sparklabstaiwan.com"
+                  href="mailto:p.hatcher@sparklabstaiwan.com"
                   className="hover:text-slate-900 transition-colors"
                 >
-                  program@sparklabstaiwan.com
+                  p.hatcher@sparklabstaiwan.com
                 </a>
               </li>
               <li className="flex items-start gap-2.5 text-slate-700">

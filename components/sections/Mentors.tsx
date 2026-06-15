@@ -65,15 +65,6 @@ const featuredMentors: MentorEntry[] = [
     initials: "AC",
   },
   {
-    name: "Tony Ling",
-    title: "Venture Partner",
-    titleZh: "創投合夥人",
-    org: "SparkLabs Group",
-    contribution: "Biotech & Healthcare AI fundraising; Silver Lake / Harvard perspective",
-    photo: "/mentors/tony-ling.webp",
-    initials: "TL",
-  },
-  {
     name: "KJ Wu",
     title: "Head of Startup Customer Engineering, Greater China",
     titleZh: "大中華區新創客戶工程負責人",
@@ -143,7 +134,7 @@ export function Mentors() {
               {t.mentors.featuredTitle}
             </span>
           </h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4 md:gap-5">
             {featuredMentors.map((m, i) => (
               <motion.div
                 key={m.name}
@@ -228,6 +219,19 @@ export function Mentors() {
                 </motion.div>
               );
             })}
+          </div>
+          <div className="mt-8 text-center">
+            <a
+              href="https://www.sparklabstaiwan.com/zh/people"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 transition-colors duration-200 hover:border-slate-300 hover:bg-slate-50"
+            >
+              {t.mentors.sparkLabsNetwork.mentorLinkLabel}
+            </a>
+            <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-slate-500">
+              {t.mentors.sparkLabsNetwork.mentorLinkNote}
+            </p>
           </div>
         </div>
       </div>

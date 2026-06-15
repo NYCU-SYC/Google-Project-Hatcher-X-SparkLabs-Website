@@ -142,7 +142,7 @@ export const translations = {
       readyCta: "準備好取得這些資源了嗎？",
       heroCard: {
         tag: "USD 25K 抵免額度",
-        title: "Google Cloud Platform 抵免額度",
+        title: "USD 25K Google Cloud Platform 抵免額度",
         tagline: "入選團隊專屬",
         description:
           "入選即取得 USD 25K 抵免額度，可投入 Gemini models API、Gemini Enterprise Agent Platform 與產品上線所需的雲端資源，讓團隊更快驗證、迭代與交付。",
@@ -335,6 +335,8 @@ export const translations = {
       sparkLabsNetwork: {
         label: "SparkLabs 全球網絡",
         title: "把台灣 AI 團隊接上跨國創業網絡",
+        mentorLinkLabel: "查看更多 SparkLabs Mentor 介紹",
+        mentorLinkNote: "前往 SparkLabs Taiwan 網站，查看完整 Mentor 與 People 介紹。",
         points: [
           {
             title: "全球導師與 GP",
@@ -405,7 +407,7 @@ export const translations = {
       items: [
         {
           q: "申請需要費用嗎？",
-          a: "完全免費。入選團隊可取得最高 USD 25K Google Cloud 額度，用於雲端與 AI 產品建置。",
+          a: "完全免費。入選團隊可取得最高 USD 25K Google Cloud Platform 抵免額度，用於雲端與 AI 產品建置。",
         },
         {
           q: "這個計畫會收取股權嗎？",
@@ -417,7 +419,7 @@ export const translations = {
         },
         {
           q: "已申請過 Google Cloud for Startup Program 25K Credit 還能參加嗎？",
-          a: "可以申請計畫本身，但 USD 25K Google Cloud 額度不重複提供。技術指導、商業導師、SparkLabs 全球網絡與 Global Showcase 等資源仍可照常參與。",
+          a: "可以申請計畫本身，但 USD 25K Google Cloud 抵免額度不重複提供；未來依照募資條件，符合資格者仍可升級為 AI Tier 並獲得 USD 350K Google Cloud Platform 抵免額度。",
         },
         {
           q: "計畫 12 週要實體到場嗎？",
@@ -518,7 +520,7 @@ export const translations = {
       form: {
         title: "步驟 3：提交申請",
         placeholder:
-          "申請表單將嵌入於此（Google Forms / Typeform / Tally）。\n\n若表單尚未載入，請聯絡 program@sparklabstaiwan.com 取得申請連結，或稍後重新整理頁面。",
+          "申請表單將嵌入於此（Google Forms / Typeform / Tally）。\n\n若表單尚未載入，請聯絡 p.hatcher@sparklabstaiwan.com 取得申請連結，或稍後重新整理頁面。",
         note: "資料會直接送交 SparkLabs Taiwan 與 Google Cloud 評審團隊。建議使用桌機填寫，內容會更好整理。",
         externalCta: "前往申請表單",
         iframeLabel: "申請表單",
@@ -694,7 +696,7 @@ export const translations = {
       readyCta: "Ready to access these resources?",
       heroCard: {
         tag: "USD 25K credit",
-        title: "Google Cloud Platform Credit",
+        title: "USD 25K Google Cloud Platform Credit",
         tagline: "Selected teams only",
         description:
           "$25K to burn on Gemini models API, Gemini Enterprise Agent Platform, and whatever it takes to ship faster. Yours the moment you're selected.",
@@ -888,6 +890,8 @@ export const translations = {
       sparkLabsNetwork: {
         label: "SparkLabs Global Network",
         title: "Plug Taiwan AI founders into a cross-border startup network",
+        mentorLinkLabel: "See more SparkLabs mentors",
+        mentorLinkNote: "Visit the SparkLabs Taiwan people page for the full mentor network.",
         points: [
           {
             title: "Global mentors & GPs",
@@ -1078,7 +1082,7 @@ export const translations = {
       form: {
         title: "Step 3 — Submit your application",
         placeholder:
-          "Application form will be embedded here (Typeform / Tally / custom form).\n\nThis is a placeholder. Email program@sparklabstaiwan.com to request the application link, or come back once the form is live.",
+          "Application form will be embedded here (Typeform / Tally / custom form).\n\nThis is a placeholder. Email p.hatcher@sparklabstaiwan.com to request the application link, or come back once the form is live.",
         note: "Submissions go directly to the SparkLabs Taiwan and Google Cloud review team. Desktop is recommended for easier completion.",
         externalCta: "Go to Application Form",
         iframeLabel: "Application Form",

@@ -35,7 +35,6 @@ export function HeroHighlights() {
             const Icon = card.icon;
             const subnote =
               "subnote" in item && typeof item.subnote === "string" ? item.subnote : undefined;
-
             return (
               <motion.div
                 key={card.key}
@@ -51,11 +50,8 @@ export function HeroHighlights() {
                   >
                     <Icon className={`h-6 w-6 ${card.accent}`} strokeWidth={2.2} />
                   </div>
-                  <div className="min-w-0">
-                    <div className="text-[11px] font-bold uppercase tracking-normal text-slate-500 sm:text-xs">
-                      {item.tag}
-                    </div>
-                    <h2 className="mt-2 font-display text-xl font-semibold leading-tight tracking-normal text-slate-950 sm:text-2xl lg:text-[1.7rem]">
+                  <div className="min-w-0 -mt-1.5">
+                    <h2 className="font-display text-xl font-semibold leading-tight tracking-normal text-slate-950 sm:text-2xl lg:text-[1.7rem]">
                       {item.title}
                     </h2>
                     <p className="mt-3 text-sm leading-relaxed text-slate-600 sm:text-[15px]">
