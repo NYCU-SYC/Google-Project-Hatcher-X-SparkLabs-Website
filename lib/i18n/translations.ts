@@ -645,7 +645,7 @@ export const translations = {
     },
     programDifference: {
       eyebrow: "Why This Program",
-      title: "Why This Program",
+      title: "Technical depth and global growth — in one accelerator.",
       subtitle:
         "Google brings AI, Cloud, and GTM resources. SparkLabs Taiwan brings founder networks and global expansion support. Together, they help AI startups build stronger products and scale internationally.",
       cards: [
@@ -690,7 +690,7 @@ export const translations = {
     },
     benefits: {
       eyebrow: "What You Get",
-      title: "What You'll Get",
+      title: "Concrete, actionable resources designed to drive growth.",
       subtitle:
         "A focused set of technical, business, fundraising, and global expansion resources designed for AI founders who need to move faster.",
       readyCta: "Ready to access these resources?",
@@ -753,7 +753,7 @@ export const translations = {
       subtitle:
         "This program is designed for AI startups with technical depth, scalable products, and global ambition beyond Taiwan.",
       headline: {
-        line1: "Built for AI startups ready to scale",
+        line1: "Built for AI startups ready to go global",
         line2: "",
       },
       cohortIntro: "A focused cohort of",
@@ -838,7 +838,7 @@ export const translations = {
     },
     selection: {
       eyebrow: "Selection Process",
-      title: "Transparent selection. You know exactly how to be seen.",
+      title: "Transparent selection — you know exactly how we evaluate teams.",
       subtitle: "No black box. Here's how we evaluate every application.",
       stages: [
         {
