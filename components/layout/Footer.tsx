@@ -1,7 +1,7 @@
 "use client";
 
 import { DualBrandLock } from "@/components/ui/BrandLogos";
-import { Mail, MapPin, Linkedin, Twitter } from "lucide-react";
+import { Mail, MapPin, Linkedin, Instagram } from "lucide-react";
 import { GOOGLE_FORM_EXTERNAL_URL } from "@/lib/applyForm";
 import { useTranslation } from "@/lib/i18n/LanguageProvider";
 
@@ -25,18 +25,22 @@ export function Footer() {
             <p className="text-slate-600 text-sm leading-relaxed max-w-md">{t.footer.tagline}</p>
             <div className="flex items-center gap-3">
               <a
-                href="#"
+                href="https://www.linkedin.com/company/sparklabs-taiwan/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="grid h-10 w-10 place-items-center rounded-full glass hover:bg-slate-100 transition-colors"
                 aria-label={t.footer.socialAria.linkedin}
               >
                 <Linkedin className="h-4 w-4 text-slate-700" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/sparklabs_taiwan/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="grid h-10 w-10 place-items-center rounded-full glass hover:bg-slate-100 transition-colors"
-                aria-label={t.footer.socialAria.twitter}
+                aria-label={t.footer.socialAria.instagram}
               >
-                <Twitter className="h-4 w-4 text-slate-700" />
+                <Instagram className="h-4 w-4 text-slate-700" />
               </a>
               <a
                 href="mailto:p.hatcher@sparklabstaiwan.com"

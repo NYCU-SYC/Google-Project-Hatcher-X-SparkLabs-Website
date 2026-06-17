@@ -464,7 +464,7 @@ export const translations = {
       terms: "使用條款",
       socialAria: {
         linkedin: "前往 LinkedIn",
-        twitter: "前往 Twitter",
+        instagram: "前往 Instagram",
         email: "寄信聯絡我們",
       },
     },
@@ -556,7 +556,7 @@ export const translations = {
   en: {
     nav: {
       glance: "About",
-      whyNow: "Why Different",
+      whyNow: "Why This Program",
       benefits: "What You Get",
       criteria: "Who",
       timeline: "Timeline",
@@ -1007,7 +1007,7 @@ export const translations = {
       programTitle: "Program",
       programLinks: [
         { label: "About", href: "/#about-program" },
-        { label: "Why Different", href: "/#program-difference" },
+        { label: "Why This Program", href: "/#program-difference" },
         { label: "What You Get", href: "/#benefits" },
         { label: "Who Should Apply", href: "/#apply-criteria" },
         { label: "Timeline", href: "/#timeline" },
@@ -1020,7 +1020,7 @@ export const translations = {
       terms: "Terms of Use",
       socialAria: {
         linkedin: "Visit LinkedIn",
-        twitter: "Visit Twitter",
+        instagram: "Visit Instagram",
         email: "Email us",
       },
     },
