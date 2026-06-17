@@ -1,7 +1,7 @@
 "use client";
 
 import { DualBrandLock } from "@/components/ui/BrandLogos";
-import { Mail, MapPin, Linkedin, Instagram } from "lucide-react";
+import { Mail, Linkedin, Instagram } from "lucide-react";
 import { GOOGLE_FORM_EXTERNAL_URL } from "@/lib/applyForm";
 import { useTranslation } from "@/lib/i18n/LanguageProvider";
 
@@ -88,10 +88,6 @@ export function Footer() {
                 >
                   p.hatcher@sparklabstaiwan.com
                 </a>
-              </li>
-              <li className="flex items-start gap-2.5 text-slate-700">
-                <MapPin className="h-4 w-4 mt-0.5 text-brand-blue shrink-0" />
-                <span>{t.footer.address}</span>
               </li>
             </ul>
           </div>
