@@ -644,8 +644,8 @@ export const translations = {
       ],
     },
     programDifference: {
-      eyebrow: "Why This Program Is Different",
-      title: "Why This Program Is Different",
+      eyebrow: "Why This Program",
+      title: "Why This Program",
       subtitle:
         "Google brings AI, Cloud, and GTM resources. SparkLabs Taiwan brings founder networks and global expansion support. Together, they help AI startups build stronger products and scale internationally.",
       cards: [
