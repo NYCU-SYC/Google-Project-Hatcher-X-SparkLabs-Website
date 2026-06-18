@@ -36,11 +36,12 @@ export const translations = {
       badgeCohort: "申請中",
       badgeStatus: "7 / 26 截止 · 精選 15 家團隊",
       title: {
-        part1: "為有全球企圖的",
+        part1: "Google Project Hatcher × SparkLabs Taiwan",
         part2: "",
-        highlight: " AI 創辦人而設計",
+        highlight: "AI 新創全球化加速計畫",
         part3: "",
       },
+      tagline: "為有全球企圖的 AI 創辦人而設計",
       subtitle:
         "這是一個由 Google Cloud Taiwan 推動、為期 12 週且不交換股權的加速器計畫，協助 AI 新創強化技術、加快成長，並走向國際市場。",
       ctaPrimary: "立即申請",
@@ -594,6 +595,7 @@ export const translations = {
         highlight: " with global ambition.",
         part3: "",
       },
+      tagline: "",
       subtitle:
         "A 12-week equity-free accelerator powered by Google Cloud Taiwan, helping AI startups strengthen their technology, accelerate growth, and scale globally.",
       ctaPrimary: "Apply Now",

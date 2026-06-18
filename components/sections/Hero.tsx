@@ -50,7 +50,7 @@ export function Hero() {
             initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.08 }}
-            className="mx-auto mt-7 max-w-5xl font-display text-[2.45rem] font-semibold leading-[1.08] tracking-normal text-slate-950 text-balance sm:text-[3.25rem] md:text-[4rem] lg:text-[4.55rem]"
+            className="mx-auto mt-7 max-w-5xl font-display text-[2rem] font-semibold leading-[1.12] tracking-normal text-slate-950 text-balance sm:text-[2.65rem] md:text-[3.25rem] lg:text-[3.75rem]"
           >
             <span className="block">{t.hero.title.part1}</span>
             <span className="block">
@@ -59,11 +59,22 @@ export function Hero() {
             </span>
           </motion.h1>
 
+          {t.hero.tagline && (
+            <motion.p
+              initial={false}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.14 }}
+              className="mx-auto mt-5 max-w-2xl font-display text-lg font-medium text-slate-700 md:text-xl"
+            >
+              {t.hero.tagline}
+            </motion.p>
+          )}
+
           <motion.p
             initial={false}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.16 }}
-            className="mx-auto mt-6 max-w-[760px] text-base leading-relaxed text-slate-600 md:text-lg"
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mx-auto mt-4 max-w-[760px] text-base leading-relaxed text-slate-600 md:text-lg"
           >
             {t.hero.subtitle}
           </motion.p>
