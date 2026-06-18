@@ -590,12 +590,12 @@ export const translations = {
       badgeCohort: "Now Open",
       badgeStatus: "Apply by July 26 · Only 15 spots",
       title: {
-        part1: "Built for AI founders",
+        part1: "Google Project Hatcher × SparkLabs Taiwan",
         part2: "",
-        highlight: " with global ambition.",
+        highlight: "AI Startup Global Accelerator",
         part3: "",
       },
-      tagline: "",
+      tagline: "Built for AI founders with global ambition.",
       subtitle:
         "A 12-week equity-free accelerator powered by Google Cloud Taiwan, helping AI startups strengthen their technology, accelerate growth, and scale globally.",
       ctaPrimary: "Apply Now",
