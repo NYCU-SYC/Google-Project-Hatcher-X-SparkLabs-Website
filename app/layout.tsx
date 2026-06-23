@@ -5,6 +5,15 @@ import "./globals.css";
 import { LanguageProvider } from "@/lib/i18n/LanguageProvider";
 import type { Locale } from "@/lib/i18n/translations";
 
+const SITE_URL = "https://project-hatcher.sparklabstaiwan.com";
+const SITE_NAME = "Project Hatcher x SparkLabs Taiwan";
+const SOCIAL_IMAGE = {
+  url: "/opengraph-image",
+  width: 1200,
+  height: 630,
+  alt: "Project Hatcher x SparkLabs Taiwan | Google Cloud AI Startup Accelerator",
+};
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -28,59 +37,81 @@ const notoTC = Noto_Sans_TC({
 
 const metadataByLocale: Record<Locale, Metadata> = {
   zh: {
-    title: "Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator｜為有全球企圖的 AI 創辦人而設",
+    title: "Project Hatcher x SparkLabs Taiwan｜Google Cloud AI 新創加速器與競賽",
     description:
-      "由 Google Cloud 與 SparkLabs Taiwan 共同推動的 12 週、不交換股權 AI 加速器計畫，協助 AI 新創強化技術、加快成長並拓展國際市場。",
+      "Project Hatcher x SparkLabs Taiwan 是 Google Cloud Taiwan 與 SparkLabs Taiwan 合作的 AI 新創加速器與創業競賽，聚焦台灣早期 AI、GenAI、LLM、Cloud、Data 與 Developer-focused 新創團隊。",
     openGraph: {
-      title: "Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator",
-      description: "為有全球企圖的 AI 創辦人而設。7 月 26 日截止申請。",
+      title:
+        "Project Hatcher x SparkLabs Taiwan｜Google Cloud AI Startup Accelerator & Competition",
+      description:
+        "申請 Project Hatcher x SparkLabs Taiwan，Google Cloud Taiwan 與 SparkLabs Taiwan 合作推動、面向早期 AI、GenAI、LLM、Cloud、Data 新創的加速與競賽計畫。",
       locale: "zh_TW",
     },
     twitter: {
-      title: "Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator",
-      description: "為有全球企圖的 AI 創辦人而設。",
+      title:
+        "Project Hatcher x SparkLabs Taiwan｜Google Cloud AI Startup Accelerator & Competition",
+      description:
+        "Google Cloud Taiwan 與 SparkLabs Taiwan 合作推動的 AI 新創加速器與創業競賽。",
     },
   },
   en: {
-    title:
-      "Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator | Built for AI founders with global ambition",
+    title: "Project Hatcher x SparkLabs Taiwan | Google Cloud AI Startup Accelerator",
     description:
-      "A 12-week equity-free accelerator powered by Google Cloud and SparkLabs Taiwan, helping AI startups strengthen technology, accelerate growth, and scale globally.",
+      "Project Hatcher x SparkLabs Taiwan is a Google Cloud Taiwan AI startup accelerator and startup competition for early-stage AI, GenAI, LLM, cloud, data, and developer-focused startups in Taiwan.",
     openGraph: {
-      title: "Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator",
-      description: "Built for AI founders with global ambition. Apply by July 26.",
+      title:
+        "Project Hatcher x SparkLabs Taiwan | Google Cloud AI Startup Accelerator & Competition",
+      description:
+        "Apply to Project Hatcher x SparkLabs Taiwan, a Google Cloud Taiwan program for early-stage AI, GenAI, LLM, cloud, data, and developer-focused startups.",
       locale: "en_US",
     },
     twitter: {
-      title: "Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator",
-      description: "Built for AI founders with global ambition.",
+      title:
+        "Project Hatcher x SparkLabs Taiwan | Google Cloud AI Startup Accelerator & Competition",
+      description:
+        "A Google Cloud Taiwan AI startup accelerator and competition with SparkLabs Taiwan.",
     },
   },
 };
 
 const keywordsByLocale: Record<Locale, string[]> = {
   zh: [
-    "台灣 AI 加速器",
-    "AI 新創",
-    "Google Cloud Startup",
+    "Project Hatcher",
+    "Google Project Hatcher",
     "SparkLabs Taiwan",
-    "Gemini Enterprise Agent Platform",
-    "Gemini models API",
-    "Frontier AI",
-    "Biotech AI",
-    "Deep Tech AI",
-    "Seed Series A AI",
+    "Google Cloud Taiwan",
+    "台灣 AI 新創加速器",
+    "AI 新創",
+    "人工智慧新創",
+    "生成式 AI",
+    "新創競賽",
+    "創業加速器",
+    "Google Cloud 新創",
+    "AI startup competition Taiwan",
+    "GenAI startup Taiwan",
+    "LLM startup Taiwan",
+    "Cloud AI startup",
+    "Developer tools startup",
   ],
   en: [
-    "AI Accelerator Taiwan",
-    "Google Cloud Startup",
+    "Project Hatcher",
+    "Google Project Hatcher",
     "SparkLabs Taiwan",
-    "Gemini Enterprise Agent Platform",
-    "Gemini models API",
-    "Frontier AI",
-    "Biotech AI",
-    "Deep Tech AI",
-    "Seed Series A AI",
+    "Google Cloud Taiwan",
+    "Google Cloud AI startup Taiwan",
+    "AI startup accelerator Taiwan",
+    "AI startup competition",
+    "Generative AI startup",
+    "GenAI startup",
+    "LLM startup",
+    "Machine Learning startup",
+    "AI Agent startup",
+    "Cloud AI",
+    "Data startup",
+    "Developer tools startup",
+    "Pre-seed startup",
+    "Seed startup",
+    "Pre-Series A startup",
   ],
 };
 
@@ -89,24 +120,87 @@ function getRequestLocale(): Locale {
   return locale === "zh" || locale === "en" ? locale : "en";
 }
 
+function getStructuredData(locale: Locale, metadata: Metadata) {
+  const inLanguage = locale === "zh" ? "zh-Hant" : "en";
+  const description =
+    typeof metadata.description === "string" ? metadata.description : undefined;
+  const title = typeof metadata.title === "string" ? metadata.title : SITE_NAME;
+
+  return [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#organization`,
+      name: "SparkLabs Taiwan",
+      url: "https://www.sparklabstaiwan.com/",
+      logo: `${SITE_URL}/sparklabs-taiwan-logo.svg`,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": `${SITE_URL}/#webpage`,
+      url: SITE_URL,
+      name: title,
+      description,
+      inLanguage,
+      isPartOf: {
+        "@type": "WebSite",
+        "@id": `${SITE_URL}/#website`,
+        name: SITE_NAME,
+        url: SITE_URL,
+      },
+      publisher: {
+        "@id": `${SITE_URL}/#organization`,
+      },
+      about: [
+        { "@type": "Thing", name: "Project Hatcher" },
+        { "@type": "Thing", name: "Google Cloud Taiwan" },
+        { "@type": "Thing", name: "SparkLabs Taiwan" },
+        { "@type": "Thing", name: "AI startup accelerator" },
+        { "@type": "Thing", name: "Startup competition" },
+      ],
+    },
+  ];
+}
+
 export function generateMetadata(): Metadata {
   const locale = getRequestLocale();
   const metadata = metadataByLocale[locale];
 
   return {
-    metadataBase: new URL(
-      process.env.NEXT_PUBLIC_SITE_URL ||
-        "https://project-hatcher.sparklabstaiwan.com"
-    ),
+    metadataBase: new URL(SITE_URL),
+    applicationName: SITE_NAME,
+    creator: "SparkLabs Taiwan",
+    publisher: "SparkLabs Taiwan",
     ...metadata,
     keywords: keywordsByLocale[locale],
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+    icons: {
+      icon: [{ url: "/icon", type: "image/png", sizes: "512x512" }],
+      shortcut: ["/icon"],
+      apple: [{ url: "/icon", type: "image/png", sizes: "512x512" }],
+    },
     openGraph: {
       ...metadata.openGraph,
+      url: SITE_URL,
+      siteName: SITE_NAME,
       type: "website",
+      images: [SOCIAL_IMAGE],
     },
     twitter: {
       card: "summary_large_image",
       ...metadata.twitter,
+      images: [SOCIAL_IMAGE.url],
     },
   };
 }
@@ -117,6 +211,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const locale = getRequestLocale();
+  const structuredData = getStructuredData(locale, metadataByLocale[locale]);
 
   return (
     <html
@@ -124,6 +219,12 @@ export default function RootLayout({
       className={`${inter.variable} ${sora.variable} ${notoTC.variable}`}
     >
       <body className="min-h-screen bg-white text-slate-900 font-sans antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
+          }}
+        />
         <LanguageProvider initialLocale={locale}>{children}</LanguageProvider>
       </body>
     </html>

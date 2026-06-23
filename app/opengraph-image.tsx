@@ -2,7 +2,8 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 
-export const alt = "Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator";
+export const alt =
+  "Project Hatcher x SparkLabs Taiwan | Google Cloud AI Startup Accelerator";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -87,10 +88,12 @@ export default async function Image() {
               textTransform: "uppercase",
             }}
           >
-            AI Accelerator · Cohort 2026
+            Project Hatcher · Cohort 2026
           </div>
           <div
             style={{
+              display: "flex",
+              flexDirection: "column",
               fontSize: 82,
               fontWeight: 800,
               letterSpacing: "-0.02em",
@@ -99,8 +102,7 @@ export default async function Image() {
               maxWidth: 900,
             }}
           >
-            Built for AI founders
-            <br />
+            Google Cloud AI
             <span
               style={{
                 backgroundImage:
@@ -109,7 +111,7 @@ export default async function Image() {
                 color: "transparent",
               }}
             >
-              with global ambition
+              Startup Accelerator
             </span>{" "}
           </div>
         </div>

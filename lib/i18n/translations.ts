@@ -25,12 +25,12 @@ export const translations = {
       en: "切換至英文",
     },
     seo: {
-      homeTitle: "Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator｜為有全球企圖的 AI 創辦人而設",
+      homeTitle: "Project Hatcher x SparkLabs Taiwan｜Google Cloud AI 新創加速器與競賽",
       homeDescription:
-        "由 Google Cloud 與 SparkLabs Taiwan 共同推動的 12 週、不交換股權 AI 加速器計畫，協助 AI 新創強化技術、加快成長並拓展國際市場。",
-      applyTitle: "立即申請｜Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator",
+        "Project Hatcher x SparkLabs Taiwan 是 Google Cloud Taiwan 與 SparkLabs Taiwan 合作的 AI 新創加速器與創業競賽，聚焦台灣早期 AI、GenAI、LLM、Cloud、Data 與 Developer-focused 新創團隊。",
+      applyTitle: "立即申請 Project Hatcher x SparkLabs Taiwan｜Google Cloud AI 新創加速器",
       applyDescription:
-        "申請 Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator。7 月 26 日截止，精選 15 家 AI 新創。免費申請，不交換股權。",
+        "申請 Project Hatcher x SparkLabs Taiwan，Google Cloud Taiwan 與 SparkLabs Taiwan 合作推動的 AI 新創加速器與創業競賽。7 月 26 日截止，精選 15 家 AI 新創。",
     },
     hero: {
       badgeCohort: "申請中",
@@ -579,12 +579,12 @@ export const translations = {
     },
     seo: {
       homeTitle:
-        "Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator | Built for AI founders with global ambition",
+        "Project Hatcher x SparkLabs Taiwan | Google Cloud AI Startup Accelerator",
       homeDescription:
-        "A 12-week equity-free accelerator powered by Google Cloud and SparkLabs Taiwan, helping AI startups strengthen technology, accelerate growth, and scale globally.",
-      applyTitle: "Apply | Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator",
+        "Project Hatcher x SparkLabs Taiwan is a Google Cloud Taiwan AI startup accelerator and startup competition for early-stage AI, GenAI, LLM, cloud, data, and developer-focused startups in Taiwan.",
+      applyTitle: "Apply to Project Hatcher x SparkLabs Taiwan | Google Cloud AI Startup Accelerator",
       applyDescription:
-        "Apply to the Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator. Application deadline: July 26. 15 selected AI startups. Free to apply, equity-free.",
+        "Apply to Project Hatcher x SparkLabs Taiwan, a Google Cloud Taiwan AI startup accelerator and startup competition for early-stage AI, GenAI, LLM, cloud, data, and developer-focused startups.",
     },
     hero: {
       badgeCohort: "Now Open",

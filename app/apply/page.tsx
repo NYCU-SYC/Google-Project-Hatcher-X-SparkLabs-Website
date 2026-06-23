@@ -11,42 +11,70 @@ import { FAQReminderLink } from "@/components/sections/apply/FAQReminderLink";
 import { AmbientBackground } from "@/components/ui/AmbientBackground";
 import type { Locale } from "@/lib/i18n/translations";
 
+const SITE_NAME = "Project Hatcher x SparkLabs Taiwan";
+const SOCIAL_IMAGE = {
+  url: "/opengraph-image",
+  width: 1200,
+  height: 630,
+  alt: "Project Hatcher x SparkLabs Taiwan | Google Cloud AI Startup Accelerator",
+};
+
 const applyMetadataByLocale: Record<Locale, Metadata> = {
   zh: {
-    title: "立即申請｜Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator",
+    title: "立即申請 Project Hatcher x SparkLabs Taiwan｜Google Cloud AI 新創加速器",
     description:
-      "申請 Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator。7 月 26 日截止，精選 15 家 AI 新創。免費申請，不交換股權。",
+      "申請 Project Hatcher x SparkLabs Taiwan，Google Cloud Taiwan 與 SparkLabs Taiwan 合作推動的 AI 新創加速器與創業競賽。7 月 26 日截止，精選 15 家 AI 新創。",
     openGraph: {
-      title: "立即申請｜Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator",
+      title: "Apply to Project Hatcher x SparkLabs Taiwan",
       description:
-        "申請 12 週、不交換股權的 AI 新創加速器計畫。7 月 26 日截止。",
+        "申請 Google Cloud Taiwan 與 SparkLabs Taiwan 合作推動、面向早期 AI 新創的加速與競賽計畫。",
       locale: "zh_TW",
     },
     twitter: {
-      title: "立即申請｜Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator",
-      description: "免費申請，不交換股權。7 月 26 日截止。",
+      title: "Apply to Project Hatcher x SparkLabs Taiwan",
+      description: "Google Cloud Taiwan AI 新創加速器與創業競賽，7 月 26 日截止。",
     },
   },
   en: {
-    title: "Apply | Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator",
+    title: "Apply to Project Hatcher x SparkLabs Taiwan | Google Cloud AI Startup Accelerator",
     description:
-      "Apply to the Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator. Application deadline: July 26. 15 selected AI startups. Free to apply, equity-free.",
+      "Apply to Project Hatcher x SparkLabs Taiwan, a Google Cloud Taiwan AI startup accelerator and startup competition for early-stage AI, GenAI, LLM, cloud, data, and developer-focused startups.",
     openGraph: {
-      title: "Apply | Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator",
+      title: "Apply to Project Hatcher x SparkLabs Taiwan",
       description:
-        "A 12-week, equity-free accelerator for AI founders with global ambition. Apply by July 26.",
+        "A Google Cloud Taiwan AI startup accelerator and competition with SparkLabs Taiwan for early-stage AI, GenAI, LLM, cloud, data, and developer-focused startups.",
       locale: "en_US",
     },
     twitter: {
-      title: "Apply | Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator",
-      description: "15 selected AI startups. Free to apply, equity-free.",
+      title: "Apply to Project Hatcher x SparkLabs Taiwan",
+      description:
+        "Google Cloud Taiwan AI startup accelerator and competition with SparkLabs Taiwan. Apply by July 26.",
     },
   },
 };
 
 export function generateMetadata(): Metadata {
   const locale = cookies().get("preferred-locale")?.value;
-  return applyMetadataByLocale[locale === "zh" ? "zh" : "en"];
+  const metadata = applyMetadataByLocale[locale === "zh" ? "zh" : "en"];
+
+  return {
+    ...metadata,
+    alternates: {
+      canonical: "/apply",
+    },
+    openGraph: {
+      ...metadata.openGraph,
+      url: "/apply",
+      siteName: SITE_NAME,
+      type: "website",
+      images: [SOCIAL_IMAGE],
+    },
+    twitter: {
+      card: "summary_large_image",
+      ...metadata.twitter,
+      images: [SOCIAL_IMAGE.url],
+    },
+  };
 }
 
 export default function ApplyPage() {
