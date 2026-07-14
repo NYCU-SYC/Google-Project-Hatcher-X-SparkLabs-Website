@@ -2,75 +2,57 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Globe2, Network, Users } from "lucide-react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { useTranslation } from "@/lib/i18n/LanguageProvider";
 
-/**
- * Mentors & SparkLabs Global Network
- *
- * Two stacked subsections so visitors immediately understand WHO
- * supports them:
- *
- *   1. Featured Mentors — individuals with photo / initials avatars.
- *      Some entries are confirmed (real photo from SparkLabs Taiwan),
- *      some are placeholders with TODO notes for the program team to
- *      replace before public launch.
- *
- *   2. SparkLabs Global Network — three institutional cards that show
- *      the cross-border mentor, market, and expansion support.
- */
-
 interface MentorEntry {
   name: string;
+  nameZh?: string;
   title: string;
   titleZh?: string;
   org: string;
-  contribution: string;
+  orgZh?: string;
   photo: string | null;
   initials: string;
   /** object-position for the avatar crop (default: center). Use "top" when
    * a portrait's subject sits high in the frame and center-crop clips the head. */
   objectPosition?: string;
-  isPlaceholder?: boolean;
-  todoNote?: string;
 }
 
 const featuredMentors: MentorEntry[] = [
   {
-    name: "Edgar Chiu",
-    title: "Founding Partner",
-    titleZh: "創始合夥人",
-    org: "SparkLabs Taiwan",
-    contribution: "Taiwan AI strategy, program vision, founder global expansion",
-    photo: "/mentors/edgar-chiu.png",
-    initials: "EC",
+    name: "Steve Chen",
+    title: "Co-founder",
+    titleZh: "共同創辦人",
+    org: "YouTube",
+    photo: "/mentors/steve-chen.jpg",
+    initials: "SC",
+    objectPosition: "50% 28%",
   },
   {
-    name: "Bernard Moon",
-    title: "Co-founder & General Partner",
-    titleZh: "共同創辦人兼合夥人",
-    org: "SparkLabs Group",
-    contribution: "AI startup GTM, US market entry, US investor perspective",
-    photo: "/mentors/bernard-moon.webp",
-    initials: "BM",
-  },
-  {
-    name: "Andrew Chen",
-    title: "Managing Partner",
-    titleZh: "管理合夥人",
-    org: "Hickory Falls Ventures",
-    contribution: "Venture investing, founder scaling, cross-border GTM",
-    photo: "/mentors/andrew-chen.jpg",
+    name: "Alice Chang",
+    title: "Founder",
+    titleZh: "創辦人",
+    org: "Perfect Corp.",
+    orgZh: "玩美移動",
+    photo: "/mentors/alice-chang-headshot.jpg",
     initials: "AC",
+  },
+  {
+    name: "Tina Lin",
+    title: "General Manager",
+    titleZh: "總經理",
+    org: "Google Taiwan",
+    orgZh: "Google 台灣",
+    photo: null,
+    initials: "TL",
   },
   {
     name: "KJ Wu",
     title: "Head of Startup Customer Engineering, Greater China",
     titleZh: "大中華區新創客戶工程負責人",
     org: "Google Cloud",
-    contribution: "Google's view on Physical AI; Deep Tech AI startup lens",
-    photo: "/mentors/kj-wu.png",
+    photo: "/mentors/kj-wu-headshot.png",
     initials: "KW",
   },
   {
@@ -78,40 +60,58 @@ const featuredMentors: MentorEntry[] = [
     title: "Head of Taiwan Startups",
     titleZh: "台灣新創業務負責人",
     org: "Google Cloud",
-    contribution: "Taiwan AI startup strategy, Google Cloud partnership lead",
-    photo: "/mentors/voice-chang.jpg",
+    photo: "/mentors/voice-chang-headshot.jpg",
     initials: "VC",
-    objectPosition: "top",
   },
   {
     name: "Tony Lee",
     title: "Healthcare Industry Lead",
     titleZh: "醫療產業負責人",
     org: "Google APAC Top Partner Team",
-    contribution: "Healthcare AI industry guidance, Google APAC partner ecosystem",
-    photo: "/mentors/tony-lee.jpg",
+    photo: "/mentors/tony-lee-headshot.jpg",
     initials: "TL",
-    objectPosition: "top",
-  },
-];
-
-interface SupportMeta {
-  icon: typeof Globe2;
-  accent: { text: string; bg: string; ring: string };
-}
-
-const sparkLabsNetworkMeta: SupportMeta[] = [
-  {
-    icon: Globe2,
-    accent: { text: "text-[#4285F4]", bg: "bg-[#4285F4]/10", ring: "ring-[#4285F4]/20" },
   },
   {
-    icon: Network,
-    accent: { text: "text-[#EA4335]", bg: "bg-[#EA4335]/10", ring: "ring-[#EA4335]/20" },
+    name: "Edgar Chiu",
+    title: "Founder",
+    titleZh: "創辦人",
+    org: "SparkLabs Taiwan",
+    photo: "/mentors/edgar-chiu.png",
+    initials: "EC",
   },
   {
-    icon: Users,
-    accent: { text: "text-[#34A853]", bg: "bg-[#34A853]/10", ring: "ring-[#34A853]/20" },
+    name: "Bernard Moon",
+    title: "Co-founder",
+    titleZh: "共同創辦人",
+    org: "SparkLabs Group",
+    photo: "/mentors/bernard-moon.webp",
+    initials: "BM",
+  },
+  {
+    name: "Andrew Chen",
+    title: "Entrepreneur & Investor",
+    titleZh: "創業家與投資人",
+    org: "",
+    photo: "/mentors/andrew-chen.jpg",
+    initials: "AC",
+  },
+  {
+    name: "Melody Koh",
+    title: "Partner",
+    titleZh: "創投基金合夥人",
+    org: "NextView Ventures",
+    orgZh: "美國 NextView Ventures",
+    photo: "/mentors/melody-koh.png",
+    initials: "MK",
+  },
+  {
+    name: "Jason Wang",
+    title: "Professor of Pediatrics & Health Policy",
+    titleZh: "兒科與健康政策教授",
+    org: "Stanford University School of Medicine",
+    orgZh: "史丹佛大學醫學院",
+    photo: "/mentors/jason-wang.jpg",
+    initials: "JW",
   },
 ];
 
@@ -119,7 +119,7 @@ export function Mentors() {
   const { locale, t } = useTranslation();
 
   return (
-    <section id="mentors" className="relative py-16 md:py-20 bg-white">
+    <section id="mentors" className="relative scroll-mt-28 bg-white py-16 md:py-20">
       <div className="container-wide">
         <SectionHeader
           eyebrow={t.mentors.eyebrow}
@@ -127,14 +127,18 @@ export function Mentors() {
           subtitle={t.mentors.subtitle}
         />
 
-        {/* Featured Mentors */}
-        <div className="mt-14">
-          <h3 className="mb-6 text-center text-sm font-bold tracking-normal uppercase text-slate-900 md:text-base">
-            <span className="inline-block border-b-2 border-[#4285F4] pb-1">
-              {t.mentors.featuredTitle}
-            </span>
-          </h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4 md:gap-5">
+        <motion.p
+          initial={false}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.45 }}
+          className="mx-auto mt-10 max-w-5xl border-y border-slate-200 py-6 text-center text-base font-medium leading-relaxed text-slate-700 sm:px-6 md:text-lg"
+        >
+          {t.mentors.mentorIntro}
+        </motion.p>
+
+        <div className="mt-10">
+          <div className="grid auto-rows-fr grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 lg:gap-5">
             {featuredMentors.map((m, i) => (
               <motion.div
                 key={m.name}
@@ -142,16 +146,16 @@ export function Mentors() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.4, delay: i * 0.04 }}
-                className="group rounded-lg border border-slate-200 bg-white p-5 md:p-6 text-center transition-all duration-200 hover:border-slate-300 hover:shadow-sm"
+                className="group flex h-full flex-col rounded-lg border border-slate-200 bg-white p-4 text-center transition-all duration-200 hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-sm sm:p-5 md:p-6"
               >
-                <div className="mx-auto h-16 w-16 md:h-20 md:w-20 mb-4">
+                <div className="mx-auto mb-4 h-16 w-16 sm:h-20 sm:w-20 lg:h-24 lg:w-24">
                   {m.photo ? (
                     <div className="relative h-full w-full rounded-full overflow-hidden ring-1 ring-slate-200">
                       <Image
                         src={m.photo}
-                        alt={m.name}
+                        alt={locale === "zh" ? m.nameZh ?? m.name : m.name}
                         fill
-                        sizes="(min-width: 768px) 80px, 64px"
+                        sizes="(min-width: 1024px) 96px, (min-width: 640px) 80px, 64px"
                         className="object-cover"
                         style={{ objectPosition: m.objectPosition ?? "center" }}
                         loading="lazy"
@@ -164,74 +168,21 @@ export function Mentors() {
                   )}
                 </div>
 
-                <div className="font-semibold text-sm md:text-[15px] text-slate-900 tracking-normal">
-                  {m.name}
-                </div>
-                <div className="mt-1 text-xs text-slate-600 leading-snug">
-                  {locale === "zh" ? m.titleZh ?? m.title : m.title}
-                </div>
-                <div className="mt-0.5 text-[11px] font-medium text-[#4285F4] tracking-normal">
-                  {m.org}
+                <div className="flex min-h-[5.5rem] flex-1 flex-col items-center">
+                  <div className="font-semibold text-sm text-slate-900 tracking-normal md:text-[15px]">
+                    {locale === "zh" ? m.nameZh ?? m.name : m.name}
+                  </div>
+                  <div className="mt-1 text-xs leading-snug text-slate-600">
+                    {locale === "zh" ? m.titleZh ?? m.title : m.title}
+                  </div>
+                  {m.org && (
+                    <div className="mt-1 text-[11px] font-medium leading-snug text-[#4285F4] tracking-normal">
+                      {locale === "zh" ? m.orgZh ?? m.org : m.org}
+                    </div>
+                  )}
                 </div>
               </motion.div>
             ))}
-          </div>
-        </div>
-
-        {/* SparkLabs Global Network */}
-        <div className="mt-14 md:mt-16">
-          <h3 className="mb-6 text-center text-sm font-bold tracking-normal uppercase text-slate-900 md:text-base">
-            <span className="inline-block border-b-2 border-[#EA4335] pb-1">
-              {t.mentors.sparkLabsNetwork.label}
-            </span>
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
-            {t.mentors.sparkLabsNetwork.points.map((point, i) => {
-              const meta = sparkLabsNetworkMeta[i] ?? sparkLabsNetworkMeta[0];
-              const Icon = meta.icon;
-              return (
-                <motion.div
-                  key={point.title}
-                  initial={false}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-60px" }}
-                  transition={{ duration: 0.4, delay: i * 0.08 }}
-                  className={`rounded-lg border border-slate-200 bg-white p-6 md:p-7 ring-1 ${meta.accent.ring}`}
-                >
-                  <div className="flex items-start gap-4">
-                    <div
-                      className={`shrink-0 inline-flex h-11 w-11 items-center justify-center rounded-lg ${meta.accent.bg}`}
-                    >
-                      <Icon className={`h-5 w-5 ${meta.accent.text}`} strokeWidth={2.2} />
-                    </div>
-                    <div className="min-w-0">
-                      <div className="text-[11px] font-semibold tracking-normal uppercase text-slate-500">
-                        {t.mentors.sparkLabsNetwork.label}
-                      </div>
-                      <div className="mt-1 font-display text-lg md:text-xl font-semibold text-slate-900 tracking-normal">
-                        {point.title}
-                      </div>
-                      <p className="mt-2.5 text-sm md:text-[15px] text-slate-600 leading-relaxed">
-                        {point.body}
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
-          <div className="mt-8 text-center">
-            <a
-              href="https://www.sparklabstaiwan.com/zh/people"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 transition-colors duration-200 hover:border-slate-300 hover:bg-slate-50"
-            >
-              {t.mentors.sparkLabsNetwork.mentorLinkLabel}
-            </a>
-            <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-slate-500">
-              {t.mentors.sparkLabsNetwork.mentorLinkNote}
-            </p>
           </div>
         </div>
       </div>
