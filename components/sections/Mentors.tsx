@@ -255,7 +255,10 @@ export function Mentors() {
 
         <div className="mt-20 border-t border-slate-200 pt-14 md:mt-24 md:pt-16">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-xs font-bold uppercase tracking-normal text-[#174EA6]">{t.mentors.fullLineupEyebrow}</p>
+            <div className="inline-flex items-center gap-2.5 rounded-full border border-[#1A73E8]/20 bg-[#1A73E8]/[0.045] px-4 py-1.5 text-xs font-bold uppercase tracking-normal text-[#174EA6]">
+              <span className="h-2 w-2 rounded-full bg-[#1A73E8]" />
+              {t.mentors.fullLineupEyebrow}
+            </div>
             <h2 className="mt-3 font-display text-3xl font-semibold tracking-normal text-slate-950 sm:text-4xl">{t.mentors.fullLineupTitle}</h2>
             <p className="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base">{t.mentors.fullLineupSubtitle}</p>
           </div>
