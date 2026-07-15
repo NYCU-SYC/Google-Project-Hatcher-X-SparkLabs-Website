@@ -329,13 +329,13 @@ export const translations = {
     },
     mentors: {
       eyebrow: "精選導師",
-      title: "Google × SparkLabs 核心陣容",
+      title: "向打造出全球企業的領袖學習",
       subtitle:
-        "Google 專家、SparkLabs 創辦人與矽谷、紐約投資人，陪伴團隊打造具全球競爭力的 AI 新創。",
+        "來自 YouTube、Google、Appier、史丹佛醫學院、玩美移動，以及全球頂尖創投。",
       featuredLabel: "核心導師",
-      fullLineupEyebrow: "完整導師陣容",
-      fullLineupTitle: "認識完整 Mentor 陣容",
-      fullLineupSubtitle: "更多來自 Google、SparkLabs 與矽谷的導師 ↓",
+      fullLineupEyebrow: "核心陣容",
+      fullLineupTitle: "Google × SparkLabs 核心陣容",
+      fullLineupSubtitle: "Google 專家、SparkLabs 創辦人與矽谷、紐約投資人，陪伴團隊打造具全球競爭力的 AI 新創。",
       mentorIntro:
         "向來自 Google Cloud、YouTube、Appier、玩美移動、SparkLabs、Hickory Falls Ventures、NextView Ventures、Stanford Hospital、臺大醫院等機構的創辦人、企業經營者、投資人與 AI 領袖學習。",
       poweredBy: "串接 SparkLabs 全球導師網絡",
@@ -891,13 +891,13 @@ export const translations = {
     },
     mentors: {
       eyebrow: "Featured Mentors",
-      title: "Google × SparkLabs Core Lineup",
+      title: "Learn from leaders who've built global companies",
       subtitle:
-        "Google experts, SparkLabs founders, and investors from Silicon Valley and New York help teams build globally competitive AI startups.",
+        "From YouTube, Google, Appier, Stanford Medicine, Perfect Corp., and leading global VCs.",
       featuredLabel: "Featured Mentor",
-      fullLineupEyebrow: "Mentor Lineup",
-      fullLineupTitle: "Meet the Full Mentor Lineup",
-      fullLineupSubtitle: "More mentors from Google, SparkLabs & Silicon Valley ↓",
+      fullLineupEyebrow: "Core Lineup",
+      fullLineupTitle: "Google × SparkLabs Core Lineup",
+      fullLineupSubtitle: "Google experts, SparkLabs founders, and investors from Silicon Valley and New York support teams in building globally competitive AI startups.",
       mentorIntro:
         "Learn from founders, operators, investors, and AI leaders from Google Cloud, YouTube, Appier, Perfect Corp., SparkLabs, Hickory Falls Ventures, NextView Ventures, Stanford Hospital, National Taiwan University Hospital, and more.",
       poweredBy: "Connected to SparkLabs Global Mentor Pool",
