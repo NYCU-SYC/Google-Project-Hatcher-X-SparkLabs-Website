@@ -6,7 +6,7 @@ export const translations = {
       glance: "關於計畫",
       whyNow: "差異亮點",
       benefits: "你將獲得",
-      criteria: "適合團隊",
+      criteria: "焦點導師",
       timeline: "時程",
       selection: "評選流程",
       mentors: "導師與講者",
@@ -328,10 +328,14 @@ export const translations = {
       ],
     },
     mentors: {
-      eyebrow: "導師與講者",
-      title: "與懂 AI、懂市場、懂國際成長的人並肩前進",
+      eyebrow: "精選導師",
+      title: "Google × SparkLabs 核心陣容",
       subtitle:
-        "從 Google Cloud 的 AI 技術視角、SparkLabs 全球 GP，到 DeepTech 與 Healthcare AI 領域專家，協助你釐清瓶頸、找到下一步。",
+        "Google 專家、SparkLabs 創辦人與矽谷、紐約投資人，陪伴團隊打造具全球競爭力的 AI 新創。",
+      featuredLabel: "核心導師",
+      fullLineupEyebrow: "完整導師陣容",
+      fullLineupTitle: "認識完整 Mentor 陣容",
+      fullLineupSubtitle: "更多來自 Google、SparkLabs 與矽谷的導師 ↓",
       mentorIntro:
         "向來自 Google Cloud、YouTube、Appier、玩美移動、SparkLabs、Hickory Falls Ventures、NextView Ventures、Stanford Hospital、臺大醫院等機構的創辦人、企業經營者、投資人與 AI 領袖學習。",
       poweredBy: "串接 SparkLabs 全球導師網絡",
@@ -561,7 +565,7 @@ export const translations = {
       glance: "About",
       whyNow: "Why This Program",
       benefits: "What You Get",
-      criteria: "Who",
+      criteria: "Featured Mentors",
       timeline: "Timeline",
       selection: "Selection",
       mentors: "Mentors",
@@ -886,10 +890,14 @@ export const translations = {
       ],
     },
     mentors: {
-      eyebrow: "Mentors & Speakers",
-      title: "Work with people who understand AI, GTM, and global growth",
+      eyebrow: "Featured Mentors",
+      title: "Google × SparkLabs Core Lineup",
       subtitle:
-        "From Google Cloud's AI expertise to SparkLabs' global partners and domain specialists, founders get practical guidance on technology, market entry, and scaling beyond Taiwan.",
+        "Google experts, SparkLabs founders, and investors from Silicon Valley and New York help teams build globally competitive AI startups.",
+      featuredLabel: "Featured Mentor",
+      fullLineupEyebrow: "Mentor Lineup",
+      fullLineupTitle: "Meet the Full Mentor Lineup",
+      fullLineupSubtitle: "More mentors from Google, SparkLabs & Silicon Valley ↓",
       mentorIntro:
         "Learn from founders, operators, investors, and AI leaders from Google Cloud, YouTube, Appier, Perfect Corp., SparkLabs, Hickory Falls Ventures, NextView Ventures, Stanford Hospital, National Taiwan University Hospital, and more.",
       poweredBy: "Connected to SparkLabs Global Mentor Pool",

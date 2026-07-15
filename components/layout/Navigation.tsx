@@ -19,7 +19,7 @@ export function Navigation() {
     { label: t.nav.glance, href: "/#about-program" },
     { label: t.nav.whyNow, href: "/#program-difference" },
     { label: t.nav.benefits, href: "/#benefits" },
-    { label: t.nav.criteria, href: "/#apply-criteria" },
+    { label: t.nav.criteria, href: "/#mentors" },
     { label: t.nav.timeline, href: "/#timeline" },
     { label: t.nav.faq, href: "/#faq" },
   ];
