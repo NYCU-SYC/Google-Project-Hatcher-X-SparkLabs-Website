@@ -118,7 +118,6 @@ const mentorLineup: MentorEntry[] = [
 ];
 
 const featuredMentorNames = ["Steve Chen", "Tina Lin", "Jason Wang", "Melody Koh"];
-
 function MentorAvatar({
   mentor,
   locale,
@@ -178,7 +177,6 @@ export function Mentors() {
     return mentor ? [mentor] : [];
   });
   const [steveChen, ...supportingFeaturedMentors] = featuredMentors;
-
   return (
     <section id="mentors" className="relative scroll-mt-28 bg-white py-16 md:py-24">
       <div className="container-wide">
@@ -250,10 +248,11 @@ export function Mentors() {
               </motion.article>
               ))}
             </div>
+
           </div>
         )}
 
-        <div className="mt-20 border-t border-slate-200 pt-14 md:mt-24 md:pt-16">
+        <div id="mentor-lineup" className="mt-20 scroll-mt-28 border-t border-slate-200 pt-14 md:mt-24 md:pt-16">
           <div className="mx-auto max-w-3xl text-center">
             <div className="inline-flex items-center gap-2.5 rounded-full border border-[#1A73E8]/20 bg-[#1A73E8]/[0.045] px-4 py-1.5 text-xs font-bold uppercase tracking-normal text-[#174EA6]">
               <span className="h-2 w-2 rounded-full bg-[#1A73E8]" />

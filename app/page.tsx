@@ -5,7 +5,6 @@ import { StickyMobileCTA } from "@/components/layout/StickyMobileCTA";
 import { Hero } from "@/components/sections/Hero";
 import { HeroHighlights } from "@/components/sections/HeroHighlights";
 import { Stats } from "@/components/sections/Stats";
-import { ProgramDifference } from "@/components/sections/ProgramDifference";
 import { WhoShouldApply } from "@/components/sections/WhoShouldApply";
 import { Benefits } from "@/components/sections/Benefits";
 import { Mentors } from "@/components/sections/Mentors";
@@ -21,7 +20,7 @@ export const metadata: Metadata = {
 
 /**
  * Information architecture per Google for Startups program-page convention:
- *   Hero → About the Program → Why This Program Is Different →
+ *   Hero → Expandable Build/Grow/Go Global highlights → About the Program →
  *   What You'll Get → Who Should Apply → Program at a Glance →
  *   Mentors → Timeline → FAQ → CTA
  *
@@ -35,7 +34,6 @@ export default function HomePage() {
       <Navigation />
       <Hero />
       <HeroHighlights />
-      <ProgramDifference />
       <Benefits />
       <WhoShouldApply />
       <Stats />

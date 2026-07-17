@@ -41,14 +41,44 @@ export const translations = {
         highlight: "AI 新創全球化加速計畫",
         part3: "",
       },
-      tagline: "為有全球企圖的 AI 創辦人而設計",
+      tagline: "由 Google Cloud 台灣與 SparkLabs Taiwan 共同打造",
       subtitle:
-        "這是一個由 Google Cloud Taiwan 推動、為期 12 週且不交換股權的加速器計畫，協助 AI 新創強化技術、加快成長，並走向國際市場。",
+        "世界級導師陣容、Google Cloud 技術額度、SparkLabs 全球投資人與市場資源，一次到位，陪你的 AI 新創走向全球。",
       ctaPrimary: "立即申請",
       ctaSecondary: "了解計畫內容",
-      applicationOpen: "6 / 15 開放申請",
       poweredBy: "技術支援：Google Cloud · Gemini Enterprise Agent Platform · Gemini models API",
       scroll: "scroll",
+    },
+    heroHighlights: {
+      equityFree: "Equity-free · 不交換股權",
+      mentorPreview: "還有更多 Google 與 SparkLabs 核心團隊",
+      mentorPreviewCta: "查看完整導師陣容",
+      cards: [
+        {
+          phase: "Build",
+          title: "打造產品",
+          items: [
+            "完整 Google Cloud AI 技術資源",
+            "Gemini Enterprise Agent 實作協助",
+          ],
+        },
+        {
+          phase: "Grow",
+          title: "加速成長",
+          items: [
+            "最高 US$350K Cloud Credits",
+            "矽谷頂級領域導師一對一，打造出海計畫",
+          ],
+        },
+        {
+          phase: "Go Global",
+          title: "走向全球",
+          items: [
+            "串接 SparkLabs 國際投資人與市場資源",
+            "登台對接國際市場的 Global Showcase Day",
+          ],
+        },
+      ],
     },
     countdown: {
       labelOpen: "距離 7 / 26 申請截止",
@@ -86,35 +116,50 @@ export const translations = {
       eyebrow: "關於計畫",
       title: "關於計畫",
       paragraphs: [
-        "台灣不缺世界級 AI 人才；下一步，是讓更多 AI 新創長成世界級公司。",
+        "台灣不缺世界級 AI 人才\n下一步，是讓更多 AI 新創長成世界級公司。",
         "Google Cloud Taiwan × SparkLabs Taiwan AI Accelerator，協助高潛力團隊加快腳步：從 AI 技術建構、產品化，到跨市場成長。",
         "入選創辦人將直接連結技術專家、商業導師、國際投資人與國際展示機會，讓產品、團隊與市場策略同步升級。",
       ],
     },
     programDifference: {
       eyebrow: "核心差異",
-      title: "技術與國際成長，放在同一個加速器裡",
+      title: "Build、Grow、Go Global，一條完整的成長路徑",
       subtitle:
-        "Google 帶來 AI、Cloud 與 GTM 資源，SparkLabs Taiwan 串接創辦人網絡與國際拓展支持。兩者結合，讓團隊不只做出更好的 AI 產品，也更快走向全球市場。",
+        "從 AI 技術實作與雲端資源，到一對一輔導與國際市場連結，Google 與 SparkLabs Taiwan 陪團隊走過每個關鍵階段。",
+      expandLabel: "了解更多",
+      collapseLabel: "收合內容",
       cards: [
         {
-          title: "打造更強的 AI 產品",
-          poweredBy: "由 Google 支持",
+          phase: "Build",
+          title: "打造產品",
+          poweredBy: "Google 技術與產業團隊",
+          summary: "強化 AI 技術、產品架構與垂直領域應用。",
           lead: "",
           bullets: [
             "Google Cloud AI 直接支援，協助實作 Gemini Enterprise Agent Platform、Gemini models API 與完整 Google Cloud 技術資源",
             "Google Healthcare 產業專家，協助針對垂直領域打磨產品",
             "Google Cloud 工程師協助進行產品架構檢視",
-            "Google Cloud Platform 抵免額度，支持團隊快速測試與上線",
           ],
         },
         {
-          title: "拓展全球市場",
-          poweredBy: "由 Google × SparkLabs 支持",
+          phase: "Grow",
+          title: "加速成長",
+          poweredBy: "Google × SparkLabs Taiwan",
+          summary: "以雲端額度與一對一輔導，加快測試、上線與成長。",
+          lead: "",
+          bullets: [
+            "Google Cloud Platform 抵免額度：入選即獲得 US$25K，符合資格者最高可達 US$350K，支持團隊快速測試與上線",
+            "Google 專家與 SparkLabs Taiwan 導師提供一對一輔導",
+          ],
+        },
+        {
+          phase: "Go Global",
+          title: "走向全球",
+          poweredBy: "Google × SparkLabs 全球資源",
+          summary: "串接 GTM、國際投資人與跨境展示機會。",
           lead: "",
           bullets: [
             "Google Ads 與 Google GTM 團隊提供市場進入策略支援",
-            "Google 專家與 SparkLabs Taiwan 導師提供一對一輔導",
             "透過 SparkLabs 全球網絡，連結國際 VC 與 CVC",
             "Global Showcase Day 結合區域科技媒體跨境 PR 曝光",
           ],
@@ -601,14 +646,44 @@ export const translations = {
         highlight: "AI Startup Global Accelerator",
         part3: "",
       },
-      tagline: "Built for AI founders with global ambition.",
+      tagline: "Built by Google Cloud Taiwan and SparkLabs Taiwan.",
       subtitle:
-        "A 12-week equity-free accelerator powered by Google Cloud Taiwan, helping AI startups strengthen their technology, accelerate growth, and scale globally.",
+        "World-class mentors, Google Cloud credits, and SparkLabs' global investor and market network—all in one program to help your AI startup scale globally.",
       ctaPrimary: "Apply Now",
       ctaSecondary: "See Program Details",
-      applicationOpen: "Application Open 6/15",
       poweredBy: "Powered by Google Cloud · Gemini Enterprise Agent Platform · Gemini models API",
       scroll: "scroll",
+    },
+    heroHighlights: {
+      equityFree: "Equity-free",
+      mentorPreview: "More leaders from Google and SparkLabs",
+      mentorPreviewCta: "Meet the full mentor lineup",
+      cards: [
+        {
+          phase: "Build",
+          title: "Build the Product",
+          items: [
+            "Full Google Cloud AI stack",
+            "Hands-on Gemini Enterprise Agent support",
+          ],
+        },
+        {
+          phase: "Grow",
+          title: "Accelerate Growth",
+          items: [
+            "Up to US$350K in Cloud Credits",
+            "1:1 guidance from Silicon Valley domain experts",
+          ],
+        },
+        {
+          phase: "Go Global",
+          title: "Scale Globally",
+          items: [
+            "SparkLabs' international investor and market network",
+            "Global Showcase Day for international market access",
+          ],
+        },
+      ],
     },
     countdown: {
       labelOpen: "Until July 26 deadline",
@@ -653,28 +728,43 @@ export const translations = {
     },
     programDifference: {
       eyebrow: "Why This Program",
-      title: "Technical depth and global growth — in one accelerator.",
+      title: "Build, grow, and go global—in one accelerator.",
       subtitle:
-        "Google brings AI, Cloud, and GTM resources. SparkLabs Taiwan brings founder networks and global expansion support. Together, they help AI startups build stronger products and scale internationally.",
+        "From hands-on AI support and cloud credits to 1:1 mentorship and international market access, Google and SparkLabs Taiwan support every critical stage of the journey.",
+      expandLabel: "Learn more",
+      collapseLabel: "Show less",
       cards: [
         {
-          title: "Build Better AI",
-          poweredBy: "Powered by Google",
+          phase: "Build",
+          title: "Build the Product",
+          poweredBy: "Google technical and industry teams",
+          summary: "Strengthen your AI technology, product architecture, and vertical application.",
           lead: "",
           bullets: [
             "Direct support from Google Cloud AI, with hands-on access to Gemini Enterprise Agent Platform, Gemini models API, and the full Google Cloud stack",
             "Google Healthcare industry experts to sharpen your product for your vertical",
             "Product architecture reviews from Google Cloud engineers",
-            "Google Cloud Platform credit to test and ship fast",
           ],
         },
         {
+          phase: "Grow",
+          title: "Accelerate Growth",
+          poweredBy: "Google × SparkLabs Taiwan",
+          summary: "Move faster with cloud credits and focused 1:1 mentorship.",
+          lead: "",
+          bullets: [
+            "Google Cloud Platform credits: US$25K upon selection and up to US$350K for eligible teams, supporting rapid testing and deployment",
+            "1:1 mentorship from Google experts and SparkLabs Taiwan mentors",
+          ],
+        },
+        {
+          phase: "Go Global",
           title: "Scale Globally",
-          poweredBy: "Powered by Google × SparkLabs",
+          poweredBy: "Google × SparkLabs global resources",
+          summary: "Connect with GTM support, global investors, and cross-border exposure.",
           lead: "",
           bullets: [
             "Go-to-market support from Google Ads and Google's GTM team",
-            "1:1 mentorship from Google experts and SparkLabs Taiwan mentors",
             "Access to international VCs and CVCs through SparkLabs' global network",
             "Global Showcase Day with cross-border PR across regional tech media",
           ],

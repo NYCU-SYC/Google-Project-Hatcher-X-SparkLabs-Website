@@ -9,7 +9,7 @@ import { useTranslation } from "@/lib/i18n/LanguageProvider";
  * Hero — light, official, founder-friendly.
  * Modeled on Google for Startups program landing pages: an eyebrow
  * pill announcing the program, a clean two-line headline, one short
- * supporting paragraph, primary CTA, and open-date microcopy.
+ * supporting paragraph and primary CTA.
  */
 export function Hero() {
   const { t } = useTranslation();
@@ -93,14 +93,6 @@ export function Hero() {
             </Button>
           </motion.div>
 
-          <motion.div
-            initial={false}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.32 }}
-            className="mt-5 text-sm font-semibold text-slate-500"
-          >
-            {t.hero.applicationOpen}
-          </motion.div>
         </div>
       </div>
     </section>
