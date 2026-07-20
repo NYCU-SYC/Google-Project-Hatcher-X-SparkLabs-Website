@@ -117,7 +117,13 @@ const mentorLineup: MentorEntry[] = [
   },
 ];
 
-const featuredMentorNames = ["Steve Chen", "Tina Lin", "Jason Wang", "Melody Koh"];
+const featuredMentorNames = [
+  "Steve Chen",
+  "Tina Lin",
+  "Jason Wang",
+  "Melody Koh",
+  "Alice Chang",
+];
 function MentorAvatar({
   mentor,
   locale,
@@ -219,7 +225,7 @@ export function Mentors() {
               </div>
             </motion.article>
 
-            <div className="grid gap-5 md:grid-cols-3 md:gap-6">
+            <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4 md:gap-6">
               {supportingFeaturedMentors.map((mentor, i) => (
               <motion.article
                 key={mentor.name}
