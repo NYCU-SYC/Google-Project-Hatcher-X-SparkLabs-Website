@@ -160,10 +160,38 @@ function MentorAvatar({
   );
 }
 
-function MentorDetails({ mentor, locale, featured = false }: { mentor: MentorEntry; locale: "en" | "zh"; featured?: boolean }) {
+function MentorDetails({
+  mentor,
+  locale,
+  featured = false,
+  compactFeatured = false,
+}: {
+  mentor: MentorEntry;
+  locale: "en" | "zh";
+  featured?: boolean;
+  compactFeatured?: boolean;
+}) {
   const name = locale === "zh" ? mentor.nameZh ?? mentor.name : mentor.name;
   const title = locale === "zh" ? mentor.titleZh ?? mentor.title : mentor.title;
   const org = locale === "zh" ? mentor.orgZh ?? mentor.org : mentor.org;
+
+  if (compactFeatured) {
+    return (
+      <div className="min-w-0">
+        <h3 className="whitespace-nowrap font-display text-2xl font-semibold tracking-normal text-slate-950">
+          {name}
+        </h3>
+        <p className={`mt-2 font-medium leading-snug text-slate-700 ${locale === "zh" ? "whitespace-nowrap text-base" : "text-sm"}`}>
+          {title}
+        </p>
+        {org && (
+          <p className={`mt-1.5 font-bold leading-snug text-[#1A73E8] ${locale === "zh" ? "whitespace-nowrap text-sm" : "text-sm"}`}>
+            {org}
+          </p>
+        )}
+      </div>
+    );
+  }
 
   return (
     <div>
@@ -248,8 +276,8 @@ export function Mentors() {
                     />
                   )}
                 </div>
-                <div className="p-6 sm:p-7">
-                  <MentorDetails mentor={mentor} locale={locale} featured />
+                <div className="p-5 sm:p-6">
+                  <MentorDetails mentor={mentor} locale={locale} compactFeatured />
                 </div>
               </motion.article>
               ))}
