@@ -92,6 +92,9 @@ export function Hero() {
               {t.hero.ctaSecondary}
             </Button>
           </motion.div>
+          <p className="mt-4 text-sm font-medium text-slate-500">
+            {t.topBanner.deadline}
+          </p>
 
         </div>
       </div>

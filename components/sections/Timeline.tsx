@@ -17,12 +17,13 @@ import { useTranslation } from "@/lib/i18n/LanguageProvider";
  * Date prominence is the primary visual: the date is the largest
  * tabular-numeric element in each step, sitting in a brand-colored
  * pill so visitors instantly see "when". Status color comes from the
- * status array per index (upcoming / future).
+ * status array per index (open / deadline / upcoming / future).
  */
 
-const itemStatus: ("open" | "upcoming" | "future")[] = [
+const itemStatus: ("open" | "deadline" | "upcoming" | "future")[] = [
+  "open",
+  "deadline",
   "upcoming",
-  "future",
   "future",
 ];
 
@@ -35,6 +36,15 @@ const stepMeta = [
     border: "border-[#4285F4]/25",
     ring: "ring-[#4285F4]/15",
     wash: "from-[#4285F4]/10",
+  },
+  {
+    dot: "bg-[#EA4335]",
+    text: "text-[#C5221F]",
+    dateBg: "bg-[#EA4335]",
+    dateText: "text-white",
+    border: "border-[#EA4335]/25",
+    ring: "ring-[#EA4335]/15",
+    wash: "from-[#EA4335]/10",
   },
   {
     dot: "bg-[#FBBC04]",
@@ -58,6 +68,12 @@ const stepMeta = [
 
 const statusStyles = {
   open: {
+    dateBg: "bg-[#EA4335]",
+    dateText: "text-white",
+    dot: "bg-[#EA4335] ring-[#EA4335]/20",
+    badge: "bg-[#EA4335]/10 text-[#EA4335] border-[#EA4335]/15",
+  },
+  deadline: {
     dateBg: "bg-[#EA4335]",
     dateText: "text-white",
     dot: "bg-[#EA4335] ring-[#EA4335]/20",
@@ -95,11 +111,11 @@ export function Timeline() {
           <div className="relative mx-auto w-full max-w-6xl pt-2">
             <div
               aria-hidden
-              className="absolute left-[16%] right-[16%] top-8 h-1 rounded-full bg-slate-100"
+              className="absolute left-[12.5%] right-[12.5%] top-8 h-1 rounded-full bg-slate-100"
             />
             <div
               aria-hidden
-              className="absolute left-[16%] right-[16%] top-8 h-1 rounded-full bg-gradient-to-r from-[#4285F4] via-[#FBBC04] to-[#34A853]"
+              className="absolute left-[12.5%] right-[12.5%] top-8 h-1 rounded-full bg-gradient-to-r from-[#4285F4] via-[#FBBC04] to-[#34A853]"
             />
             <ol
               className="relative grid auto-rows-fr items-stretch gap-4 lg:gap-6"

@@ -302,10 +302,11 @@ export const translations = {
     },
     timeline: {
       eyebrow: "計畫時程",
-      title: "三個關鍵日期，從申請走向國際舞台",
-      subtitle: "6 / 15 開放申請；8 月中旬公布入選名單；11 月下旬登上 Global Showcase。",
+      title: "四個關鍵日期，從申請走向國際舞台",
+      subtitle: "6 / 15 開放申請，7 / 26 截止收件；8 月中旬公布入選名單；11 月下旬登上 Global Showcase。",
       statuses: {
         open: "申請中",
+        deadline: "截止日",
         upcoming: "即將開始",
         future: "待展開",
       },
@@ -314,6 +315,11 @@ export const translations = {
           date: "6/15",
           title: "開放申請",
           description: "AI-native 團隊可提交申請資料。",
+        },
+        {
+          date: "7/26",
+          title: "收件截止",
+          description: "請於 7 月 26 日前完成申請送出。",
         },
         {
           date: "8 月中旬",
@@ -909,10 +915,11 @@ export const translations = {
     },
     timeline: {
       eyebrow: "Program Timeline",
-      title: "Three dates. One global stage.",
-      subtitle: "Application Open 6/15. Shortlist lands in mid August. Showcase starts in late November.",
+      title: "Four dates. One global stage.",
+      subtitle: "Applications open June 15 and close July 26. The shortlist lands in mid August, followed by the Global Showcase in late November.",
       statuses: {
         open: "Open",
+        deadline: "Deadline",
         upcoming: "Upcoming",
         future: "Future",
       },
@@ -921,6 +928,11 @@ export const translations = {
           date: "6/15",
           title: "Application Open",
           description: "AI-native teams can begin submitting applications.",
+        },
+        {
+          date: "July 26",
+          title: "Application Deadline",
+          description: "Submit your application by July 26.",
         },
         {
           date: "Mid August",
